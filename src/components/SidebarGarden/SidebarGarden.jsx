@@ -13,6 +13,7 @@ import { TbApps } from "react-icons/tb";
 const SidebarGarden = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  // const useIsMedium = () => useMediaQuery('(min-width: 1024px)');
 
   const showAnimation = {
     hidden: {
