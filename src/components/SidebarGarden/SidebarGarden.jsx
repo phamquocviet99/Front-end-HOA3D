@@ -1,48 +1,49 @@
 import { Children, React, useState } from "react";
 import "./Sidebar.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaHome, FaGifts, FaAngleDown } from "react-icons/fa";
-import { BiHomeSmile, BiGift } from "react-icons/bi";
-import { MdDoubleArrow, MdPieChart } from "react-icons/md";
-import { RiBillLine } from "react-icons/ri";
+import { GrCreditCard } from "react-icons/gr";
+import { BiBox, BiBarChartSquare, BiFoodMenu } from "react-icons/bi";
+import { GoCreditCard } from "react-icons/go";
+import { TbDatabaseExport } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 import Header from "../header/Header";
+import { TbApps } from "react-icons/tb";
 import SideBarMenu from "./SideBarMenu";
-const routes = [
-  {
-    path: "/trang-nha-vuon/trang-chu",
-    name: "Trang chủ",
-    icon: <BiHomeSmile />,
-  },
-  {
-    path: "/trang-nha-vuon/san-pham",
-    name: "Tất cả sản phẩm",
-    icon: <BiHomeSmile />,
-  },
-  {
-    path: "/trang-nha-vuon/san-luong",
-    name: "Sản lượng hiện có",
-    icon: <BiHomeSmile />,
-  },
-  {
-    path: "/trang-nha-vuon/don-hang",
-    name: "Tất cả đơn hàng",
-    icon: <MdPieChart />,
-  },
-  {
-    icon: <BiGift />,
-    path: "/trang-nha-vuon/doanh-thu",
-    name: "Doanh thu",
-  },
-  {
-    icon: <BiGift />,
-    path: "/trang-nha-vuon/ngan-hang",
-    name: "Tài khoản ngân hàng",
-  },
-];
+// const routes = [
+//   {
+//     path: "/trang-nha-vuon/trang-chu",
+//     name: "Trang chủ",
+//     icon: <BiHomeSmile />,
+//   },
+//   {
+//     path: "/trang-nha-vuon/san-pham",
+//     name: "Tất cả sản phẩm",
+//     icon: <BiHomeSmile />,
+//   },
+//   {
+//     path: "/trang-nha-vuon/san-luong",
+//     name: "Sản lượng hiện có",
+//     icon: <BiHomeSmile />,
+//   },
+//   {
+//     path: "/trang-nha-vuon/don-hang",
+//     name: "Tất cả đơn hàng",
+//     icon: <MdPieChart />,
+//   },
+//   {
+//     icon: <BiGift />,
+//     path: "/trang-nha-vuon/doanh-thu",
+//     name: "Doanh thu",
+//   },
+//   {
+//     icon: <BiGift />,
+//     path: "/trang-nha-vuon/ngan-hang",
+//     name: "Tài khoản ngân hàng",
+//   },
+// ];
 
 const SidebarGarden = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   const showAnimation = {
@@ -64,8 +65,13 @@ const SidebarGarden = ({ children }) => {
     },
   };
   return (
-    <div className="main-container">
+    <div
+      className="main-container"
+     
+    >
       <motion.div
+       onMouseEnter={toggle}
+       onMouseLeave={toggle}
         className="sidebar"
         animate={{
           width: isOpen ? "330px" : "90px",
@@ -78,20 +84,20 @@ const SidebarGarden = ({ children }) => {
       >
         <div className="top_section">
           {isOpen ? (
-            <div className="logo mt-2">
+            <a href="/trang-nha-vuon" className="logo mt-2">
               <img src={require("../../assets/images/logo/fmp.png")} />
-            </div>
+            </a>
           ) : (
-            <div className="logo mt-2">
+            <a href="/trang-nha-vuon" className="logo mt-2">
               <img src={require("../../assets/images/logo/logo2.png")} />
-            </div>
+            </a>
           )}
 
           <div className="bars">
             <img
               src={require("../../assets/images/logo/icon_arrow.png")}
               className={isOpen ? "rotate180" : "rotate0"}
-              onClick={toggle}
+              // onClick={toggle}
             />
           </div>
         </div>
@@ -104,7 +110,7 @@ const SidebarGarden = ({ children }) => {
             className="link none-decoration mt-4"
           >
             <div className="icon-sidebar">
-              <BiHomeSmile />
+              <TbApps />
             </div>
             <AnimatePresence>
               {isOpen && (
@@ -142,7 +148,7 @@ const SidebarGarden = ({ children }) => {
             className="link none-decoration"
           >
             <div className="icon-sidebar">
-              <BiHomeSmile />
+              <BiBox />
             </div>
             <AnimatePresence>
               {isOpen && (
@@ -166,7 +172,7 @@ const SidebarGarden = ({ children }) => {
             className="link none-decoration"
           >
             <div className="icon-sidebar">
-              <BiHomeSmile />
+              <TbDatabaseExport />
             </div>
             <AnimatePresence>
               {isOpen && (
@@ -192,7 +198,7 @@ const SidebarGarden = ({ children }) => {
                 exit="hidden"
                 className="link_text"
               >
-                <p className="line-title">Quản lý hóa đơn</p>
+                <p className="line-title">Hóa đơn</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -203,7 +209,7 @@ const SidebarGarden = ({ children }) => {
             className="link none-decoration"
           >
             <div className="icon-sidebar">
-              <BiHomeSmile />
+              <BiFoodMenu />
             </div>
             <AnimatePresence>
               {isOpen && (
@@ -228,7 +234,7 @@ const SidebarGarden = ({ children }) => {
                 animate="show"
                 exit="hidden"
               >
-                <p className="line-title">Quản lý doanh thu</p>
+                <p className="line-title">Doanh thu</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -239,7 +245,7 @@ const SidebarGarden = ({ children }) => {
             className="link none-decoration"
           >
             <div className="icon-sidebar">
-              <BiHomeSmile />
+              <BiBarChartSquare />
             </div>
             <AnimatePresence>
               {isOpen && (
@@ -262,7 +268,7 @@ const SidebarGarden = ({ children }) => {
             className="link none-decoration"
           >
             <div className="icon-sidebar">
-              <BiHomeSmile />
+              <GoCreditCard />
             </div>
             <AnimatePresence>
               {isOpen && (

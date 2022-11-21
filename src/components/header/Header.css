@@ -1,31 +1,53 @@
 .main-header {
-    /* margin: 15px; */
+    margin: 12px;
     padding: 10px 20px 10px 0px;
     background-color: white;
-    /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.07); */
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
     display: flex;
-    /* justify-content: space-between; */
-    justify-content: flex-end;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
     /* height: 70px; */
 }
 
-.bar-information-user,
-.bar-search {
+.bar-information-user {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-left: 10px;
 }
 
-.input-search {
+.navbar-information {
+    display: flex;
+    margin: 0px 20px;
 
-    border-top: 1px !important;
-    border-left: 1px !important;
-    border-right: 1px !important;
-    border-radius: 0px !important;
-    height: 30px;
 }
+
+.navbar-information>a:hover {
+    background-color: #F4F6FA;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #00a6ff;
+}
+
+.navbar-information>a {
+    color: rgb(94, 94, 94);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.navbar-information>a>p {
+    padding: 0;
+    margin: 0;
+font-size: 16px;
+}
+
 
 .bar-information-user>a>img {
     height: 40px;
