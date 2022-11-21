@@ -15,18 +15,14 @@ const routes = [
     icon: <BiHomeSmile />,
   },
   {
-    name: "Quản lý sản phẩm",
-    icon: <BiGift />,
-    subRoutes: [
-      {
-        path: "/trang-nha-vuon/san-pham",
-        name: "Tất cả sản phẩm",
-      },
-      {
-        path: "/trang-nha-vuon/san-luong",
-        name: "Sản lượng hiện có",
-      },
-    ],
+    path: "/trang-nha-vuon/san-pham",
+    name: "Tất cả sản phẩm",
+    icon: <BiHomeSmile />,
+  },
+  {
+    path: "/trang-nha-vuon/san-luong",
+    name: "Sản lượng hiện có",
+    icon: <BiHomeSmile />,
   },
   {
     name: "Quản lý đơn hàng",
@@ -81,7 +77,7 @@ const SidebarGarden = ({ children }) => {
       <motion.div
         className="sidebar"
         animate={{
-          width: isOpen ? "330px" : "70px",
+          width: isOpen ? "330px" : "100px",
           transition: {
             duration: 0.1,
             type: "spring",
@@ -90,9 +86,13 @@ const SidebarGarden = ({ children }) => {
         }}
       >
         <div className="top_section">
-          {isOpen && (
+          {isOpen ? (
             <div className="logo mt-2">
               <img src={require("../../assets/images/logo/fmp.png")} />
+            </div>
+          ) : (
+            <div className="logo mt-2">
+              <img src={require("../../assets/images/logo/logo2.png")} />
             </div>
           )}
 

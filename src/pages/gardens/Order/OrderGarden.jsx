@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OrderGardent = () => {
+const OrderGarden = () => {
     return (
         <div>
             Đơn hàng
@@ -8,4 +8,4 @@ const OrderGardent = () => {
     );
 }
 
-export default OrderGardent;
+export default OrderGarden;

@@ -68,7 +68,7 @@ a {
 
 :root {
   --transition-header: 0.2s;
-  --background-sidebar: white;
+  --background-sidebar: #1E1E2D;
   --color-icon-header-sidebar: rgb(121, 121, 121);
   --color-hover: linear-gradient(to right, #6bb2ff, #b7daff);
   --color-main-blue: #0069D9

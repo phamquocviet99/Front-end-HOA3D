@@ -7,14 +7,14 @@ import { CiSearch } from "react-icons/ci";
 const Header = () => {
   return (
     <div className="main-header">
-      <form className="bar-search">
+      {/* <form className="bar-search">
         <div className="circle-icon">
           <a href="/">
             <CiSearch className="icon-information" />
           </a>
         </div>
         <input className="form-control input-search "></input>
-      </form>
+      </form> */}
       <div className="bar-information-user">
 
         <div className="circle-icon">
