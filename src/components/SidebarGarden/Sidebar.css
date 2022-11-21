@@ -1,6 +1,7 @@
 .sidebar {
-    background: var(--background-sidebar);
-    color: rgb(177, 177, 177);
+    /* background: var(--background-sidebar); */
+    background-color: #292b30;
+    color: rgb(224, 224, 224);
     height: 100vh;
     overflow-y: auto;
 }
@@ -15,47 +16,48 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 10px;
-    height: 90px;
+    padding: 0 10px;
 }
 
 .bars {
+    padding-left: 5px;
     margin-top: 5px;
     position: absolute;
     right: 0px;
-    font-size: 30px;
+    height: 27px;
+    width: 22px;
+    font-size: 18px;
     background-color: white;
     display: flex;
     align-items: center;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
+
 }
 
 .rotate180 {
     transform: rotate(180deg);
     transition: 0.5s;
-    color: #50CD89;
+    height: 18px;
 }
 
 .rotate0 {
     transition: 0.8s;
-    color: #50CD89;
+    height: 18px;
 }
 
-.line-sidebar {
-    height: 1px;
-    width: 100%;
-    background-color: rgb(177, 177, 177);
-    margin-bottom: 10px;
-    /* margin-top: 5px; */
+.line-title {
+    text-transform: uppercase;
+    margin: 20px 20px;
+    font-weight: bold;
+    color: rgb(114, 114, 114);
+    font-size: 13px;
 }
-
-
 
 .logo>img {
     height: 40px;
     object-fit: cover;
-    margin-left: 5px;
+    margin-left: 0px;
     transition: 0.3s;
 }
 
@@ -64,33 +66,36 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 10px;
-    margin: 5px 15px;
+    padding: 10px 25px;
+    margin: 1px 0px;
     gap: 10px;
-    border-radius: 7px;
+    /* border-radius: 7px; */
     transition: 0.1s;
+
 }
 
 .icon-sidebar {
-    font-size: 20px;
-    margin-bottom: 3px;
+    font-size: 30px;
+    margin-bottom: 7px;
 }
 
 .active {
-    color: rgb(255, 255, 255);
-    background-image: linear-gradient(to right, #0069D9, #54a6ff);
+    color: rgb(223, 223, 223);
+    /* background-image: linear-gradient(to right, #2300b0, #02afff); */
+    background-color: black;
+
 }
 
 .link:hover {
     transition: 0.1s;
-    color: rgb(255, 255, 255);
-    background-image: var(--color-hover)
+    color: rgb(223, 223, 223);
+    /* background-image: linear-gradient(to right, #2300b0, #02afff); */
+    background-color: black;
 }
 
 .link_text {
     white-space: nowrap;
-    font-size: 17px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
 }
 
 

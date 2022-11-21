@@ -1,12 +1,13 @@
 .main-header {
-    margin: 15px;
+    /* margin: 15px; */
     padding: 10px 20px 10px 0px;
     background-color: white;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.07);
+    /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.07); */
     border-radius: 5px;
     display: flex;
     /* justify-content: space-between; */
     justify-content: flex-end;
+    /* height: 70px; */
 }
 
 .bar-information-user,

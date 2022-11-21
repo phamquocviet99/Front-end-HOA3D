@@ -25,28 +25,19 @@ const routes = [
     icon: <BiHomeSmile />,
   },
   {
-    name: "Quản lý đơn hàng",
+    path: "/trang-nha-vuon/don-hang",
+    name: "Tất cả đơn hàng",
     icon: <MdPieChart />,
-    subRoutes: [
-      {
-        path: "/trang-nha-vuon/tat-ca-don-hang",
-        name: "Tất cả đơn hàng",
-      },
-    ],
   },
   {
-    name: "Quản lý tài chính",
     icon: <BiGift />,
-    subRoutes: [
-      {
-        path: "/trang-nha-vuon/doanh-thu",
-        name: "Doanh thu",
-      },
-      {
-        path: "/trang-nha-vuon/ngan-hang",
-        name: "Tài khoản ngân hàng",
-      },
-    ],
+    path: "/trang-nha-vuon/doanh-thu",
+    name: "Doanh thu",
+  },
+  {
+    icon: <BiGift />,
+    path: "/trang-nha-vuon/ngan-hang",
+    name: "Tài khoản ngân hàng",
   },
 ];
 
@@ -77,7 +68,7 @@ const SidebarGarden = ({ children }) => {
       <motion.div
         className="sidebar"
         animate={{
-          width: isOpen ? "330px" : "100px",
+          width: isOpen ? "330px" : "90px",
           transition: {
             duration: 0.1,
             type: "spring",
@@ -97,50 +88,196 @@ const SidebarGarden = ({ children }) => {
           )}
 
           <div className="bars">
-            <MdDoubleArrow
+            <img
+              src={require("../../assets/images/logo/icon_arrow.png")}
               className={isOpen ? "rotate180" : "rotate0"}
               onClick={toggle}
             />
           </div>
         </div>
-        <div className="line-sidebar"></div>
+
         <section className="routes">
-          {routes.map((route, index) => {
-            if (route.subRoutes) {
-              return (
-                <SideBarMenu
-                  showAnimation={showAnimation}
-                  setIsOpen={setIsOpen}
-                  isOpen={isOpen}
-                  route={route}
-                  key={route.name}
-                />
-              );
-            }
-            return (
-              <NavLink
-                activeClassName="active"
-                to={route.path}
-                key={index}
-                className="link none-decoration"
+          {/* DashBoard */}
+          <NavLink
+            activeClassName="active"
+            to="/trang-nha-vuon/trang-chu"
+            className="link none-decoration mt-4"
+          >
+            <div className="icon-sidebar">
+              <BiHomeSmile />
+            </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  variants={showAnimation}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="link_text"
+                >
+                  Trang chủ
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </NavLink>
+
+          {/* All Product */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                variants={showAnimation}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                className="link_text"
               >
-                <div className="icon-sidebar">{route.icon}</div>
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      variants={showAnimation}
-                      initial="hidden"
-                      animate="show"
-                      exit="hidden"
-                      className="link_text"
-                    >
-                      {route.name}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </NavLink>
-            );
-          })}
+                <p className="line-title">Sản phẩm</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <NavLink
+            activeClassName="active"
+            to="/trang-nha-vuon/san-pham"
+            className="link none-decoration"
+          >
+            <div className="icon-sidebar">
+              <BiHomeSmile />
+            </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  variants={showAnimation}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="link_text"
+                >
+                  Tất cả sản phẩm
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </NavLink>
+          {/* Quantity Product */}
+
+          <NavLink
+            activeClassName="active"
+            to="/trang-nha-vuon/san-luong"
+            className="link none-decoration"
+          >
+            <div className="icon-sidebar">
+              <BiHomeSmile />
+            </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  variants={showAnimation}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="link_text"
+                >
+                  Sản lượng hiện có
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </NavLink>
+          {/* All Orders */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                variants={showAnimation}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                className="link_text"
+              >
+                <p className="line-title">Quản lý hóa đơn</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <NavLink
+            activeClassName="active"
+            to="/trang-nha-vuon/don-hang"
+            className="link none-decoration"
+          >
+            <div className="icon-sidebar">
+              <BiHomeSmile />
+            </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  variants={showAnimation}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="link_text"
+                >
+                  Tất cả đơn hàng
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </NavLink>
+          {/* All Turnover */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                variants={showAnimation}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+              >
+                <p className="line-title">Quản lý doanh thu</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <NavLink
+            activeClassName="active"
+            to="/trang-nha-vuon/doanh-thu"
+            className="link none-decoration"
+          >
+            <div className="icon-sidebar">
+              <BiHomeSmile />
+            </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  variants={showAnimation}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="link_text"
+                >
+                  Doanh thu
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </NavLink>
+          {/* All Bank */}
+          <NavLink
+            activeClassName="active"
+            to="/trang-nha-vuon/ngan-hang"
+            className="link none-decoration"
+          >
+            <div className="icon-sidebar">
+              <BiHomeSmile />
+            </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  variants={showAnimation}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="link_text"
+                >
+                  Tài khoản ngân hàng
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </NavLink>
         </section>
       </motion.div>
       <div className="content-main-container">
