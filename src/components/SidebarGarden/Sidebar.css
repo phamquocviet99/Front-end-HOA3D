@@ -1,0 +1,117 @@
+.sidebar {
+    background: var(--background-sidebar);
+    color: rgb(177, 177, 177);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.content-main-container {
+    display: block;
+    width: 100%;
+}
+
+.bars {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+    transition: 0.5s;
+    color: #0069D9;
+}
+
+.rotate0 {
+    transition: 0.8s;
+    color: #0069D9;
+}
+
+.line-sidebar {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(177, 177, 177);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.top_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+
+.logo>img {
+    height: 35px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.link {
+    color: var(--color-icon-header-sidebar);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 5px 15px;
+    gap: 10px;
+    border-radius: 7px;
+    transition: 0.1s;
+}
+
+.icon-sidebar {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.active {
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, #0069D9, #54a6ff);
+}
+
+.link:hover {
+    transition: 0.1s;
+    color: rgb(255, 255, 255);
+    background-image: var(--color-hover)
+}
+
+.link_text {
+    white-space: nowrap;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.main-container {
+    display: flex;
+}
+
+.menu {
+    color: var(--color-icon-header-sidebar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 5px 15px;
+    gap: 10px;
+    border-radius: 7px;
+    transition: 0.1s;
+
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    font-size: 17px;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-container>.link {
+    padding-left: 20px;
+}
