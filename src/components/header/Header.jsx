@@ -13,7 +13,6 @@ const Header = () => {
         <a href="/trang-nha-vuon">
           <p>Sản phẩm</p>
         </a>
-       
       </div>
       <div className="bar-information-user">
         <div className="circle-icon">
@@ -29,9 +28,6 @@ const Header = () => {
         </div>
         <a className="none-decoration" href="/">
           <img src={require("../../assets/images/avartar/avartar.jpg")}></img>
-        </a>
-        <a href="/" className="none-decoration">
-          Trợ giúp ?
         </a>
       </div>
     </div>

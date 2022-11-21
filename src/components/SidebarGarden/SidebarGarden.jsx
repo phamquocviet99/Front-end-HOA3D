@@ -8,39 +8,7 @@ import { TbDatabaseExport } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 import Header from "../header/Header";
 import { TbApps } from "react-icons/tb";
-import SideBarMenu from "./SideBarMenu";
-// const routes = [
-//   {
-//     path: "/trang-nha-vuon/trang-chu",
-//     name: "Trang chủ",
-//     icon: <BiHomeSmile />,
-//   },
-//   {
-//     path: "/trang-nha-vuon/san-pham",
-//     name: "Tất cả sản phẩm",
-//     icon: <BiHomeSmile />,
-//   },
-//   {
-//     path: "/trang-nha-vuon/san-luong",
-//     name: "Sản lượng hiện có",
-//     icon: <BiHomeSmile />,
-//   },
-//   {
-//     path: "/trang-nha-vuon/don-hang",
-//     name: "Tất cả đơn hàng",
-//     icon: <MdPieChart />,
-//   },
-//   {
-//     icon: <BiGift />,
-//     path: "/trang-nha-vuon/doanh-thu",
-//     name: "Doanh thu",
-//   },
-//   {
-//     icon: <BiGift />,
-//     path: "/trang-nha-vuon/ngan-hang",
-//     name: "Tài khoản ngân hàng",
-//   },
-// ];
+
 
 const SidebarGarden = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +65,6 @@ const SidebarGarden = ({ children }) => {
             <img
               src={require("../../assets/images/logo/icon_arrow.png")}
               className={isOpen ? "rotate180" : "rotate0"}
-              // onClick={toggle}
             />
           </div>
         </div>
@@ -143,6 +110,7 @@ const SidebarGarden = ({ children }) => {
           </AnimatePresence>
 
           <NavLink
+          
             activeClassName="active"
             to="/trang-nha-vuon/san-pham"
             className="link none-decoration"

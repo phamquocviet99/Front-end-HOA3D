@@ -20,7 +20,6 @@
 .navbar-information {
     display: flex;
     margin: 0px 20px;
-
 }
 
 .navbar-information>a:hover {
@@ -81,3 +80,12 @@ font-size: 16px;
     color: var(--color-icon-header-sidebar);
     font-size: 23px;
 }
+
+
+@media only screen and (max-width: 1024px) {
+
+    .navbar-information {
+        display: none;
+        
+    }
+  }
