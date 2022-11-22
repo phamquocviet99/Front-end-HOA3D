@@ -4,7 +4,7 @@
 }
 .link {
     color:rgb(56, 56, 56);
-    width: 100%;
+
     padding: 15px 25px;
     gap: 10px;
     transition: 0.1s;
@@ -20,14 +20,15 @@
 }
 
 .active {
-    width: 100%;
+
     color: rgb(255, 255, 255);
     background-color:rgb(35, 120, 255);
 
 }
 
 .link:hover {
-    transition: 0.1s;
+
+
     color: rgb(255, 255, 255);
     background-color:rgb(35, 120, 255);
 }

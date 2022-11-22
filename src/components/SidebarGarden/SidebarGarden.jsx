@@ -3,14 +3,13 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { GrCreditCard } from "react-icons/gr";
 import { BiBox, BiBarChartSquare, BiFoodMenu } from "react-icons/bi";
 import { GoCreditCard } from "react-icons/go";
 import { TbDatabaseExport } from "react-icons/tb";
 import { TbApps } from "react-icons/tb";
 
-
 const SidebarGarden = ({ children }) => {
+  const [isShowing, setIsShowing] = useState(true);
   const user = {
     name: "Tom Cook",
     email: "tom@example.com",
@@ -42,7 +41,10 @@ const SidebarGarden = ({ children }) => {
                 <div className="flex h-12 items-center justify-between">
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
-                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md border border-white p-2 text-white hover:bg-gray-400 hover:text-white ">
+                    <Disclosure.Button
+                      onClick={() => setIsShowing((isShowing) => !isShowing)}
+                      className="inline-flex items-center justify-center rounded-md border border-white p-2 text-white hover:bg-gray-400 hover:text-white "
+                    >
                       <span className="sr-only">Open main menu</span>
                       {open ? (
                         <FaBars className="block h-6 w-6" aria-hidden="true" />
@@ -157,81 +159,93 @@ const SidebarGarden = ({ children }) => {
 
         <div className="flex">
           {/* SideBar */}
-          <div className=" bg-white rounded-tr-lg ">
-            <NavLink
-              activeClassName="active"
-              to="/trang-nha-vuon/trang-chu"
-              className="link none-decoration"
+          <Transition
+          show={isShowing}
+            enter="transition ease-in-out duration-300 transform"
+            enterFrom="-translate-x-full"
+            enterTo="translate-x-0"
+            leave="transition ease-in-out duration-300 transform"
+            leaveFrom="translate-x-0"
+            leaveTo="-translate-x-full"
+          >
+            <div
+              className={!isShowing ? "bg-white hidden md:block" : "bg-white"}
             >
-              <div className="">
-                <div className="icon-sidebar">
-                <TbApps />
+              <NavLink
+                activeClassName="active"
+                to="/trang-nha-vuon/trang-chu"
+                className="link none-decoration"
+              >
+                <div className="">
+                  <div className="icon-sidebar">
+                    <TbApps />
+                  </div>
+                  <div className="link_text">Trang chủ</div>
                 </div>
-                <div className="link_text">Trang chủ</div>
-              </div>
-            </NavLink>
-            <NavLink
-              activeClassName="active"
-              to="/trang-nha-vuon/san-pham"
-              className="link none-decoration"
-            >
-              <div className="">
-                <div className="icon-sidebar">
-                  <BiBox />
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                to="/trang-nha-vuon/san-pham"
+                className="link none-decoration"
+              >
+                <div className="">
+                  <div className="icon-sidebar">
+                    <BiBox />
+                  </div>
+                  <div className="link_text">Sản phẩm</div>
                 </div>
-                <div className="link_text">Sản phẩm</div>
-              </div>
-            </NavLink>
-            <NavLink
-              activeClassName="active"
-              to="/trang-nha-vuon/san-luong"
-              className="link none-decoration"
-            >
-              <div className="">
-                <div className="icon-sidebar">
-                <TbDatabaseExport />
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                to="/trang-nha-vuon/san-luong"
+                className="link none-decoration"
+              >
+                <div className="">
+                  <div className="icon-sidebar">
+                    <TbDatabaseExport />
+                  </div>
+                  <div className="link_text">Sản lượng</div>
                 </div>
-                <div className="link_text">Sản lượng</div>
-              </div>
-            </NavLink>
-            <NavLink
-              activeClassName="active"
-              to="/trang-nha-vuon/don-hang"
-              className="link none-decoration"
-            >
-              <div className="">
-                <div className="icon-sidebar">
-                <BiFoodMenu />
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                to="/trang-nha-vuon/don-hang"
+                className="link none-decoration"
+              >
+                <div className="">
+                  <div className="icon-sidebar">
+                    <BiFoodMenu />
+                  </div>
+                  <div className="link_text">Hóa đơn</div>
                 </div>
-                <div className="link_text">Hóa đơn</div>
-              </div>
-            </NavLink>
-            <NavLink
-              activeClassName="active"
-              to="/trang-nha-vuon/doanh-thu"
-              className="link none-decoration"
-            >
-              <div className="">
-                <div className="icon-sidebar">
-                <BiBarChartSquare />
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                to="/trang-nha-vuon/doanh-thu"
+                className="link none-decoration"
+              >
+                <div className="">
+                  <div className="icon-sidebar">
+                    <BiBarChartSquare />
+                  </div>
+                  <div className="link_text">Doanh thu</div>
                 </div>
-                <div className="link_text">Doanh thu</div>
-              </div>
-            </NavLink>
-            <NavLink
-              activeClassName="active"
-              to="/trang-nha-vuon/ngan-hang"
-              className="link none-decoration"
-            >
-              <div className="">
-                <div className="icon-sidebar">
-                <GoCreditCard />
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                to="/trang-nha-vuon/ngan-hang"
+                className="link none-decoration"
+              >
+                <div className="">
+                  <div className="icon-sidebar">
+                    <GoCreditCard />
+                  </div>
+                  <div className="link_text">Ngân hàng</div>
                 </div>
-                <div className="link_text">Ngân hàng</div>
-              </div>
-            </NavLink>
-          </div>
-          <div className="w-full ml-5 rounded-tl-lg">
+              </NavLink>
+            </div>
+          </Transition>
+          <div className="w-full">
             <main>{children}</main>
           </div>
         </div>
