@@ -32,13 +32,13 @@ const SidebarGarden = ({ children }) => {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <div className="background-color-side-bar">
+    <div className="">
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-green-500">
+        <Disclosure as="nav" className="bg-green-600">
           {({ open }) => (
             <>
               <div className=" px-4 sm:px-6 lg:px-8">
-                <div className="flex h-12 items-center justify-between">
+                <div className="flex h-16 items-center justify-between">
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
                     <Disclosure.Button
@@ -169,7 +169,7 @@ const SidebarGarden = ({ children }) => {
             leaveTo="-translate-x-full"
           >
             <div
-              className={!isShowing ? "bg-white hidden md:block" : "bg-white"}
+              className={!isShowing ? "bg-white hidden md:block h-screen m-3 rounded-xl" : "bg-white  h-screen m-3 rounded-xl"}
             >
               <NavLink
                 activeClassName="active"
