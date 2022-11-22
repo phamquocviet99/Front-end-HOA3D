@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const OrderGarden = () => {
-    return (
-        <div>
-            Đơn hàng
-        </div>
-    );
-}
+  return (
+    <div className="container">
+     
+    </div>
+  );
+};
 
 export default OrderGarden;

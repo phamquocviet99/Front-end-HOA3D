@@ -35,9 +35,12 @@ function App() {
 
   }
   return (
-    <BrowserRouter>
-      <GardenLayout />
-    </BrowserRouter>
+    <div >
+      <BrowserRouter>
+        <GardenLayout />
+      </BrowserRouter>
+    </div>
+
     // <BrowserRouter>
     //   {userData ?
     //     (<GardenLayout />) :

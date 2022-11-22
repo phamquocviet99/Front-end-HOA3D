@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const QuantityGarden = () => {
-    return (
-        <div>
-            Sản lượng
-        </div>
-    );
-}
+  return (
+    <div className="row">
+      
+    </div>
+  );
+};
 
 export default QuantityGarden;

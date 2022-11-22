@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const DashboardGarden = () => {
-    return (
-        <div>
-            dashboard page
-        </div>
-    );
-}
+  return (
+    <div className="row">
+
+    </div>
+  );
+};
 
 export default DashboardGarden;
