@@ -107,14 +107,13 @@ const SidebarGarden = ({ children }) => {
                       </Menu>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </>
           )}
         </Disclosure>
 
-        <div className="flex m-4">
+        <div className="flex md:m-4">
           {/* SideBar */}
           <Transition
             show={isShowing}
