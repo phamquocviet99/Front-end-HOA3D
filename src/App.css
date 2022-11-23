@@ -9,13 +9,10 @@ html {
 }
 
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
@@ -61,6 +58,7 @@ p {
 p,
 a {
   font-size: 14px;
+  text-decoration: none !important;
 }
 
 /* font-validate-input */

@@ -54,24 +54,24 @@ const SidebarGarden = ({ children }) => {
                     </Disclosure.Button>
                   </div>
                   <div className="flex items-center">
-                    <div className="flex-shrink-0">
+                    <a href="/trang-nha-vuon" className="flex-shrink-0">
                       <img
-                        className="h-9"
+                        className="h-11"
                         src={require("../../assets/images/logo/fmp.png")}
                         alt="FMP"
                       />
-                    </div>
+                    </a>
                     <div className="hidden md:block">{/* Navbar */}</div>
                   </div>
-                  <div className="hidden md:block">
+                  <div className="md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
                         <div>
-                          <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 ">
+                          <Menu.Button className="flex mr-2 max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 ">
                             <span className="sr-only">Open user menu</span>
                             <img
-                              className="h-9 w-9 rounded-full"
+                              className="h-11 w-11 rounded-full"
                               src={user.imageUrl}
                               alt=""
                             />
@@ -107,60 +107,17 @@ const SidebarGarden = ({ children }) => {
                       </Menu>
                     </div>
                   </div>
-                  <div className="-mr-2 flex md:hidden">
-                    <div className="ml-4 flex items-center md:ml-6">
-                      {/* Profile dropdown */}
-                      <Menu as="div" className="relative ml-3">
-                        <div>
-                          <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 ">
-                            <span className="sr-only">Open user menu</span>
-                            <img
-                              className="h-9 w-9 rounded-full"
-                              src={user.imageUrl}
-                              alt=""
-                            />
-                          </Menu.Button>
-                        </div>
-                        <Transition
-                          as={Fragment}
-                          enter="transition ease-out duration-100"
-                          enterFrom="transform opacity-0 scale-95"
-                          enterTo="transform opacity-100 scale-100"
-                          leave="transition ease-in duration-75"
-                          leaveFrom="transform opacity-100 scale-100"
-                          leaveTo="transform opacity-0 scale-95"
-                        >
-                          <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                            {userNavigation.map((item) => (
-                              <Menu.Item key={item.name}>
-                                {({ active }) => (
-                                  <a
-                                    href={item.href}
-                                    className={classNames(
-                                      active ? "bg-gray-100" : "",
-                                      "block px-4 py-2 text-sm text-gray-700"
-                                    )}
-                                  >
-                                    {item.name}
-                                  </a>
-                                )}
-                              </Menu.Item>
-                            ))}
-                          </Menu.Items>
-                        </Transition>
-                      </Menu>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </>
           )}
         </Disclosure>
 
-        <div className="flex">
+        <div className="flex m-4">
           {/* SideBar */}
           <Transition
-          show={isShowing}
+            show={isShowing}
             enter="transition ease-in-out duration-300 transform"
             enterFrom="-translate-x-full"
             enterTo="translate-x-0"
@@ -169,7 +126,11 @@ const SidebarGarden = ({ children }) => {
             leaveTo="-translate-x-full"
           >
             <div
-              className={!isShowing ? "bg-white hidden md:block h-screen m-3 rounded-xl" : "bg-white  h-screen m-3 rounded-xl"}
+              className={
+                !isShowing
+                  ? "bg-white hidden md:block h-screen  rounded-xl p-1"
+                  : "bg-white  h-screen  rounded-xl p-1"
+              }
             >
               <NavLink
                 activeClassName="active"
@@ -245,7 +206,7 @@ const SidebarGarden = ({ children }) => {
               </NavLink>
             </div>
           </Transition>
-          <div className="w-full">
+          <div className="w-full ml-4">
             <main>{children}</main>
           </div>
         </div>

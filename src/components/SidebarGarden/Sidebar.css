@@ -1,16 +1,17 @@
 .background-color-side-bar {
     height: 100vh;
-    background-image: linear-gradient(to RIGHT,  rgb(255, 255, 255), rgb(35, 120, 255))
+    background-image: linear-gradient(to RIGHT, rgb(255, 255, 255), rgb(35, 120, 255))
 }
-.link {
-    color:rgb(56, 56, 56);
 
+.link {
+    color: rgb(56, 56, 56);
     padding: 15px 25px;
     gap: 10px;
     transition: 0.1s;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom:4px ;
 }
 
 .icon-sidebar {
@@ -20,21 +21,20 @@
 }
 
 .active {
-
+    border-radius: 11px;
     color: rgb(255, 255, 255);
-    background-color:rgb(35, 120, 255);
+    background-color: rgb(35, 120, 255);
+
 
 }
 
 .link:hover {
-
-
+    border-radius: 11px;
     color: rgb(255, 255, 255);
-    background-color:rgb(35, 120, 255);
+    background-color: rgb(35, 120, 255);
 }
 
 .link_text {
     white-space: nowrap;
     font-size: 14px;
 }
-
