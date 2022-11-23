@@ -1,4 +1,4 @@
-import { Children, Fragment, React, useState } from "react";
+import { useEffect, Fragment, React, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
@@ -11,6 +11,15 @@ import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 
 const SidebarGarden = ({ children }) => {
+  const [linkCurrent, setLinkCurrent] = useState(window.location.pathname);
+  const [check, setCheck] = useState(false);
+
+  useEffect(() => {
+    console.log("the age has changed");
+  }, [linkCurrent]);
+  function ChangeLink() {
+    setLinkCurrent(window.location.pathname);
+  }
   const [isShowing, setIsShowing] = useState(true);
   const user = {
     name: "Tom Cook",
@@ -65,13 +74,14 @@ const SidebarGarden = ({ children }) => {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
+
   return (
-    <div className="min-h-full p-4 ">
-      <Disclosure as="nav" className="back-ground-header rounded-lg">
+    <div className="min-h-full">
+      <Disclosure as="nav" className="back-ground-header rounded-bl-3xl">
         {({ open }) => (
           <>
             <div className=" px-4 sm:px-6 lg:px-8">
-              <div className="flex h-16 items-center justify-between">
+              <div className="flex h-20 items-center justify-between">
                 <div className="-mr-2 flex md:hidden">
                   {/* Mobile menu button */}
                   <Disclosure.Button
@@ -90,15 +100,93 @@ const SidebarGarden = ({ children }) => {
                   <a href="/trang-nha-vuon" className="flex-shrink-0">
                     <img
                       className="h-11"
-                      src={require("../../assets/images/logo/fmp.png")}
+                      src={require("../../assets/images/logo/logo2.png")}
                       alt="FMP"
                     />
                   </a>
                   <div className="hidden md:block">{/* Navbar */}</div>
                 </div>
+                <a className="block px-4 py-2 text-sm text-white">HOA 3D</a>
                 <div className="md:block">
                   <div className="ml-4 flex items-center md:ml-6">
                     {/* Profile dropdown */}
+
+                    <Menu as="div" className="relative ml-3 hidden md:block">
+                      <div>
+                        <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 ">
+                          <span className="sr-only">Open user menu</span>
+                          <BiMessageRoundedDetail
+                            className="block h-6 w-6 text-white"
+                            aria-hidden="true"
+                          />
+                        </Menu.Button>
+                      </div>
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95"
+                      >
+                        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          {userNavigation.map((item) => (
+                            <Menu.Item key={item.name}>
+                              {({ active }) => (
+                                <a
+                                  href={item.href}
+                                  className={classNames(
+                                    active ? "bg-gray-100" : "",
+                                    "block px-4 py-2 text-sm text-gray-700"
+                                  )}
+                                >
+                                  {item.name}
+                                </a>
+                              )}
+                            </Menu.Item>
+                          ))}
+                        </Menu.Items>
+                      </Transition>
+                    </Menu>
+                    <Menu as="div" className="relative ml-3 hidden md:block">
+                      <div>
+                        <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 ">
+                          <span className="sr-only">Open user menu</span>
+                          <MdOutlineNotificationsNone
+                            className="block h-6 w-6 text-white"
+                            aria-hidden="true"
+                          />
+                        </Menu.Button>
+                      </div>
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95"
+                      >
+                        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          {userNavigation.map((item) => (
+                            <Menu.Item key={item.name}>
+                              {({ active }) => (
+                                <a
+                                  href={item.href}
+                                  className={classNames(
+                                    active ? "bg-gray-100" : "",
+                                    "block px-4 py-2 text-sm text-gray-700"
+                                  )}
+                                >
+                                  {item.name}
+                                </a>
+                              )}
+                            </Menu.Item>
+                          ))}
+                        </Menu.Items>
+                      </Transition>
+                    </Menu>
                     <Menu as="div" className="relative ml-3">
                       <div>
                         <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 ">
@@ -138,88 +226,6 @@ const SidebarGarden = ({ children }) => {
                         </Menu.Items>
                       </Transition>
                     </Menu>
-                    <a
-                      href="#"
-                      className="hidden block px-3 text-md text-black md:block"
-                    >
-                      {user.name}
-                    </a>
-                    <Menu as="div" className="relative ml-3 hidden md:block">
-                      <div>
-                        <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 bg-white">
-                          <span className="sr-only">Open user menu</span>
-                          <BiMessageRoundedDetail
-                            className="block h-6 w-6"
-                            aria-hidden="true"
-                          />
-                        </Menu.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                      >
-                        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                          {userNavigation.map((item) => (
-                            <Menu.Item key={item.name}>
-                              {({ active }) => (
-                                <a
-                                  href={item.href}
-                                  className={classNames(
-                                    active ? "bg-gray-100" : "",
-                                    "block px-4 py-2 text-sm text-gray-700"
-                                  )}
-                                >
-                                  {item.name}
-                                </a>
-                              )}
-                            </Menu.Item>
-                          ))}
-                        </Menu.Items>
-                      </Transition>
-                    </Menu>
-                    <Menu as="div" className="relative ml-3 hidden md:block">
-                      <div>
-                        <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 bg-white">
-                          <span className="sr-only">Open user menu</span>
-                          <MdOutlineNotificationsNone
-                            className="block h-6 w-6"
-                            aria-hidden="true"
-                          />
-                        </Menu.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                      >
-                        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                          {userNavigation.map((item) => (
-                            <Menu.Item key={item.name}>
-                              {({ active }) => (
-                                <a
-                                  href={item.href}
-                                  className={classNames(
-                                    active ? "bg-gray-100" : "",
-                                    "block px-4 py-2 text-sm text-gray-700"
-                                  )}
-                                >
-                                  {item.name}
-                                </a>
-                              )}
-                            </Menu.Item>
-                          ))}
-                        </Menu.Items>
-                      </Transition>
-                    </Menu>
                   </div>
                 </div>
               </div>
@@ -227,8 +233,8 @@ const SidebarGarden = ({ children }) => {
           </>
         )}
       </Disclosure>
-
-      <div className="flex mt-4">
+      {/* <div className="h-5 bg-white"></div> */}
+      <div className="flex">
         {/* SideBar */}
         <Transition
           show={isShowing}
@@ -239,13 +245,23 @@ const SidebarGarden = ({ children }) => {
           leaveFrom="translate-x-0"
           leaveTo="-translate-x-full"
         >
-          <div className="back-ground-side hidden md:block h-screen rounded-lg p-1 w-24">
+          <div className="back-ground-side hidden md:block h-screen pt-20 w-28">
             {sideBar.map((s, index) => (
               <NavLink
+                onClick={ChangeLink}
                 activeClassName="active"
                 to={s.link}
                 className="link none-decoration "
               >
+                {/* {linkCurrent === s.link ? (
+                  <>
+                    <div className="aaa"></div>
+                    <div className="bbb"></div>
+                  </>
+                ) : (
+                  <></>
+                )} */}
+
                 <div className="text-center">
                   <div className="container-icon">
                     <div className="icon-sidebar">{s.icon}</div>
@@ -254,9 +270,32 @@ const SidebarGarden = ({ children }) => {
                 </div>
               </NavLink>
             ))}
+            {/* <NavLink
+              activeClassName="active"
+              to="/trang-nha-vuon/ngan-hang"
+              className="link none-decoration "
+            >
+              {window.location.pathname === "/trang-nha-vuon/ngan-hang" ? (
+                <>
+                  <div className="aaa"></div>
+                  <div className="bbb"></div>
+                </>
+              ) : (
+                <></>
+              )}
+
+              <div className="text-center">
+                <div className="container-icon">
+                  <div className="icon-sidebar">
+                    <TbApps />
+                  </div>
+                </div>
+                <div className="link_text">sss</div>
+              </div>
+            </NavLink> */}
           </div>
         </Transition>
-        <div className="w-full ml-4">
+        <div className="w-full pt-4 pb-4 pr-10">
           <main>{children}</main>
         </div>
       </div>

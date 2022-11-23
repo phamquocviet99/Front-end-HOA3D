@@ -2,40 +2,11 @@ import React from "react";
 
 const DashboardGarden = () => {
   return (
-    <div className="row">
-      <div className="col-md-3">
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
+<div className="row">
+        <div className="col-md-12">
+          <div className="bg-element h-screen rounded-3xl"></div>
+        </div>
       </div>
-      <div className="col-md-3">
-        {" "}
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div>
-      <div className="col-md-6">
-        {" "}
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div>
-      <div className="col-md-3">
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div>
-      <div className="col-md-3">
-        {" "}
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div>
-      <div className="col-md-6">
-        {" "}
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div> <div className="col-md-3">
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div>
-      <div className="col-md-3">
-        {" "}
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div>
-      <div className="col-md-6">
-        {" "}
-        <div className="h-36 bg-element rounded-lg mt-2"></div>
-      </div>
-    </div>
   );
 };
 

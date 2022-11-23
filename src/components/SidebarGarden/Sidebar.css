@@ -1,29 +1,33 @@
 .back-ground-side {
-    background-color: #41965F;
+    background-color: #276221;
 }
 
 .back-ground-header {
-    background-color: #41965F;
+    background-color: #46883e;
 }
-.bg-element{
-    background-color: #FCFDF8;
+
+.bg-element {
+    background-color: #C9DCBE;
 }
 
 .link {
+    height: 90px;
     color: #EEFFED;
     padding: 10px 20px;
     gap: 10px;
-    transition: 0.1s;
+ 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4px;
+    position: relative;
 }
+
+
 
 .icon-sidebar {
     height: 42px;
     width: 42px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     font-size: 25px;
     display: flex;
     align-items: center;
@@ -32,15 +36,73 @@
 }
 
 .active {
-    border-radius: 8px;
-    color: rgb(255, 255, 255);
-    background-color: #0E632C;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    color: #276221;
+    background-color: #C9DCBE;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(86, 86, 206, 0);
+    border-radius: 50%;
+    box-shadow: 22px 22px 0px 5px #C9DCBE;
+    pointer-events: none;
+    transition: 0.1s;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(86, 86, 206, 0);
+    border-radius: 50%;
+    box-shadow: 22px -22px 0px 5px #C9DCBE;
+    pointer-events: none;
+    transition: 0.1s;
 }
 
 .link:hover {
-    border-radius: 8px;
-    color: rgb(255, 255, 255);
-    background-color: #0E632C;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    color: #276221;
+    background-color: #C9DCBE;
+}
+
+.link:hover::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(86, 86, 206, 0);
+    border-radius: 50%;
+    box-shadow: 22px 22px 0px 5px #C9DCBE;
+    pointer-events: none;
+
+}
+
+.link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(86, 86, 206, 0);
+    border-radius: 50%;
+    box-shadow: 22px -22px 0px 5px #C9DCBE;
+    pointer-events: none;
+
 }
 
 .link_text {
