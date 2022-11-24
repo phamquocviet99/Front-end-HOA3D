@@ -77,7 +77,7 @@ const SidebarGarden = ({ children }) => {
 
   return (
     <div className="min-h-full">
-      <Disclosure as="nav" className="back-ground-header rounded-bl-3xl">
+      <Disclosure as="nav" className="bolder-bottom-header">
         {({ open }) => (
           <>
             <div className=" px-4 sm:px-6 lg:px-8">
@@ -96,17 +96,22 @@ const SidebarGarden = ({ children }) => {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex items-center">
-                  <a href="/trang-nha-vuon" className="flex-shrink-0">
+                <div className="flex items-center ml-2 ">
+                  <a
+                    href="/trang-nha-vuon"
+                    className="flex-shrink-0 flex items-center"
+                  >
                     <img
-                      className="h-11"
-                      src={require("../../assets/images/logo/logo2.png")}
+                      className="h-12"
+                      src={require("../../assets/images/logo/logo3.png")}
                       alt="FMP"
                     />
                   </a>
+                  <div className=" hidden md:block w-full flex items-center">
+                    <p className="font-text-logo">HOA 3D</p>
+                  </div>
                   <div className="hidden md:block">{/* Navbar */}</div>
                 </div>
-                <a className="block px-4 py-2 text-sm text-white">HOA 3D</a>
                 <div className="md:block">
                   <div className="ml-4 flex items-center md:ml-6">
                     {/* Profile dropdown */}
@@ -187,7 +192,7 @@ const SidebarGarden = ({ children }) => {
                         </Menu.Items>
                       </Transition>
                     </Menu>
-                    <Menu as="div" className="relative ml-3">
+                    <Menu as="div" className="relative ml-3 mr-5">
                       <div>
                         <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 ">
                           <span className="sr-only">Open user menu</span>
@@ -233,69 +238,35 @@ const SidebarGarden = ({ children }) => {
           </>
         )}
       </Disclosure>
-      {/* <div className="h-5 bg-white"></div> */}
+      <div className="h-5 relative ">
+        <div className="absolute h-5 w-44 back-ground-side ml-24 z-10"></div>
+      </div>
       <div className="flex">
         {/* SideBar */}
-        <Transition
-          show={isShowing}
-          enter="transition ease-in-out duration-300 transform"
-          enterFrom="-translate-x-full"
-          enterTo="translate-x-0"
-          leave="transition ease-in-out duration-300 transform"
-          leaveFrom="translate-x-0"
-          leaveTo="-translate-x-full"
-        >
-          <div className="back-ground-side hidden md:block h-screen pt-20 w-28">
-            {sideBar.map((s, index) => (
-              <NavLink
-                onClick={ChangeLink}
-                activeClassName="active"
-                to={s.link}
-                className="link none-decoration "
-              >
-                {/* {linkCurrent === s.link ? (
-                  <>
-                    <div className="aaa"></div>
-                    <div className="bbb"></div>
-                  </>
-                ) : (
-                  <></>
-                )} */}
 
-                <div className="text-center">
-                  <div className="container-icon">
-                    <div className="icon-sidebar">{s.icon}</div>
-                  </div>
-                  <div className="link_text">{s.name}</div>
-                </div>
-              </NavLink>
-            ))}
-            {/* <NavLink
+        <div className="w-48 md:block md:w-48 back-ground-side h-screen fixed">
+          {sideBar.map((s, index) => (
+            <NavLink
+              onClick={ChangeLink}
               activeClassName="active"
-              to="/trang-nha-vuon/ngan-hang"
+              to={s.link}
               className="link none-decoration "
             >
-              {window.location.pathname === "/trang-nha-vuon/ngan-hang" ? (
-                <>
-                  <div className="aaa"></div>
-                  <div className="bbb"></div>
-                </>
-              ) : (
-                <></>
-              )}
-
-              <div className="text-center">
-                <div className="container-icon">
-                  <div className="icon-sidebar">
-                    <TbApps />
+              <div className="flex w-full h-12">
+                <div className=" flex justify-center items-center">
+                  <div className="flex justify-center items-center text-3xl ">
+                    {s.icon}
                   </div>
                 </div>
-                <div className="link_text">sss</div>
+                <div className="hidden md:block  md:flex items-center text-sm whitespace-nowrap md:ml-4 ">
+                  {s.name}
+                </div>
               </div>
-            </NavLink> */}
-          </div>
-        </Transition>
-        <div className="w-full pt-4 pb-4 pr-10">
+            </NavLink>
+          ))}
+        </div>
+
+        <div className="w-full pb-4 pr-10 pl-48">
           <main>{children}</main>
         </div>
       </div>
