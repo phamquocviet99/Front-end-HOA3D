@@ -1,20 +1,19 @@
 .form-login {
-    /* background-image: url("../../assets/images/image/background-login.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
 
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: #EFEFEF; */
+
+    /* background-color: var(--background-color-page); */
+    background-image: linear-gradient(to left bottom, #960098, rgb(54, 87, 160),  #01DBDD)
 }
 
 .box-login {
 
     width: 400px;
     background-color: white;
-    border-radius: 35px;
+    border-radius: 20px;
     box-shadow: 0px 0px 20px 10px #00000021;
     padding: 35px;
     text-align: center;
@@ -26,5 +25,17 @@
 
 .btn-login {
     width: 100%;
+
 }
 
+.left-login {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.right-login {
+    width: 500px;
+    height: 500px;
+}

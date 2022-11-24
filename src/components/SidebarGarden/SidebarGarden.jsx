@@ -9,6 +9,7 @@ import { TbDatabaseExport } from "react-icons/tb";
 import { TbApps } from "react-icons/tb";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
+import { HiOutlineUserCircle } from "react-icons/hi";
 
 const SidebarGarden = ({ children }) => {
   const [isShowing, setIsShowing] = useState(false);
@@ -18,13 +19,6 @@ const SidebarGarden = ({ children }) => {
     imageUrl:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   };
-  const navigation = [
-    { name: "Dashboard", href: "#", current: true },
-    { name: "Team", href: "#", current: false },
-    { name: "Projects", href: "#", current: false },
-    { name: "Calendar", href: "#", current: false },
-    { name: "Reports", href: "#", current: false },
-  ];
   const userNavigation = [
     { name: "Your Profile", href: "#" },
     { name: "Settings", href: "#" },
@@ -60,6 +54,11 @@ const SidebarGarden = ({ children }) => {
       name: "Ngân hàng",
       link: "/trang-nha-vuon/ngan-hang",
       icon: <GoCreditCard />,
+    },
+    {
+      name: "Thông tin",
+      link: "/trang-nha-vuon/nguoi-dung",
+      icon: <HiOutlineUserCircle />,
     },
   ];
   function classNames(...classes) {
@@ -203,7 +202,19 @@ const SidebarGarden = ({ children }) => {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <div className="flex items-center p-3">
+                            <img
+                              className="h-11 w-11 rounded-full"
+                              src={user.imageUrl}
+                              alt=""
+                            />
+
+                            <p className="mb-0 ml-2 font-semibold text-base">
+                              Quốc Việt Phạm
+                            </p>
+                          </div>
+                          <div className="line-page"></div>
                           {userNavigation.map((item) => (
                             <Menu.Item key={item.name}>
                               {({ active }) => (
@@ -219,6 +230,13 @@ const SidebarGarden = ({ children }) => {
                               )}
                             </Menu.Item>
                           ))}
+                          <div className="line-page"></div>
+                          <div className="flex items-center justify-center my-2">
+                            
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-lg">
+                              Đăng xuất
+                            </button>
+                          </div>
                         </Menu.Items>
                       </Transition>
                     </Menu>
@@ -229,12 +247,17 @@ const SidebarGarden = ({ children }) => {
           </>
         )}
       </Disclosure>
-      <div className="h-5 relative ">
-        <div className="absolute h-5 w-22 md:w-44 back-ground-side ml:10 md:ml-24 z-10"></div>
-      </div>
+      <div className="h-5  "></div>
       <div className="flex">
         {/* SideBar */}
         <div className="hidden md:block w-48 back-ground-side h-screen fixed">
+          <div className="ml-1 my-2 w-full flex justify-center items-center h-14">
+            <img
+              className="h-12"
+              src={require("../../assets/images/logo/fmp.png")}
+              alt="FMP"
+            />
+          </div>
           {sideBar.map((s, index) => (
             <NavLink
               activeClassName="active"
@@ -247,7 +270,7 @@ const SidebarGarden = ({ children }) => {
                     {s.icon}
                   </div>
                 </div>
-                <div className=" flex items-center text-sm whitespace-nowrap ml-4 ">
+                <div className=" flex items-center font-medium text-lg whitespace-nowrap ml-4 ">
                   {s.name}
                 </div>
               </div>

@@ -68,10 +68,17 @@ a {
   font-style: italic;
 }
 
+.bg-page {
+  background-color: var(--background-color-page);
+  min-height: 100vh;
+}
+
 :root {
-  --transition-header: 0.2s;
-  --background-sidebar: #1E1E2D;
-  --color-icon-header-sidebar: #93939d;
-  --color-hover: linear-gradient(to right, #6bb2ff, #b7daff);
-  --color-main-blue: #0069D9
+  /* --background-color-page: #C9DCBE; */
+  --background-color-page: #e0edd9;
+}
+.line-page{
+  height: 1px;
+  background-color: var(--background-color-page);
+  width: 100%;
 }

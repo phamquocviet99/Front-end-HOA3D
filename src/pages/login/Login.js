@@ -39,15 +39,15 @@ function Login() {
   return (
     <div className='form-login'>
       <div className='box-login '>
-        <div className='col d-flex justify-content-center mb-5'><img src={require("../../assets/images/logo/logo-HOA3D.jpg")} alt="" />
+        <div className='col d-flex justify-content-center mb-3'><img src={require("../../assets/images/logo/fmp.png")} alt="" />
         </div>
-        <h3>ĐĂNG NHẬP VỚI HOA3D</h3>
+        <h3 className='font-bold'>ĐĂNG NHẬP</h3>
         <form>
           <div className="form-group mt-4">
             <input
               type="text"
               className="form-control"
-              placeholder="Email/Số điện thoại/Tên đăng nhập"
+              placeholder="Tên đăng nhập hoặc số điện thoại"
               name='username'
               id='username'
               autoComplete='username'
@@ -64,7 +64,7 @@ function Login() {
               autoComplete='current-password'
               placeholder="Mật khẩu"
               onChange={onChangePassword} />
-              
+
             <p className='error-validate'>{validationMsg.password}</p>
           </div>
           <div className='mt-3'>
@@ -72,10 +72,10 @@ function Login() {
           </div>
           <button
             type="button"
-            className="btn btn-login  btn-primary mt-3"
+            className="btn btn-login  btn-success mt-3"
             onClick={onSubmitLogin}
           >Đăng nhập kênh người bán</button>
-          <h2 className='line-or-login'><span>OR</span></h2>
+
           <div className='mt-3'>
             <p >Chưa có tài khoản HOA3D ? <a href='/' className='none-decoration'>Tạo tài khoản</a></p>
           </div>
