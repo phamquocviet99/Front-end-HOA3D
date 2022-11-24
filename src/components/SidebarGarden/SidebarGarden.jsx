@@ -11,16 +11,7 @@ import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 
 const SidebarGarden = ({ children }) => {
-  const [linkCurrent, setLinkCurrent] = useState(window.location.pathname);
-  const [check, setCheck] = useState(false);
-
-  useEffect(() => {
-    console.log("the age has changed");
-  }, [linkCurrent]);
-  function ChangeLink() {
-    setLinkCurrent(window.location.pathname);
-  }
-  const [isShowing, setIsShowing] = useState(true);
+  const [isShowing, setIsShowing] = useState(false);
   const user = {
     name: "Tom Cook",
     email: "tom@example.com",
@@ -86,7 +77,7 @@ const SidebarGarden = ({ children }) => {
                   {/* Mobile menu button */}
                   <Disclosure.Button
                     onClick={() => setIsShowing((isShowing) => !isShowing)}
-                    className="inline-flex items-center justify-center rounded-md border border-white p-2 text-white hover:bg-gray-400 hover:text-white "
+                    className="inline-flex items-center justify-center rounded-md border border-white p-2 text-white  "
                   >
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -96,7 +87,7 @@ const SidebarGarden = ({ children }) => {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex items-center ml-2 ">
+                <div className="md:flex items-center ml-2  hidden md:block">
                   <a
                     href="/trang-nha-vuon"
                     className="flex-shrink-0 flex items-center"
@@ -107,7 +98,7 @@ const SidebarGarden = ({ children }) => {
                       alt="FMP"
                     />
                   </a>
-                  <div className=" hidden md:block w-full flex items-center">
+                  <div className=" w-full flex items-center">
                     <p className="font-text-logo">HOA 3D</p>
                   </div>
                   <div className="hidden md:block">{/* Navbar */}</div>
@@ -192,7 +183,7 @@ const SidebarGarden = ({ children }) => {
                         </Menu.Items>
                       </Transition>
                     </Menu>
-                    <Menu as="div" className="relative ml-3 mr-5">
+                    <Menu as="div" className="relative ml-3 md:mr-5">
                       <div>
                         <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 ">
                           <span className="sr-only">Open user menu</span>
@@ -239,18 +230,16 @@ const SidebarGarden = ({ children }) => {
         )}
       </Disclosure>
       <div className="h-5 relative ">
-        <div className="absolute h-5 w-44 back-ground-side ml-24 z-10"></div>
+        <div className="absolute h-5 w-22 md:w-44 back-ground-side ml:10 md:ml-24 z-10"></div>
       </div>
       <div className="flex">
         {/* SideBar */}
-
-        <div className="w-48 md:block md:w-48 back-ground-side h-screen fixed">
+        <div className="hidden md:block w-48 back-ground-side h-screen fixed">
           {sideBar.map((s, index) => (
             <NavLink
-              onClick={ChangeLink}
               activeClassName="active"
               to={s.link}
-              className="link none-decoration "
+              className="link none-decoration ml-5 "
             >
               <div className="flex w-full h-12">
                 <div className=" flex justify-center items-center">
@@ -258,15 +247,45 @@ const SidebarGarden = ({ children }) => {
                     {s.icon}
                   </div>
                 </div>
-                <div className="hidden md:block  md:flex items-center text-sm whitespace-nowrap md:ml-4 ">
+                <div className=" flex items-center text-sm whitespace-nowrap ml-4 ">
                   {s.name}
                 </div>
               </div>
             </NavLink>
           ))}
         </div>
+        <Transition
+          show={isShowing}
+          enter="transition-opacity duration-75"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-150"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className=" md:hidden w-16 back-ground-side pt-14 pb-6 rounded-r-xl fixed">
+            {sideBar.map((s, index) => (
+              <NavLink
+                activeClassName="active"
+                to={s.link}
+                className="link none-decoration ml-2"
+              >
+                <div className="flex w-full h-12">
+                  <div className=" flex justify-center items-center">
+                    <div className="flex justify-center items-center text-3xl ">
+                      {s.icon}
+                    </div>
+                  </div>
+                  <div className="hidden md:block  md:flex items-center text-sm whitespace-nowrap md:ml-4 ">
+                    {s.name}
+                  </div>
+                </div>
+              </NavLink>
+            ))}
+          </div>
+        </Transition>
 
-        <div className="w-full pb-4 pr-10 pl-48">
+        <div className="w-full pl-5 pb-4 pr-5 md:pr-10 md:pl-48">
           <main>{children}</main>
         </div>
       </div>

@@ -1,5 +1,9 @@
-.back-ground-side {
+/* .back-ground-side {
     background-color: #276221;
+} */
+
+.back-ground-side {
+    background-color: #10883E;
 }
 
 .back-ground-header {
@@ -31,7 +35,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     margin-bottom: 25px;
 }
 
@@ -96,12 +100,10 @@
 
 .link:hover {
     transition: 0.09s;
-    padding-right: 5px;
     border-radius: 25px;
     color: #276221;
     background-color: #C9DCBE;
-    /* color: white;
-    background-color: #1e4919; */
+
 }
 
 /* .link:hover::before {
