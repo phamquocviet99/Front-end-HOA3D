@@ -122,7 +122,7 @@ const SidebarGarden = ({ children }) => {
         </div>
       </Transition>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bolder-bottom-header mb-4">
+        <Disclosure as="nav" className="">
           {({ open }) => (
             <>
               <div className=" px-4 sm:px-6 lg:px-8">
@@ -306,10 +306,10 @@ const SidebarGarden = ({ children }) => {
           <div className="w-full md:ml-5 rounded-3xl bg-side-test sm:bg-transparent">
             {/* <div className="w-full md:ml-5 rounded-3xl bg-side-test "> */}
             {/* SideBar for MD */}
-            <div className="hidden md:block w-48  h-screen fixed">
-              <div className="ml-1 my-2 w-full flex justify-center items-center h-12 mt-3">
+            <div className="hidden md:block w-48  h-screen fixed pt-5">
+              {/* <div className="ml-1 my-2 w-full flex justify-center items-center h-12 mt-3">
                 <h4 className="text-white font-bold text-md">Nhà Vườn</h4>
-              </div>
+              </div> */}
               {sideBar.map((s, index) => (
                 <NavLink
                   activeClassName="active"
