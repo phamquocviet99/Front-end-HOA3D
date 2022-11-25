@@ -232,7 +232,6 @@ const SidebarGarden = ({ children }) => {
                           ))}
                           <div className="line-page"></div>
                           <div className="flex items-center justify-center my-2">
-                            
                             <button class="bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-lg">
                               Đăng xuất
                             </button>
@@ -247,8 +246,8 @@ const SidebarGarden = ({ children }) => {
           </>
         )}
       </Disclosure>
-      <div className="h-5  "></div>
-      <div className="flex">
+      <div className="h-5"></div>
+      <div className="flex relative">
         {/* SideBar */}
         <div className="hidden md:block w-48 back-ground-side h-screen fixed">
           <div className="ml-1 my-2 w-full flex justify-center items-center h-14">
@@ -286,20 +285,26 @@ const SidebarGarden = ({ children }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className=" md:hidden w-16 back-ground-side pt-14 pb-6 rounded-r-xl fixed">
+          <div
+            onClick={() => setIsShowing((isShowing) => !isShowing)}
+            className="absolute background-side-phone h-full w-full"
+          ></div>
+
+          <div className=" absolute z-10 md:hidden w-22 back-ground-side pt-10 pb-6  fixed h-screen">
             {sideBar.map((s, index) => (
               <NavLink
+                key={index}
                 activeClassName="active"
                 to={s.link}
-                className="link none-decoration ml-2"
+                className="link none-decoration ml-2 mr-2"
               >
                 <div className="flex w-full h-12">
                   <div className=" flex justify-center items-center">
-                    <div className="flex justify-center items-center text-3xl ">
+                    <div className="flex justify-center items-center text-2xl ">
                       {s.icon}
                     </div>
                   </div>
-                  <div className="hidden md:block  md:flex items-center text-sm whitespace-nowrap md:ml-4 ">
+                  <div className="flex items-center text-sm whitespace-nowrap ml-3 ">
                     {s.name}
                   </div>
                 </div>
@@ -309,7 +314,7 @@ const SidebarGarden = ({ children }) => {
         </Transition>
 
         <div className="w-full pl-5 pb-4 pr-5 md:pr-10 md:pl-48">
-          <main>{children}</main>
+          <div>{children}</div>
         </div>
       </div>
     </div>
