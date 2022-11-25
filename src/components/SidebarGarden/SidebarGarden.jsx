@@ -103,7 +103,7 @@ const SidebarGarden = ({ children }) => {
                   key={index}
                   activeClassName="active"
                   to={s.link}
-                  className="link none-decoration ml-2 mr-2"
+                  className="link none-decoration ml-2 mr-2 mb-7"
                 >
                   <div className="flex w-full h-12">
                     <div className=" flex justify-center items-center">
@@ -316,7 +316,7 @@ const SidebarGarden = ({ children }) => {
               <NavLink
                 activeClassName="active"
                 to={s.link}
-                className="link none-decoration ml-5 "
+                className="link none-decoration ml-5 mb-8"
               >
                 <div className="flex w-full h-12">
                   <div className=" flex justify-center items-center">
