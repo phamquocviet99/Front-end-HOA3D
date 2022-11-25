@@ -122,7 +122,7 @@ const SidebarGarden = ({ children }) => {
         </div>
       </Transition>
       <div className="min-h-full">
-        <Disclosure as="nav" className="">
+        <Disclosure as="nav" className="bolder-bottom-header mb-4">
           {({ open }) => (
             <>
               <div className=" px-4 sm:px-6 lg:px-8">
