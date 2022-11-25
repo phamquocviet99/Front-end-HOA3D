@@ -78,7 +78,7 @@ const SidebarGarden = ({ children }) => {
       >
         <div
           onClick={() => setIsShowing((isShowing) => !isShowing)}
-          className="absolute flex justify-start background-side-phone h-full w-full fixed md:hidden"
+          className="absolute z-20 flex justify-start background-side-phone h-full w-full fixed md:hidden"
         >
           <div className="flex justify-center items-center w-1/2 back-ground-side pt-10 pb-6 h-full fixed">
             <div>
