@@ -26,37 +26,37 @@ const SidebarGarden = ({ children }) => {
   ];
   const sideBar = [
     {
-      name: "Trang chủ",
+      name: "Trang Chủ",
       link: "/trang-nha-vuon/trang-chu",
       icon: <TbApps />,
     },
     {
-      name: "Sản phẩm",
+      name: "Sản Phẩm",
       link: "/trang-nha-vuon/san-pham",
       icon: <BiBox />,
     },
     {
-      name: "Sản lượng",
+      name: "Sản Lượng",
       link: "/trang-nha-vuon/san-luong",
       icon: <TbDatabaseExport />,
     },
     {
-      name: "Hóa đơn",
+      name: "Hóa Đơn",
       link: "/trang-nha-vuon/don-hang",
       icon: <BiFoodMenu />,
     },
     {
-      name: "Doanh thu",
+      name: "Doanh Thu",
       link: "/trang-nha-vuon/doanh-thu",
       icon: <BiBarChartSquare />,
     },
     {
-      name: "Ngân hàng",
+      name: "Ngân Hàng",
       link: "/trang-nha-vuon/ngan-hang",
       icon: <GoCreditCard />,
     },
     {
-      name: "Thông tin",
+      name: "Thông Tin",
       link: "/trang-nha-vuon/nguoi-dung",
       icon: <HiOutlineUserCircle />,
     },
@@ -122,7 +122,7 @@ const SidebarGarden = ({ children }) => {
         </div>
       </Transition>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bolder-bottom-header ">
+        <Disclosure as="nav" className="">
           {({ open }) => (
             <>
               <div className=" px-4 sm:px-6 lg:px-8">
@@ -301,39 +301,38 @@ const SidebarGarden = ({ children }) => {
             </>
           )}
         </Disclosure>
-        <div className="h-5"></div>
-        <div className="flex ">
-          {/* SideBar for MD */}
-          <div className="hidden md:block w-48 back-ground-side h-screen fixed">
-            <div className="ml-1 my-2 w-full flex justify-center items-center h-14">
-              <img
-                className="h-12"
-                src={require("../../assets/images/logo/fmp.png")}
-                alt="FMP"
-              />
-            </div>
-            {sideBar.map((s, index) => (
-              <NavLink
-                activeClassName="active"
-                to={s.link}
-                className="link none-decoration ml-5 mb-8"
-              >
-                <div className="flex w-full h-12">
-                  <div className=" flex justify-center items-center">
-                    <div className="flex justify-center items-center text-3xl ">
-                      {s.icon}
+        {/* <div className="h-5"></div> */}
+        <div className="flex mx-2 pb-2 md:pr-10 md:mb-5">
+          <div className="w-full md:ml-5 rounded-3xl bg-side-test sm:bg-transparent">
+            {/* <div className="w-full md:ml-5 rounded-3xl bg-side-test "> */}
+            {/* SideBar for MD */}
+            <div className="hidden md:block w-48  h-screen fixed">
+              <div className="ml-1 my-2 w-full flex justify-center items-center h-12 mt-3">
+                <h4 className="text-white font-bold text-md">Nhà Vườn</h4>
+              </div>
+              {sideBar.map((s, index) => (
+                <NavLink
+                  activeClassName="active"
+                  to={s.link}
+                  className="link none-decoration ml-5 mb-8"
+                >
+                  <div className="flex w-full h-12">
+                    <div className=" flex justify-center items-center">
+                      <div className="flex justify-center items-center text-3xl ">
+                        {s.icon}
+                      </div>
+                    </div>
+                    <div className=" flex items-center font-medium text-lg whitespace-nowrap ml-4 ">
+                      {s.name}
                     </div>
                   </div>
-                  <div className=" flex items-center font-medium text-lg whitespace-nowrap ml-4 ">
-                    {s.name}
-                  </div>
-                </div>
-              </NavLink>
-            ))}
-          </div>
+                </NavLink>
+              ))}
+            </div>
 
-          <div className="w-full pl-5 pb-4 pr-5 md:pr-10 md:pl-48">
-            <div>{children}</div>
+            <div className="w-full pl-0  pr-0 md:pr-0  md:pl-48 ">
+              <div>{children}</div>
+            </div>
           </div>
         </div>
       </div>

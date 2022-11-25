@@ -18,6 +18,10 @@
     border-bottom: 1px solid var(--background-color-page);
 }
 
+.bg-side-test{
+   background-color:  #0e642f;
+}
+
 
 .font-text-logo {
     color: white;
@@ -101,7 +105,7 @@
     width: 35px;
     background-color: rgba(86, 86, 206, 0);
     border-radius: 50%;
-    box-shadow: 22px 22px 0px 5px var(--background-color-page);
+    box-shadow: 19px 22px 0px 5px var(--background-color-page);
     pointer-events: none;
 
 }
@@ -116,12 +120,12 @@
     width: 35px;
     background-color: rgba(86, 86, 206, 0);
     border-radius: 50%;
-    box-shadow: 22px -22px 0px 5px var(--background-color-page);
+    box-shadow: 19px -22px 0px 5px var(--background-color-page);
     pointer-events: none;
 
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 720px) {
     .link {
 
         color: #EEFFED;
