@@ -42,7 +42,7 @@
 }
 
 .background-side-phone {
-    background-color: #245e1e25;
+    background-color: #1b251a56;
 }
 
 .active {
@@ -137,7 +137,6 @@
 
 
     .active {
-
         border-radius: 25px;
         color: #276221;
         background-color: var(--background-color-page)

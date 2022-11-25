@@ -21,7 +21,7 @@ function App() {
       <div>
         <SidebarGarden>
           <Routes>
-            <Route path="*" element={<Navigate replace to="/trang-nha-vuon" />} />
+            {/* <Route path="*" element={<Navigate replace to="/trang-nha-vuon" />} /> */}
             <Route path="/trang-nha-vuon" element={<Navigate replace to="/trang-nha-vuon/trang-chu" />} />
             <Route path="/trang-nha-vuon/trang-chu" element={<DashboardGarden />} />
             <Route path="/trang-nha-vuon/san-pham" element={<ProductGarden />} />
@@ -39,14 +39,14 @@ function App() {
   return (
     <div >
       <BrowserRouter>
-      {/* <Routes>  <Route path="/trang-nha-vuon/dang-nhap" element={<Login />} /></Routes> */}
+        <Routes>  <Route path="/trang-nha-vuon/dang-nhap" element={<Login />} /></Routes>
         <GardenLayout />
-      
+
       </BrowserRouter>
     </div>
 
     // <BrowserRouter>
-    
+
     //   {userData ?
     //     (<GardenLayout />) :
     //     (<Routes>
