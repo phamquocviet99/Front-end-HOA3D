@@ -100,7 +100,7 @@ const SidebarGarden = ({ children }) => {
                   </div>
                 </div>
                 <div className="inline-flex items-center justify-center p-2 text-white ml-9">
-                  <FaRegWindowClose   className="h-9 w-9 block" />
+                  <FaRegWindowClose className="h-9 w-9 block" />
                 </div>
 
                 <div className="hidden md:block">{/* Navbar */}</div>
@@ -149,7 +149,7 @@ const SidebarGarden = ({ children }) => {
                     </Disclosure.Button>
                   </div>
                   <div className="md:flex items-center ml-2  hidden md:block">
-                    <a
+                    {/* <a
                       href="/trang-nha-vuon"
                       className="flex-shrink-0 flex items-center"
                     >
@@ -161,7 +161,7 @@ const SidebarGarden = ({ children }) => {
                     </a>
                     <div className=" w-full flex items-center">
                       <p className="font-text-logo">HOA 3D</p>
-                    </div>
+                    </div> */}
                     <div className="hidden md:block">{/* Navbar */}</div>
                   </div>
                   <div className="md:block">
@@ -313,10 +313,24 @@ const SidebarGarden = ({ children }) => {
           <div className="w-full md:ml-5 rounded-3xl bg-side-test sm:bg-transparent">
             {/* <div className="w-full md:ml-5 rounded-3xl bg-side-test "> */}
             {/* SideBar for MD */}
-            <div className="hidden md:block w-48  h-screen fixed pt-5">
-              {/* <div className="ml-1 my-2 w-full flex justify-center items-center h-12 mt-3">
-                <h4 className="text-white font-bold text-md">Nhà Vườn</h4>
-              </div> */}
+            <div className="hidden md:block w-48  h-screen absolute pt-4">
+              <div className="flex justify-center items-center w-full mb-3">
+                <div className="flex">
+                  <a
+                    href="/trang-nha-vuon"
+                    className="flex-shrink-0 flex items-center"
+                  >
+                    <img
+                      className="h-12"
+                      src={require("../../assets/images/logo/logo3.png")}
+                      alt="FMP"
+                    />
+                  </a>
+                  <div className=" w-full flex items-center">
+                    <p className="font-text-logo">HOA 3D</p>
+                  </div>
+                </div>
+              </div>
               {sideBar.map((s, index) => (
                 <NavLink
                   activeClassName="active"
