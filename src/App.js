@@ -39,7 +39,7 @@ function App() {
   return (
     <div >
       <BrowserRouter>
-        <Routes>  <Route path="/trang-nha-vuon/dang-nhap" element={<Login />} /></Routes>
+        <Routes>  <Route path="/dang-nhap" element={<Login />} /></Routes>
         <GardenLayout />
 
       </BrowserRouter>

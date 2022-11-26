@@ -10,6 +10,7 @@ import { TbApps } from "react-icons/tb";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { HiOutlineUserCircle } from "react-icons/hi";
+import { FaRegWindowClose } from "react-icons/fa";
 
 const SidebarGarden = ({ children }) => {
   const [isShowing, setIsShowing] = useState(false);
@@ -69,10 +70,10 @@ const SidebarGarden = ({ children }) => {
     <div className="relative">
       <Transition
         show={isShowing}
-        enter="transition-opacity duration-75"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-150"
+        enter="transition-opacity duration-300"
+        enterFrom="x-0"
+        enterTo="x-full"
+        leave="transition-opacity duration-600"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
@@ -80,22 +81,28 @@ const SidebarGarden = ({ children }) => {
           onClick={() => setIsShowing((isShowing) => !isShowing)}
           className="absolute z-20 flex justify-start background-side-phone h-full w-full fixed md:hidden"
         >
-          <div className="flex justify-center items-center w-1/2 back-ground-side pt-10 pb-6 h-full fixed">
+          <div className="flex justify-center w-3/4 back-ground-side pt-10 pb-6 h-full ">
             <div>
-              <div className="flex items-center ml-4 mb-4">
-                <a
-                  href="/trang-nha-vuon"
-                  className="flex-shrink-0 flex items-center"
-                >
-                  <img
-                    className="h-10"
-                    src={require("../../assets/images/logo/logo3.png")}
-                    alt="FMP"
-                  />
-                </a>
-                <div className=" w-full flex items-center">
-                  <p className="font-text-logo">HOA 3D</p>
+              <div className="flex justify-between  w-full mb-4">
+                <div className="flex items-center">
+                  <a
+                    href="/trang-nha-vuon"
+                    className="flex-shrink-0 flex items-center"
+                  >
+                    <img
+                      className="h-10"
+                      src={require("../../assets/images/logo/logo3.png")}
+                      alt="FMP"
+                    />
+                  </a>
+                  <div className=" w-full flex items-center">
+                    <p className="font-text-logo">HOA 3D</p>
+                  </div>
                 </div>
+                <div className="inline-flex items-center justify-center p-2 text-white ml-9">
+                  <FaRegWindowClose   className="h-9 w-9 block" />
+                </div>
+
                 <div className="hidden md:block">{/* Navbar */}</div>
               </div>
               {sideBar.map((s, index) => (
@@ -107,11 +114,11 @@ const SidebarGarden = ({ children }) => {
                 >
                   <div className="flex w-full h-12">
                     <div className=" flex justify-center items-center">
-                      <div className="flex justify-center items-center text-3xl ">
+                      <div className="flex justify-center items-center text-4xl ">
                         {s.icon}
                       </div>
                     </div>
-                    <div className="flex items-center text-base whitespace-nowrap ml-5 ">
+                    <div className="flex items-center text-lg whitespace-nowrap ml-5 ">
                       {s.name}
                     </div>
                   </div>
@@ -122,10 +129,10 @@ const SidebarGarden = ({ children }) => {
         </div>
       </Transition>
       <div className="min-h-full">
-        <Disclosure as="nav" className="">
+        <Disclosure as="nav" className="back-ground-side">
           {({ open }) => (
             <>
-              <div className=" px-4 sm:px-6 lg:px-8">
+              <div className=" px-4 sm:px-6 lg:px-8 ">
                 <div className="flex h-20 items-center justify-between">
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
