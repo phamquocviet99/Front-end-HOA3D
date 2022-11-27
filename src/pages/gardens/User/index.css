@@ -1,0 +1,48 @@
+.card-user-inf {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 22px;
+    padding-bottom: 10px;
+}
+
+.bar-task-user {
+    display: flex;
+}
+
+.item-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-bill {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title-bill {
+    font-size: 14px;
+    color: rgb(136, 136, 136);
+}
+
+.icon-task {
+    color: rgb(227, 130, 19);
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+.bar-menu-edit-user {
+    width: 100%;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-edit-user {
+    width: 100%;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
