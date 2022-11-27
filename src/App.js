@@ -21,7 +21,7 @@ function App() {
       <div>
         <SidebarGarden>
           <Routes>
-            <Route path="*" element={<Navigate replace to="/trang-nha-vuon" />} />
+            {/* <Route path="*" element={<Navigate replace to="/trang-nha-vuon" />} /> */}
             <Route path="/trang-nha-vuon" element={<Navigate replace to="/trang-nha-vuon/trang-chu" />} />
             <Route path="/trang-nha-vuon/trang-chu" element={<DashboardGarden />} />
             <Route path="/trang-nha-vuon/san-pham" element={<ProductGarden />} />

@@ -125,8 +125,16 @@
 
 }
 
+@media only screen and (max-width: 550px) {
+    .width-phone{
+        width: 50%;
+    }
+}
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 770px ) {
+    .width-phone{
+        width: 70%;
+    }
     .link {
         color: #EEFFED;
         padding: 0 15px;

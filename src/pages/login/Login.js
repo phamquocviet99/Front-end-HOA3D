@@ -37,7 +37,7 @@ function Login() {
 
   }
   return (
-    <div className='form-login'>
+    <div className='form-login absolute z-20'>
       <div className='box-login '>
         <div className='col d-flex justify-content-center mb-3'><img src={require("../../assets/images/logo/fmp.png")} alt="" />
         </div>
