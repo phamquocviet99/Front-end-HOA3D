@@ -1,4 +1,4 @@
-import { useEffect, Fragment, React, useState } from "react";
+import { useEffect, Fragment, React, useState, useCallback } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
@@ -10,9 +10,10 @@ import { TbApps } from "react-icons/tb";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import { FaRegWindowClose } from "react-icons/fa";
+import { AiOutlineCloseSquare } from "react-icons/ai";
 
 const SidebarGarden = ({ children }) => {
+  const [isShowLogo, setIsShowLogo] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
   const user = {
     name: "Tom Cook",
@@ -65,7 +66,14 @@ const SidebarGarden = ({ children }) => {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-
+  const handleLogo = () => {
+    if (window.scrollY >= 50) {
+      setIsShowLogo(true);
+    } else {
+      setIsShowLogo(false);
+    }
+  };
+  window.addEventListener("scroll", handleLogo);
   return (
     <div className="relative">
       <Transition
@@ -81,9 +89,9 @@ const SidebarGarden = ({ children }) => {
           onClick={() => setIsShowing((isShowing) => !isShowing)}
           className="absolute z-20 flex justify-start background-side-phone h-full w-full fixed md:hidden"
         >
-          <div className="flex justify-center w-3/4 back-ground-side pt-10 pb-6 h-full ">
+          <div className="flex justify-center max-w3/4 min-w-2/4 back-ground-side pt-10 pb-6 h-full ">
             <div>
-              <div className="flex justify-between  w-full mb-4">
+              <div className="flex justify-between px-2 w-full mb-4">
                 <div className="flex items-center">
                   <a
                     href="/trang-nha-vuon"
@@ -99,8 +107,8 @@ const SidebarGarden = ({ children }) => {
                     <p className="font-text-logo">HOA 3D</p>
                   </div>
                 </div>
-                <div className="inline-flex items-center justify-center p-2 text-white ml-9">
-                  <FaRegWindowClose className="h-9 w-9 block" />
+                <div className="inline-flex items-center justify-center p-2 text-white ml-7">
+                  <AiOutlineCloseSquare className="h-9 w-9 block" />
                 </div>
 
                 <div className="hidden md:block">{/* Navbar */}</div>
@@ -136,32 +144,59 @@ const SidebarGarden = ({ children }) => {
                 <div className="flex h-20 items-center justify-between">
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
-                    <Disclosure.Button
-                      onClick={() => setIsShowing((isShowing) => !isShowing)}
-                      className="inline-flex items-center justify-center rounded-md border border-white p-2 text-white  "
-                    >
-                      <span className="sr-only">Open main menu</span>
-                      {open ? (
-                        <FaBars className="block h-6 w-6" aria-hidden="true" />
-                      ) : (
-                        <FaBars className="block h-6 w-6" aria-hidden="true" />
-                      )}
-                    </Disclosure.Button>
+                    <div className="flex">
+                      <Disclosure.Button
+                        onClick={() => setIsShowing((isShowing) => !isShowing)}
+                        className="inline-flex items-center justify-center rounded-md border border-white p-2 text-white "
+                      >
+                        <span className="sr-only">Open main menu</span>
+                        {open ? (
+                          <FaBars
+                            className="block h-6 w-6"
+                            aria-hidden="true"
+                          />
+                        ) : (
+                          <FaBars
+                            className="block h-6 w-6"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </Disclosure.Button>
+                      <a
+                        href="/trang-nha-vuon"
+                        className="flex-shrink-0 flex items-center pl-3"
+                      >
+                        <img
+                          className="h-12"
+                          src={require("../../assets/images/logo/logo3.png")}
+                          alt="FMP"
+                        />
+                      </a>
+                    </div>
                   </div>
+
                   <div className="md:flex items-center ml-2  hidden md:block">
-                    {/* <a
-                      href="/trang-nha-vuon"
-                      className="flex-shrink-0 flex items-center"
-                    >
-                      <img
-                        className="h-12"
-                        src={require("../../assets/images/logo/logo3.png")}
-                        alt="FMP"
-                      />
-                    </a>
-                    <div className=" w-full flex items-center">
-                      <p className="font-text-logo">HOA 3D</p>
-                    </div> */}
+                    {!isShowLogo ? (
+                      <>
+                        {" "}
+                        <a
+                          href="/trang-nha-vuon"
+                          className="flex-shrink-0 flex items-center"
+                        >
+                          <img
+                            className="h-12"
+                            src={require("../../assets/images/logo/logo3.png")}
+                            alt="FMP"
+                          />
+                        </a>
+                        <div className=" w-full flex items-center">
+                          <p className="font-text-logo">HOA 3D</p>
+                        </div>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
                     <div className="hidden md:block">{/* Navbar */}</div>
                   </div>
                   <div className="md:block">
@@ -313,24 +348,35 @@ const SidebarGarden = ({ children }) => {
           <div className="w-full md:ml-5 rounded-3xl bg-side-test sm:bg-transparent">
             {/* <div className="w-full md:ml-5 rounded-3xl bg-side-test "> */}
             {/* SideBar for MD */}
-            <div className="hidden md:block w-48  h-screen absolute pt-4">
-              <div className="flex justify-center items-center w-full mb-3">
-                <div className="flex">
-                  <a
-                    href="/trang-nha-vuon"
-                    className="flex-shrink-0 flex items-center"
-                  >
-                    <img
-                      className="h-12"
-                      src={require("../../assets/images/logo/logo3.png")}
-                      alt="FMP"
-                    />
-                  </a>
-                  <div className=" w-full flex items-center">
-                    <p className="font-text-logo">HOA 3D</p>
+            <div
+              className={
+                !isShowLogo
+                  ? "hidden md:block w-48  h-screen fixed pt-5"
+                  : "hidden md:block w-48  h-screen fixed top-10 "
+              }
+            >
+              {isShowLogo ? (
+                <div className="flex justify-center items-center w-full mb-3">
+                  <div className="flex">
+                    <a
+                      href="/trang-nha-vuon"
+                      className="flex-shrink-0 flex items-center"
+                    >
+                      <img
+                        className="h-12"
+                        src={require("../../assets/images/logo/logo3.png")}
+                        alt="FMP"
+                      />
+                    </a>
+                    <div className=" w-full flex items-center">
+                      <p className="font-text-logo">HOA 3D</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <></>
+              )}
+
               {sideBar.map((s, index) => (
                 <NavLink
                   activeClassName="active"
