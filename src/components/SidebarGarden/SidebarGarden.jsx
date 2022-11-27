@@ -144,10 +144,10 @@ const SidebarGarden = ({ children }) => {
                 <div className="flex h-20 items-center justify-between">
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
-                    <div className="flex">
+                    <div className="flex items-center justify-center">
                       <Disclosure.Button
                         onClick={() => setIsShowing((isShowing) => !isShowing)}
-                        className="inline-flex items-center justify-center rounded-md border border-white p-2 text-white "
+                        className="inline-flex items-center justify-center rounded-md border border-white p-2 w-11 h-11 text-white "
                       >
                         <span className="sr-only">Open main menu</span>
                         {open ? (
