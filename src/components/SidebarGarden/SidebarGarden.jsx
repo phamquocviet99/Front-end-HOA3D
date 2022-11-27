@@ -10,7 +10,7 @@ import { TbApps } from "react-icons/tb";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import { AiOutlineCloseSquare } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 
 const SidebarGarden = ({ children }) => {
   const [isShowLogo, setIsShowLogo] = useState(false);
@@ -91,7 +91,7 @@ const SidebarGarden = ({ children }) => {
         >
           <div className="flex justify-center max-w3/4 min-w-2/4 back-ground-side pt-10 pb-6 h-full ">
             <div>
-              <div className="flex justify-between px-2 w-full mb-4">
+              <div className="flex justify-between items-center px-2 w-full mb-4">
                 <div className="flex items-center">
                   <a
                     href="/trang-nha-vuon"
@@ -107,8 +107,8 @@ const SidebarGarden = ({ children }) => {
                     <p className="font-text-logo">HOA 3D</p>
                   </div>
                 </div>
-                <div className="inline-flex items-center justify-center p-2 text-white ml-7">
-                  <AiOutlineCloseSquare className="h-9 w-9 block" />
+                <div className="inline-flex items-center justify-center rounded-md border border-white p-0 text-white ml-5 w-8 h-8">
+                  <AiOutlineClose className="h-6 w-6 block" />
                 </div>
 
                 <div className="hidden md:block">{/* Navbar */}</div>
