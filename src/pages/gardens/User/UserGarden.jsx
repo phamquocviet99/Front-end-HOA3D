@@ -318,8 +318,8 @@ export default function UserGarden() {
               </button>
             </div>
           </div>
-          <div className="card-edit-user mt-4">
-            <h4 className="text-zinc-500 text-xl my-3 ml-2 font-medium">
+          <div className="card-edit-user mt-4 p-4">
+            <h4 className="text-zinc-500 text-xl mt-3 mb-3 ml-2 font-medium">
               Cập nhật mật khẩu
             </h4>
 
@@ -382,7 +382,7 @@ export default function UserGarden() {
               </button>
             </div>
           </div>
-          <div className="card-edit-user mt-4">
+          <div className="card-edit-user mt-4 p-4">
             <div className="flex justify-between items-center">
               <h4 className="text-zinc-500 text-xl my-3 ml-2 font-medium">
                 Phương thức thanh toán
