@@ -1,6 +1,6 @@
 .form-login {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,6 @@
 }
 
 .box-login {
-
     width: 400px;
     background-color: white;
     border-radius: 20px;

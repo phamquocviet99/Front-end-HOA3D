@@ -125,16 +125,16 @@ function Login() {
           >Đăng nhập kênh người bán</button>
 
           <div className='mt-3'>
-            <p >Chưa có tài khoản HOA3D ? <a href='/' className='none-decoration'>Tạo tài khoản</a></p>
+            <p >Chưa có tài khoản HOA3D ? <a href='/dang-ky' className='none-decoration'>Tạo tài khoản</a></p>
           </div>
-          <div className='persistCheck'>
+          {/* <div className='persistCheck'>
             <input type="checkbox"
 
               id="persist"
               onChange={togglePersist}
               checked={persist} />
             <label > nhớ tôi </label>
-          </div>
+          </div> */}
         </form>
       </div>
     </div>

@@ -58,9 +58,8 @@ function App() {
       <div>
         <SidebarGarden>
           <Routes>
-            <Route path="*" element={<Navigate replace to="/nha-vuon" />} />
             <Route
-              path="/nha-vuon"
+              path="/"
               element={<Navigate replace to="/nha-vuon/trang-chu" />}
             />
             <Route path="/nha-vuon/trang-chu" element={<DashboardGarden />} />
@@ -75,13 +74,18 @@ function App() {
       </div>
     );
   }
+  function LoginAndRegisterLayout() {
+    return (
+      <Routes>
+        <Route path="/dang-nhap" element={<Login />} />
+        <Route path="/dang-ky" element={<Register />} />
+      </Routes>
+    );
+  }
   return (
     <div>
       <BrowserRouter>
-        <Routes>
-          {" "}
-          <Route path="/dang-nhap" element={<Login />} />
-        </Routes>
+      <LoginAndRegisterLayout/>
         <GardenLayout />
       </BrowserRouter>
     </div>
