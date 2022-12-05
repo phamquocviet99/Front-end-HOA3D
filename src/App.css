@@ -83,7 +83,7 @@ a {
   .bg-page {
     background-color: var(--background-color-page);
     min-height: 100vh;
-    padding: 15px;
+    padding: 10px;
   }
 }
 
@@ -91,5 +91,6 @@ a {
   .bg-page {
     background-color: var(--background-color-page);
     min-height: 100vh;
+    padding: 15px;
   }
 }
