@@ -11,7 +11,8 @@ export default function UserGarden() {
   const [showAddCardModal, setShowAddCardModal] = useState(false);
   const handleCloseAddCardModal = () => setShowAddCardModal(false);
   return (
-    <div className="bg-page rounded-3xl px-5 pt-10 pb-10">
+    // <div className="bg-page rounded-3xl px-5 pt-10 pb-10">
+      <div className="bg-page rounded-3xl ">
       <div className="row">
         <div className="col-md-4">
           <div className="card-user-inf">

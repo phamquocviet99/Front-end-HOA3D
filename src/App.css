@@ -5,11 +5,8 @@ html {
 
   /* font-family: Roboto, sans-serif;
 } */
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
-
-
 
 a:hover {
   text-decoration: none !important;
@@ -33,8 +30,6 @@ img {
   vertical-align: middle;
 }
 
-
-
 h1,
 h2,
 h3,
@@ -50,7 +45,7 @@ h6,
 a,
 p {
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -71,14 +66,30 @@ a {
 .bg-page {
   background-color: var(--background-color-page);
   min-height: 100vh;
+  padding: 30px;
 }
 
 :root {
   /* --background-color-page: #C9DCBE; */
   --background-color-page: #e0edd9;
 }
-.line-page{
+.line-page {
   height: 1px;
   background-color: var(--background-color-page);
   width: 100%;
+}
+
+@media only screen and (max-width: 550px) {
+  .bg-page {
+    background-color: var(--background-color-page);
+    min-height: 100vh;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .bg-page {
+    background-color: var(--background-color-page);
+    min-height: 100vh;
+  }
 }
