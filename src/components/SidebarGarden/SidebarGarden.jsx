@@ -29,37 +29,37 @@ const SidebarGarden = ({ children }) => {
   const sideBar = [
     {
       name: "Trang Chủ",
-      link: "/trang-nha-vuon/trang-chu",
+      link: "/nha-vuon/trang-chu",
       icon: <TbApps />,
     },
     {
       name: "Sản Phẩm",
-      link: "/trang-nha-vuon/san-pham",
+      link: "/nha-vuon/san-pham",
       icon: <BiBox />,
     },
     {
       name: "Sản Lượng",
-      link: "/trang-nha-vuon/san-luong",
+      link: "/nha-vuon/san-luong",
       icon: <TbDatabaseExport />,
     },
     {
       name: "Hóa Đơn",
-      link: "/trang-nha-vuon/don-hang",
+      link: "/nha-vuon/don-hang",
       icon: <BiFoodMenu />,
     },
     {
       name: "Doanh Thu",
-      link: "/trang-nha-vuon/doanh-thu",
+      link: "/nha-vuon/doanh-thu",
       icon: <BiBarChartSquare />,
     },
     {
       name: "Ngân Hàng",
-      link: "/trang-nha-vuon/ngan-hang",
+      link: "/nha-vuon/ngan-hang",
       icon: <GoCreditCard />,
     },
     {
       name: "Thông Tin",
-      link: "/trang-nha-vuon/nguoi-dung",
+      link: "/nha-vuon/nguoi-dung",
       icon: <HiOutlineUserCircle />,
     },
   ];
@@ -122,11 +122,11 @@ const SidebarGarden = ({ children }) => {
                 >
                   <div className="flex w-full h-12">
                     <div className=" flex justify-center items-center">
-                      <div className="flex justify-center items-center text-4xl ">
+                      <div className="flex justify-center items-center text-3xl ">
                         {s.icon}
                       </div>
                     </div>
-                    <div className="flex items-center text-lg whitespace-nowrap ml-5 ">
+                    <div className="flex items-center text-base whitespace-nowrap ml-5 ">
                       {s.name}
                     </div>
                   </div>

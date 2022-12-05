@@ -1,39 +1,87 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import isEmpty from "validator/lib/isEmpty"
 import "./Login.css"
+import useAuth from '../../hooks/useAuth';
+import axiosClient from '../../api/axiosClient';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const LOGIN_URL = "/users/login";
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  const { setAuth, persist, setPersist } = useAuth();
+  
+  const [user, setUser] = useState('');
+  const [pwd, setPwd] = useState('');
   const [validationMsg, setValidationMsg] = useState('')
 
   const onChangeUsername = (e) => {
-    const username = e.target.value
-    setUsername(username)
+    const user = e.target.value
+    setUser(user)
   }
   const onChangePassword = (e) => {
-    const password = e.target.value
-    setPassword(password)
+    const pwd = e.target.value
+    setPwd(pwd)
   }
 
   const validateAll = () => {
     const msg = {}
-    if (isEmpty(username)) {
-      msg.username = "Không được bỏ trống ô này"
+    if (isEmpty(user)) {
+      msg.user = "Không được bỏ trống ô này"
     }
-    if (isEmpty(password)) {
-      msg.password = "Không được bỏ trống ô này"
+    if (isEmpty(pwd)) {
+      msg.pwd = "Không được bỏ trống ô này"
     }
     setValidationMsg(msg)
     if (Object.keys(msg).length > 0) return false
     return true
   }
-  const onSubmitLogin = () => {
+
+  const togglePersist = () => {
+    setPersist(prev => !prev)
+  }
+  useEffect(() => {
+    localStorage.setItem("persist", persist);
+
+  }, [persist]);
+
+  const onSubmitLogin = async () => {
     const isValid = validateAll();
     if (!isValid) return
+    try {
+      const response = await axiosClient.post(LOGIN_URL, JSON.stringify(
+        { username: user, password: pwd }
+      ), {
+        headers: { "Content-Type": "application/json" },
+        withCredentials: true,
+      });
 
-    //call API
+      console.log(response)
+      const accessToken = response?.data?.data?.jwtToken
+      const roles = [1984];
+
+      if (response?.data?.success) {
+        setAuth({ user, pwd, roles, accessToken })
+        navigate(from, { replace: true });
+      }
+
+      // setAuth({ user, pwd, roles, accessToken });
+      // // navigate("/cua-hang")
+      // navigate(from, { replace: true });
+    } catch (err) {
+      if (!err?.response) {
+        alert('No Server Response');
+      } else if (err.response?.status === 400) {
+        alert('Missing Username or Password');
+      } else if (err.response?.status === 401) {
+        alert('Unauthorized');
+      } else {
+        alert('Login Failed');
+      }
+    }
 
   }
   return (
@@ -53,7 +101,7 @@ function Login() {
               autoComplete='username'
               onChange={onChangeUsername}
             />
-            <p className='error-validate'>{validationMsg.username}</p>
+            <p className='error-validate'>{validationMsg.user}</p>
           </div>
           <div className="form-group mt-4">
 
@@ -65,7 +113,7 @@ function Login() {
               placeholder="Mật khẩu"
               onChange={onChangePassword} />
 
-            <p className='error-validate'>{validationMsg.password}</p>
+            <p className='error-validate'>{validationMsg.pwd}</p>
           </div>
           <div className='mt-3'>
             <a href='/' className='none-decoration'>Quên mật khẩu ?</a>
@@ -78,6 +126,14 @@ function Login() {
 
           <div className='mt-3'>
             <p >Chưa có tài khoản HOA3D ? <a href='/' className='none-decoration'>Tạo tài khoản</a></p>
+          </div>
+          <div className='persistCheck'>
+            <input type="checkbox"
+
+              id="persist"
+              onChange={togglePersist}
+              checked={persist} />
+            <label > nhớ tôi </label>
           </div>
         </form>
       </div>
