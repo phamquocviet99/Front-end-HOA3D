@@ -355,7 +355,7 @@ const SidebarGarden = ({ children }) => {
               className={
                 !isShowLogo
                   ? "hidden md:block w-48  h-screen fixed pt-5"
-                  : "hidden md:block w-48  h-screen fixed top-1"
+                  : "hidden md:block w-48  h-screen fixed top-10"
               }
             >
               {isShowLogo ? (
