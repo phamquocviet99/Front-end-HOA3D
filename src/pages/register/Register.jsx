@@ -25,7 +25,7 @@ const Register = () => {
           <div className="col-md-6">
             <div className="flex justify-center items-center h-full">
               <img
-                className="h-20"
+                className="h-12 md:h-20"
                 src={require("../../assets/images/logo/fmp.png")}
                 alt=""
               />
@@ -34,7 +34,7 @@ const Register = () => {
         </div>
         <div className="row">
           <div className="col-md-6 p-0">
-            <div className="w-72 md:w-96 h-full p-4">
+            <div className="w-64 md:w-96 h-full p-4">
               <div className="">
                 <input
                   className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -80,7 +80,7 @@ const Register = () => {
             </div>
           </div>
           <div className="col-md-6 p-0">
-            <div className=" w-72 md:w-96 h-full p-4">
+            <div className=" w-64 md:w-96 h-full p-4">
               <div className="">
                 <input
                   className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
