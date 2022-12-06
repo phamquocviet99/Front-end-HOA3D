@@ -67,6 +67,7 @@ a {
   background-color: var(--background-color-page);
   min-height: 100vh;
   padding: 30px;
+
 }
 
 :root {

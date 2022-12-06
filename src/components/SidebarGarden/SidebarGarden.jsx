@@ -43,7 +43,7 @@ const SidebarGarden = ({ children }) => {
       icon: <TbDatabaseExport />,
     },
     {
-      name: "Hóa Đơn",
+      name: "Đơn Hàng",
       link: "/nha-vuon/don-hang",
       icon: <BiFoodMenu />,
     },
@@ -74,6 +74,9 @@ const SidebarGarden = ({ children }) => {
     }
   };
   window.addEventListener("scroll", handleLogo);
+
+
+  
   return (
     <div className="relative">
       <Transition
@@ -352,7 +355,7 @@ const SidebarGarden = ({ children }) => {
               className={
                 !isShowLogo
                   ? "hidden md:block w-48  h-screen fixed pt-5"
-                  : "hidden md:block w-48  h-screen fixed top-10 "
+                  : "hidden md:block w-48  h-screen fixed top-1"
               }
             >
               {isShowLogo ? (
@@ -363,7 +366,7 @@ const SidebarGarden = ({ children }) => {
                       className="flex-shrink-0 flex items-center"
                     >
                       <img
-                        className="h-12"
+                        className="h-11"
                         src={require("../../assets/images/logo/logo3.png")}
                         alt="FMP"
                       />

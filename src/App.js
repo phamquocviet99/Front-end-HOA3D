@@ -84,10 +84,8 @@ function App() {
   }
   return (
     <div>
-      <BrowserRouter>
-      <LoginAndRegisterLayout/>
-        <GardenLayout />
-      </BrowserRouter>
+      <LoginAndRegisterLayout />
+      <GardenLayout />
     </div>
   );
 }
