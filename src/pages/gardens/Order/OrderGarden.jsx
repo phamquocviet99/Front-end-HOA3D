@@ -42,20 +42,12 @@ const OrderGarden = () => {
     <div className="row">
       <div className="col-md-12">
         <div className="bg-element h-screen rounded-3xl">
-          {/* {users?.length ? (
-            <ul>
-              {users.map((user, i) => (
-                <li key={i}>{user?.firstname}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>No user</p>
-          )} */}
-        </div>
-      </div>
-      <button className="btn btn-success" onClick={()=>logout()}>
+        <button className="btn btn-success" onClick={()=>logout()}>
         logout
       </button>
+        </div>
+      </div>
+     
     </div>
   );
 };

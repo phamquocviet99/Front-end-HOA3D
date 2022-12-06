@@ -18,6 +18,7 @@ import QuantityGarden from "./pages/gardens/Quantity/QuantityGarden";
 import OrderGarden from "./pages/gardens/Order/OrderGarden";
 
 import BankGarden from "./pages/gardens/Bank/BankGarden";
+import RegistrationProduct from "./pages/gardens/RegistrationProduct/RegistrationProduct";
 
 const ROLES = {
   User: 2001,
@@ -64,6 +65,7 @@ function App() {
             />
             <Route path="/nha-vuon/trang-chu" element={<DashboardGarden />} />
             <Route path="/nha-vuon/san-pham" element={<ProductGarden />} />
+            <Route path="/nha-vuon/dang-ky-san-pham" element={<RegistrationProduct />} />
             <Route path="/nha-vuon/san-luong" element={<QuantityGarden />} />
             <Route path="/nha-vuon/don-hang" element={<OrderGarden />} />
             <Route path="/nha-vuon/nguoi-dung" element={<UserGarden />} />

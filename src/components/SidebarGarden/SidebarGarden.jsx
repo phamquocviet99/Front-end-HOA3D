@@ -33,6 +33,11 @@ const SidebarGarden = ({ children }) => {
       icon: <TbApps />,
     },
     {
+      name: "Đăng Ký",
+      link: "/nha-vuon/dang-ky-san-pham",
+      icon: <BiBox />,
+    },
+    {
       name: "Sản Phẩm",
       link: "/nha-vuon/san-pham",
       icon: <BiBox />,
@@ -401,7 +406,7 @@ const SidebarGarden = ({ children }) => {
             </div>
 
             <div className="w-full pl-0  pr-0 md:pr-0  md:pl-48 ">
-              <div>{children}</div>
+              <div className="bg-page rounded-3xl ">{children}</div>
             </div>
           </div>
         </div>

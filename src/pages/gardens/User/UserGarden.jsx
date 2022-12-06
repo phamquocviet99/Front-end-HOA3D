@@ -12,7 +12,7 @@ export default function UserGarden() {
 
   return (
     // <div className="bg-page rounded-3xl px-5 pt-10 pb-10">
-    <div className="bg-page rounded-3xl ">
+    <div className=" ">
       <div className="row">
         <div className="col-md-4">
           <ProfileUserComponent/>
