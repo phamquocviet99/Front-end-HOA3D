@@ -17,15 +17,15 @@ const Register = () => {
     <div className="form-login absolute z-20">
       <div className="bg-white p-3 rounded-3xl">
         <div className="row h-22">
-          <div className="col-md-6">
+          <div className="col-md-6 col-xs-12">
             <div className="flex justify-center items-center h-full">
               <h3 className="font-bold">TRANG ĐĂNG KÝ</h3>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 col-xs-12 mt-2 md:mt-0">
             <div className="flex justify-center items-center h-full">
               <img
-                className="h-12 md:h-20"
+                className="h-16 md:h-20"
                 src={require("../../assets/images/logo/fmp.png")}
                 alt=""
               />
@@ -33,8 +33,8 @@ const Register = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-6 p-0">
-            <div className="w-64 md:w-96 h-full p-4">
+          <div className="col-md-6 col-xs-12 p-0">
+            <div className="w-full md:w-96 h-full p-4">
               <div className="">
                 <input
                   className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -79,8 +79,8 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 p-0">
-            <div className=" w-64 md:w-96 h-full p-4">
+          <div className="col-md-6 col-xs-12 p-0">
+            <div className=" w-full md:w-96 h-full pt-0 pl-5 pr-5 pb-4 md:p-4">
               <div className="">
                 <input
                   className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
