@@ -34,7 +34,7 @@ const Register = () => {
         </div>
         <div className="row">
           <div className="col-md-6 p-0">
-            <div className="w-96 h-full p-4">
+            <div className="w-72 md:w-96 h-full p-4">
               <div className="">
                 <input
                   className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -80,7 +80,7 @@ const Register = () => {
             </div>
           </div>
           <div className="col-md-6 p-0">
-            <div className=" w-96 h-full p-4">
+            <div className=" w-72 md:w-96 h-full p-4">
               <div className="">
                 <input
                   className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

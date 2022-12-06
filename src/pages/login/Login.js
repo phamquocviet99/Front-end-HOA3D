@@ -87,7 +87,7 @@ function Login() {
   return (
     <div className='form-login absolute z-20'>
       <div className='box-login '>
-        <div className='col d-flex justify-content-center mb-3'><img src={require("../../assets/images/logo/fmp.png")} alt="" />
+        <div className='col d-flex justify-content-center mb-3'><img className='h-16 md:h-24' src={require("../../assets/images/logo/fmp.png")} alt="" />
         </div>
         <h3 className='font-bold'>ĐĂNG NHẬP</h3>
         <form>
@@ -95,7 +95,7 @@ function Login() {
             <input
               type="text"
               className="form-control"
-              placeholder="Tên đăng nhập hoặc số điện thoại"
+              placeholder="Tên đăng nhập"
               name='username'
               id='username'
               autoComplete='username'
@@ -127,14 +127,7 @@ function Login() {
           <div className='mt-3'>
             <p >Chưa có tài khoản HOA3D ? <a href='/dang-ky' className='none-decoration'>Tạo tài khoản</a></p>
           </div>
-          {/* <div className='persistCheck'>
-            <input type="checkbox"
 
-              id="persist"
-              onChange={togglePersist}
-              checked={persist} />
-            <label > nhớ tôi </label>
-          </div> */}
         </form>
       </div>
     </div>
