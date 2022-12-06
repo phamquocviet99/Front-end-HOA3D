@@ -45,7 +45,7 @@ export default function ModalPostProduct({ visible, onClose }) {
         </div>
         <div className="mt-3">
           <p className="mb-2 text-zinc-500">Ngày bắt đầu thu hoạch</p>
-          <DateTimePicker onChange={onChange} value={value} />
+          <DateTimePicker className="rounded text-gray-400" onChange={onChange} value={value} />
         </div>
         <div className="mt-3">
           <p className="mb-2 text-zinc-500">Đến ngày</p>
