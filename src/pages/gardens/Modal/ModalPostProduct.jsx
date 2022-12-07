@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import DateTimePicker from "react-datetime-picker";
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 export default function ModalPostProduct({ visible, onClose }) {
-  const [value, onChange] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date());
   if (!visible) return null;
   function handleClose(e) {
     if (e.target.id === "background-add-card") onClose();
@@ -13,7 +14,7 @@ export default function ModalPostProduct({ visible, onClose }) {
     <div
       id="background-add-card"
       onClick={handleClose}
-      className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm"
+      className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm z-20"
     >
       <div className="bg-white rounded p-4">
         <p className="text-center text-2xl  text-zinc-600">
@@ -53,18 +54,18 @@ export default function ModalPostProduct({ visible, onClose }) {
         </div>
         <div className="mt-3">
           <p className="mb-2 text-zinc-500">Ngày bắt đầu thu hoạch</p>
-          <DateTimePicker
-            className="rounded text-gray-700 w-full h-10 "
-            onChange={onChange}
-            value={value}
+          <DatePicker
+          className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
           />
         </div>
         <div className="mt-3">
           <p className="mb-2 text-zinc-500">Đến ngày</p>
-          <DateTimePicker
-            className="rounded text-gray-400 w-full h-10"
-            onChange={onChange}
-            value={value}
+          <DatePicker
+          className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
           />
         </div>
         <div className="flex justify-end mt-4">

@@ -1,11 +1,10 @@
-import { useEffect, Fragment, React, useState, useCallback } from "react";
+import { useEffect, Fragment, React, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import "./Sidebar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { BiBox, BiBarChartSquare, BiFoodMenu } from "react-icons/bi";
-import { GoCreditCard } from "react-icons/go";
-import { TbDatabaseExport } from "react-icons/tb";
+import { BiBox } from "react-icons/bi";
+
 import { TbApps } from "react-icons/tb";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
@@ -13,6 +12,7 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
 const SidebarGarden = ({ children }) => {
+  const navigate = useNavigate();
   const [isShowLogo, setIsShowLogo] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
   const user = {
@@ -33,16 +33,16 @@ const SidebarGarden = ({ children }) => {
       icon: <TbApps />,
     },
     {
-      name: "Đăng Ký",
-      link: "/nha-vuon/dang-ky-san-pham",
-      icon: <BiBox />,
-    },
-    {
       name: "Đăng bán",
       link: "/nha-vuon/dang-ban",
       icon: <BiBox />,
     },
-    
+    {
+      name: "Đăng Ký",
+      link: "/nha-vuon/dang-ky-san-pham",
+      icon: <BiBox />,
+    },
+
     {
       name: "Thông Tin",
       link: "/nha-vuon/nguoi-dung",
@@ -51,6 +51,9 @@ const SidebarGarden = ({ children }) => {
   ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
+  }
+  function goToPost() {
+    navigate("/nha-vuon/dang-ban");
   }
   const handleLogo = () => {
     if (window.scrollY >= 50) {
@@ -61,8 +64,6 @@ const SidebarGarden = ({ children }) => {
   };
   window.addEventListener("scroll", handleLogo);
 
-
-  
   return (
     <div className="relative">
       <Transition
@@ -100,7 +101,6 @@ const SidebarGarden = ({ children }) => {
                 <div className="absolute right-5 inline-flex items-center justify-center rounded-md border border-white p-0 text-white ml-5 w-8 h-8">
                   <AiOutlineClose className="h-6 w-6 block" />
                 </div>
-
               </div>
               {sideBar.map((s, index) => (
                 <NavLink
@@ -191,7 +191,9 @@ const SidebarGarden = ({ children }) => {
                   <div className="md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       {/* Profile dropdown */}
-
+                      <button onClick={goToPost} className=" mt-3 mb-2 bg-orange-400 hover:bg-orange-500 text-white font-base py-2 px-4   rounded ">
+                        Đăng bán
+                      </button>
                       <Menu as="div" className="relative ml-3 hidden md:block">
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 ">
