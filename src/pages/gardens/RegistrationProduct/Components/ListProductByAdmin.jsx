@@ -59,13 +59,13 @@ export default function ListProductByAdmin() {
       <div className="line-page"></div>
       <div className="row mt-3">
         <div className="col-md-6">
-          <div className="flex justify-start items-center ">
+          <div className="md:flex justify-start items-center mb-3">
             <p className="text-zinc-500 text-base mt-1  ml-2 mb-1 mr-3">
               Bộ lọc :
             </p>
             <select
               id="countries_disabled"
-              className="bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg p-2 w-1/2"
+              className="bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg p-2 w-full md:w-1/2"
             >
               <option selected>Danh mục hoa</option>
               <option value="US">United States</option>
@@ -77,11 +77,11 @@ export default function ListProductByAdmin() {
         </div>
         <div className="col-md-6">
           <div>
-            <form className="flex justify-end items-center">
+            <form className="flex  justify-start md:justify-end md:mt-0 items-center">
               <label for="simple-search" class="sr-only">
                 Search
               </label>
-              <div className="relative w-1/2">
+              <div className="relative w-full md:w-1/2">
                 <div className="absolute inset-y-0 left-0 flex  items-center pl-3 pointer-events-none">
                   <svg
                     aria-hidden="true"

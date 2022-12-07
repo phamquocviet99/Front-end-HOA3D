@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import DateTimePicker from 'react-datetime-picker';
+import DateTimePicker from "react-datetime-picker";
 export default function ModalPostProduct({ visible, onClose }) {
-    const [value, onChange] = useState(new Date());
+  const [value, onChange] = useState(new Date());
   if (!visible) return null;
   function handleClose(e) {
     if (e.target.id === "background-add-card") onClose();
@@ -24,7 +24,7 @@ export default function ModalPostProduct({ visible, onClose }) {
           <input
             className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
-            placeholder="Ngân hàng"
+            placeholder="Tên sản phẩm"
           />
         </div>
         <div className="mt-3">
@@ -32,7 +32,7 @@ export default function ModalPostProduct({ visible, onClose }) {
           <input
             className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
-            placeholder="Ngân hàng"
+            placeholder="Danh mục"
           />
         </div>
         <div className="mt-3">
@@ -40,19 +40,31 @@ export default function ModalPostProduct({ visible, onClose }) {
           <input
             className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
-            placeholder="Ngân hàng"
+            placeholder="Số lượng"
+          />
+        </div>
+        <div className="mt-3">
+          <p className="mb-2 text-zinc-500">Giá bán</p>
+          <input
+            className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            placeholder="Giá"
           />
         </div>
         <div className="mt-3">
           <p className="mb-2 text-zinc-500">Ngày bắt đầu thu hoạch</p>
-          <DateTimePicker className="rounded text-gray-400" onChange={onChange} value={value} />
+          <DateTimePicker
+            className="rounded text-gray-700 w-full h-10 "
+            onChange={onChange}
+            value={value}
+          />
         </div>
         <div className="mt-3">
           <p className="mb-2 text-zinc-500">Đến ngày</p>
-          <input
-            className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="Ngân hàng"
+          <DateTimePicker
+            className="rounded text-gray-400 w-full h-10"
+            onChange={onChange}
+            value={value}
           />
         </div>
         <div className="flex justify-end mt-4">
@@ -60,7 +72,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             onClick={submitCard}
             className=" ml-2 bg-orange-100 hover:bg-orange-200 text-orange-400 font-base py-2 px-3  rounded "
           >
-            Thêm thẻ
+            Đăng bán
           </button>
           <button
             onClick={onClose}

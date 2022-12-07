@@ -47,7 +47,7 @@ export default function UserGarden() {
               <div className="bg-orange-400 w-3/4 h-2 rounded"></div>
             </div>
             <p className="m-0 text-sm text-zinc-400 mt-2">4 days remaining</p>
-            <button class=" mt-4 mb-4 bg-orange-400 hover:bg-orange-500 text-white font-base py-2 px-4 border border-blue-700 rounded w-full">
+            <button class=" mt-4 mb-4 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded w-full">
               Upgrade Plan
             </button>
           </div>

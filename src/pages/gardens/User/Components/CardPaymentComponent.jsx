@@ -18,7 +18,7 @@ export default function CardPaymentComponent() {
           onClick={() => {
             setShowAddCardModal(true);
           }}
-          class=" mt-3 mb-2 bg-orange-400 hover:bg-orange-500 text-white font-base py-2 px-4 border border-blue-700 rounded "
+          class=" mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded "
         >
           Thêm
         </button>

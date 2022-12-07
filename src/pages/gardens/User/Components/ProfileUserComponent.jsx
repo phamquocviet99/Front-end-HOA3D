@@ -142,7 +142,7 @@ export default function ProfileUserComponent() {
         </p>
       </div>
       <div className="flex justify-center">
-        <button class="bg-orange-400 hover:bg-orange-500 text-white font-base py-2 px-4 border border-blue-700 rounded">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded">
           Khóa tài khoản
         </button>
       </div>

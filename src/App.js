@@ -3,27 +3,17 @@ import "./App.css";
 import Login from "./pages/login/Login";
 import NotRegister from "./pages/login/NotRegister";
 import Register from "./pages/register/Register";
-import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
-import Layout from "./pages/layout/Layout";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import UserGarden from "./pages/gardens/User/UserGarden";
-import RequireAuth from "./pages/RequireAuth";
-import PersistLogin from "./pages/login/PersistLogin";
+
 import ProductGarden from "./pages/gardens/Product/ProductGarden";
-import TurnoverGarden from "./pages/gardens/Turnover/TurnoverGarden";
-import Homepage from "./pages/homes/Homepage";
+
 import SidebarGarden from "./components/SidebarGarden/SidebarGarden";
 import DashboardGarden from "./pages/gardens/Dashboard/DashboardGarden";
 
-import QuantityGarden from "./pages/gardens/Quantity/QuantityGarden";
-import OrderGarden from "./pages/gardens/Order/OrderGarden";
-
-import BankGarden from "./pages/gardens/Bank/BankGarden";
 import RegistrationProduct from "./pages/gardens/RegistrationProduct/RegistrationProduct";
-
-const ROLES = {
-  User: 2001,
-  Garden: 1984,
-};
+import PostProduct from "./pages/gardens/PostProduct/PostProduct";
 
 // function App() {
 //   return (
@@ -65,12 +55,12 @@ function App() {
             />
             <Route path="/nha-vuon/trang-chu" element={<DashboardGarden />} />
             <Route path="/nha-vuon/san-pham" element={<ProductGarden />} />
-            <Route path="/nha-vuon/dang-ky-san-pham" element={<RegistrationProduct />} />
-            <Route path="/nha-vuon/san-luong" element={<QuantityGarden />} />
-            <Route path="/nha-vuon/don-hang" element={<OrderGarden />} />
+            <Route
+              path="/nha-vuon/dang-ky-san-pham"
+              element={<RegistrationProduct />}
+            />{" "}
+            <Route path="/nha-vuon/dang-ban" element={<PostProduct />} />
             <Route path="/nha-vuon/nguoi-dung" element={<UserGarden />} />
-            <Route path="/nha-vuon/doanh-thu" element={<TurnoverGarden />} />
-            <Route path="/nha-vuon/ngan-hang" element={<BankGarden />} />
           </Routes>
         </SidebarGarden>
       </div>

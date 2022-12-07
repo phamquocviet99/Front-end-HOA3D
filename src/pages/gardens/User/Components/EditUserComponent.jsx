@@ -115,7 +115,7 @@ export default function EditUserComponent() {
       </div>
 
       <div className="flex justify-end">
-        <button class=" mb-2 bg-orange-400 hover:bg-orange-500 text-white font-base py-2 px-4 border border-blue-700 rounded ">
+        <button class=" mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded ">
           Cập nhật thông tin
         </button>
       </div>
