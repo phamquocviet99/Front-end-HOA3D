@@ -16,7 +16,7 @@ export default function ModalPostProduct({ visible, onClose }) {
       onClick={handleClose}
       className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm z-20"
     >
-      <div className="bg-white rounded p-4">
+      <div className="bg-white rounded p-4 overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto">
         <p className="text-center text-2xl  text-zinc-600">
           Quá trình đăng bán sản phẩm
         </p>
@@ -49,7 +49,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             <div className="mt-3">
               <p className="mb-2 text-zinc-500">Số lượng hiện có</p>
               <input
-                className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Số lượng"
               />
@@ -57,7 +57,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             <div className="mt-3">
               <p className="mb-2 text-zinc-500">Giá bán</p>
               <input
-                className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Giá"
               />
@@ -65,7 +65,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             <div className="mt-3">
               <p className="mb-2 text-zinc-500">Ngày bắt đầu thu hoạch</p>
               <DatePicker
-                className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
               />
@@ -96,7 +96,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             <div className="mt-3">
               <p className="mb-2 text-zinc-500">Màu sắc</p>
               <input
-                className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Số lượng"
               />
@@ -106,7 +106,7 @@ export default function ModalPostProduct({ visible, onClose }) {
               <input
                 className="form-control
                         
-                        w-80
+                w-full
                         
                         py-1.5
                         text-base
@@ -126,7 +126,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             <div className="mt-3">
               <p className="mb-2 text-zinc-500">Đến ngày</p>
               <DatePicker
-                className="w-80 border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
               />

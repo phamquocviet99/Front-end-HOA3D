@@ -66,14 +66,14 @@ export default function ListProductByAdmin() {
   ]);
   return (
     <div className="card-element p-4">
-      <h4 className="text-zinc-500 text-xl mt-1 mb-3 ml-2 font-medium">
-        Danh sách sản phẩm mà sàn quy định
+      <h4 className="text-zinc-500 text-base md:text-xl mt-1 mb-3 ml-2 font-medium">
+        Danh sách sản phẩm sàn quy định
       </h4>
       <div className="line-page"></div>
       <div className="row mt-3">
         <div className="col-md-6">
           <div className="md:flex justify-start items-center mb-3">
-            <p className="text-zinc-500 text-base mt-1  ml-2 mb-1 mr-3">
+            <p className="text-zinc-500 text-sm md:text-base mt-1  ml-2 mb-1 mr-3">
               Bộ lọc :
             </p>
             <select
@@ -142,7 +142,7 @@ export default function ListProductByAdmin() {
           </div>
         </div>
       </div>
-      <div className="row overflow-y-scroll" style={{height:"800px"}}>
+      <div className="row overflow-y-scroll mt-3" style={{height:"800px"}}>
         {listProductAdmin?.map((p, index) => (
           <div className="col-md-3">
             <CardProductByAdmin />
