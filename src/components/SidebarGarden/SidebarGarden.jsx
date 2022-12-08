@@ -38,7 +38,7 @@ const SidebarGarden = ({ children }) => {
       icon: <BiBox />,
     },
     {
-      name: "Đăng Ký",
+      name: "Sản Phẩm",
       link: "/nha-vuon/dang-ky-san-pham",
       icon: <BiBox />,
     },
