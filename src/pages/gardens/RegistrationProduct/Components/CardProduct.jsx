@@ -15,7 +15,7 @@ export default function CardProduct() {
         visible={showPostProductModal}
       />
       <img
-        className="w-full h-52 rounded object-cover"
+        className="w-full h-52 rounded object-cover "
         alt=""
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />
@@ -31,9 +31,7 @@ export default function CardProduct() {
         >
           Đăng bán
         </button>
-        {/* <button className="ml-2 bg-orange-400 hover:bg-orange-500 text-white font-base py-1 px-3   border-blue-700 rounded ">
-          Xóa
-        </button> */}
+
       </div>
     </div>
   );

@@ -16,6 +16,18 @@ export default function ListProductByAdmin() {
       nameCategory: "Hoa",
     },
     {
+      id: "1",
+      name: "Hoa sen",
+      avatar: "../../../assets/images/logo/fmp.png",
+      nameCategory: "Hoa",
+    },
+    {
+      id: "2",
+      name: "Hoa sen",
+      avatar: "../../../assets/images/logo/fmp.png",
+      nameCategory: "Hoa",
+    },
+    {
       id: "3",
       name: "Hoa sen",
       avatar: "../../../assets/images/logo/fmp.png",
@@ -130,10 +142,9 @@ export default function ListProductByAdmin() {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row overflow-y-scroll" style={{height:"800px"}}>
         {listProductAdmin?.map((p, index) => (
           <div className="col-md-3">
-            
             <CardProductByAdmin />
           </div>
         ))}
