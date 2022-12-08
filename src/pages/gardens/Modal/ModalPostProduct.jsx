@@ -26,7 +26,7 @@ export default function ModalPostProduct({ visible, onClose }) {
               <p className="mb-2 text-zinc-500">Tên sản phẩm</p>
               <select
                 id="countries_disabled"
-                className=" border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
+                className="h-10 border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
               >
                 <option className="text-gray-700 text-sm" selected>
                   Hoa Lan
@@ -76,7 +76,8 @@ export default function ModalPostProduct({ visible, onClose }) {
               <p className="mb-2 text-zinc-500">Loại sản phẩm</p>
               <select
                 id="countries_disabled"
-                className=" border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
+                className=" h-10
+                 border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
               >
                 <option className="text-gray-700 text-sm" selected>
                   A

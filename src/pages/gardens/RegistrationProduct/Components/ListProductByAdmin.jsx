@@ -78,9 +78,9 @@ export default function ListProductByAdmin() {
             </p>
             <select
               id="countries_disabled"
-              className="p-2.5 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full md:w-1/2"
+              className=" h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full md:w-1/2"
             >
-              <option selected>Danh mục hoa</option>
+              <option selected>Danh mục</option>
               <option value="US">United States</option>
               <option value="CA">Canada</option>
               <option value="FR">France</option>
