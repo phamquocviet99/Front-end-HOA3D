@@ -42,10 +42,20 @@ const SidebarGarden = ({ children }) => {
       link: "/nha-vuon/dang-ky-san-pham",
       icon: <BiBox />,
     },
+    {
+      name: "Đơn hàng",
+      link: "/nha-vuon/don-hang",
+      icon: <BiBox />,
+    },
 
     {
       name: "Thông Tin",
       link: "/nha-vuon/nguoi-dung",
+      icon: <HiOutlineUserCircle />,
+    },
+    {
+      name: "profileShop",
+      link: "/nha-vuon/ho-so-cua-hang",
       icon: <HiOutlineUserCircle />,
     },
   ];
