@@ -15,7 +15,8 @@ export default function CardProduct() {
         visible={showPostProductModal}
       />
       <img
-        className="w-full h-52 rounded object-cover "
+        // className="w-full h-52 rounded object-cover "
+        className="img-responsive rounded"
         alt=""
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />

@@ -5,7 +5,8 @@ export default function CardProductByAdmin() {
         <p className="mb-0 text-sx text-white font-extralight">BÁN TỐT</p>
       </div>
       <img
-        className="h-48 w-full object-cover"
+        // className="h-48 w-full object-cover"
+        className="img-responsive "
         alt=""
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />

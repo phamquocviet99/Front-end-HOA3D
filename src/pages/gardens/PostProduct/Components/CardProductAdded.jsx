@@ -2,7 +2,8 @@ export default function CardProductAdded() {
   return (
     <div className="p-3 shadow-lg">
       <img
-        className="h-44 w-full "
+        // className="h-44 w-full "
+        className="img-responsive "
         alt=""
         src={require("../../../../assets/images/image/testflower.jpg")}
       />
