@@ -1,34 +1,93 @@
 .element-tab-product {
+  cursor: pointer;
+  position: relative;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #405ec0;
-  border-radius: 7px;
+  margin-top: 12px;
+  margin-right: 20px;
+  padding: 15px;
   color: white;
 }
 .element-tab-product-active {
+  position: relative;
+  cursor: pointer;
   height: 40px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border-radius: 7px;
-  color: rgb(104, 104, 104);
-  /* border: 2px solid rgb(155, 155, 155);; */
+  background-color: white;
+  margin-top: 12px;
+  margin-right: 20px;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: rgb(76, 76, 76);
 }
-.element-tab-product-active:hover {
+.element-tab-product:hover {
   height: 40px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border-radius: 7px;
-  color: rgb(104, 104, 104);
-  background-color: rgb(235, 235, 235);
+  background-color: white;
+  color: rgb(76, 76, 76);
+  margin-top: 12px;
+  margin-right: 20px;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
+
+.element-tab-product-active::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 0;
+  left: -20px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 10px 10px 0px 2px white;
+}
+.element-tab-product-active::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 0;
+  right: -20px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: -10px 10px 0px 2px white;
+}
+.element-tab-product:hover::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 0;
+  left: -20px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 10px 10px 0px 2px white;
+}
+.element-tab-product:hover::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 0;
+  right: -20px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: -10px 10px 0px 2px white;
+}
+
 .font-title-product {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

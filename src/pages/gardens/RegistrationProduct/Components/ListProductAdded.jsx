@@ -65,7 +65,7 @@ export default function ListProductAdded() {
     },
   ]);
   return (
-    <div className="card-element p-4 mt-4">
+    <div className="card-element p-4">
       <div className="row">
         <div className="col-md-6">
           <h4 className="text-zinc-500 text-base md:text-xl mt-1 mb-3 ml-2 font-medium">

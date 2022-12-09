@@ -69,7 +69,6 @@ export default function ListProductByAdmin() {
       <h4 className="text-zinc-500 text-base md:text-xl mt-1 mb-3 ml-2 font-medium">
         Danh sách sản phẩm sàn quy định
       </h4>
-      <div className="line-page"></div>
       <div className="row mt-3">
         <div className="col-md-6">
           <div className="md:flex justify-start items-center mb-3">
