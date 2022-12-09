@@ -142,9 +142,9 @@ export default function ListProductByAdmin() {
           </div>
         </div>
       </div>
-      <div className="row overflow-y-scroll mt-3" style={{height:"800px"}}>
+      <div className="row mt-3" >
         {listProductAdmin?.map((p, index) => (
-          <div className="col-md-3">
+          <div className="col-md-2">
             <CardProductByAdmin />
           </div>
         ))}

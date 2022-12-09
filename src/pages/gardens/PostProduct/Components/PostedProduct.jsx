@@ -126,9 +126,9 @@ export default function PostedProduct() {
       </div>
 
       <div>
-        <div className="row overflow-y-scroll mt-3">
+        <div className="row mt-3">
           {listProductAdmin?.map((p, index) => (
-            <div className="col-md-3  col-xs-12 mt-3">
+            <div className="col-md-3 mt-3">
               <CardProductAdded />
             </div>
           ))}
