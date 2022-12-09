@@ -48,11 +48,7 @@ const SidebarGarden = ({ children }) => {
       link: "/nha-vuon/nguoi-dung",
       icon: <HiOutlineUserCircle />,
     },
-    {
-      name: "profileShop",
-      link: "/nha-vuon/ho-so-cua-hang",
-      icon: <HiOutlineUserCircle />,
-    },
+
   ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
