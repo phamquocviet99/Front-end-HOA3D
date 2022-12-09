@@ -15,16 +15,16 @@ export default function CardProductAdded() {
       <p className="mt-2 text-slate-400 mb-0">Danh mục : Hoa cúc</p>
       <p className="mt-2 text-slate-400 mb-0">Giá : 220.000đ/kg</p>
 
-      <div className="flex justify-between items-center mt-3">
+      <div className="flex justify-start items-center mt-3">
         <div className="flex items-center">
           <p className="mb-0 font-bold mr-1">Loại :</p>
           <div className=" rounded-full bg-green-600  flex justify-center items-center p-2 h-6 w-6">
             <p className="mb-0 text-white text-xs">A</p>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="ml-4 flex items-center">
           <p className="mb-0 font-bold mr-1">Màu :</p>
-          <div className=" rounded-lg bg-pink-600  flex justify-center items-center p-2 h-6 w-6"></div>
+          <div className=" rounded-full bg-pink-600  flex justify-center items-center p-2 h-6 w-6"></div>
         </div>
       </div>
 

@@ -33,11 +33,6 @@ const SidebarGarden = ({ children }) => {
       icon: <TbApps />,
     },
     {
-      name: "Đăng bán",
-      link: "/nha-vuon/dang-ban",
-      icon: <BiBox />,
-    },
-    {
       name: "Sản Phẩm",
       link: "/nha-vuon/dang-ky-san-pham",
       icon: <BiBox />,
