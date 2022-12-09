@@ -1,0 +1,30 @@
+.tab-profile-shop {
+  background-color: transparent;
+
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  color: rgb(129, 129, 129);
+}
+.tab-profile-shop-active {
+  background-color: white;
+
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  color: rgb(129, 129, 129);
+}
+.tab-profile-shop:hover {
+  background-color: white;
+
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  color: rgb(129, 129, 129);
+}
