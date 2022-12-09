@@ -38,6 +38,11 @@ const SidebarGarden = ({ children }) => {
       icon: <BiBox />,
     },
     {
+      name: "Sản Lượng",
+      link: "/nha-vuon/san-luong",
+      icon: <BiBox />,
+    },
+    {
       name: "Đơn hàng",
       link: "/nha-vuon/don-hang",
       icon: <BiBox />,

@@ -64,27 +64,5 @@ export default function RegistrationProduct() {
         <div className={isActiveTab === l.id ? "" : "hidden"}>{l.element}</div>
       ))}
     </div>
-    // <div>
-    //   <div className="card-element w-full mb-4 p-2">
-    //     <div className="block  md:flex">
-    //       {tabProduct?.map((t, index) => (
-    //         <div
-    //           onClick={() => setIsActiveTab(t.id)}
-    //           className={
-    //             isActiveTab !== t.id
-    //               ? "w-full md:w-1/2 element-tab-product-active"
-    //               : "w-full md:w-1/2 element-tab-product"
-    //           }
-    //         >
-    //           {t.icon}
-    //           <p className="mb-0 ml-3 text-base">{t.name}</p>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    //   {ListProductList?.map((l, index) => (
-    //     <div className={isActiveTab === l.id ? "" : "hidden"}>{l.element}</div>
-    //   ))}
-    // </div>
   );
 }

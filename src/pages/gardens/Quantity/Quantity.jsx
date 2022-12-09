@@ -1,44 +1,41 @@
 import { useState } from "react";
 import { AiFillAppstore } from "react-icons/ai";
-import PostedProduct from "../PostProduct/Components/PostedProduct";
-import ListProductAdded from "../RegistrationProduct/Components/ListProductAdded";
-import ListProductByAdmin from "../RegistrationProduct/Components/ListProductByAdmin";
-import CompleteOrder from "./Components/CompleteOrder";
-import CurrentOrder from "./Components/CurrentOrder";
-import PrepareOrder from "./Components/PrepareOrder";
+import HarvestProduct from "./Components/HarvestProduct";
+import OnSaleProduct from "./Components/OnSaleProduct";
+import OutOfStockProduct from "./Components/OutOfStockProduct";
 
-export default function Order(){
-    const [isActiveTab, setIsActiveTab] = useState(1);
+export default function Quantity() {
+  const [isActiveTab, setIsActiveTab] = useState(1);
   const tabProduct = [
     {
       id: 1,
 
-      name: "Đơn hàng đang có",
+      name: "Sản phẩm sắp thu hoạch",
     },
 
     {
       id: 2,
 
-      name: "Đơn hàng chuẩn bị",
+      name: "Sản phẩm đang bán",
     },
     {
       id: 3,
 
-      name: "Đơn hàng hoàn thành",
+      name: "Sản phẩm hết hàng",
     },
   ];
   const ListContentProduct = [
     {
       id: 1,
-      element: <CurrentOrder />,
+      element: <HarvestProduct/>,
     },
     {
       id: 2,
-      element: <PrepareOrder />,
+      element: <OnSaleProduct/>,
     },
     {
       id: 3,
-      element: <CompleteOrder />,
+      element: <OutOfStockProduct/>,
     },
   ];
 

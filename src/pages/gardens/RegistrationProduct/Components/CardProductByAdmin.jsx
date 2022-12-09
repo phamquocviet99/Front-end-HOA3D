@@ -12,7 +12,7 @@ export default function CardProductByAdmin() {
         <p className="text-center font-bold text-base font-title-product mb-0">HOA NHÀI 3D</p>
       </div>
       <div className="flex items-center justify-center px-2">
-        <button className="mt-2 mb-3 bg-blue-500 hover:bg-blue-600 text-white  py-2 px-4 border border-blue-700 rounded-lg w-full ">
+        <button className="mt-2 mb-3 bg-blue-500 hover:bg-blue-600 text-white  py-1 px-4 border border-blue-700 rounded-lg w-full ">
           Đăng ký
         </button>
       </div>
