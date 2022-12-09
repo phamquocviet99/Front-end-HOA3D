@@ -91,3 +91,93 @@
 .font-title-product {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+@media only screen and (max-width: 770px) {
+  .p-res-pro{
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  .element-tab-product {
+    cursor: pointer;
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    color: white;
+  }
+  .element-tab-product-active {
+    position: relative;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    color: rgb(76, 76, 76);
+  }
+  .element-tab-product:hover {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: rgb(76, 76, 76);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .element-tab-product-active::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    left: -20px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 10px 10px 0px 2px rgba(255, 255, 255, 0);
+  }
+  .element-tab-product-active::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    right: -20px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: -10px 10px 0px 2px rgba(130, 35, 35, 0);
+  }
+  .element-tab-product:hover::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    left: -20px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 10px 10px 0px 2px rgba(255, 255, 255, 0);
+  }
+  .element-tab-product:hover::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    right: -20px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: -10px 10px 0px 2px rgba(202, 171, 171, 0);
+  }
+}
