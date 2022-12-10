@@ -72,7 +72,7 @@ export default function PostedProduct() {
         </div>
         <div className="col-md-6">
           <form className="flex  justify-start md:justify-end md:mt-0 items-center">
-            <label for="simple-search" class="sr-only">
+            <label for="simple-search" className="sr-only">
               Search
             </label>
             <div className="relative w-full md:w-1/2">

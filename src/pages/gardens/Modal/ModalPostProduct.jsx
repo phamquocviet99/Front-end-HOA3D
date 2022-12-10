@@ -54,14 +54,7 @@ export default function ModalPostProduct({ visible, onClose }) {
                 placeholder="Số lượng"
               />
             </div>
-            <div className="mt-3">
-              <p className="mb-2 text-zinc-500">Giá bán</p>
-              <input
-                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                type="text"
-                placeholder="Giá"
-              />
-            </div>
+           
             <div className="mt-3">
               <p className="mb-2 text-zinc-500">Ngày bắt đầu thu hoạch</p>
               <DatePicker
@@ -93,35 +86,12 @@ export default function ModalPostProduct({ visible, onClose }) {
                 </option>
               </select>
             </div>
-
             <div className="mt-3">
-              <p className="mb-2 text-zinc-500">Màu sắc</p>
+              <p className="mb-2 text-zinc-500">Giá bán</p>
               <input
                 className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
-                placeholder="Màu sắc"
-              />
-            </div>
-            <div className="mt-3">
-              <p className="mb-2 text-zinc-500">Hình ảnh :</p>
-              <input
-                className="form-control
-                        
-                w-full
-                        
-                        py-1.5
-                        text-base
-                        font-normal
-                        text-gray-700
-                        bg-white bg-clip-padding
-                        border border-solid border-gray-300
-                        rounded
-                        transition
-                        ease-in-out
-                        m-0
-                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                type="file"
-                id="formFile"
+                placeholder="Giá"
               />
             </div>
             <div className="mt-3">
