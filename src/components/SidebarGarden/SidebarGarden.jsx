@@ -10,6 +10,7 @@ import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
+import ButtonPosted from "../ButtonPosted/ButtonPosted";
 
 const SidebarGarden = ({ children }) => {
   const navigate = useNavigate();
@@ -53,7 +54,6 @@ const SidebarGarden = ({ children }) => {
       link: "/nha-vuon/nguoi-dung",
       icon: <HiOutlineUserCircle />,
     },
-
   ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -197,9 +197,8 @@ const SidebarGarden = ({ children }) => {
                   <div className="md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       {/* Profile dropdown */}
-                      <button onClick={goToPost} className=" mt-3 mb-2 bg-orange-400 hover:bg-orange-500 text-white font-base py-2 px-4   rounded ">
-                        Đăng bán
-                      </button>
+
+                      <ButtonPosted button={{ name: "Đăng bán" }} />
                       <Menu as="div" className="relative ml-3 hidden md:block">
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 ">
