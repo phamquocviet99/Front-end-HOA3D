@@ -99,7 +99,7 @@ export default function ModalPostProduct({ visible, onClose }) {
               <input
                 className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
-                placeholder="Số lượng"
+                placeholder="Màu sắc"
               />
             </div>
             <div className="mt-3">
