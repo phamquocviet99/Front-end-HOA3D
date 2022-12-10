@@ -2,7 +2,7 @@ import { TbTrashX } from "react-icons/tb";
 
 export default function CardHarvestProduct() {
   return (
-    <div className="w-5/6 mt-3 shadow-md rounded-2xl">
+    <div className=" w-full md:w-5/6 mt-3 shadow-md rounded-2xl">
       <img
         className="img-responsive rounded-2xl"
         alt=""

@@ -12,7 +12,7 @@ export default function ButtonPosted({button}) {
       />
       <button
         onClick={() => setShowPostProductModal(true)}
-        className="mb-1 ml-2 w-full bg-orange-500 hover:bg-orange-600 text-white font-sm py-2 px-3  rounded-lg "
+        className="mb-1 ml-2 w-full bg-orange-400 hover:bg-orange-500 text-white font-sm py-2 px-3  rounded-lg "
       >
         {button.name}
       </button>
