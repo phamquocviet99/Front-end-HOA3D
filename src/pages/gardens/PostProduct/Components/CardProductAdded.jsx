@@ -1,4 +1,4 @@
-import { TbTrashX } from "react-icons/tb";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function CardProductAdded() {
   return (
@@ -33,7 +33,7 @@ export default function CardProductAdded() {
           Bán lại
         </button>
         <button className="mb-1 ml-2 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-lg ">
-          <TbTrashX />
+          <AiOutlineClose  />
         </button>
       </div>
     </div>

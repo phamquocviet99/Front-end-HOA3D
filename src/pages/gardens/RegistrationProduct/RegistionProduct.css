@@ -1,17 +1,19 @@
 .element-tab-product {
   cursor: pointer;
-  position: relative;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
   margin-top: 12px;
   margin-right: 20px;
-  padding: 15px;
-  color: white;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-weight: 500;
 }
 .element-tab-product-active {
-  position: relative;
   cursor: pointer;
   height: 40px;
   display: flex;
@@ -20,25 +22,28 @@
   background-color: white;
   margin-top: 12px;
   margin-right: 20px;
-  padding: 15px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: rgb(76, 76, 76);
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-weight: 500;
 }
 .element-tab-product:hover {
+  cursor: pointer;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  color: rgb(76, 76, 76);
   margin-top: 12px;
   margin-right: 20px;
-  padding: 15px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-weight: 500;
 }
-
+/* 
 .element-tab-product-active::before {
   content: "";
   position: absolute;
@@ -86,13 +91,17 @@
   border-radius: 50%;
   pointer-events: none;
   box-shadow: -10px 10px 0px 2px white;
-}
+} */
 
 .font-title-product {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.bg-header-tab {
+  background-color: #e2eedc;
+}
 @media only screen and (max-width: 770px) {
-  .p-res-pro{
+  .p-res-pro {
     padding-top: 1px;
     padding-bottom: 1px;
   }

@@ -1,3 +1,4 @@
+import { AiOutlineClose } from "react-icons/ai";
 import { TbTrashX } from "react-icons/tb";
 
 export default function CardHarvestProduct() {
@@ -32,7 +33,7 @@ export default function CardHarvestProduct() {
             Thu hoạch
           </button>
           <button className="mb-1 ml-2 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-lg ">
-            <TbTrashX />
+          <AiOutlineClose  />
           </button>
         </div>
       </div>

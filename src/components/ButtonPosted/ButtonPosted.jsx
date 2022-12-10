@@ -1,7 +1,8 @@
 import { useState } from "react";
 import ModalPostProduct from "../../pages/gardens/Modal/ModalPostProduct";
+import { GoDiffAdded } from "react-icons/go";
 
-export default function ButtonPosted({button}) {
+export default function ButtonPosted({ button }) {
   const [showPostProductModal, setShowPostProductModal] = useState(false);
   const handleClosePostProductModal = () => setShowPostProductModal(false);
   return (
@@ -12,9 +13,12 @@ export default function ButtonPosted({button}) {
       />
       <button
         onClick={() => setShowPostProductModal(true)}
-        className="mb-1 ml-2 w-full bg-orange-400 hover:bg-orange-500 text-white font-sm py-2 px-3  rounded-lg "
+        className="mb-1 ml-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-sm py-2 px-3  rounded-lg "
       >
-        {button.name}
+        <div className="flex justify-center items-center">
+          <GoDiffAdded className="text-xl mr-3" />
+          <p className="mb-0 text-base">{button.name}</p>
+        </div>
       </button>
     </div>
   );

@@ -12,18 +12,18 @@ export default function RegistrationProduct() {
     {
       id: 1,
 
-      name: "Sản phẩm đã bán",
+      name: "Sản phẩm đang bán",
     },
 
     {
       id: 2,
 
-      name: "Sản phẩm đã đăng ký",
+      name: "Sản phẩm của tôi",
     },
     {
       id: 3,
 
-      name: "Sản phẩm sàn quy định",
+      name: "Thêm sản phẩm mới",
     },
   ];
   const ListContentProduct = [
@@ -43,16 +43,15 @@ export default function RegistrationProduct() {
 
   return (
     <div className="card-element w-full ">
-      <div className=" w-full bg-blue-500 rounded-xl m md:rounded-b-none block md:flex p-res-pro items-center">
-        <AiFillAppstore className="hidden md:block text-2xl mx-6 text-white mt-3" />
+      <div className=" w-full rounded-xl md:rounded-b-none block md:flex p-res-pro items-center pl-5">
         {tabProduct.map((t, index) => (
           <div key={index}>
             <div
               onClick={() => setIsActiveTab(t.id)}
               className={
                 isActiveTab === t.id
-                  ? "element-tab-product-active"
-                  : "element-tab-product"
+                  ? "element-tab-product-active border-b-4 border-blue-500 text-blue-500"
+                  : "element-tab-product text-gray-400 border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400"
               }
             >
               {t.name}

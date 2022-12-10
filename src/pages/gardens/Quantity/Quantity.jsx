@@ -40,9 +40,9 @@ export default function Quantity() {
   ];
 
   return (
-    <div className="card-element w-full ">
-      <div className=" w-full bg-blue-500 rounded-xl m md:rounded-b-none block md:flex p-res-pro items-center">
-        <AiFillAppstore className="hidden md:block text-2xl mx-6 text-white mt-3" />
+    <div className="card-element w-full border-2  ">
+      <div className=" w-full bg-header-tab rounded-xl m md:rounded-b-none block md:flex p-res-pro items-center">
+        <AiFillAppstore className="hidden md:block text-2xl mx-6 text-black mt-3" />
         {tabProduct.map((t, index) => (
           <div key={index}>
             <div

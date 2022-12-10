@@ -68,9 +68,7 @@ export default function PostedProduct() {
     <div className="card-element p-4">
       <div className="row">
         <div className="col-md-6">
-          <h4 className="text-zinc-500 text-base md:text-xl mt-1 mb-3 ml-2 font-medium">
-            Danh sách sản phẩm đã bán
-          </h4>
+         
         </div>
         <div className="col-md-6">
           <form className="flex  justify-start md:justify-end md:mt-0 items-center">

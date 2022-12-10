@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ModalPostProduct from "../../Modal/ModalPostProduct";
 import { TbTrashX } from "react-icons/tb";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function CardProduct() {
   const [showPostProductModal, setShowPostProductModal] = useState(false);
@@ -33,7 +34,7 @@ export default function CardProduct() {
       
           className="mb-1 ml-2 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-lg "
         >
-          <TbTrashX />
+           <AiOutlineClose  />
         </button>
       </div>
     </div>
