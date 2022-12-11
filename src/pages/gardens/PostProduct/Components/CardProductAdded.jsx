@@ -3,7 +3,7 @@ import { BsFillPatchPlusFill } from "react-icons/bs";
 
 export default function CardProductAdded() {
   return (
-    <div className="w-11/12 p-2 shadow rounded-lg">
+    <div className="w-full md:w-11/12 p-2 shadow rounded-lg">
       <img
         // className="h-44 w-full "
         className="img-responsive rounded-md "
