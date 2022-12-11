@@ -43,14 +43,14 @@ export default function RegistrationProduct() {
 
   return (
     <div className="card-element w-full ">
-      <div className=" w-full rounded-xl md:rounded-b-none block md:flex p-res-pro items-center pl-5">
+      <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5">
         {tabProduct.map((t, index) => (
           <div key={index}>
             <div
               onClick={() => setIsActiveTab(t.id)}
               className={
                 isActiveTab === t.id
-                  ? "element-tab-product-active border-b-4 border-blue-500 text-blue-500"
+                  ? "element-tab-product-active md:border-b-4 md:border-blue-500 md:text-blue-500"
                   : "element-tab-product text-gray-400 border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400"
               }
             >
