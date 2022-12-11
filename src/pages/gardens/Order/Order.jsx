@@ -73,7 +73,7 @@ function Order() {
   return (
     <div>
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-3 mt-2">
           <div className="p-4 w-full bg-white rounded-md">
             <div className="flex justify-between items-center">
               <div>
@@ -91,7 +91,7 @@ function Order() {
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 mt-2">
           <div className="p-4 w-full bg-white rounded-md">
             <div className="flex justify-between items-center">
               <div>
@@ -109,7 +109,7 @@ function Order() {
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 mt-2">
           <div className="p-4 w-full bg-white rounded-md">
             <div className="flex justify-between items-center">
               <div>
@@ -129,7 +129,7 @@ function Order() {
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 mt-2">
           <div className="p-4 w-full bg-white rounded-md">
             <div className="flex justify-between items-center">
               <div>
@@ -154,10 +154,10 @@ function Order() {
         <div>
           <div className="row">
             <p>Bộ lọc :</p>
-            <div className="col-md-4">
+            <div className="col-md-4 mt-2">
               <select
                 id="countries_disabled"
-                className=" h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
+                className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
               >
                 <option selected>Loại hoa</option>
                 <option value="US">Hoa Lan</option>
@@ -166,10 +166,10 @@ function Order() {
                 <option value="DE">Hoa Hồng</option>
               </select>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mt-2">
               <select
                 id="countries_disabled"
-                className=" h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
+                className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
               >
                 <option selected>Trạng thái</option>
                 <option value="US">Chưa giao hàng</option>
@@ -177,10 +177,10 @@ function Order() {
                 <option value="FR">Đang giao hàng</option>
               </select>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mt-2">
               <select
                 id="countries_disabled"
-                className=" h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
+                className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
               >
                 <option selected>Số lượng</option>
                 <option value="US">Cao tới thấp</option>
