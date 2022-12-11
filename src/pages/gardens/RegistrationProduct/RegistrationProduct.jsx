@@ -43,7 +43,7 @@ export default function RegistrationProduct() {
 
   return (
     <div className="card-element w-full ">
-      <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5">
+      <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5 pt-1">
         {tabProduct.map((t, index) => (
           <div key={index}>
             <div
