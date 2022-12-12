@@ -11,6 +11,7 @@ import { FaRegWindowClose } from "react-icons/fa";
 import { TbPlayerTrackNext, TbPlayerTrackPrev } from "react-icons/tb";
 import "./Order.css";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
+import ButtonDetailOrder from "../../../components/ButtonDetailOrder/ButtonDetailOrder";
 
 function Order() {
   const listOrder = [
@@ -241,9 +242,7 @@ function Order() {
                     </td>
                     <td className="py-4 px-6 text-center">{o.date}</td>
                     <td className="py-4 flex justify-center items-center">
-                      <button className="p-2 bg-blue-500 hover:bg-blue-700 rounded-md mx-1">
-                        <AiFillEye className="text-white text-2xl" />
-                      </button>
+                      <ButtonDetailOrder />
                       <button className="p-2 bg-green-600 hover:bg-green-700 rounded-md m-1">
                         <FiEdit className="text-white text-2xl" />
                       </button>
@@ -268,6 +267,7 @@ function Order() {
                     Trang trước
                   </a>
                 </li>
+                <div className="hidden md:flex">
                 <li>
                   <a
                     href="/#"
@@ -309,6 +309,7 @@ function Order() {
                     30
                   </a>
                 </li>
+                </div>
                 <li>
                   <a
                     href="/#"
