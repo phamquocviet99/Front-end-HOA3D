@@ -41,7 +41,7 @@ function Order() {
       nameShop: "Minh An",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "delivering",
+      status: "cancel",
       date: "22/12/2022",
     },
     {
@@ -237,6 +237,8 @@ function Order() {
                         <>Đã giao hàng</>
                       ) : o.status === "delivering" ? (
                         <>Đang giao hàng</>
+                      ) : o.status === "cancel" ? (
+                        <>Đơn hàng bị hủy</>
                       ) : (
                         <ButtonDelivery />
                       )}
