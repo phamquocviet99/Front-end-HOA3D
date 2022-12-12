@@ -12,12 +12,12 @@ export default function ButtonDetailOrder() {
         onClose={handleCloseDetailModal}
         visible={showDetailOrderModal}
       />
-      
+
       <button
         onClick={() => setShowDetailOrderModal(true)}
-        className="p-2 bg-blue-500 hover:bg-blue-700 rounded-md mx-1"
+        className=" bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 border border-blue-700 rounded-lg w-28"
       >
-        <AiFillEye className="text-white text-2xl" />
+        Xem chi tiết
       </button>
     </div>
   );

@@ -1,13 +1,11 @@
-import { useState } from "react";
-import CardProduct from "./Components/CardProduct";
 import ListProductByAdmin from "./Components/ListProductByAdmin";
 import "./RegistionProduct.css";
-import { AiFillAppstore, AiFillCodeSandboxSquare } from "react-icons/ai";
+
 import ListProductAdded from "./Components/ListProductAdded";
 import PostedProduct from "../PostProduct/Components/PostedProduct";
+import TabHeader from "../../../components/TabHeader/TabHeader";
 
 export default function RegistrationProduct() {
-  const [isActiveTab, setIsActiveTab] = useState(1);
   const tabProduct = [
     {
       id: 1,
@@ -41,27 +39,5 @@ export default function RegistrationProduct() {
     },
   ];
 
-  return (
-    <div className="card-element w-full ">
-      <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5 pt-1">
-        {tabProduct.map((t, index) => (
-          <div key={index}>
-            <div
-              onClick={() => setIsActiveTab(t.id)}
-              className={
-                isActiveTab === t.id
-                  ? "element-tab-product-active md:border-b-4 md:border-blue-500 md:text-blue-500"
-                  : "element-tab-product text-gray-400 border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400"
-              }
-            >
-              {t.name}
-            </div>
-          </div>
-        ))}
-      </div>
-      {ListContentProduct?.map((l, index) => (
-        <div className={isActiveTab === l.id ? "" : "hidden"}>{l.element}</div>
-      ))}
-    </div>
-  );
+  return <TabHeader tabName={tabProduct} listComponent={ListContentProduct} />;
 }

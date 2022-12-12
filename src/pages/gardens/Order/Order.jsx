@@ -1,19 +1,16 @@
-import { useState } from "react";
 import {
   RiNewspaperLine,
   RiFileMusicLine,
   RiTaskLine,
   RiExchangeBoxLine,
 } from "react-icons/ri";
-import { AiFillEye } from "react-icons/ai";
-import { FiEdit } from "react-icons/fi";
-import { FaRegWindowClose } from "react-icons/fa";
-import { TbPlayerTrackNext, TbPlayerTrackPrev } from "react-icons/tb";
 import "./Order.css";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
 import ButtonDetailOrder from "../../../components/ButtonDetailOrder/ButtonDetailOrder";
 import ButtonEditOrder from "../../../components/ButtonEditOrder/ButtonEditOrder";
 import ButtonDeleteOrder from "../../../components/ButtonDeleteOrder/ButtonDeleteOrder";
+import { MdBallot, MdDescription } from "react-icons/md";
+import { GoChecklist, GoTasklist } from "react-icons/go";
 
 function Order() {
   const listOrder = [
@@ -41,7 +38,7 @@ function Order() {
       nameShop: "Minh An",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "cancel",
+      status: "sendMoney",
       date: "22/12/2022",
     },
     {
@@ -77,83 +74,79 @@ function Order() {
     <div>
       <div className="row">
         <div className="col-md-3 mt-2">
-          <div className="p-4 w-full bg-white rounded-md">
-            <div className="flex justify-between items-center">
+          <div className="p-4  w-full bg-white rounded-xl shadow-md">
+            <div className="flex justify-around items-center">
+              <div className="p-3 bg-orange-100 rounded-lg">
+                <i className="fa-solid fa-table-list text-orange-500 text-4xl"></i>
+              </div>
               <div>
-                <p className="mb-0 text-base text-gray-500">Tổng hóa đơn</p>
-                <div className="flex justify-start items-center mt-2">
-                  <p className="mb-0 text-xl font-mono text-gray-600 mr-2">
+                <p className="mb-0 text-base text-gray-500">Tổng đơn hàng</p>
+                <div className="flex justify-start items-center mt-1">
+                  <p className="mb-0 text-xl font-bold text-orange-500 mr-2">
                     +2304
                   </p>
-                  <p className="mb-0 text-base text-red-600">(100%)</p>
+                  <p className="mb-0 text-base text-green-600">(100%)</p>
                 </div>
-              </div>
-              <div className="p-2 bg-orange-50 rounded-md">
-                <RiNewspaperLine className="text-orange-500 text-2xl" />
               </div>
             </div>
           </div>
         </div>
         <div className="col-md-3 mt-2">
-          <div className="p-4 w-full bg-white rounded-md">
-            <div className="flex justify-between items-center">
-              <div>
-                <p className="mb-0 text-base text-gray-500">Hóa đơn chuẩn bị</p>
-                <div className="flex justify-start items-center mt-2">
-                  <p className="mb-0 text-xl font-mono text-gray-600 mr-2">
-                    +1234
-                  </p>
-                  <p className="mb-0 text-base text-red-600">(20%)</p>
-                </div>
+          <div className="p-4  w-full bg-white rounded-xl shadow-md">
+            <div className="flex justify-around items-center">
+              <div className="p-3 bg-indigo-100 rounded-lg">
+                <i className="fa-solid fa-file-circle-plus text-indigo-500 text-4xl"></i>
               </div>
-              <div className="p-2 bg-red-50 rounded-md">
-                <RiExchangeBoxLine className="text-red-500 text-2xl" />
+              <div>
+                <p className="mb-0 text-base text-gray-500">Đơn hàng mới</p>
+                <div className="flex justify-start items-center mt-1">
+                  <p className="mb-0 text-xl font-bold text-indigo-500 mr-2">
+                    +2304
+                  </p>
+                  <p className="mb-0 text-base text-green-600">(100%)</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className="col-md-3 mt-2">
-          <div className="p-4 w-full bg-white rounded-md">
-            <div className="flex justify-between items-center">
-              <div>
-                <p className="mb-0 text-base text-gray-500">
-                  Hóa đơn đang giao
-                </p>
-                <div className="flex justify-start items-center mt-2">
-                  <p className="mb-0 text-xl font-mono text-gray-600 mr-2">
-                    +250
-                  </p>
-                  <p className="mb-0 text-base text-red-600">(30%)</p>
-                </div>
+          <div className="p-4  w-full bg-white rounded-xl shadow-md">
+            <div className="flex justify-around items-center">
+              <div className="p-3 bg-blue-100 rounded-lg">
+                <i className="text-blue-500 text-4xl fa-solid fa-truck-fast"></i>
               </div>
-              <div className="p-2 bg-purple-50 rounded-md">
-                <RiFileMusicLine className="text-purple-500 text-2xl" />
+              <div>
+                <p className="mb-0 text-base text-gray-500">Đơn đang giao</p>
+                <div className="flex justify-start items-center mt-1">
+                  <p className="mb-0 text-xl font-bold text-blue-500 mr-2">
+                    +2304
+                  </p>
+                  <p className="mb-0 text-base text-green-600">(100%)</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className="col-md-3 mt-2">
-          <div className="p-4 w-full bg-white rounded-md">
-            <div className="flex justify-between items-center">
-              <div>
-                <p className="mb-0 text-base text-gray-500">
-                  Hóa đơn hoàn thành
-                </p>
-                <div className="flex justify-start items-center mt-2">
-                  <p className="mb-0 text-xl font-mono text-gray-600 mr-2">
-                    +250
-                  </p>
-                  <p className="mb-0 text-base text-red-600">(20%)</p>
-                </div>
+          <div className="p-4  w-full bg-white rounded-xl shadow-md">
+            <div className="flex justify-around items-center">
+              <div className="p-3 bg-rose-100 rounded-lg">
+                <i className="fa-solid fa-building-circle-check text-rose-500 text-4xl"></i>
               </div>
-              <div className="p-2 bg-green-50 rounded-md">
-                <RiTaskLine className="text-green-500 text-2xl" />
+              <div>
+                <p className="mb-0 text-base text-gray-500">Đơn hoàn thành</p>
+                <div className="flex justify-start items-center mt-1">
+                  <p className="mb-0 text-xl font-bold text-rose-500 mr-2">
+                    +2304
+                  </p>
+                  <p className="mb-0 text-base text-green-600">(100%)</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full rounded-md bg-white mt-3 p-3">
+      <div className=" w-full rounded-xl bg-white mt-3 p-3 shadow-md">
         <div>
           <div className="row">
             <div className="col-md-4 mt-2">
@@ -193,8 +186,8 @@ function Order() {
         </div>
 
         <div className="mt-4">
-          <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
-            <table className="w-full text-sm text-left text-gray-500 ">
+          <div className=" hidden md:block overflow-x-auto relative shadow-md sm:rounded-lg">
+            <table className=" w-full text-sm text-left text-gray-500 ">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                 <tr>
                   <th scope="col" className="py-3 px-6 text-center">
@@ -237,89 +230,137 @@ function Order() {
                         <>Đã giao hàng</>
                       ) : o.status === "delivering" ? (
                         <>Đang giao hàng</>
-                      ) : o.status === "cancel" ? (
-                        <>Đơn hàng bị hủy</>
+                      ) : o.status === "sendMoney" ? (
+                        <>Đã đặt cọc</>
                       ) : (
-                        <ButtonDelivery />
+                        <>Đơn hàng mới</>
                       )}
                     </td>
                     <td className="py-4 px-6 text-center">{o.date}</td>
                     <td className="py-4 flex justify-center items-center">
-                      <ButtonDetailOrder />
-                      <ButtonEditOrder />
-                      <ButtonDeleteOrder />
+                      {o.status === "delivered" ? (
+                        <ButtonDetailOrder />
+                      ) : o.status === "delivering" ? (
+                        <ButtonDetailOrder />
+                      ) : o.status === "sendMoney" ? (
+                        <ButtonDelivery />
+                      ) : (
+                        <ButtonEditOrder />
+                      )}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <nav
-              className="flex justify-end items-center pt-3 pr-3"
-              aria-label="Table navigation"
-            >
-              <ul className="inline-flex items-center -space-x-px">
-                <li>
-                  <a
-                    href="/#"
-                    className=" rounded-l-lg py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-                  >
-                    Trang trước
-                  </a>
-                </li>
-                <div className="hidden md:flex">
-                  <li>
-                    <a
-                      href="/#"
-                      className="py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-                    >
-                      1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/#"
-                      className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
-                    >
-                      2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/#"
-                      aria-current="page"
-                      className="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
-                    >
-                      3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/#"
-                      className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                    >
-                      ...
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/#"
-                      className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                    >
-                      30
-                    </a>
-                  </li>
-                </div>
-                <li>
-                  <a
-                    href="/#"
-                    className=" rounded-r-lg py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-                  >
-                    Trang tiếp
-                  </a>
-                </li>
-              </ul>
-            </nav>
           </div>
+          <div className="md:hidden">
+            {listOrder?.map((o, index) => (
+              <div
+                key={index}
+                className="w-full shadow-md rounded-md border mt-3 p-3 "
+              >
+                <div className="flex justify-between items-center">
+                  <p className="font-bold text-base">Mã đơn : {o.id}</p>
+                  <p className="text-gray-500">
+                    {o.status === "delivered" ? (
+                      <>Đã giao hàng</>
+                    ) : o.status === "delivering" ? (
+                      <>Đang giao hàng</>
+                    ) : o.status === "sendMoney" ? (
+                      <>Đã đặt cọc</>
+                    ) : (
+                      <>Đơn hàng mới</>
+                    )}
+                  </p>
+                </div>
+
+                <p className="text-gray-500">Sản phẩm : {o?.nameProduct}</p>
+                <p className="text-gray-500">Số lượng : {o?.count}</p>
+
+                <p className="text-gray-500">Cửa hàng : {o?.nameShop}</p>
+                <p className="text-gray-500">Dự kiến ngày đến : {o?.date}</p>
+                <p className="text-red-500">Giá : {o?.totalPrice}</p>
+                <div className="flex justify-center items-center">
+                 
+                  {o.status === "delivered" ? (
+                    <ButtonDetailOrder />
+                  ) : o.status === "delivering" ? (
+                    <ButtonDetailOrder />
+                  ) : o.status === "sendMoney" ? (
+                    <ButtonDelivery />
+                  ) : (
+                    <ButtonEditOrder />
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <nav
+            className="flex justify-end items-center pt-3 pr-3"
+            aria-label="Table navigation"
+          >
+            <ul className="inline-flex items-center -space-x-px">
+              <li>
+                <a
+                  href="/#"
+                  className=" rounded-l-lg py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
+                >
+                  Trang trước
+                </a>
+              </li>
+              <div className="hidden md:flex">
+                <li>
+                  <a
+                    href="/#"
+                    className="py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
+                  >
+                    1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#"
+                    className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                  >
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#"
+                    aria-current="page"
+                    className="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                  >
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#"
+                    className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    ...
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#"
+                    className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    30
+                  </a>
+                </li>
+              </div>
+              <li>
+                <a
+                  href="/#"
+                  className=" rounded-r-lg py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
+                >
+                  Trang tiếp
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>

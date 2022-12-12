@@ -16,7 +16,15 @@ export default function ModalPostProduct({ visible, onClose }) {
       onClick={handleClose}
       className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm z-20"
     >
-      <div className="bg-white rounded p-4 overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto">
+      <div className="relative bg-white rounded p-4 overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto">
+      <div className="absolute top-0 right-0">
+          <button
+            onClick={onClose}
+            className="text-gray-500 rounded-md  h-9 w-9 flex justify-center items-center m-2 border-gray-400 border-2  focus:ring-0"
+          >
+            <i className="fa-solid fa-xmark text-2xl "></i>
+          </button>
+        </div>
         <p className="text-center text-2xl  text-zinc-600">
           Quá trình đăng bán sản phẩm
         </p>

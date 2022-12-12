@@ -1,5 +1,5 @@
 import "./App.css";
-
+// import "./components/Fontawesomeicons"
 import Login from "./pages/login/Login";
 import NotRegister from "./pages/login/NotRegister";
 import Register from "./pages/register/Register";
@@ -17,6 +17,7 @@ import PostProduct from "./pages/gardens/PostProduct/PostProduct";
 import Order from "./pages/gardens/Order/Order";
 import ProfileShop from "./pages/gardens/ProfileShop/ProfileShop";
 import Quantity from "./pages/gardens/Quantity/Quantity";
+import Purchase from "./pages/gardens/Purchase/Purchase";
 
 // function App() {
 //   return (
@@ -57,12 +58,10 @@ function App() {
               element={<Navigate replace to="/nha-vuon/trang-chu" />}
             />
             <Route path="/nha-vuon/trang-chu" element={<DashboardGarden />} />
-            <Route path="/nha-vuon/san-pham" element={<ProductGarden />} />
+            <Route path="/nha-vuon/mua-ban" element={<Purchase />} />
+            <Route path="/nha-vuon/san-pham" element={<RegistrationProduct />} />
             <Route path="/nha-vuon/san-luong" element={<Quantity />} />
-            <Route
-              path="/nha-vuon/dang-ky-san-pham"
-              element={<RegistrationProduct />}
-            />
+          
              <Route
               path="/nha-vuon/don-hang"
               element={<Order />}

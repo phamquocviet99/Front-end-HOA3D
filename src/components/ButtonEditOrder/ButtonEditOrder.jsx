@@ -17,9 +17,9 @@ export default function ButtonEditOrder() {
 
       <button
         onClick={() => setShowEditOrderModal(true)}
-        className="p-2 bg-green-600 hover:bg-green-700 rounded-md m-1"
+        className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 border border-blue-700 rounded-lg w-28"
       >
-        <FiEdit className="text-white text-2xl" />
+        Đặt cọc
       </button>
     </div>
   );
