@@ -253,14 +253,14 @@ function Order() {
               </tbody>
             </table>
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden ">
             {listOrder?.map((o, index) => (
               <div
                 key={index}
-                className="w-full shadow-md rounded-md border mt-3 p-3 "
+                className="w-full shadow-md rounded-md border mt-3 p-3 bg-slate-50 "
               >
                 <div className="flex justify-between items-center">
-                  <p className="font-bold text-base">Mã đơn : {o.id}</p>
+                  <p className="font-bold text-base mb-2">Mã đơn : {o.id}</p>
                   <p className="text-gray-500">
                     {o.status === "delivered" ? (
                       <>Đã giao hàng</>
@@ -274,14 +274,30 @@ function Order() {
                   </p>
                 </div>
 
-                <p className="text-gray-500">Sản phẩm : {o?.nameProduct}</p>
-                <p className="text-gray-500">Số lượng : {o?.count}</p>
+                <p className="text-gray-500 mb-2">
+                  Sản phẩm :{" "}
+                  <span className="font-bold text-black">{o?.nameProduct}</span>
+                </p>
+                <div className="flex justify-between items-center">
+                  <p className="text-gray-500 mb-2">
+                    Cửa hàng :{" "}
+                    <span className="font-bold text-black ">{o?.nameShop}</span>
+                  </p>
+                  <p className="text-gray-500 mb-2">
+                    Số lượng :{" "}
+                    <span className="font-bold text-black">{o?.count}</span>
+                  </p>
+                </div>
 
-                <p className="text-gray-500">Cửa hàng : {o?.nameShop}</p>
-                <p className="text-gray-500">Dự kiến ngày đến : {o?.date}</p>
-                <p className="text-red-500">Giá : {o?.totalPrice}</p>
-                <div className="flex justify-center items-center">
-                 
+                <p className="text-gray-500">
+                  Dự kiến ngày đến :{" "}
+                  <span className="font-bold text-black">{o?.date}</span>
+                </p>
+
+                <div
+                  className="flex justify-between
+                 items-center"
+                >
                   {o.status === "delivered" ? (
                     <ButtonDetailOrder />
                   ) : o.status === "delivering" ? (
@@ -291,6 +307,7 @@ function Order() {
                   ) : (
                     <ButtonEditOrder />
                   )}
+                  <p className="text-red-500 mb-0">Giá : {o?.totalPrice}</p>
                 </div>
               </div>
             ))}

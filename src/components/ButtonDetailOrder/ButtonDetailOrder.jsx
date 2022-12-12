@@ -17,7 +17,7 @@ export default function ButtonDetailOrder() {
         onClick={() => setShowDetailOrderModal(true)}
         className=" bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 border border-blue-700 rounded-lg w-28"
       >
-        Xem chi tiết
+        Chi tiết
       </button>
     </div>
   );
