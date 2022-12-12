@@ -12,6 +12,8 @@ import { TbPlayerTrackNext, TbPlayerTrackPrev } from "react-icons/tb";
 import "./Order.css";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
 import ButtonDetailOrder from "../../../components/ButtonDetailOrder/ButtonDetailOrder";
+import ButtonEditOrder from "../../../components/ButtonEditOrder/ButtonEditOrder";
+import ButtonDeleteOrder from "../../../components/ButtonDeleteOrder/ButtonDeleteOrder";
 
 function Order() {
   const listOrder = [
@@ -154,7 +156,6 @@ function Order() {
       <div className="w-full rounded-md bg-white mt-3 p-3">
         <div>
           <div className="row">
-         
             <div className="col-md-4 mt-2">
               <select
                 id="countries_disabled"
@@ -243,12 +244,8 @@ function Order() {
                     <td className="py-4 px-6 text-center">{o.date}</td>
                     <td className="py-4 flex justify-center items-center">
                       <ButtonDetailOrder />
-                      <button className="p-2 bg-green-600 hover:bg-green-700 rounded-md m-1">
-                        <FiEdit className="text-white text-2xl" />
-                      </button>
-                      <button className="p-2 bg-red-600 hover:bg-red-700 rounded-md mx-1">
-                        <FaRegWindowClose className="text-white text-2xl" />
-                      </button>
+                      <ButtonEditOrder />
+                      <ButtonDeleteOrder />
                     </td>
                   </tr>
                 ))}
@@ -268,47 +265,47 @@ function Order() {
                   </a>
                 </li>
                 <div className="hidden md:flex">
-                <li>
-                  <a
-                    href="/#"
-                    className="py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-                  >
-                    1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#"
-                    className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
-                  >
-                    2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#"
-                    aria-current="page"
-                    className="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
-                  >
-                    3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#"
-                    className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                  >
-                    ...
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#"
-                    className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                  >
-                    30
-                  </a>
-                </li>
+                  <li>
+                    <a
+                      href="/#"
+                      className="py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
+                    >
+                      1
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/#"
+                      className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                    >
+                      2
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/#"
+                      aria-current="page"
+                      className="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                    >
+                      3
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/#"
+                      className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                    >
+                      ...
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/#"
+                      className="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                    >
+                      30
+                    </a>
+                  </li>
                 </div>
                 <li>
                   <a
