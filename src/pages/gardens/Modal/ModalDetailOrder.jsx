@@ -20,8 +20,8 @@ export default function ModalDetailOrder({ visible, onClose }) {
         <p className="text-center text-2xl  text-zinc-600">HÓA ĐƠN</p>
         <div className="row">
           <div className="col-md-6">
-            <div className="w-full bg-gray-200 p-2 rounded-md flex justify-center mb-2">
-              <p className="text-xl mb-0">Nhà vườn</p>
+            <div className="w-full bg-orange-50 p-2 rounded-md flex justify-center mb-2">
+              <p className="text-xl mb-0 text-orange-700">Nhà vườn</p>
             </div>
             <div className="flex">
               <p className=" text-slate-500 text-sm md:text-base font-bold mb-3 w-64">
@@ -59,8 +59,8 @@ export default function ModalDetailOrder({ visible, onClose }) {
                 B12/20 Lê Sao
               </p>
             </div>
-            <div className="w-full bg-gray-200 p-2 rounded-md flex justify-center mb-2">
-              <p className="text-xl mb-0">Cửa hàng</p>
+            <div className="w-full bg-orange-50 p-2 rounded-md flex justify-center mb-2">
+              <p className="text-xl mb-0 text-orange-700">Cửa hàng</p>
             </div>
             <div className="flex">
               <p className=" text-slate-500 text-sm md:text-base font-bold mb-3 w-64">
@@ -100,12 +100,12 @@ export default function ModalDetailOrder({ visible, onClose }) {
             </div>
           </div>
           <div className="col-md-6">
-            <div className="w-full bg-gray-200 p-2 rounded-md flex justify-center mb-2">
-              <p className="text-xl mb-0">Chi tiết hóa đơn</p>
+            <div className="w-full bg-orange-50 p-2 rounded-md flex justify-center mb-2">
+              <p className="text-xl mb-0 text-orange-700">Chi tiết hóa đơn</p>
             </div>
             <div className="flex">
               <p className=" text-slate-500 text-sm md:text-base font-bold mb-3 w-64">
-                Tên sản phẩm
+                Tên sản phẩm :
               </p>
 
               <p className="text-slate-500 text-sm md:text-base font-medium mb-3 w-64">
@@ -167,7 +167,7 @@ export default function ModalDetailOrder({ visible, onClose }) {
             </div>
             <div className="flex">
               <p className=" text-slate-500 text-sm md:text-base font-bold mb-3 w-64">
-                Địa chỉ nhận hàng
+                Địa chỉ nhận hàng :
               </p>
 
               <p className="text-slate-500 text-sm md:text-base font-medium mb-3 w-64">
@@ -176,7 +176,7 @@ export default function ModalDetailOrder({ visible, onClose }) {
             </div>
             <div className="flex">
               <p className=" text-slate-500 text-sm md:text-base font-bold mb-3 w-64">
-                Ngày dự kiến nhận hàng
+                Ngày dự kiến nhận hàng :
               </p>
 
               <p className="text-slate-500 text-sm md:text-base font-medium mb-3 w-64">

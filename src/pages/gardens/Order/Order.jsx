@@ -154,7 +154,7 @@ function Order() {
       <div className="w-full rounded-md bg-white mt-3 p-3">
         <div>
           <div className="row">
-            <p>Bộ lọc :</p>
+         
             <div className="col-md-4 mt-2">
               <select
                 id="countries_disabled"
