@@ -16,7 +16,7 @@ export default function ModalDeleteOrder({ visible, onClose }) {
       onClick={handleClose}
       className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm z-20"
     >
-      <div className="bg-white rounded p-4 overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto">
+      <div className="bg-white rounded p-4 overflow-y-scroll  md:overflow-y-hidden md:h-auto">
         <p className="text-center text-2xl  text-zinc-600">
           Hủy đơn hàng
         </p>
