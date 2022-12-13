@@ -11,8 +11,8 @@ export default function CardPaymentComponent() {
         visible={showAddCardModal}
       />
       <div className="flex justify-between items-center">
-        <h4 className="text-zinc-500 text-xl mb-3 ml-2 font-medium">
-          Phương thức thanh toán
+        <h4 className="text-zinc-500 text-base md:text-xl  ml-2 font-medium">
+          Thanh toán
         </h4>
         <button
           onClick={() => {
