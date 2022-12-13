@@ -2,7 +2,9 @@ export default function CardShip() {
   return (
     <div className="border w-full p-3 rounded mt-2 shadow-md">
       <div className="flex justify-between items-center">
-        <p className="mb-0 text-sm md:text-2xl font-bold text-blue-500">Thành Bưởi</p>
+        <p className="mb-0 text-sm md:text-2xl font-bold text-blue-500">
+          Thành Bưởi
+        </p>
         <div className="flex">
           <button className="text-sm ml-2 bg-orange-100 hover:bg-orange-200 text-orange-400 font-base py-2 px-3  rounded ">
             Cập nhật
@@ -15,23 +17,31 @@ export default function CardShip() {
 
       <div className="hidden md:block row mt-3">
         <div className="col-md-6">
-          <div className="row">
-            <div className="col-md-6">
+          <div className="flex justify-between items-center md:hidden">
+            <p className="font-bold text-base text-gray-500">Số điện thoại :</p>
+            <p className="text-base text-gray-500">0909659999</p>
+          </div>
+          <div className=" row">
+            <div className="col-md-6 hidden md:block">
               <p className="font-bold text-base text-gray-500">
                 Số điện thoại :
               </p>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 hidden md:block">
               <p className="text-base text-gray-500">0909659999</p>
             </div>
           </div>
         </div>
         <div className="col-md-6">
+          <div className="flex justify-between items-center md:hidden">
+            <p className="font-bold text-base text-gray-500">Loại xe :</p>
+            <p className="text-base text-gray-500">Xe khách</p>
+          </div>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 hidden md:block">
               <p className="font-bold text-base text-gray-500">Loại xe :</p>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 hidden md:block">
               <p className="text-base text-gray-500">Xe khách</p>
             </div>
           </div>
