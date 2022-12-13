@@ -3,7 +3,7 @@ import React from "react";
 export default function ChangePasswordComponent() {
   return (
     <div className="p-4">
-      <h4 className="text-zinc-500 text-xl mb-3 ml-2 font-medium">
+      <h4 className="text-zinc-500 text-base md:text-xl mb-3 ml-2 font-medium">
         Cập nhật mật khẩu
       </h4>
 

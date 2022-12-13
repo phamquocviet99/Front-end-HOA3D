@@ -1,7 +1,7 @@
 export default function EditUserComponent() {
   return (
     <div className="card-edit-user p-4">
-      <h4 className="text-zinc-500 text-xl mb-3 font-medium">
+      <h4 className="text-zinc-500 text-base md:text-xl mb-3 font-medium">
         Cập nhật thông tin nhà vườn
       </h4>
       <div className="line-page" />
