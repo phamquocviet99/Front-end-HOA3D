@@ -41,7 +41,7 @@ export default function ModalPayment({ visible, onClose }) {
               <input
                 className=" w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
-                placeholder="Chành xe"
+                placeholder="Số tiền"
               />
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function ModalPayment({ visible, onClose }) {
               <input
                 className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
-                placeholder="Địa chỉ"
+                placeholder="Tên"
               />
             </div>
             <div className="mt-3">
