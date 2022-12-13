@@ -7,16 +7,58 @@ import ChangePasswordComponent from "./Components/ChangePasswordComponent";
 import CardPaymentComponent from "./Components/CardPaymentComponent";
 import EditUserComponent from "./Components/EditUserComponent";
 import ProfileUserComponent from "./Components/ProfileUserComponent";
+import TabHeader from "../../../components/TabHeader/TabHeader";
+import ListShip from "./Components/ListShip";
 
 export default function UserGarden() {
+  const tabName = [
+    {
+      id: 1,
+
+      name: "Cập nhật thông tin",
+    },
+
+    {
+      id: 2,
+
+      name: "Bảo mật",
+    },
+    {
+      id: 3,
+
+      name: "Thanh toán",
+    },
+    {
+      id: 4,
+
+      name: "Chành xe",
+    },
+  ];
+  const listComponent = [
+    {
+      id: 1,
+      element: <EditUserComponent />,
+    },
+    {
+      id: 2,
+      element: <ChangePasswordComponent />,
+    },
+    {
+      id: 3,
+      element: <CardPaymentComponent />,
+    },
+    {
+      id: 4,
+      element: <ListShip />,
+    },
+  ];
 
   return (
-    // <div className="bg-page rounded-3xl px-5 pt-10 pb-10">
     <div className=" ">
       <div className="row">
         <div className="col-md-4">
-          <ProfileUserComponent/>
-          <div className="card-user-inf mt-4 p-4 mb-4">
+          <ProfileUserComponent />
+          {/* <div className="card-user-inf mt-4 p-4 mb-4">
             <div className="flex justify-between">
               <div className="bg-orange-200 flex justify-center items-center rounded p-2">
                 <p className="m-0 text-orange-500">Standard</p>
@@ -50,13 +92,11 @@ export default function UserGarden() {
             <button class=" mt-4 mb-4 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded w-full">
               Upgrade Plan
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="col-md-8">
-          <EditUserComponent/>
-          <ChangePasswordComponent />
-          <CardPaymentComponent/>
-          
+          <TabHeader tabName={tabName} listComponent={listComponent} />
+         
         </div>
       </div>
     </div>

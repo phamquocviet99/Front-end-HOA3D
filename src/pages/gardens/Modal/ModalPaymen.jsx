@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-export default function ModalDelivery({ visible, onClose }) {
+export default function ModalPayment({ visible, onClose }) {
   const [startDate, setStartDate] = useState(new Date());
   if (!visible) return null;
   function handleClose(e) {
@@ -25,13 +25,11 @@ export default function ModalDelivery({ visible, onClose }) {
             <i className="fa-solid fa-xmark text-2xl "></i>
           </button>
         </div>
-        <p className="text-center text-2xl  text-zinc-600">
-          Quá trình giao hàng
-        </p>
+        <p className="text-center text-2xl  text-zinc-600">Quá trình đặt cọc</p>
         <div className="row">
           <div className="col-md-6">
             <div className="mt-3">
-              <p className="mb-2 text-zinc-500">Mã hóa đơn giao hàng :</p>
+              <p className="mb-2 text-zinc-500">Mã giao dịch :</p>
               <input
                 className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
@@ -39,34 +37,22 @@ export default function ModalDelivery({ visible, onClose }) {
               />
             </div>
             <div className="mt-3">
-              <p className="mb-2 text-zinc-500">Giá giao hàng :</p>
+              <p className=" mb-2 text-zinc-500">Số tiền :</p>
               <input
-                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className=" w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
-                placeholder="Giá"
+                placeholder="Chành xe"
               />
             </div>
           </div>
           <div className="col-md-6">
             <div className="mt-3">
-              <p className="mb-2 text-zinc-500">Chành xe :</p>
-              <select
-                id="countries_disabled"
-                className="h-9 border border-gray-300 text-gray-700 text-sm rounded  w-full"
-              >
-                <option className="text-gray-700 text-sm" selected>
-                  Thành Bưởi
-                </option>
-                <option className="text-gray-700 text-sm" value="US">
-                  Phương Trang
-                </option>
-                <option className="text-gray-700 text-sm" value="CA">
-                  Hùng Cường
-                </option>
-                <option className="text-gray-700 text-sm" value="FR">
-                  Thịnh Phát
-                </option>
-              </select>
+              <p className="mb-2 text-zinc-500">Người gửi :</p>
+              <input
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Địa chỉ"
+              />
             </div>
             <div className="mt-3">
               <p className="mb-2 text-zinc-500">Ngày giao hàng dự kiến :</p>
@@ -83,14 +69,14 @@ export default function ModalDelivery({ visible, onClose }) {
             onClick={submitCard}
             className=" ml-2 bg-blue-600 hover:bg-blue-700 text-white font-base py-2 px-3  rounded "
           >
-            Giao hàng
+            Đặt cọc
           </button>
 
           <button
             onClick={onClose}
             className="ml-2 bg-red-500 hover:bg-red-600 text-white font-base py-2 px-3   border-blue-700 rounded "
           >
-            Hủy bỏ
+            Hủy đơn hàng
           </button>
         </div>
       </div>

@@ -16,6 +16,7 @@ export default function ButtonEditOrder() {
       />
 
       <button
+      title="Đặt cọc đơn hàng"
         onClick={() => setShowEditOrderModal(true)}
         className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 border border-blue-700 rounded-lg w-28"
       >

@@ -5,25 +5,25 @@ export default function CardPaymentComponent() {
   const [showAddCardModal, setShowAddCardModal] = useState(false);
   const handleCloseAddCardModal = () => setShowAddCardModal(false);
   return (
-    <div className="card-edit-user mt-4 p-4">
+    <div className="  p-4">
       <ModalAddCard
         onClose={handleCloseAddCardModal}
         visible={showAddCardModal}
       />
       <div className="flex justify-between items-center">
-        <h4 className="text-zinc-500 text-xl my-3 ml-2 font-medium">
+        <h4 className="text-zinc-500 text-xl mb-3 ml-2 font-medium">
           Phương thức thanh toán
         </h4>
         <button
           onClick={() => {
             setShowAddCardModal(true);
           }}
-          class=" mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded "
+          className="bg-blue-500 hover:bg-blue-500 text-white  py-2 px-3 border border-blue-500 rounded-lg w-28 shadow-md"
         >
           Thêm
         </button>
       </div>
-      <div className="border w-full p-3 rounded mt-2">
+      <div className="border w-full p-3 rounded mt-2 shadow-md">
         <div className="flex justify-between">
           <div className="flex items-center">
             <img
@@ -63,7 +63,7 @@ export default function CardPaymentComponent() {
           </div>
         </div>
       </div>
-      <div className="border w-full p-3 rounded mt-2">
+      <div className="border w-full p-3 rounded mt-2 shadow-md">
         <div className="flex justify-between">
           <div className="flex items-center">
             <img

@@ -1,17 +1,7 @@
-import {
-  RiNewspaperLine,
-  RiFileMusicLine,
-  RiTaskLine,
-  RiExchangeBoxLine,
-} from "react-icons/ri";
 import "./Order.css";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
 import ButtonDetailOrder from "../../../components/ButtonDetailOrder/ButtonDetailOrder";
-import ButtonEditOrder from "../../../components/ButtonEditOrder/ButtonEditOrder";
-import ButtonDeleteOrder from "../../../components/ButtonDeleteOrder/ButtonDeleteOrder";
-import { MdBallot, MdDescription } from "react-icons/md";
-import { GoChecklist, GoTasklist } from "react-icons/go";
-
+import ButtonPayment from "../../../components/ButtonPayment/ButtonPayment";
 function Order() {
   const listOrder = [
     {
@@ -103,6 +93,7 @@ function Order() {
                   <p className="mb-0 text-xl font-bold text-indigo-500 mr-2">
                     +2304
                   </p>
+
                   <p className="mb-0 text-base text-green-600">(100%)</p>
                 </div>
               </div>
@@ -149,38 +140,79 @@ function Order() {
       <div className=" w-full rounded-xl bg-white mt-3 p-3 shadow-md">
         <div>
           <div className="row">
-            <div className="col-md-4 mt-2">
-              <select
-                id="countries_disabled"
-                className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
-              >
-                <option selected>Loại hoa</option>
-                <option value="US">Hoa Lan</option>
-                <option value="CA">Hoa Cúc</option>
-                <option value="FR">Hoa Đào</option>
-                <option value="DE">Hoa Hồng</option>
-              </select>
+            <div className="col-md-6">
+              <form className="flex  justify-start md:mt-2 items-center">
+                <label for="simple-search" className="sr-only">
+                  Search
+                </label>
+                <div className="relative w-full md:w-1/2">
+                  <div className="absolute inset-y-0 left-0 flex  items-center pl-3 pointer-events-none">
+                    <svg
+                      aria-hidden="true"
+                      className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="simple-search"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5   "
+                    placeholder="Tìm kiếm mã hóa đơn"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="p-2.5 ml-2 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                  <span className="sr-only">Tìm kiếm mã hóa đơn</span>
+                </button>
+              </form>
             </div>
-            <div className="col-md-4 mt-2">
-              <select
-                id="countries_disabled"
-                className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
-              >
-                <option selected>Trạng thái</option>
-                <option value="US">Chưa giao hàng</option>
-                <option value="CA">Đã giao hàng</option>
-                <option value="FR">Đang giao hàng</option>
-              </select>
-            </div>
-            <div className="col-md-4 mt-2">
-              <select
-                id="countries_disabled"
-                className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
-              >
-                <option selected>Số lượng</option>
-                <option value="US">Cao tới thấp</option>
-                <option value="CA">Thấp tới cao</option>
-              </select>
+            <div className="col-md-6 mt-2">
+              <div className="flex justify-start items-center">
+                <select
+                  id="countries_disabled"
+                  className="mr-2 px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
+                >
+                  <option selected>Loại hoa</option>
+                  <option value="US">Hoa Lan</option>
+                  <option value="CA">Hoa Cúc</option>
+                  <option value="FR">Hoa Đào</option>
+                  <option value="DE">Hoa Hồng</option>
+                </select>
+                <select
+                  id="countries_disabled"
+                  className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
+                >
+                  <option selected>Trạng thái</option>
+                  <option value="US">Chưa giao hàng</option>
+                  <option value="CA">Đã giao hàng</option>
+                  <option value="FR">Đang giao hàng</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -245,7 +277,7 @@ function Order() {
                       ) : o.status === "sendMoney" ? (
                         <ButtonDelivery />
                       ) : (
-                        <ButtonEditOrder />
+                        <ButtonPayment />
                       )}
                     </td>
                   </tr>
@@ -305,9 +337,14 @@ function Order() {
                   ) : o.status === "sendMoney" ? (
                     <ButtonDelivery />
                   ) : (
-                    <ButtonEditOrder />
+                    <ButtonPayment />
                   )}
-                  <p className="text-red-500 mb-0">Giá : {o?.totalPrice}</p>
+                  <p className="text-gray-500 mb-0">
+                    Giá :{" "}
+                    <span className="font-bold text-red-500">
+                      {o?.totalPrice}
+                    </span>
+                  </p>
                 </div>
               </div>
             ))}
