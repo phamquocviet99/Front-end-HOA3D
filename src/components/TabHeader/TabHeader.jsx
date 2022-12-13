@@ -5,7 +5,7 @@ export default function TabHeader(props) {
   const [isActiveTab, setIsActiveTab] = useState(1);
   return (
     <div className="card-element w-full ">
-      <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5 pt-1">
+      <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5 pt-1 bg-slate-50 pb-3 md:bg-transparent md:pb-0">
         {props.tabName.map((t, index) => (
           <div key={index}>
             <div

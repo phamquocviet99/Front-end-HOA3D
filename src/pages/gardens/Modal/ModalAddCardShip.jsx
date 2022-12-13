@@ -79,14 +79,14 @@ export default function ModalAddCardShip({ visible, onClose }) {
       <div className="flex justify-end mt-4">
         <button
           onClick={submitCard}
-          className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
+          className="text-sm ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
         >
           Thêm 
         </button>
 
         <button
           onClick={onClose}
-          className="ml-2 bg-red-500 hover:bg-red-600 text-white font-base py-2 px-3 rounded "
+          className="ml-2 test-sm bg-red-500 hover:bg-red-600 text-white font-base py-2 px-3 rounded "
         >
           Hủy bỏ
         </button>

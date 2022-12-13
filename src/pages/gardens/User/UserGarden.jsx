@@ -56,8 +56,8 @@ export default function UserGarden() {
   return (
     <div className=" ">
       <div className="row">
-        <div className="col-md-4">
-          <ProfileUserComponent />
+        <div className="col-md-4 mb-3">
+          <ProfileUserComponent  />
           {/* <div className="card-user-inf mt-4 p-4 mb-4">
             <div className="flex justify-between">
               <div className="bg-orange-200 flex justify-center items-center rounded p-2">
