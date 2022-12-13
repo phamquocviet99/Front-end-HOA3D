@@ -65,7 +65,7 @@ export default function PostedProduct() {
     },
   ]);
   return (
-    <div className="card-element p-4">
+    <div className="card-element p-4 shadow-md">
       <div className="row">
         <div className="col-md-6">
          

@@ -259,13 +259,21 @@ function Order() {
                     <td className="py-4 px-6 text-center">{o.totalPrice}</td>
                     <td className="py-4 px-6 flex justify-center">
                       {o.status === "delivered" ? (
-                        <>Đã giao hàng</>
+                        <div className="border-green-600 border-2 px-2 py-1 rounded-full  text-green-600 w-32 text-center">
+                          Đã giao hàng
+                        </div>
                       ) : o.status === "delivering" ? (
-                        <>Đang giao hàng</>
+                        <div className="border-orange-500 border-2 px-2 py-1 rounded-full  text-orange-500 w-32 text-center">
+                          Đang giao hàng
+                        </div>
                       ) : o.status === "sendMoney" ? (
-                        <>Đã đặt cọc</>
+                        <div className="border-red-600 border-2 px-2 py-1 rounded-full  text-red-600 w-32 text-center">
+                          Đã đặt cọc
+                        </div>
                       ) : (
-                        <>Đơn hàng mới</>
+                        <div className="border-blue-500 border-2 px-2 py-1 rounded-full  text-blue-500 w-32 text-center">
+                          Đơn hàng mới
+                        </div>
                       )}
                     </td>
                     <td className="py-4 px-6 text-center">{o.date}</td>
@@ -350,16 +358,6 @@ function Order() {
             ))}
           </div>
           <div className="flex justify-end items-center pt-3 pr-3">
-            {/* <div>
-              <select
-                id="countries_disabled"
-                className="mr-2 px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
-              >
-                <option selected>Hiển thị số lượng</option>
-                <option value="US">Số lượng thấp tới cao</option>
-                <option value="CA">Số lượng cao đến thấp</option>
-              </select>
-            </div> */}
             <ul className="inline-flex items-center mt-2 h-10">
               <li>
                 <a
