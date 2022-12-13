@@ -205,7 +205,7 @@ function Order() {
                 </select>
                 <select
                   id="countries_disabled"
-                  className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
+                  className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full focus:ring-0"
                 >
                   <option selected>Trạng thái</option>
                   <option value="US">Chưa giao hàng</option>
@@ -349,11 +349,18 @@ function Order() {
               </div>
             ))}
           </div>
-          <nav
-            className="flex justify-end items-center pt-3 pr-3"
-            aria-label="Table navigation"
-          >
-            <ul className="inline-flex items-center -space-x-px">
+          <div className="flex justify-between items-center pt-3 pr-3">
+            <div>
+              <select
+                id="countries_disabled"
+                className="mr-2 px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
+              >
+                <option selected>Hiển thị số lượng</option>
+                <option value="US">Số lượng thấp tới cao</option>
+                <option value="CA">Số lượng cao đến thấp</option>
+              </select>
+            </div>
+            <ul className="inline-flex items-center mt-2 h-10">
               <li>
                 <a
                   href="/#"
@@ -414,7 +421,7 @@ function Order() {
                 </a>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </div>
