@@ -24,58 +24,47 @@ export default function CardShip() {
           <div className=" row">
             <div className="col-md-6 hidden md:block">
               <p className="font-bold text-base text-gray-500">
-                Số điện thoại :
+                Số điện thoại:
               </p>
             </div>
             <div className="col-md-6 hidden md:block">
               <p className="text-base text-gray-500">0909659999</p>
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-6">
+              <p className="font-bold text-base text-gray-500 mb-0">
+                Nơi giao hàng:
+              </p>
+            </div>
+            <div className="col-md-6">
+              <p className="text-base text-gray-500 mb-0">
+                289 Phan Bội Châu Đà Lạt
+              </p>
+            </div>
+          </div>
         </div>
         <div className="col-md-6">
-          <div className="flex justify-between items-center md:hidden">
-            <p className="font-bold text-base text-gray-500">Loại xe :</p>
-            <p className="text-base text-gray-500">Xe khách</p>
-          </div>
           <div className="row">
-            <div className="col-md-6 hidden md:block">
-              <p className="font-bold text-base text-gray-500">Loại xe :</p>
+            <div className="col-md-6">
+              <p className="font-bold text-base text-gray-500 mb-0">
+                Nơi nhận hàng:
+              </p>
             </div>
-            <div className="col-md-6 hidden md:block">
-              <p className="text-base text-gray-500">Xe khách</p>
+            <div className="col-md-6">
+              <p className="text-base text-gray-500 mb-0">
+                - 226 Lê Hồng Phong TP.HCM
+              </p>
+              <p className="text-base text-gray-500 mb-0">
+                - Bến xe miền Tây
+              </p>
             </div>
           </div>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6">
-          <div className="row">
-            <div className="col-md-6">
-              <p className="font-bold text-base text-gray-500 mb-0">
-                Địa chỉ giao hàng :
-              </p>
-            </div>
-            <div className="col-md-6">
-              <p className="text-base text-gray-500 mb-0">
-                289 Phan Bội Châu TP Đà Lạt
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="row">
-            <div className="col-md-6">
-              <p className="font-bold text-base text-gray-500 mb-0">
-                Địa chỉ nhận hàng :
-              </p>
-            </div>
-            <div className="col-md-6">
-              <p className="text-base text-gray-500 mb-0">
-                226 Lê Hồng Phong TP.HCM
-              </p>
-            </div>
-          </div>
-        </div>
+        <div className="col-md-6"></div>
+        <div className="col-md-6"></div>
       </div>
     </div>
   );

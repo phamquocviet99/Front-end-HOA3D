@@ -75,7 +75,7 @@ export default function ModalDelivery({ visible, onClose }) {
                 </select>
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Ngày giao hàng dự kiến :</p>
+                <p className="mb-2 text-zinc-500">Giá giao hàng :</p>
                 <DatePicker
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   selected={startDate}
@@ -83,6 +83,14 @@ export default function ModalDelivery({ visible, onClose }) {
                 />
               </div>
             </div>
+          </div>
+          <div className="mt-2">
+          <p className="mb-2 text-zinc-500">Ghi chú :</p>
+            <textarea
+              className="w-full border rounded h-40 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              placeholder="Ghi chú"
+            />
           </div>
           <div className="flex justify-end mt-4">
             <button

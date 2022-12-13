@@ -117,7 +117,7 @@ export default function ModalDetailOrder({ visible, onClose }) {
             </div>
             <div className="col-md-6">
               <div className="w-full bg-orange-50 p-2 rounded-md flex justify-center mb-2">
-                <p className="text-xl mb-0 text-orange-700">Chi tiết hóa đơn</p>
+                <p className="text-xl mb-0 text-orange-700">Chi tiết đơn hàng</p>
               </div>
               <div className="flex">
                 <p className=" text-slate-500 text-sm md:text-base font-bold mb-3 w-64">
