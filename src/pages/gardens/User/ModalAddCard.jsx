@@ -52,7 +52,7 @@ export default function ModalAddCard({ visible, onClose }) {
             Thêm thẻ
           </button>
           <button onClick={onClose} className="ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
-            Cancel
+            Đóng
           </button>
         </div>
       </div>

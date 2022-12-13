@@ -63,9 +63,6 @@ const SidebarGarden = ({ children }) => {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-  function goToPost() {
-    navigate("/nha-vuon/dang-ban");
-  }
   const handleLogo = () => {
     if (window.scrollY >= 50) {
       setIsShowLogo(true);
@@ -203,8 +200,8 @@ const SidebarGarden = ({ children }) => {
                     <div className="ml-4 flex items-center md:ml-6">
                       {/* Profile dropdown */}
 
-                      <ButtonPosted button={{ name: "Đăng bán" }} />
-                      <Menu as="div" className="relative ml-3 hidden md:block">
+                      <ButtonPosted  button={{ name: "Đăng bán" }} />
+                      <Menu as="div" className="relative ml-4 hidden md:block">
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 ">
                             <span className="sr-only">Open user menu</span>
