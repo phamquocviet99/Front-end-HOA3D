@@ -122,14 +122,14 @@ export default function ModalPostProduct({ visible, onClose }) {
             <button
               title="Trở về trang trước"
               onClick={onClose}
-              className="ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded "
+              className="ml-2 bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3 rounded "
             >
-              Cancel
+              Đóng
             </button>
             <button
               title="Đăng bán sản phẩm này"
               onClick={submitCard}
-              className=" ml-2 bg-orange-100 hover:bg-orange-200 text-orange-400 font-base py-2 px-3  rounded "
+              className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
             >
               Đăng bán
             </button>

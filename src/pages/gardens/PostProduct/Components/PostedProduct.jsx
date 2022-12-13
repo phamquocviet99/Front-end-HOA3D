@@ -68,7 +68,6 @@ export default function PostedProduct() {
     <div className="card-element p-4 shadow-md">
       <div className="row">
         <div className="col-md-6">
-         
         </div>
         <div className="col-md-6">
           <form className="flex  justify-start md:justify-end md:mt-0 items-center">

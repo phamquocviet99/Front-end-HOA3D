@@ -14,9 +14,9 @@ export default function CardProductAdded() {
       <p className="mt-3 text-xl font-bold mb-0">Hoa cúc vàng</p>
 
       <p className="mt-2 text-slate-500 mb-0">Danh mục : Hoa cúc</p>
-      <p className="mt-3 text-red-400 mb-0 font-bold">Giá : 220.000đ/kg</p>
+      <p  className="mt-3 text-red-500 mb-0 font-bold">Giá : 220.000đ/kg</p>
 
-      <div className="flex justify-between items-center mt-2">
+      <div className="flex justify-between items-center mt-3">
         <div className="flex items-center">
           <p className="mb-0  mr-1">Loại :</p>
           <div className=" rounded-full bg-green-600  flex justify-center items-center p-2 h-6 w-6">

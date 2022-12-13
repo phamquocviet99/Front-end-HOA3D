@@ -11,6 +11,7 @@ import { BiMessageRoundedDetail } from "react-icons/bi";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import ButtonPosted from "../ButtonPosted/ButtonPosted";
+import ButtonOnTop from "../ButtonOnTop/ButtonOnTop";
 
 const SidebarGarden = ({ children }) => {
   const navigate = useNavigate();
@@ -401,6 +402,7 @@ const SidebarGarden = ({ children }) => {
           </div>
         </div>
       </div>
+      <ButtonOnTop/>
     </div>
   );
 };
