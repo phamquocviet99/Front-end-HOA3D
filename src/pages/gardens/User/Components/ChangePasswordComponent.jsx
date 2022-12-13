@@ -1,8 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
 export default function ChangePasswordComponent() {
+  const [showChangeUsername, setShowChangeUsername] = useState(true);
+  const [showChangePassword, setShowChangePassword] = useState(true);
   return (
-    <div className="p-4">
+    <div className="mt-3">
       <h4 className="text-zinc-500 text-base md:text-xl mb-3 ml-2 font-medium">
         Cập nhật mật khẩu
       </h4>
@@ -15,48 +18,110 @@ export default function ChangePasswordComponent() {
           Tối thiểu 8 ký tự bao gồm chữ hoa và ký hiệu
         </p>
       </div>
-      <div className="row ">
-        <div className="col-md-6 mt-4">
-          <p className="text-slate-500 text-sm font-bold mb-2">Tên đăng nhập</p>
-          <input
-            className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="Tên đăng nhập"
-          />
+      <div className="line-y mt-4 mb-2"></div>
+      {showChangeUsername ? (
+        <div className="flex justify-between items-center ml-2">
+          <div>
+            <p className="color-bold mb-2 text-base">Tên đăng nhập</p>
+            <p className=" mb-0 text-md text-gray-700">
+              support@keenthemes.com
+            </p>
+          </div>
+          <button
+            onClick={() => setShowChangeUsername(false)}
+            className="shadow-md mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
+          >
+            Thay đổi
+          </button>
         </div>
-        <div className="col-md-6  mt-4">
-          <p className="text-slate-500 text-sm font-bold mb-2">Mật khẩu cũ</p>
-          <input
-            className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="password"
-            placeholder="Mật khẩu"
-          />
+      ) : (
+        <div className="ml-2">
+          <div className="row">
+            <div className="col-md-6 mt-4">
+              <p className="color-bold mb-2 text-base ">Tên đăng nhập mới</p>
+              <input
+                className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                placeholder="Mật khẩu"
+              />
+            </div>
+            <div className="col-md-6 mt-4">
+              <p className="color-bold mb-2 text-base ">Mật khẩu</p>
+              <input
+                className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                placeholder="Mật khẩu"
+              />
+            </div>
+            <div className="flex justify-end">
+              <button class="shadow-md mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4  rounded ">
+                Cập nhật
+              </button>
+              <button
+                onClick={() => setShowChangeUsername(true)}
+                className="shadow-md ml-3 mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
+              >
+                Hủy bỏ
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="col-md-6 mt-4">
-          <p className="text-slate-500 text-sm font-bold mb-2">Mật khẩu mới</p>
-          <input
-            className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="password"
-            placeholder="Mật khẩu"
-          />
+      )}
+      <div className="line-y mt-4 mb-2"></div>
+      {showChangePassword ? (
+        <div className="flex justify-between items-center ml-2">
+          <div>
+            <p className="color-bold mb-2 text-base">Mật khẩu hiện tại</p>
+            <p className=" mb-0 text-md text-gray-700">*****************</p>
+          </div>
+          <button
+            onClick={() => setShowChangePassword(false)}
+            className="shadow-md mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
+          >
+            Thay đổi
+          </button>
         </div>
-        <div className="col-md-6 mt-4">
-          <p className="text-slate-500 text-sm font-bold mb-2">Nhập lại</p>
-          <input
-            className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="password"
-            placeholder="Mật khẩu"
-          />
+      ) : (
+        <div className="ml-2">
+          <div className="row">
+            <div className="col-md-4 mt-4">
+              <p className="color-bold mb-2 text-base ">Mật khẩu cũ</p>
+              <input
+                className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                placeholder="Mật khẩu"
+              />
+            </div>
+            <div className="col-md-4 mt-4">
+              <p className="color-bold mb-2 text-base ">Mật khẩu mới</p>
+              <input
+                className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                placeholder="Mật khẩu"
+              />
+            </div>
+            <div className="col-md-4 mt-4">
+              <p className="color-bold mb-2 text-base ">Nhập lại mật khẩu</p>
+              <input
+                className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                placeholder="Mật khẩu"
+              />
+            </div>
+          </div>
+          <div className="flex justify-end">
+            <button class=" mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4  rounded ">
+              Cập nhật
+            </button>
+            <button
+              onClick={() => setShowChangePassword(true)}
+              className="ml-3 mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
+            >
+              Hủy bỏ
+            </button>
+          </div>
         </div>
-      </div>
-
-      <div className="flex justify-end">
-        <button class=" mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded ">
-          Cập nhật mật khẩu
-        </button>
-      </div>
+      )}
     </div>
   );
 }
