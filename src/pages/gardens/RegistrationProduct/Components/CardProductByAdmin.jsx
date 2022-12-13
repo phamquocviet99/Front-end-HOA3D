@@ -18,6 +18,7 @@ export default function CardProductByAdmin() {
         <div className="flex items-center justify-center">
           {isCheck ? (
             <button
+            title="Đăng ký sản phẩm này"
               onClick={() => setIsCheck(!isCheck)}
               className=" rounded-full   h-8 w-8  flex justify-center items-center text-blue-500 border-blue-500 border-2 hover:border-transparent hover:text-white hover:bg-blue-500 focus:ring-0"
             >
@@ -28,6 +29,7 @@ export default function CardProductByAdmin() {
               onClick={() => setIsCheck(!isCheck)}
               onMouseEnter={() => setIsHover(true)}
               onMouseLeave={() => setIsHover(false)}
+              title="Hủy đăng ký sản phẩm này"
               className={
                 isHover
                   ? "rounded-full  h-8 w-8 flex justify-center items-center  text-red-500 border-red-500 border-2 hover:border-transparent hover:text-white hover:bg-red-500 focus:ring-0"

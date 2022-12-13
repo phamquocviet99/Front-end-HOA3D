@@ -27,13 +27,13 @@ export default function CardProductAdded() {
       </div>
 
       <div className="w-full flex justify-start items-center mt-3">
-        <button className="mb-1 w-full bg-blue-500 hover:bg-blue-600 text-white font-sm py-1 px-3  rounded-lg ">
+        <button title="Bán lại sản phẩm này" className="mb-1 w-full bg-blue-500 hover:bg-blue-600 text-white font-sm py-1 px-3  rounded-lg ">
           <div className="flex justify-center items-center m-1">
-            <BsFillPatchPlusFill className="text-xl"/>
+          <i class="fa-solid fa-rotate-right text-xl"></i>
             <p className="mb-0 ml-3">Bán lại</p>
           </div>
         </button>
-        <button className="mb-1 ml-2 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-lg ">
+        <button title="Xóa sản phẩm này" className="mb-1 ml-2 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-full ">
           <AiOutlineClose className="text-xl"/>
         </button>
       </div>

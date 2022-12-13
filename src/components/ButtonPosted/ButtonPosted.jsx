@@ -12,6 +12,7 @@ export default function ButtonPosted({ button }) {
         visible={showPostProductModal}
       />
       <button
+      title="Đăng bán sản phẩm"
         onClick={() => setShowPostProductModal(true)}
         className="mb-1 ml-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-sm py-2 px-3  rounded-lg "
       >

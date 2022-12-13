@@ -43,11 +43,11 @@ const SidebarGarden = ({ children }) => {
       link: "/nha-vuon/san-pham",
       icon: <BiBox />,
     },
-    {
-      name: "Sản Lượng",
-      link: "/nha-vuon/san-luong",
-      icon: <BiBox />,
-    },
+    // {
+    //   name: "Sản Lượng",
+    //   link: "/nha-vuon/san-luong",
+    //   icon: <BiBox />,
+    // },
     {
       name: "Đơn hàng",
       link: "/nha-vuon/don-hang",

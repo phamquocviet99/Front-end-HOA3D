@@ -20,20 +20,20 @@ export default function ModalDelivery({ visible, onClose }) {
         <div className="flex justify-between items-center">
           <div className="w-3/12"></div>
           <div className="w-1/2 justify-center">
-            <p className="text-center text-2xl mb-0 mt-2 text-zinc-600">
+            <p className="text-center text-2xl mb-0  text-zinc-600">
               GIAO HÀNG
             </p>
           </div>
           <div className="w-3/12 flex justify-end">
             <button
               onClick={onClose}
-              className="text-gray-500 rounded-md  h-9 w-9 flex justify-center items-center m-2 border-gray-400 border-2  focus:ring-0"
+              className="text-gray-500   h-9 w-9 flex justify-center items-center m-2 focus:ring-0"
             >
               <i className="fa-solid fa-xmark text-2xl "></i>
             </button>
           </div>
         </div>
-        <div className="p-4">
+        <div className="pl-4 pr-4 pb-4">
           <div className="row">
             <div className="col-md-6">
               <div className="mt-3">
@@ -86,12 +86,14 @@ export default function ModalDelivery({ visible, onClose }) {
           </div>
           <div className="flex justify-end mt-4">
             <button
+              title="Trở về trang trước"
               onClick={onClose}
               className="ml-2 bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3  rounded "
             >
               Hủy bỏ
             </button>
             <button
+              title="Thực hiện giao hàng"
               onClick={submitCard}
               className=" ml-2 bg-blue-600 hover:bg-blue-700 text-white font-base py-2 px-3  rounded "
             >

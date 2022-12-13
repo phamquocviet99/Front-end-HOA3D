@@ -236,7 +236,7 @@ function Order() {
                   </th>
 
                   <th scope="col" className="py-3 px-6 text-center">
-                    Giá tiền
+                    Tổng tiền
                   </th>
                   <th scope="col" className="py-3 px-6 text-center">
                     Trạng thái
@@ -300,33 +300,40 @@ function Order() {
                 className="w-full shadow-md rounded-md border mt-3 p-3 bg-slate-50 "
               >
                 <div className="flex justify-between items-center">
-                  <p className="font-bold text-base mb-2">Mã đơn : {o.id}</p>
+                  <p className="font-bold text-base">Mã đơn : {o.id}</p>
                   <p className="text-gray-500">
-                    {o.status === "delivered" ? (
-                      <>Đã giao hàng</>
-                    ) : o.status === "delivering" ? (
-                      <>Đang giao hàng</>
-                    ) : o.status === "sendMoney" ? (
-                      <>Đã đặt cọc</>
-                    ) : (
-                      <>Đơn hàng mới</>
-                    )}
+                  {o.status === "delivered" ? (
+                        <div className="border-green-600 border-2 px-2 py-1 rounded-full  text-green-600 w-32 text-center">
+                          Đã giao hàng
+                        </div>
+                      ) : o.status === "delivering" ? (
+                        <div className="border-orange-500 border-2 px-2 py-1 rounded-full  text-orange-500 w-32 text-center">
+                          Đang giao hàng
+                        </div>
+                      ) : o.status === "sendMoney" ? (
+                        <div className="border-red-600 border-2 px-2 py-1 rounded-full  text-red-600 w-32 text-center">
+                          Đã đặt cọc
+                        </div>
+                      ) : (
+                        <div className="border-blue-500 border-2 px-2 py-1 rounded-full  text-blue-500 w-32 text-center">
+                          Đơn hàng mới
+                        </div>
+                      )}
                   </p>
                 </div>
 
                 <p className="text-gray-500 mb-2">
                   Sản phẩm :{" "}
-                  <span className="font-bold text-black">{o?.nameProduct}</span>
+                  <span className="font-bold text-black">{o?.nameProduct} x {o?.count}</span>
                 </p>
                 <div className="flex justify-between items-center">
-                  <p className="text-gray-500 mb-2">
-                    Cửa hàng :{" "}
-                    <span className="font-bold text-black ">{o?.nameShop}</span>
+                <p className="text-gray-500 mb-2">
+                    Tổng tiền :{" "}
+                    <span className="font-bold text-red-500">
+                      {o?.totalPrice}
+                    </span>
                   </p>
-                  <p className="text-gray-500 mb-2">
-                    Số lượng :{" "}
-                    <span className="font-bold text-black">{o?.count}</span>
-                  </p>
+                 
                 </div>
 
                 <p className="text-gray-500">
@@ -335,7 +342,7 @@ function Order() {
                 </p>
 
                 <div
-                  className="flex justify-between
+                  className="flex justify-end
                  items-center"
                 >
                   {o.status === "delivered" ? (
@@ -347,12 +354,7 @@ function Order() {
                   ) : (
                     <ButtonPayment />
                   )}
-                  <p className="text-gray-500 mb-0">
-                    Giá :{" "}
-                    <span className="font-bold text-red-500">
-                      {o?.totalPrice}
-                    </span>
-                  </p>
+                  
                 </div>
               </div>
             ))}

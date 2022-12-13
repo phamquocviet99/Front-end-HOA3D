@@ -84,19 +84,22 @@ export default function ModalEditOrder({ visible, onClose }) {
         </div>
       </div>
       <div className="flex justify-end mt-4">
+      <button
+      title="Trở về trang trước"
+          onClick={onClose}
+          className="ml-2 bg-red-500 hover:bg-red-600 text-white font-base py-2 px-3   border-blue-700 rounded "
+        >
+          Hủy giao hàng
+        </button>
         <button
+        title="Chỉnh sửa giao hàng"
           onClick={submitCard}
           className=" ml-2 bg-blue-600 hover:bg-blue-700 text-white font-base py-2 px-3  rounded "
         >
           Chỉnh sửa 
         </button>
 
-        <button
-          onClick={onClose}
-          className="ml-2 bg-red-500 hover:bg-red-600 text-white font-base py-2 px-3   border-blue-700 rounded "
-        >
-          Hủy giao hàng
-        </button>
+       
       </div>
     </div>
   </div>
