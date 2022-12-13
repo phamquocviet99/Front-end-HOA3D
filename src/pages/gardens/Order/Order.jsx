@@ -349,7 +349,7 @@ function Order() {
               </div>
             ))}
           </div>
-          <div className="flex justify-between items-center pt-3 pr-3">
+          <div className="flex justify-end items-center pt-3 pr-3">
             {/* <div>
               <select
                 id="countries_disabled"
