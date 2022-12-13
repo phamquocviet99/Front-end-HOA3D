@@ -350,7 +350,7 @@ function Order() {
             ))}
           </div>
           <div className="flex justify-between items-center pt-3 pr-3">
-            <div>
+            {/* <div>
               <select
                 id="countries_disabled"
                 className="mr-2 px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full "
@@ -359,7 +359,7 @@ function Order() {
                 <option value="US">Số lượng thấp tới cao</option>
                 <option value="CA">Số lượng cao đến thấp</option>
               </select>
-            </div>
+            </div> */}
             <ul className="inline-flex items-center mt-2 h-10">
               <li>
                 <a
