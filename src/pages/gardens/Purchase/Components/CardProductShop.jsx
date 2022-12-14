@@ -1,13 +1,19 @@
 export default function CardProductShop() {
   return (
-    <div className="border-2 w-full rounded-2xl m-2 shadow-md">
+    <div className="border-2 w-full rounded-2xl mt-4 shadow-md">
       <img
         className="w-full h-44 rounded-t-xl object-cover "
         alt=""
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />
       <div className="py-2 px-3">
-        <p className=" text-lg  mb-2">Hoa Lan</p>
+        <div className="flex justify-between items-center my-2">
+          <p className=" text-xl font-bold mb-0">Hoa Lan</p>
+          <div className=" rounded-full bg-green-600  flex justify-center items-center p- h-7 w-7">
+            <p className="mb-0 text-white text-base">A</p>
+          </div>
+        </div>
+
         <div className="flex justify-between items-center">
           <p className="text-gray-500 text-base mb-1">Cửa hàng :</p>
           <p className=" text-base mb-1">Hồng Hạnh</p>
@@ -20,12 +26,7 @@ export default function CardProductShop() {
           <p className="text-gray-500 text-base mb-1">Đơn giá :</p>
           <p className=" text-base mb-1">300.000đ/kg</p>
         </div>
-        <div className="flex items-center">
-          <p className="text-gray-500 text-base mb-0 mr-3">Loại :</p>
-          <div className=" rounded-full bg-green-600  flex justify-center items-center p-2 h-6 w-6">
-            <p className="mb-0 text-white text-xs">A</p>
-          </div>
-        </div>
+
         <div className="flex justify-start items-center w-full mt-3">
           <button
             title="Bán sản phẩm này"

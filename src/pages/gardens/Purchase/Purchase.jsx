@@ -72,14 +72,11 @@ export default function Purchase() {
       <div className="row mt-4">
         <div className="col-md-6">
           <div className="md:flex justify-start items-center mb-3">
-            <p className="text-zinc-500 text-sm md:text-base mt-1  ml-2 mb-1 mr-3">
-              Bộ lọc :
-            </p>
             <select
               id="countries_disabled"
-              className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full md:w-1/2"
+              className="px-2  h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  w-full md:w-1/2"
             >
-              <option selected>Danh mục</option>
+              <option selected>Loại hoa</option>
               <option value="US">United States</option>
               <option value="CA">Canada</option>
               <option value="FR">France</option>
