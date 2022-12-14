@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function DetailOrder() {
   const navigate = useNavigate();
   return (
-    <div className="p-4 bg-white rounded-lg">
+    <div className="p-4 bg-white rounded-lg shadow-md">
       <p className=" text-center text-2xl  text-blue-600">
         CHI TIẾT ĐƠN HÀNG HD1
       </p>
