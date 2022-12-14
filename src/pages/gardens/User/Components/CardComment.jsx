@@ -1,6 +1,6 @@
 export default function CardComment() {
   return (
-    <div className="mt-3 pr-3">
+    <div className="mt-3 ">
       <div className="p-2 border flex justify-start items-center w-full rounded-lg shadow-md">
         <img
           className="w-20 h-20 rounded-full border-4 border-blue-400"
