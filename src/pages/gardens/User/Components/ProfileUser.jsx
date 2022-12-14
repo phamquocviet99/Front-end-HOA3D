@@ -101,7 +101,9 @@ export default function ProfileUser() {
       <div className="row mt-5">
         <div className="col-md-4">
           <div className="line-page"></div>
-          <p className="font-semibold text-gray-500">THÔNG TIN CÁ NHÂN</p>
+          <p className="font-semibold text-gray-500 mt-3 text-lg">
+            THÔNG TIN NHÀ VƯỜN
+          </p>
         </div>
         <div className="col-md-8">
           <div className="line-page"></div>
