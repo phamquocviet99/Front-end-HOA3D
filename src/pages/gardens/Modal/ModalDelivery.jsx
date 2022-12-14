@@ -103,7 +103,7 @@ export default function ModalDelivery({ visible, onClose }) {
             <button
               title="Thực hiện giao hàng"
               onClick={submitCard}
-              className=" ml-2 bg-blue-600 hover:bg-blue-700 text-white font-base py-2 px-3  rounded "
+              className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
             >
               Giao hàng
             </button>

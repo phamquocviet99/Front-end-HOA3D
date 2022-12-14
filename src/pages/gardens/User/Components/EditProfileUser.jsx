@@ -23,7 +23,7 @@ export default function EditProfileUser() {
               </div>
               <label className="cursor-pointer mt-6">
                 <span className="mt-2 text-base leading-normal px-4 py-2 bg-blue-500 text-white  rounded-full">
-                  Select Avatar
+                  Chọn ảnh
                 </span>
                 <input type="file" className="hidden" />
               </label>
