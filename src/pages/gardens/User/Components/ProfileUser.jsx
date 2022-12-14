@@ -1,5 +1,6 @@
 import { BiMessageSquareCheck } from "react-icons/bi";
 import { RiBillLine } from "react-icons/ri";
+import CardComment from "./CardComment";
 
 export default function ProfileUser() {
   return (
@@ -101,9 +102,10 @@ export default function ProfileUser() {
       <div className="row mt-5">
         <div className="col-md-4">
           <div className="line-page"></div>
-          <p className="font-semibold text-gray-500 mt-3 text-lg">
-            THÔNG TIN NHÀ VƯỜN
-          </p>
+          <p className="font-semibold text-gray-500 mt-3 text-lg">PHẢN HỒI</p>
+          <CardComment/>
+          <CardComment/>
+          <CardComment/>
         </div>
         <div className="col-md-8">
           <div className="line-page"></div>
