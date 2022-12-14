@@ -63,13 +63,13 @@ export default function UserGarden() {
   return (
     <div className="">
       <div className="w-full rounded-lg bg-white shadow-md">
-        <div className=" p-4 flex items-center">
+        <div className=" pl-5 pr-4 pt-4 md:flex items-center">
           <img
-            className=" w-40 h-40 rounded-lg"
+            className="w-full mb-3 md:w-40 md:h-40 rounded-lg"
             src={require("../../../assets/images/avartar/avartar.jpg")}
             alt="FMP"
           />
-          <div className="ml-6">
+          <div className="ml-6 ">
             <div className="flex items-center">
               <p className="font-bold text-xl mb-0 mr-3">Galaxy Garden</p>
               <BsFillPatchCheckFill className="text-lg text-sky-500 mr-3" />
@@ -79,44 +79,49 @@ export default function UserGarden() {
                 </p>
               </div>
             </div>
-            <div className="flex mt-3">
-              <div className="flex items-center text-gray-400">
+            <div className="md:flex mt-3">
+              <div className="flex justify-center md:justify-start items-center text-gray-400">
                 <MdLocationOn className="text-lg" />
                 <p style={{ fontSize: "13px" }} className="mb-0 ml-1">
                   Lâm Đồng, Đà Lạt
                 </p>
               </div>
-              <div className="flex items-center text-gray-400 ml-4">
+              <div className="flex justify-center md:justify-start items-center text-gray-400 ml-4">
                 <MdEmail className="text-lg" />
                 <p style={{ fontSize: "13px" }} className="mb-0 ml-1">
                   galaxygarden@gmail.com
                 </p>
               </div>
             </div>
-            <div className="flex items-center mt-3">
-              <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2">
-                <div className="flex items-center justify-center">
-                  <RiBillLine className="mr-2 text-green-500" />
-                  <p className="font-bold text-xl mb-0 text-center">3,241</p>
+            <div className="md:flex items-center ">
+              <div className="flex justify-center md:justify-start">
+                <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 mt-3">
+                  <div className="flex items-center justify-center ">
+                    <RiBillLine className="mr-2 text-green-500" />
+                    <p className="font-bold text-xl mb-0 text-center">3,241</p>
+                  </div>
+                  <p className="text-gray-400 mb-0 text-center">Tổng đơn</p>
                 </div>
-
-                <p className="text-gray-400 mb-0 text-center">Tổng đơn</p>
               </div>
-              <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 ml-5">
-                <div className="flex items-center justify-center">
-                  <BiMessageSquareCheck className="mr-2 text-blue-500" />
-                  <p className="font-bold text-xl mb-0 text-center">2,345</p>
-                </div>
+              <div className="flex justify-center md:justify-start">
+                <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 md:ml-5 mt-3">
+                  <div className="flex items-center justify-center">
+                    <BiMessageSquareCheck className="mr-2 text-blue-500" />
+                    <p className="font-bold text-xl mb-0 text-center">2,345</p>
+                  </div>
 
-                <p className="text-gray-400 mb-0 text-center">Đơn hoàn tất</p>
+                  <p className="text-gray-400 mb-0 text-center">Đơn hoàn tất</p>
+                </div>
               </div>
-              <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 ml-5">
-                <div className="flex items-center justify-center">
-                  <MdAttachMoney className="mr-2 text-red-500" />
-                  <p className="font-bold text-xl mb-0 text-center">1,241</p>
-                </div>
+              <div className="flex justify-center md:justify-start">
+                <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 md:ml-5 mt-3">
+                  <div className="flex items-center justify-center">
+                    <MdAttachMoney className="mr-2 text-red-500" />
+                    <p className="font-bold text-xl mb-0 text-center">1,241</p>
+                  </div>
 
-                <p className="text-gray-400 mb-0 text-center">Đơn đã cọc</p>
+                  <p className="text-gray-400 mb-0 text-center">Đơn đã cọc</p>
+                </div>
               </div>
             </div>
           </div>
