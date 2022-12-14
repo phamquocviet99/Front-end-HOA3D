@@ -74,7 +74,7 @@ export default function ModalAddCardShip({ visible, onClose }) {
             <button
               title="Tắt hiển thị"
               onClick={onClose}
-              className="ml-2 test-sm bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3 rounded "
+              className="text-sm ml-2 test-sm bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3 rounded "
             >
               Hủy bỏ
             </button>

@@ -321,9 +321,8 @@ function Order() {
           <div className="flex justify-between items-center pt-3 pr-3">
             <select
               id="countries_disabled"
-              className="px-2 h-10 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  focus:ring-0"
+              className="px-2 h-8 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  focus:ring-0"
             >
-              <option selected>Số hóa đơn xem trong một trang</option>
               <option value="US">10</option>
               <option value="CA">20</option>
               <option value="FR">30</option>

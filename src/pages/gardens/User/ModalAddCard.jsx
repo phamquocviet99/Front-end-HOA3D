@@ -14,10 +14,23 @@ export default function ModalAddCard({ visible, onClose }) {
       onClick={handleClose}
       className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm"
     >
-      <div className="bg-white rounded p-4">
-        <p className="text-center text-2xl  text-zinc-600">
-          Thêm thẻ ngân hàng
-        </p>
+      <div className="bg-white rounded pb-4 pr-4 pl-4">
+      <div className="flex justify-between items-center">
+          <div className="w-3/12"></div>
+          <div className="w-1/2 justify-center">
+            <p className="text-center text-2xl mb-0  text-zinc-600">
+              THÊM THẺ
+            </p>
+          </div>
+          <div className="w-3/12 flex justify-end">
+            <button
+              onClick={onClose}
+              className="text-gray-500   h-9 w-9 flex justify-center items-center m-2 focus:ring-0"
+            >
+              <i className="fa-solid fa-xmark text-2xl "></i>
+            </button>
+          </div>
+        </div>
 
         <div className="mt-3">
           <input
@@ -48,12 +61,13 @@ export default function ModalAddCard({ visible, onClose }) {
           />
         </div>
         <div className="flex justify-end mt-3">
-          <button onClick={submitCard} className=" ml-2 bg-orange-100 hover:bg-orange-200 text-orange-400 font-base py-2 px-3  rounded ">
-            Thêm thẻ
-          </button>
-          <button onClick={onClose} className="ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
+        <button onClick={onClose} className="ml-2 bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3   border-blue-700 rounded ">
             Đóng
           </button>
+          <button onClick={submitCard} className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded ">
+            Thêm thẻ
+          </button>
+          
         </div>
       </div>
     </div>
