@@ -14,7 +14,7 @@ export default function ButtonDelivery() {
       <button
       title="Giao hàng"
         onClick={() => setShowDeliveryModal(true)}
-        className="bg-green-600 hover:bg-green-700 text-white text-sm  py-2 px-3 border border-green-700 rounded-lg w-28 shadow-md"
+        className="bg-green-600 hover:bg-green-700 text-white text-sm  py-2 px-3 border border-green-700 rounded-lg shadow-md"
       >
         Giao hàng
       </button>

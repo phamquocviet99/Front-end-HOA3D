@@ -221,32 +221,38 @@ function Order() {
                     <td className="py-4 px-6 flex justify-center">
                       {o.status === "delivered" ? (
                         <div className="border-green-600 border-2 px-2 py-1 rounded-full  text-green-600 w-32 text-center">
-                          Đã giao hàng
+                          Đã hoàn thành
                         </div>
                       ) : o.status === "delivering" ? (
                         <div className="border-orange-500 border-2 px-2 py-1 rounded-full  text-orange-500 w-32 text-center">
                           Đang giao hàng
                         </div>
                       ) : o.status === "sendMoney" ? (
-                        <div className="border-red-600 border-2 px-2 py-1 rounded-full  text-red-600 w-32 text-center">
+                        <div className="border-blue-600 border-2 px-2 py-1 rounded-full  text-blue-600 w-32 text-center">
                           Đã đặt cọc
                         </div>
                       ) : (
-                        <div className="border-blue-500 border-2 px-2 py-1 rounded-full  text-blue-500 w-32 text-center">
+                        <div className="border-sky-500 border-2 px-2 py-1 rounded-full  text-sky-500 w-32 text-center">
                           Đơn hàng mới
                         </div>
                       )}
                     </td>
                     <td className="py-4 px-6 text-center">{o.date}</td>
-                    <td className="py-4 flex justify-center items-center">
+                    <td className="py-4 flex justify-start items-center">
                       {o.status === "delivered" ? (
                         <ButtonDetailOrder />
                       ) : o.status === "delivering" ? (
                         <ButtonDetailOrder />
                       ) : o.status === "sendMoney" ? (
-                        <ButtonDelivery />
+                        <div className="flex items-center">
+                          <ButtonDetailOrder />
+                          <ButtonDelivery />
+                        </div>
                       ) : (
-                        <ButtonPayment />
+                        <div className="flex items-center">
+                          <ButtonDetailOrder />
+                          <ButtonPayment />
+                        </div>
                       )}
                     </td>
                   </tr>

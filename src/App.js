@@ -7,7 +7,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import UserGarden from "./pages/gardens/User/UserGarden";
 
-import ProductGarden from "./pages/gardens/Product/ProductGarden";
+
 
 import SidebarGarden from "./components/SidebarGarden/SidebarGarden";
 import DashboardGarden from "./pages/gardens/Dashboard/DashboardGarden";
@@ -18,6 +18,7 @@ import Order from "./pages/gardens/Order/Order";
 import ProfileShop from "./pages/gardens/ProfileShop/ProfileShop";
 import Quantity from "./pages/gardens/Quantity/Quantity";
 import Purchase from "./pages/gardens/Purchase/Purchase";
+import DetailOrder from "./pages/gardens/Order/DetailOrder";
 
 // function App() {
 //   return (
@@ -61,7 +62,7 @@ function App() {
             <Route path="/nha-vuon/mua-ban" element={<Purchase />} />
             <Route path="/nha-vuon/san-pham" element={<RegistrationProduct />} />
             <Route path="/nha-vuon/san-luong" element={<Quantity />} />
-          
+            <Route path="/nha-vuon/don-hang/chi-tiet" element={<DetailOrder />} />
              <Route
               path="/nha-vuon/don-hang"
               element={<Order />}
