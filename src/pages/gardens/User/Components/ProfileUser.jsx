@@ -9,20 +9,25 @@ export default function ProfileUser() {
         <div className="col-md-4">
           <div className=" flex justify-center items-center">
             <img
-              className="w-3/5 img-responsive rounded-md"
+              className="w-3/5 img-responsive rounded-md mb-2"
               src={require("../../../../assets/images/avartar/avartar.jpg")}
               alt="FMP"
             />
           </div>
         </div>
         <div className="col-md-8">
-          <div className="flex justify-start items-center">
-            <p className="font-bold text-2xl mb-0 ">Vườn Lan Garden</p>
-            <i className="fa-solid fa-location-pin text-gray-400  ml-4"></i>
-            <p className=" text-gray-400 mb-0 ml-2">Lâm Đồng , Đà Lạt</p>
+          <div className="md:flex justify-start items-center">
+            <div className="flex justify-center md:justify-start">
+              <p className="font-bold text-2xl mb-0 ">Vườn Lan Garden</p>
+            </div>
+
+            <div className="flex justify-center md:justify-start ">
+              <i className="fa-solid fa-location-pin text-gray-400  ml-4"></i>
+              <p className=" text-gray-400 mb-0 ml-2">Lâm Đồng , Đà Lạt</p>
+            </div>
           </div>
 
-          <div className="flex items-center justify-start mt-3">
+          <div className="flex items-center justify-center md:justify-start mt-3">
             <p className="mb-0 text-xl font-semibold mr-2">3.9</p>
             <svg
               aria-hidden="true"
@@ -75,25 +80,31 @@ export default function ProfileUser() {
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
             </svg>
           </div>
-          <div className="flex justify-start items-center mt-3">
-            <div className="flex items-center">
-              <div className="flex items-center p-3 bg-green-100 text-green-600 rounded-md">
-                <RiBillLine className="text-3xl" />
-              </div>
-              <div className="ml-3">
-                <h5 className="text-lg font-bold mb-0 "> 1230</h5>
-                <h6 className="text-base text-gray-500 mb-0">Tổng đơn hàng</h6>
+          <div className="md:flex justify-start items-center mt-3">
+            <div className="flex justify-center mt-2 md:justify-start">
+              <div className="flex items-center">
+                <div className="flex items-center p-3 bg-green-100 text-green-600 rounded-md">
+                  <RiBillLine className="text-3xl" />
+                </div>
+                <div className="ml-3">
+                  <h5 className="text-lg font-bold mb-0 "> 1230</h5>
+                  <h6 className="text-base text-gray-500 mb-0">
+                    Tổng đơn hàng
+                  </h6>
+                </div>
               </div>
             </div>
-            <div className="flex items-center ml-5">
-              <div className="flex items-center p-3 bg-orange-50 text-orange-600 rounded-md">
-                <BiMessageSquareCheck className="text-3xl" />
-              </div>
-              <div className="ml-3">
-                <h5 className="text-lg font-bold mb-0 "> 1230</h5>
-                <h6 className="text-base text-gray-500 mb-0">
-                  Đơn hàng hoàn thành
-                </h6>
+            <div className="flex justify-center mt-2 md:justify-start">
+              <div className="flex items-center md:ml-5">
+                <div className="flex items-center p-3 bg-orange-50 text-orange-600 rounded-md">
+                  <BiMessageSquareCheck className="text-3xl" />
+                </div>
+                <div className="ml-3">
+                  <h5 className="text-lg font-bold mb-0 "> 1230</h5>
+                  <h6 className="text-base text-gray-500 mb-0">
+                    Đơn hàng hoàn thành
+                  </h6>
+                </div>
               </div>
             </div>
           </div>
@@ -103,9 +114,9 @@ export default function ProfileUser() {
         <div className="col-md-4">
           <div className="line-page"></div>
           <p className="font-semibold text-gray-500 mt-3 text-lg">PHẢN HỒI</p>
-          <CardComment/>
-          <CardComment/>
-          <CardComment/>
+          <CardComment />
+          <CardComment />
+          <CardComment />
         </div>
         <div className="col-md-8">
           <div className="line-page"></div>
