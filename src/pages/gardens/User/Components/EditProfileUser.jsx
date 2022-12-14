@@ -117,7 +117,7 @@ export default function EditProfileUser() {
       </div>
 
       <div className="flex justify-end">
-        <button className="shadow-md mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded ">
+        <button title="Cập nhật thông tin cá nhân" className="shadow-md mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4 border border-blue-700 rounded ">
           Cập nhật thông tin
         </button>
       </div>

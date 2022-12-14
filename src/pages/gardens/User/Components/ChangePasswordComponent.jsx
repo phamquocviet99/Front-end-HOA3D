@@ -28,6 +28,7 @@ export default function ChangePasswordComponent() {
             </p>
           </div>
           <button
+          title="Cập nhật tên đăng nhập"
             onClick={() => setShowChangeUsername(false)}
             className="shadow-md mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
           >
@@ -54,10 +55,11 @@ export default function ChangePasswordComponent() {
               />
             </div>
             <div className="flex justify-end">
-              <button class="shadow-md mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4  rounded ">
+              <button title="Xác nhận cập nhật" className="shadow-md mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4  rounded ">
                 Cập nhật
               </button>
               <button
+              title="Hủy cập nhật"
                 onClick={() => setShowChangeUsername(true)}
                 className="shadow-md ml-3 mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
               >
@@ -75,6 +77,7 @@ export default function ChangePasswordComponent() {
             <p className=" mb-0 text-md text-gray-700">*****************</p>
           </div>
           <button
+          title="Cập nhật mật khẩu"
             onClick={() => setShowChangePassword(false)}
             className="shadow-md mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
           >
@@ -110,10 +113,11 @@ export default function ChangePasswordComponent() {
             </div>
           </div>
           <div className="flex justify-end">
-            <button class=" mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4  rounded ">
+            <button title ="Xác nhận cập nhật"className=" mt-3 mb-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-4  rounded ">
               Cập nhật
             </button>
             <button
+            title="Hủy cập nhật"
               onClick={() => setShowChangePassword(true)}
               className="ml-3 mt-3 mb-2 bg-gray-100 hover:bg-sky-50 text-gray-400 hover:text-blue-600 text-base py-2 px-4  rounded "
             >
