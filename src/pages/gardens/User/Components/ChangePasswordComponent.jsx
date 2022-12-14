@@ -5,7 +5,7 @@ export default function ChangePasswordComponent() {
   const [showChangeUsername, setShowChangeUsername] = useState(true);
   const [showChangePassword, setShowChangePassword] = useState(true);
   return (
-    <div className="mt-3">
+    <div className="mt-4 p-4 rounded-lg bg-white shadow-md">
       <h4 className="text-zinc-500 text-base md:text-xl mb-3 ml-2 font-medium">
         Cập nhật mật khẩu
       </h4>

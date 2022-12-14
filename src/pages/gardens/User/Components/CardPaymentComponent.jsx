@@ -5,15 +5,16 @@ export default function CardPaymentComponent() {
   const [showAddCardModal, setShowAddCardModal] = useState(false);
   const handleCloseAddCardModal = () => setShowAddCardModal(false);
   return (
-    <div className="h-screen p-4">
+    <div className="h-screen shadow-md rounded-lg bg-white">
       <ModalAddCard
         onClose={handleCloseAddCardModal}
         visible={showAddCardModal}
       />
-      <div className="flex justify-between items-center">
-        <h4 className="text-zinc-500 text-base md:text-xl  ml-2 font-medium">
-          Thanh toán
-        </h4>
+
+      <div className="py-3 px-4 flex justify-between items-center">
+        <p style={{ fontSize: "17px" }} className="font-bold mb-0 mr-3">
+          Danh sách chành xe
+        </p>
         <button
           onClick={() => {
             setShowAddCardModal(true);
@@ -23,7 +24,8 @@ export default function CardPaymentComponent() {
           Thêm
         </button>
       </div>
-      <div className="row">
+      <div className="line-y " />
+      <div className="row p-4 ">
         <div className="col-md-6">
           <div className="border w-full p-3 rounded mt-2 shadow-md">
             <div className="flex justify-between">
