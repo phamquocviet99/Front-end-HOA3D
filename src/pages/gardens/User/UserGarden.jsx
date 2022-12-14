@@ -59,10 +59,9 @@ export default function UserGarden() {
     },
   ];
 
-  // return <TabHeader tabName={tabName} listComponent={listComponent} />;
   return (
-    <div className="">
-      <div className="w-full rounded-lg bg-white shadow-md">
+    <div >
+      <div className="w-full rounded-lg bg-white shadow-md ">
         <div className=" pl-5 pr-4 pt-4 md:flex items-center">
           <img
             className="w-full mb-3 md:w-40 md:h-40 rounded-lg"
@@ -127,7 +126,7 @@ export default function UserGarden() {
           </div>
         </div>
 
-        <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5 bg-slate-50 md:bg-transparent md:pb-0">
+        <div className=" w-full rounded-xl md:rounded-b-none block md:flex items-center pl-5  md:bg-transparent md:pb-0">
           {tabName.map((t, index) => (
             <div key={index}>
               <div
