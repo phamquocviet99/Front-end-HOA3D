@@ -1,6 +1,6 @@
 export default function ProfileUser() {
   return (
-    <div className="rounded-lg bg-white">
+    <div className="rounded-lg bg-white shadow-md">
       <div className="py-3 px-4 flex justify-between items-center">
         <p style={{ fontSize: "17px" }} className="font-bold mb-0 mr-3">
           Trang cá nhân

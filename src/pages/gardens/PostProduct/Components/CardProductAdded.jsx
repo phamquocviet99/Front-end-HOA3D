@@ -27,14 +27,14 @@ export default function CardProductAdded() {
       </div>
 
       <div className="w-full flex justify-start items-center mt-3">
-        <button title="Bán lại sản phẩm này" className="mb-1 w-full bg-blue-500 hover:bg-blue-600 text-white font-sm py-1 px-3  rounded-lg ">
-          <div className="flex justify-center items-center m-1">
-          <i class="fa-solid fa-rotate-right text-xl"></i>
-            <p className="mb-0 ml-3">Bán lại</p>
+        <button title="Bán lại sản phẩm này" className="mb-1 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg ">
+          <div className="flex justify-center items-center ">
+          <i class="fa-solid fa-rotate-right text-lg"></i>
+            <p className="mb-0 ml-3 text-base">Bán lại</p>
           </div>
         </button>
-        <button title="Xóa sản phẩm này" className="mb-1 ml-2 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-full ">
-          <AiOutlineClose className="text-xl"/>
+        <button title="Xóa sản phẩm này" className="mb-1 ml-1 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-full ">
+          <AiOutlineClose className="text-2xl"/>
         </button>
       </div>
     </div>
