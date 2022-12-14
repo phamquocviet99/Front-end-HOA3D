@@ -4,6 +4,31 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function ModalDelivery({ visible, onClose }) {
   const [startDate, setStartDate] = useState(new Date());
   if (!visible) return null;
+  const days = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
+  const months = [
+    "Tháng 1",
+    "Tháng 2",
+    "Tháng 3",
+    "Tháng 4",
+    "Tháng 5",
+    "Tháng 6",
+    "Tháng 7",
+    "Tháng 8",
+    "Tháng 9",
+    "Tháng 10",
+    "Tháng 11",
+    "Tháng 12",
+  ];
+
+  const locale = {
+    localize: {
+      day: (n) => days[n],
+      month: (n) => months[n],
+    },
+    formatLong: {
+      date: () => "mm/dd/yyyy",
+    },
+  };
   function handleClose(e) {
     if (e.target.id === "background-add-card") onClose();
   }
@@ -75,8 +100,9 @@ export default function ModalDelivery({ visible, onClose }) {
                 </select>
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Giá giao hàng :</p>
+                <p className="mb-2 text-zinc-500">Dự kiến ngày đến :</p>
                 <DatePicker
+                  locale={locale}
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
@@ -85,7 +111,7 @@ export default function ModalDelivery({ visible, onClose }) {
             </div>
           </div>
           <div className="mt-2">
-          <p className="mb-2 text-zinc-500">Ghi chú :</p>
+            <p className="mb-2 text-zinc-500">Ghi chú :</p>
             <textarea
               className="w-full border rounded h-40 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
