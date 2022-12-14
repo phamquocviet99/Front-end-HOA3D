@@ -29,8 +29,8 @@ export default function CardProduct() {
           onClick={() => setShowPostProductModal(true)}
           className="mb-1 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center items-center "
         >
-          <i class="fa-solid fa-check-double xl mr-2"></i>
-          Bán
+          <i class="fa-solid fa-check-double text-lg mr-2"></i>
+          <p className="mb-0 ml-3 text-base">Bán</p>
         </button>
         <button title="Xóa sản phẩm này" className="mb-1 ml-1 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-full ">
           <AiOutlineClose className="text-2xl"/>

@@ -20,8 +20,8 @@ export default function CardProductByAdmin() {
             title="Bán lại sản phẩm này"
             className="mb-1 w-full bg-blue-500 hover:bg-blue-600 text-white flex justify-center items-center  py-2 px-3 rounded-lg "
           >
-            <div className="h-7 w-7 flex justify-center items-center rounded-full border-2 border-white">
-              <i className="fa-solid fa-plus text-xl" />
+            <div className="h-6 w-6 flex justify-center items-center rounded-full border-2 border-white">
+              <i className="fa-solid fa-plus text-lg" />
             </div>
 
             <p className="mb-0 ml-3 text-base">Thêm </p>
@@ -39,17 +39,17 @@ export default function CardProductByAdmin() {
           >
             {isHover ? (
               <>
-                <div className="h-7 w-7 flex justify-center items-center rounded-full border-2 border-white">
-                  <i class="fa-solid fa-xmark text-xl" />
+                <div className="h-6 w-6 flex justify-center items-center rounded-full border-2 border-white">
+                  <i class="fa-solid fa-xmark text-lg" />
                 </div>
                 <p className="mb-0 text-base ml-4">Xóa</p>
               </>
             ) : (
               <>
-                <div className="h-7 w-7 flex justify-center items-center rounded-full border-2 border-white">
-                  <i class="fa-solid fa-check text-xl" />
+                <div className="h-6 w-6 flex justify-center items-center rounded-full border-2 border-white">
+                  <i class="fa-solid fa-check text-lg" />
                 </div>
-                <p className="mb-0 ml-1 text-base">Đã thêm </p>
+                <p className="mb-0 ml-3 text-base">Đã thêm </p>
               </>
             )}
           </button>
