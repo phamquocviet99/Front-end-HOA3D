@@ -14,7 +14,7 @@ export default function CardProduct() {
       />
       <img
         // className="w-full h-52 rounded object-cover "
-        className="img-responsive rounded-lg"
+        className="img-responsive rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />

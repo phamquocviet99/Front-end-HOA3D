@@ -6,7 +6,7 @@ export default function CardProductAdded() {
     <div className="w-full md:w-11/12 p-2 shadow rounded-lg">
       <img
         // className="h-44 w-full "
-        className="img-responsive rounded-md "
+        className="img-responsive rounded-t-lg "
         alt=""
         src={require("../../../../assets/images/image/test-flower.jpg")}
       />
