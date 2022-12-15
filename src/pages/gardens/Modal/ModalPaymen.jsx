@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useNavigate } from "react-router-dom";
 export default function ModalPayment({ visible, onClose }) {
+  const navigate = useNavigate();
+
+  function goToDetail() {
+    navigate("/nha-vuon/don-hang/chi-tiet");
+  }
   const [startDate, setStartDate] = useState(new Date());
   if (!visible) return null;
   function handleClose(e) {
@@ -45,9 +51,7 @@ export default function ModalPayment({ visible, onClose }) {
         <div className="flex justify-between items-center">
           <div className="w-3/12"></div>
           <div className="w-1/2 justify-center">
-            <p className="text-center text-2xl mb-0  text-zinc-600">
-              ĐẶT CỌC
-            </p>
+            <p className="text-center text-2xl mb-0  text-zinc-600">ĐẶT CỌC</p>
           </div>
           <div className="w-3/12 flex justify-end">
             <button
@@ -58,11 +62,27 @@ export default function ModalPayment({ visible, onClose }) {
             </button>
           </div>
         </div>
+        <div className="line-y"></div>
         <div className="pl-4 pr-4 pb-4">
+          <div className="flex justify-between items-center">
+            <div>
+              <p className="mb-0 text-base mt-2">Mã đơn : HD1</p>
+              <p className="mb-0 text-base mt-2">Trạng thái : Chờ đặt cọc</p>
+              <p className="mb-0 text-base mt-2">Tổng tiền : 12.000.000</p>
+            </div>
+            <button
+              title="Xem chi tiết đơn hàng"
+              onClick={goToDetail}
+              className=" bg-blue-500 hover:bg-blue-600 text-white text-sm  py-2 px-3 border border-blue-700 rounded-lg shadow-md"
+            >
+              Chi tiết
+            </button>
+          </div>
+
           <div className="row ">
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Mã giao dịch :</p>
+                <p className="mb-2 text-zinc-500 text-base">Mã giao dịch :</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -70,7 +90,7 @@ export default function ModalPayment({ visible, onClose }) {
                 />
               </div>
               <div className="mt-3">
-                <p className=" mb-2 text-zinc-500">Số tiền :</p>
+                <p className=" mb-2 text-zinc-500 text-base">Số tiền :</p>
                 <input
                   className=" w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -80,7 +100,7 @@ export default function ModalPayment({ visible, onClose }) {
             </div>
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Người gửi :</p>
+                <p className="mb-2 text-zinc-500 text-base">Người gửi :</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -88,9 +108,11 @@ export default function ModalPayment({ visible, onClose }) {
                 />
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Ngày giao hàng dự kiến :</p>
+                <p className="mb-2 text-zinc-500 text-base">
+                  Ngày Đặt cọc :
+                </p>
                 <DatePicker
-                locale={locale}
+                  locale={locale}
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
@@ -100,16 +122,16 @@ export default function ModalPayment({ visible, onClose }) {
           </div>
           <div className="flex justify-end mt-4">
             <button
-            title="Hủy bỏ đơn hàng"
+              title="Hủy bỏ đơn hàng"
               onClick={onClose}
-              className="ml-2 bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3   border-blue-700 rounded "
+              className="shadow-md ml-2 bg-gray-400 hover:bg-gray-500 text-white font-base py-2 px-3   border-blue-700 rounded "
             >
               Hủy đơn hàng
             </button>
             <button
-            title="Xác nhận đã đặt cọc"
+              title="Xác nhận đã đặt cọc"
               onClick={submitCard}
-              className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
+              className="shadow-md ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
             >
               Đặt cọc
             </button>

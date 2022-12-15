@@ -1,8 +1,10 @@
 import "./Order.css";
-import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
-import ButtonDetailOrder from "../../../components/ButtonDetailOrder/ButtonDetailOrder";
-import ButtonPayment from "../../../components/ButtonPayment/ButtonPayment";
+
 import { useNavigate } from "react-router-dom";
+import ButtonDeposit from "../../../components/ButtonPayment/ButtonDeposit";
+import ButtonWaitingShopPayment from "../../../components/ButtonWaitingShopPayment/ButtonWaitingShopPayment";
+import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
+
 function Order() {
   const navigate = useNavigate();
 
@@ -219,17 +221,11 @@ function Order() {
                     <td className="py-4 px-6 text-center">{o.totalPrice}</td>
                     <td className="py-4 px-6 flex justify-center items-center">
                       {o.status === "waitingDeposit" ? (
-                        <button className="bg-blue-500  hover:bg-blue-600 text-white px-2 py-1 rounded-full  w-32 text-center">
-                          Đơn hàng mới
-                        </button>
+                        <ButtonDeposit />
                       ) : o.status === "waitingPayment" ? (
-                        <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full w-32 text-center">
-                          Đợi thanh toán
-                        </button>
+                        <ButtonWaitingShopPayment />
                       ) : o.status === "waitingDelivery" ? (
-                        <button className="bg-sky-500  hover:bg-sky-600 text-white px-2 py-1 rounded-full   w-32 text-center">
-                          Giao hàng ngay
-                        </button>
+                       <ButtonDelivery/>
                       ) : o.status === "delivering" ? (
                         <button className="bg-orange-500  hover:bg-orange-600  text-white  px-2 py-1 rounded-full   w-32 text-center">
                           Đang giao hàng

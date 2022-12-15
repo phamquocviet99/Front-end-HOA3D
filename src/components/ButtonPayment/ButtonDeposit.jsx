@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ModalPayment from "../../pages/gardens/Modal/ModalPaymen";
 
-export default function ButtonPayment() {
+export default function ButtonDeposit() {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const handleClosePayment = () => setShowPaymentModal(false);
   return (
@@ -9,11 +9,11 @@ export default function ButtonPayment() {
       <ModalPayment onClose={handleClosePayment} visible={showPaymentModal} />
 
       <button
-      title="Đặt cọc đơn hàng"
+        title="Đặt cọc đơn hàng"
         onClick={() => setShowPaymentModal(true)}
-        className="bg-orange-500 hover:bg-orange-600 text-sm text-white  py-2 px-3 border border-orange-600 rounded-lg w-24 shadow-md"
+        className="bg-blue-500  hover:bg-blue-600 text-white px-2 py-1 rounded-full  w-32 text-center"
       >
-        Đặt cọc
+        Đơn hàng mới
       </button>
     </div>
   );
