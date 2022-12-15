@@ -1,6 +1,8 @@
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle,FaFlagCheckered } from "react-icons/fa";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 import { MdLocationOn } from "react-icons/md";
+import {CgCalendarDates} from "react-icons/cg"
+
 export default function DetailProductOrder() {
   return (
     <div>
@@ -36,7 +38,7 @@ export default function DetailProductOrder() {
             <div className="line-y mt-3" />
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
                 <p className="mb-0 text-gray-400 text-base">Ngày đặt cọc :</p>
               </div>
               <p className="mb-0 text-gray-600 text-base">22/3/2002</p>
@@ -74,7 +76,7 @@ export default function DetailProductOrder() {
             <div className="line-y mt-3" />
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
                 <p className="mb-0 text-gray-400 text-base">Ngày đặt cọc :</p>
               </div>
               <p className="mb-0 text-gray-600 text-base">11/2/2022</p>
@@ -102,7 +104,7 @@ export default function DetailProductOrder() {
             <div className="line-y mt-3" />
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+                <FaFlagCheckered className="text-gray-400 mr-2 text-xl" />
                 <p className="mb-0 text-gray-400 text-base">Tình trạng :</p>
               </div>
               <p className="mb-0 text-gray-600 text-base">Đã hoàn thành</p>
@@ -110,7 +112,7 @@ export default function DetailProductOrder() {
             <div className="line-y mt-3" />
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
                 <p className="mb-0 text-gray-400 text-base">
                   Ngày hoàn thành :
                 </p>
@@ -143,7 +145,7 @@ export default function DetailProductOrder() {
             </div>
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
                 <p className="mb-0 text-gray-400 text-base">Ngày giao hàng :</p>
               </div>
               <p className="mb-0 text-gray-600 text-base">22/3/2022</p>
@@ -172,7 +174,7 @@ export default function DetailProductOrder() {
             </div>
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
                 <p className="mb-0 text-gray-400 text-base">Ngày nhận hàng :</p>
               </div>
               <p className="mb-0 text-gray-600 text-base">22/3/2022</p>

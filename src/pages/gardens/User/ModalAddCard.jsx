@@ -61,7 +61,7 @@ export default function ModalAddCard({ visible, onClose }) {
           />
         </div>
         <div className="flex justify-end mt-3">
-        <button onClick={onClose} className="ml-2 bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3   border-blue-700 rounded ">
+        <button onClick={onClose} className="ml-2 bg-gray-400 hover:bg-gray-500 text-white font-base py-2 px-3   border-blue-700 rounded ">
             Đóng
           </button>
           <button onClick={submitCard} className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded ">

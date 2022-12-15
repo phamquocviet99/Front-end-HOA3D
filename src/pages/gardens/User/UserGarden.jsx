@@ -1,14 +1,8 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import "./index.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { MdLocationOn, MdEmail, MdAttachMoney } from "react-icons/md";
-import { TbPoint } from "react-icons/tb";
-import ChangePasswordComponent from "./Components/ChangePasswordComponent";
 import CardPaymentComponent from "./Components/CardPaymentComponent";
-import EditUserComponent from "./Components/EditUserComponent";
-import ProfileUserComponent from "./Components/ProfileUserComponent";
-import TabHeader from "../../../components/TabHeader/TabHeader";
-import ListShip from "./Components/ListShip";
 import ProfileUser from "./Components/ProfileUser";
 import EditProfileUser from "./Components/EditProfileUser";
 import TransportList from "./Components/TransportList";
@@ -60,7 +54,7 @@ export default function UserGarden() {
   ];
 
   return (
-    <div >
+    <div>
       <div className="w-full rounded-lg bg-white shadow-md ">
         <div className=" pl-5 pr-4 pt-4 md:flex items-center">
           <img
@@ -94,7 +88,7 @@ export default function UserGarden() {
             </div>
             <div className="md:flex items-center ">
               <div className="flex justify-center md:justify-start">
-                <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 mt-3">
+                <div className="border-information-page w-32 rounded-lg py-2 mt-3">
                   <div className="flex items-center justify-center ">
                     <RiBillLine className="mr-2 text-green-500" />
                     <p className="font-bold text-xl mb-0 text-center">3,241</p>
@@ -103,7 +97,7 @@ export default function UserGarden() {
                 </div>
               </div>
               <div className="flex justify-center md:justify-start">
-                <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 md:ml-5 mt-3">
+                <div className="border-information-page w-32 rounded-lg py-2 md:ml-5 mt-3">
                   <div className="flex items-center justify-center">
                     <BiMessageSquareCheck className="mr-2 text-blue-500" />
                     <p className="font-bold text-xl mb-0 text-center">2,345</p>
@@ -113,7 +107,7 @@ export default function UserGarden() {
                 </div>
               </div>
               <div className="flex justify-center md:justify-start">
-                <div className="border-2 border-dashed border-gray-300 w-32 rounded-lg py-2 md:ml-5 mt-3">
+                <div className="border-information-page w-32 rounded-lg py-2 md:ml-5 mt-3">
                   <div className="flex items-center justify-center">
                     <MdAttachMoney className="mr-2 text-red-500" />
                     <p className="font-bold text-xl mb-0 text-center">1,241</p>

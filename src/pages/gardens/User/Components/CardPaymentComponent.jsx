@@ -37,10 +37,10 @@ export default function CardPaymentComponent() {
                 />
               </div>
               <div className="flex">
-                <button className="text-sm ml-2 bg-orange-100 hover:bg-orange-200 text-orange-400 font-base py-2 px-3  rounded ">
+                <button className="shadow-md text-sm ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded ">
                   Cập nhật
                 </button>
-                <button className=" text-sm ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
+                <button className="shadow-md text-sm ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
                   Xóa
                 </button>
               </div>
@@ -79,10 +79,10 @@ export default function CardPaymentComponent() {
                 />
               </div>
               <div className="flex">
-                <button className="text-sm ml-2 bg-orange-100 hover:bg-orange-200 text-orange-400 font-base py-2 px-3  rounded ">
+                <button className="shadow-md text-sm ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded ">
                   Cập nhật
                 </button>
-                <button className=" text-sm ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
+                <button className="shadow-md text-sm ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
                   Xóa
                 </button>
               </div>

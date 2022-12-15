@@ -6,10 +6,10 @@ export default function CardShip() {
           Thành Bưởi
         </p>
         <div className="flex">
-          <button className="text-sm ml-2 bg-orange-100 hover:bg-orange-200 text-orange-400 font-base py-2 px-3  rounded ">
+          <button className="shadow-md text-sm ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded ">
             Cập nhật
           </button>
-          <button className=" text-sm ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
+          <button className="shadow-md text-sm ml-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-400 font-base py-2 px-3   border-blue-700 rounded ">
             Xóa
           </button>
         </div>
@@ -55,17 +55,12 @@ export default function CardShip() {
               <p className="text-base text-gray-500 mb-0">
                 - 226 Lê Hồng Phong TP.HCM
               </p>
-              <p className="text-base text-gray-500 mb-0">
-                - Bến xe miền Tây
-              </p>
+              <p className="text-base text-gray-500 mb-0">- Bến xe miền Tây</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-6"></div>
-        <div className="col-md-6"></div>
-      </div>
+      
     </div>
   );
 }

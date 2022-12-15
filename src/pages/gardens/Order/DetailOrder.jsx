@@ -54,16 +54,15 @@ export default function DetailOrder() {
             {l.element}
           </div>
         ))}
-      </div>
-
-      <div className="flex justify-end mt-4">
-        <button
-          onClick={() => navigate(-1)}
-          title="Trở về trang trước"
-          className="ml-2 bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3    rounded "
-        >
-          Trở về
-        </button>
+        <div className="flex justify-end mt-4">
+          <button
+            onClick={() => navigate(-1)}
+            title="Trở về trang trước"
+            className="ml-2 bg-gray-400 hover:bg-gray-600 text-white font-base py-2 px-3    rounded "
+          >
+            Trở về
+          </button>
+        </div>
       </div>
     </div>
   );

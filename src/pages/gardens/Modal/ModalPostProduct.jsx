@@ -58,6 +58,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             </button>
           </div>
         </div>
+        <div className="line-y"></div>
         <div className="pl-4 pr-4 pb-4">
           <div className="row">
             <div className="col-md-6">
@@ -149,7 +150,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             <button
               title="Trở về trang trước"
               onClick={onClose}
-              className="ml-2 bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3 rounded "
+              className="ml-2 bg-gray-400 hover:bg-gray-400 text-white font-base py-2 px-3 rounded "
             >
               Đóng
             </button>
