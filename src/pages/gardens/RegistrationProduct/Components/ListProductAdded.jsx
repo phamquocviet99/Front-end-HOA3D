@@ -67,9 +67,7 @@ export default function ListProductAdded() {
   return (
     <div className="card-element p-4">
       <div className="row">
-        <div className="col-md-6">
-         
-        </div>
+        <div className="col-md-6"></div>
         <div className="col-md-6">
           <form className="flex  justify-start md:justify-end md:mt-0 items-center">
             <label for="simple-search" class="sr-only">
@@ -124,11 +122,9 @@ export default function ListProductAdded() {
       </div>
 
       <div>
-        <div className="row  mt-3">
+        <div className="flex-card mt-2">
           {listProductAdmin?.map((p, index) => (
-            <div className="col-md-2 mt-3">
-              <CardProduct />
-            </div>
+            <CardProduct key={index} />
           ))}
         </div>
       </div>

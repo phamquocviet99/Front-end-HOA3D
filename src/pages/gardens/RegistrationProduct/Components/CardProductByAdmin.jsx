@@ -5,7 +5,7 @@ export default function CardProductByAdmin() {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className=" w-full mt-3 shadow-md rounded-lg">
+    <div className="width-card-6 mt-3 shadow-md rounded-lg">
       <img
         // className="h-48 w-full object-cover"
         className="img-responsive rounded-t-lg"
@@ -16,11 +16,11 @@ export default function CardProductByAdmin() {
         <p className="text-center text-lg font-title-product mb-2">Hoa nhài</p>
         {isCheck ? (
           <button
-          onClick={() => setIsCheck(!isCheck)}
+            onClick={() => setIsCheck(!isCheck)}
             title="Bán lại sản phẩm này"
             className="mb-1 w-full bg-blue-500 hover:bg-blue-600 text-white flex justify-center items-center  py-2 px-3 rounded-lg "
           >
-            <div className="h-6 w-6 flex justify-center items-center rounded-full border-2 border-white">
+            <div className="h-6 w-6 flex justify-center items-center rounded-full ">
               <i className="fa-solid fa-plus text-lg" />
             </div>
 
@@ -34,19 +34,19 @@ export default function CardProductByAdmin() {
             className={
               isHover
                 ? "mb-1 w-full bg-red-400 hover:bg-red-400 text-white flex justify-center items-center  py-2 px-3 rounded-lg "
-                : "mb-1 w-full bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center  py-2 px-3 rounded-lg "
+                : "mb-1 w-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center  py-2 px-3 rounded-lg "
             }
           >
             {isHover ? (
               <>
-                <div className="h-6 w-6 flex justify-center items-center rounded-full border-2 border-white">
+                <div className="h-6 w-6 flex justify-center items-center rounded-full">
                   <i class="fa-solid fa-xmark text-lg" />
                 </div>
                 <p className="mb-0 text-base ml-4">Xóa</p>
               </>
             ) : (
               <>
-                <div className="h-6 w-6 flex justify-center items-center rounded-full border-2 border-white">
+                <div className="h-6 w-6 flex justify-center items-center rounded-fullite">
                   <i class="fa-solid fa-check text-lg" />
                 </div>
                 <p className="mb-0 ml-3 text-base">Đã thêm </p>
@@ -54,37 +54,6 @@ export default function CardProductByAdmin() {
             )}
           </button>
         )}
-
-        {/* <div className="flex items-center justify-center">
-          {isCheck ? (
-            <button
-              title="Đăng ký sản phẩm này"
-              onClick={() => setIsCheck(!isCheck)}
-              className=" rounded-full   h-8 w-8  flex justify-center items-center text-blue-500 border-blue-500 border-2 hover:border-transparent hover:text-white hover:bg-blue-500 focus:ring-0"
-            >
-              <i class="fa-solid fa-plus text-xl" />
-              
-            </button>
-          ) : (
-            <button
-              onClick={() => setIsCheck(!isCheck)}
-              onMouseEnter={() => setIsHover(true)}
-              onMouseLeave={() => setIsHover(false)}
-              title="Hủy đăng ký sản phẩm này"
-              className={
-                isHover
-                  ? "rounded-full  h-8 w-8 flex justify-center items-center  text-red-500 border-red-500 border-2 hover:border-transparent hover:text-white hover:bg-red-500 focus:ring-0"
-                  : "rounded-full   h-8 w-8  flex justify-center items-center  text-blue-500 border-blue-500 border-2 hover:border-transparent hover:text-white hover:bg-blue-500 focus:ring-0"
-              }
-            >
-              {isHover ? (
-                <i class="fa-solid fa-xmark text-2xl" />
-              ) : (
-                <i class="fa-solid fa-check text-2xl" />
-              )}
-            </button>
-          )}
-        </div> */}
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CardProductAdded from "./CardProductAdded";
+import "./index.css";
 
 export default function PostedProduct() {
   const [listProductAdmin, setListProductAdmin] = useState([
@@ -67,8 +68,7 @@ export default function PostedProduct() {
   return (
     <div className="card-element p-4 shadow-md">
       <div className="row">
-        <div className="col-md-6">
-        </div>
+        <div className="col-md-6"></div>
         <div className="col-md-6">
           <form className="flex  justify-start md:justify-end md:mt-0 items-center">
             <label for="simple-search" className="sr-only">
@@ -123,11 +123,9 @@ export default function PostedProduct() {
       </div>
 
       <div>
-        <div className="row mt-3">
+        <div className="flex-card mt-2">
           {listProductAdmin?.map((p, index) => (
-            <div className="col-md-3 mt-3">
-              <CardProductAdded />
-            </div>
+            <CardProductAdded key={index} />
           ))}
         </div>
       </div>
