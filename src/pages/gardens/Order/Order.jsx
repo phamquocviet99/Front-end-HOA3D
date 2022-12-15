@@ -2,7 +2,13 @@ import "./Order.css";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
 import ButtonDetailOrder from "../../../components/ButtonDetailOrder/ButtonDetailOrder";
 import ButtonPayment from "../../../components/ButtonPayment/ButtonPayment";
+import { useNavigate } from "react-router-dom";
 function Order() {
+  const navigate = useNavigate();
+
+  function goToDetail() {
+    navigate("/nha-vuon/don-hang/chi-tiet");
+  }
   const listOrder = [
     {
       id: "HD1",
@@ -186,14 +192,9 @@ function Order() {
                   <th scope="col" className="py-3 px-6 text-center">
                     Mã đơn
                   </th>
-                  <th scope="col" className="py-3 px-6 text-center">
-                    Sản phẩm
-                  </th>
+
                   <th scope="col" className="py-3 px-6 text-center">
                     Cửa hàng
-                  </th>
-                  <th scope="col" className="py-3 px-6 text-center">
-                    Số lượng
                   </th>
 
                   <th scope="col" className="py-3 px-6 text-center">
@@ -202,9 +203,7 @@ function Order() {
                   <th scope="col" className="py-3 px-6 text-center">
                     Trạng thái
                   </th>
-                  <th scope="col" className="py-3 px-6 text-center">
-                    Dự kiến ngày đến
-                  </th>
+
                   <th scope="col" className="py-3 px-6 text-center">
                     Hành động
                   </th>
@@ -214,11 +213,11 @@ function Order() {
                 {listOrder?.map((o, index) => (
                   <tr className="bg-order border-b  ">
                     <td className="py-4 px-6 text-center">{o.id}</td>
-                    <td className="py-4 px-6 text-center">{o.nameProduct}</td>
+
                     <td className="py-4 px-6 text-center">{o.nameShop}</td>
-                    <td className="py-4 px-6 text-center">{o.count}</td>
+
                     <td className="py-4 px-6 text-center">{o.totalPrice}</td>
-                    <td className="py-4 px-6 flex justify-center">
+                    <td className="py-4 px-6 flex justify-center items-center">
                       {o.status === "delivered" ? (
                         <div className="border-green-600 border-2 px-2 py-1 rounded-full  text-green-600 w-32 text-center">
                           Đã hoàn thành
@@ -237,23 +236,16 @@ function Order() {
                         </div>
                       )}
                     </td>
-                    <td className="py-4 px-6 text-center">{o.date}</td>
-                    <td className="py-4 flex justify-start items-center">
-                      {o.status === "delivered" ? (
-                        <ButtonDetailOrder />
-                      ) : o.status === "delivering" ? (
-                        <ButtonDetailOrder />
-                      ) : o.status === "sendMoney" ? (
-                        <div className="flex items-center">
-                          <ButtonDetailOrder />
-                          <ButtonDelivery />
-                        </div>
-                      ) : (
-                        <div className="flex items-center">
-                          <ButtonDetailOrder />
-                          <ButtonPayment />
-                        </div>
-                      )}
+
+                    <td className="py-4 px-6 text-center">
+                      <button
+                        title="Xem chi tiết đơn hàng"
+                        // onClick={() => setShowDetailOrderModal(true)}
+                        onClick={goToDetail}
+                        className=" bg-blue-500 hover:bg-blue-600 text-white text-sm  py-2 px-3 border border-blue-700 rounded-lg shadow-md"
+                      >
+                        Chi tiết
+                      </button>
                     </td>
                   </tr>
                 ))}

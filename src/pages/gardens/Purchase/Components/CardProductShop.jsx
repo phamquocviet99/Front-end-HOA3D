@@ -1,6 +1,7 @@
+import "./index.css";
 export default function CardProductShop() {
   return (
-    <div className="border-2 w-full rounded-2xl mt-4 shadow-md">
+    <div className="border-2 width-card-4 rounded-2xl mt-4 shadow-md">
       <img
         className="w-full h-44 rounded-t-xl object-cover "
         alt=""
@@ -32,7 +33,7 @@ export default function CardProductShop() {
             title="Bán sản phẩm này"
             className="shadow-md mb-1 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center items-center "
           >
-            <i class="fa-solid fa-check-double text-lg mr-2"></i>
+            <i class="fa-regular fa-circle-check text-2xl mr-1"></i>
             <p className="mb-0 ml-3 text-base">Bán</p>
           </button>
         </div>

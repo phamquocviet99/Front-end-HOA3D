@@ -138,11 +138,9 @@ export default function Purchase() {
           </div>
         </div>
       </div>
-      <div className="row mt-3">
+      <div className="flex-card mt-2">
         {listProductAdmin?.map((p, index) => (
-          <div className="col-md-3">
-            <CardProductShop />
-          </div>
+          <CardProductShop />
         ))}
       </div>
     </div>
