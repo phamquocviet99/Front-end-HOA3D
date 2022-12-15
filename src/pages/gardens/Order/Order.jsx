@@ -331,7 +331,7 @@ function Order() {
               </div>
             ))}
           </div>
-          <div className="flex justify-between items-center pt-3 pr-3">
+          <div className="flex justify-between items-center pt-3 ">
             <select
               id="countries_disabled"
               className="px-2 h-8 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  focus:ring-0"
