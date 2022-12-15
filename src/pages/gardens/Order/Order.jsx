@@ -16,7 +16,7 @@ function Order() {
       nameShop: "Minh An",
       count: "12kg",
       totalPrice: "1.000.000đ",
-      status: "delivered",
+      status: "waitingDeposit",
       date: "22/12/2022",
     },
     {
@@ -25,7 +25,7 @@ function Order() {
       nameShop: "Minh Huệ",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "notDelivery",
+      status: "waitingDeposit",
       date: "Chưa có",
     },
     {
@@ -34,7 +34,7 @@ function Order() {
       nameShop: "Minh An",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "sendMoney",
+      status: "waitingPayment",
       date: "22/12/2022",
     },
     {
@@ -43,7 +43,7 @@ function Order() {
       nameShop: "Ba Lan",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "delivering",
+      status: "waitingDelivery",
       date: "22/12/2022",
     },
     {
@@ -52,7 +52,7 @@ function Order() {
       nameShop: "Minh Minh",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "delivered",
+      status: "delivering",
       date: "22/12/2022",
     },
     {
@@ -61,7 +61,7 @@ function Order() {
       nameShop: "Minh Hoàng",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "notDelivery",
+      status: "delivering",
       date: "Chưa có",
     },
     {
@@ -70,7 +70,7 @@ function Order() {
       nameShop: "Minh An",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "sendMoney",
+      status: "waitingCensorship",
       date: "22/12/2022",
     },
     {
@@ -79,7 +79,7 @@ function Order() {
       nameShop: "Ba Lan",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "delivering",
+      status: "waitingCensorship",
       date: "22/12/2022",
     },
     {
@@ -88,7 +88,7 @@ function Order() {
       nameShop: "Minh Minh",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "delivered",
+      status: "completed",
       date: "22/12/2022",
     },
     {
@@ -97,7 +97,7 @@ function Order() {
       nameShop: "Minh Hoàng",
       count: "200kg",
       totalPrice: "2.000.000đ",
-      status: "notDelivery",
+      status: "cancel",
       date: "Chưa có",
     },
   ];
@@ -218,29 +218,40 @@ function Order() {
 
                     <td className="py-4 px-6 text-center">{o.totalPrice}</td>
                     <td className="py-4 px-6 flex justify-center items-center">
-                      {o.status === "delivered" ? (
-                        <div className="border-green-600 border-2 px-2 py-1 rounded-full  text-green-600 w-32 text-center">
-                          Đã hoàn thành
-                        </div>
-                      ) : o.status === "delivering" ? (
-                        <div className="border-orange-500 border-2 px-2 py-1 rounded-full  text-orange-500 w-32 text-center">
-                          Đang giao hàng
-                        </div>
-                      ) : o.status === "sendMoney" ? (
-                        <div className="border-blue-600 border-2 px-2 py-1 rounded-full  text-blue-600 w-32 text-center">
-                          Đã đặt cọc
-                        </div>
-                      ) : (
-                        <div className="border-sky-500 border-2 px-2 py-1 rounded-full  text-sky-500 w-32 text-center">
+                      {o.status === "waitingDeposit" ? (
+                        <button className="bg-blue-500  hover:bg-blue-600 text-white px-2 py-1 rounded-full  w-32 text-center">
                           Đơn hàng mới
-                        </div>
+                        </button>
+                      ) : o.status === "waitingPayment" ? (
+                        <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full w-32 text-center">
+                          Đợi thanh toán
+                        </button>
+                      ) : o.status === "waitingDelivery" ? (
+                        <button className="bg-sky-500  hover:bg-sky-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                          Giao hàng ngay
+                        </button>
+                      ) : o.status === "delivering" ? (
+                        <button className="bg-orange-500  hover:bg-orange-600  text-white  px-2 py-1 rounded-full   w-32 text-center">
+                          Đang giao hàng
+                        </button>
+                      ) : o.status === "waitingCensorship" ? (
+                        <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                          Chờ kiểm duyệt
+                        </button>
+                      ) : o.status === "cancel" ? (
+                        <button className="bg-red-500  hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                          Đơn hàng hủy
+                        </button>
+                      ) : (
+                        <button className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center">
+                          Đơn hoàn thành
+                        </button>
                       )}
                     </td>
 
                     <td className="py-4 px-6 text-center">
                       <button
                         title="Xem chi tiết đơn hàng"
-                        // onClick={() => setShowDetailOrderModal(true)}
                         onClick={goToDetail}
                         className=" bg-blue-500 hover:bg-blue-600 text-white text-sm  py-2 px-3 border border-blue-700 rounded-lg shadow-md"
                       >
@@ -261,57 +272,61 @@ function Order() {
                 <div className="flex justify-between items-center">
                   <p className="font-bold text-base">Mã đơn : {o.id}</p>
                   <p className="text-gray-500">
-                    {o.status === "delivered" ? (
-                      <div className="border-green-600 border-2 px-2 py-1 rounded-full  text-green-600 w-32 text-center">
-                        Đã giao hàng
-                      </div>
-                    ) : o.status === "delivering" ? (
-                      <div className="border-orange-500 border-2 px-2 py-1 rounded-full  text-orange-500 w-32 text-center">
-                        Đang giao hàng
-                      </div>
-                    ) : o.status === "sendMoney" ? (
-                      <div className="border-red-600 border-2 px-2 py-1 rounded-full  text-red-600 w-32 text-center">
-                        Đã đặt cọc
-                      </div>
-                    ) : (
-                      <div className="border-blue-500 border-2 px-2 py-1 rounded-full  text-blue-500 w-32 text-center">
+                    {o.status === "waitingDeposit" ? (
+                      <button className="bg-blue-500  hover:bg-blue-600 text-white px-2 py-1 rounded-full  w-32 text-center">
                         Đơn hàng mới
-                      </div>
+                      </button>
+                    ) : o.status === "waitingPayment" ? (
+                      <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full w-32 text-center">
+                        Đợi thanh toán
+                      </button>
+                    ) : o.status === "waitingDelivery" ? (
+                      <button className="bg-sky-500  hover:bg-sky-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                        Giao hàng ngay
+                      </button>
+                    ) : o.status === "delivering" ? (
+                      <button className="bg-orange-500  hover:bg-orange-600  text-white  px-2 py-1 rounded-full   w-32 text-center">
+                        Đang giao hàng
+                      </button>
+                    ) : o.status === "waitingCensorship" ? (
+                      <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                        Chờ kiểm duyệt
+                      </button>
+                    ) : o.status === "cancel" ? (
+                      <button className="bg-red-500  hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                        Đơn hàng hủy
+                      </button>
+                    ) : (
+                      <button className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center">
+                        Đơn hoàn thành
+                      </button>
                     )}
                   </p>
                 </div>
-
-                <p className="text-gray-500 mb-2">
-                  Cửa hàng :{" "}
-                  <span className="font-bold text-black">{o?.nameShop} </span>
-                </p>
                 <div className="flex justify-between items-center">
-                  <p className="text-gray-500 mb-2">
-                    Tổng tiền :{" "}
-                    <span className="font-bold text-red-500">
-                      {o?.totalPrice}
-                    </span>
-                  </p>
-                </div>
-
-                <p className="text-gray-500">
-                  Dự kiến ngày đến :{" "}
-                  <span className="font-bold text-black">{o?.date}</span>
-                </p>
-
-                <div
-                  className="flex justify-end
-                 items-center"
-                >
-                  {o.status === "delivered" ? (
-                    <ButtonDetailOrder />
-                  ) : o.status === "delivering" ? (
-                    <ButtonDetailOrder />
-                  ) : o.status === "sendMoney" ? (
-                    <ButtonDelivery />
-                  ) : (
-                    <ButtonPayment />
-                  )}
+                  <div>
+                    <p className="text-gray-500 mb-2">
+                      Cửa hàng :{" "}
+                      <span className="font-bold text-black">
+                        {o?.nameShop}{" "}
+                      </span>
+                    </p>
+                    <div className="flex justify-between items-center">
+                      <p className="text-gray-500 mb-2">
+                        Tổng tiền :{" "}
+                        <span className="font-bold text-red-500">
+                          {o?.totalPrice}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    title="Xem chi tiết đơn hàng"
+                    onClick={goToDetail}
+                    className=" bg-blue-500 hover:bg-blue-600 text-white text-sm  py-2 px-3 border border-blue-700 rounded-lg shadow-md"
+                  >
+                    Chi tiết
+                  </button>
                 </div>
               </div>
             ))}
