@@ -66,7 +66,6 @@ export default function ListProductByAdmin() {
   ]);
   return (
     <div className="card-element p-4">
-     
       <div className="row mt-3">
         <div className="col-md-6">
           <div className="md:flex justify-start items-center mb-3">
@@ -139,11 +138,11 @@ export default function ListProductByAdmin() {
           </div>
         </div>
       </div>
-      <div className="flex-card mt-2" >
+      <div className="row">
         {listProductAdmin?.map((p, index) => (
-          
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mt-3">
             <CardProductByAdmin />
-         
+          </div>
         ))}
       </div>
     </div>

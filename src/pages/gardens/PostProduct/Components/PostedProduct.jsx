@@ -132,8 +132,8 @@ export default function PostedProduct() {
       <div>
         <div className="row">
           {listProductAdmin?.map((p, index) => (
-            // <CardProductAdded key={index} />
-            <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2">
+    
+            <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mt-3">
               <CardProductAdded  />
             </div>
             
