@@ -138,7 +138,7 @@ export default function Purchase() {
           </div>
         </div>
       </div>
-      <div className="flex-card mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4 gap-4 mt-3">
         {listProductAdmin?.map((p, index) => (
           <CardProductShop />
         ))}

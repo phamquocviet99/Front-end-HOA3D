@@ -1,7 +1,7 @@
 import "./index.css";
 export default function CardProductShop() {
   return (
-    <div className="border-2 width-card-4 rounded-2xl mt-4 shadow-md">
+    <div className="border-2 rounded-2xl shadow-md">
       <img
         className="w-full h-44 rounded-t-xl object-cover "
         alt=""
