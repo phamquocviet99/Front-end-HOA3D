@@ -183,7 +183,7 @@
     }
 
     .link:hover {
-
+        width: 100%;
         border-radius: 25px;
         color: #276221;
         background-color: var(--background-color-page);
