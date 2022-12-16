@@ -15,7 +15,7 @@ export default function ButtonAddCardShip() {
       <button
       title="Thêm nhà xe mới"
         onClick={() => setShowAddShipModal(true)}
-        className="bg-blue-500 hover:bg-blue-500 text-white  py-2 px-3 border border-blue-500 rounded-lg w-28 shadow-md"
+        className="bg-blue-500  hover:bg-blue-500 text-white  py-2 px-3 border border-blue-500 rounded-lg w-28 shadow-md"
       >
         Thêm
       </button>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { MdLocationOn, MdEmail, MdAttachMoney } from "react-icons/md";
-import CardPaymentComponent from "./Components/CardPaymentComponent";
+import ListCardPaymentComponent from "./Components/ListCardPaymentComponent";
 import ProfileUser from "./Components/ProfileUser";
 import EditProfileUser from "./Components/EditProfileUser";
 import TransportList from "./Components/TransportList";
@@ -45,7 +45,7 @@ export default function UserGarden() {
     },
     {
       id: 3,
-      element: <CardPaymentComponent />,
+      element: <ListCardPaymentComponent />,
     },
     {
       id: 4,

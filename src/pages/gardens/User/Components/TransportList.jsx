@@ -12,13 +12,10 @@ export default function TransportList() {
       </div>
       <div className="line-y " />
 
-      <div className="row p-4">
-        <div className="col-md-6">
-          <CardShip />
-        </div>
-        <div className="col-md-6">
-          <CardShip />
-        </div>
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 p-3">
+        <CardShip />
+
+        <CardShip />
       </div>
     </div>
   );
