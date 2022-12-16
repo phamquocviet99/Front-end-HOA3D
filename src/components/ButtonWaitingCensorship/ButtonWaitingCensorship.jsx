@@ -16,9 +16,9 @@ export default function ButtonWaitingCensorship() {
       <button
       title="Xem chi tiết"
         onClick={() => setShowDeliveryModal(true)}
-        className="bg-amber-500 shadow-md hover:bg-amber-600 text-white px-2 py-1 rounded-full   w-32 text-center"
+        className="bg-teal-500 shadow-md hover:bg-teal-600 text-white px-2 py-1 rounded-full   w-32 text-center"
       >
-        Chờ kiểm duyệt
+        Đã giao
       </button>
     </div>
   );

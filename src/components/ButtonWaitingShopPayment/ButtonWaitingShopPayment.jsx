@@ -10,9 +10,9 @@ export default function ButtonWaitingShopPayment({ props }) {
       <button
         title="Xem chi tiết trạng thái"
         onClick={() => setShowPaymentModal(true)}
-        className="shadow-md bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full w-32 text-center"
+        className="shadow-md bg-purple-500  hover:bg-purple-600 text-white px-2 py-1 rounded-full w-32 text-center"
       >
-        Đợi thanh toán
+        Đã cọc
       </button>
     </div>
   );

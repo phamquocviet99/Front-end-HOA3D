@@ -14,9 +14,9 @@ export default function ButtonDelivery() {
       <button
       title="Giao hàng"
         onClick={() => setShowDeliveryModal(true)}
-        className="bg-sky-500   hover:bg-sky-600 text-white px-2 py-1 rounded-full   w-32 text-center shadow-md"
+        className="bg-blue-500   hover:bg-blue-600 text-white px-2 py-1 rounded-full   w-32 text-center shadow-md"
       >
-        Giao hàng ngay
+        Xử lý
       </button>
     </div>
   );

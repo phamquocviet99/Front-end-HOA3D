@@ -7,7 +7,7 @@ export default function CardProduct() {
   const [showPostProductModal, setShowPostProductModal] = useState(false);
   const handleClosePostProductModal = () => setShowPostProductModal(false);
   return (
-    <div className="  border-2 width-card-6 rounded-xl p-1 shadow-md">
+    <div className="  border-2 rounded-xl p-1 shadow-md">
       <ModalPostProduct
         onClose={handleClosePostProductModal}
         visible={showPostProductModal}
@@ -27,12 +27,12 @@ export default function CardProduct() {
         <button
         title="Bán sản phẩm này"
           onClick={() => setShowPostProductModal(true)}
-          className="mb-1 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center items-center "
+          className="mb-1 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center shadow-md  items-center "
         >
           <i class="fa-regular fa-circle-check text-xl"></i>
           <p className="mb-0 ml-3 text-base">Bán</p>
         </button>
-        <button title="Xóa sản phẩm này" className="mb-1 ml-1 bg-red-500 hover:bg-red-600 text-white font-sm p-2  rounded-full ">
+        <button title="Xóa sản phẩm này" className="mb-1 ml-1 bg-red-500 hover:bg-red-600 text-white font-sm p-2 shadow-md rounded-full ">
           <AiOutlineClose className="text-2xl"/>
         </button>
       </div>
