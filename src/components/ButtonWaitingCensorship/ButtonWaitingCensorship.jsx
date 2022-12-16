@@ -1,23 +1,24 @@
 import { useState } from "react";
-import { FaRegWindowClose } from "react-icons/fa";
-import ModalDeleteOrder from "../../pages/gardens/Modal/ModalDeleteOrder";
-import ModalDelivery from "../../pages/gardens/Modal/ModalDelivery";
+import ModalWaitingCensorship from "../../pages/gardens/Modal/ModalWaitingCensorship";
 
-export default function ButtonDeleteOrder() {
+
+
+export default function ButtonWaitingCensorship() {
   const [showDeliveryModal, setShowDeliveryModal] = useState(false);
   const handleClosePostProductModal = () => setShowDeliveryModal(false);
   return (
     <div>
-      <ModalDeleteOrder
+      <ModalWaitingCensorship
         onClose={handleClosePostProductModal}
         visible={showDeliveryModal}
       />
 
       <button
+      title="Xem chi tiết"
         onClick={() => setShowDeliveryModal(true)}
-        className="p-2 bg-red-600 hover:bg-red-700 rounded-md mx-1"
+        className="bg-amber-500 shadow-md hover:bg-amber-600 text-white px-2 py-1 rounded-full   w-32 text-center"
       >
-        <FaRegWindowClose className="text-white text-2xl" />
+        Chờ kiểm duyệt
       </button>
     </div>
   );

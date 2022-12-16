@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import ButtonDeposit from "../../../components/ButtonPayment/ButtonDeposit";
 import ButtonWaitingShopPayment from "../../../components/ButtonWaitingShopPayment/ButtonWaitingShopPayment";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
+import ButtonWaitingDelivery from "../../../components/ButtonWaitingDelivery/ButtonWaitingDelivery";
+import ButtonWaitingCensorship from "../../../components/ButtonWaitingCensorship/ButtonWaitingCensorship";
 
 function Order() {
   const navigate = useNavigate();
@@ -225,21 +227,21 @@ function Order() {
                       ) : o.status === "waitingPayment" ? (
                         <ButtonWaitingShopPayment />
                       ) : o.status === "waitingDelivery" ? (
-                       <ButtonDelivery/>
+                        <ButtonDelivery />
                       ) : o.status === "delivering" ? (
-                        <button className="bg-orange-500  hover:bg-orange-600  text-white  px-2 py-1 rounded-full   w-32 text-center">
-                          Đang giao hàng
-                        </button>
+                        <ButtonWaitingDelivery />
                       ) : o.status === "waitingCensorship" ? (
-                        <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full   w-32 text-center">
-                          Chờ kiểm duyệt
-                        </button>
+                        <ButtonWaitingCensorship />
                       ) : o.status === "cancel" ? (
                         <button className="bg-red-500  hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
                           Đơn hàng hủy
                         </button>
                       ) : (
-                        <button className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center">
+                        <button
+                          title="Xem chi tiết"
+                          onClick={goToDetail}
+                          className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
+                        >
                           Đơn hoàn thành
                         </button>
                       )}
@@ -269,31 +271,25 @@ function Order() {
                   <p className="font-bold text-base">Mã đơn : {o.id}</p>
                   <p className="text-gray-500">
                     {o.status === "waitingDeposit" ? (
-                      <button className="bg-blue-500  hover:bg-blue-600 text-white px-2 py-1 rounded-full  w-32 text-center">
-                        Đơn hàng mới
-                      </button>
+                      <ButtonDeposit />
                     ) : o.status === "waitingPayment" ? (
-                      <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full w-32 text-center">
-                        Đợi thanh toán
-                      </button>
+                      <ButtonWaitingShopPayment />
                     ) : o.status === "waitingDelivery" ? (
-                      <button className="bg-sky-500  hover:bg-sky-600 text-white px-2 py-1 rounded-full   w-32 text-center">
-                        Giao hàng ngay
-                      </button>
+                      <ButtonDelivery />
                     ) : o.status === "delivering" ? (
-                      <button className="bg-orange-500  hover:bg-orange-600  text-white  px-2 py-1 rounded-full   w-32 text-center">
-                        Đang giao hàng
-                      </button>
+                      <ButtonWaitingDelivery />
                     ) : o.status === "waitingCensorship" ? (
-                      <button className="bg-amber-500  hover:bg-amber-600 text-white px-2 py-1 rounded-full   w-32 text-center">
-                        Chờ kiểm duyệt
-                      </button>
+                      <ButtonWaitingCensorship />
                     ) : o.status === "cancel" ? (
                       <button className="bg-red-500  hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
                         Đơn hàng hủy
                       </button>
                     ) : (
-                      <button className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center">
+                      <button
+                        title="Xem chi tiết"
+                        onClick={goToDetail}
+                        className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
+                      >
                         Đơn hoàn thành
                       </button>
                     )}
