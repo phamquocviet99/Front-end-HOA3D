@@ -19,7 +19,7 @@ export default function CardProduct() {
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />
 
-      <p className="text-green-800 text-center text-base ml-1 mt-2 mb-2">
+      <p className=" text-center font-bold text-xl ml-1 mt-2 mb-2">
         Hoa Lan
       </p>
 

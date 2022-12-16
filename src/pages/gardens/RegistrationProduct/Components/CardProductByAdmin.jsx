@@ -13,7 +13,7 @@ export default function CardProductByAdmin() {
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />
       <div className="  p-2">
-        <p className="text-center text-lg font-title-product mb-2">Hoa nhài</p>
+        <p className="text-center font-bold text-xl mb-2">Hoa nhài</p>
         {isCheck ? (
           <button
             onClick={() => setIsCheck(!isCheck)}
@@ -40,7 +40,7 @@ export default function CardProductByAdmin() {
             {isHover ? (
               <>
                 <div className="h-6 w-6 flex justify-center items-center rounded-full">
-                  <i class="fa-solid fa-xmark text-lg" />
+                  <i class="fa-solid fa-xmark text-base" />
                 </div>
                 <p className="mb-0 text-base ml-4">Xóa</p>
               </>
