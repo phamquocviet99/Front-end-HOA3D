@@ -31,11 +31,12 @@ export default function ModalAddCardShip({ visible, onClose }) {
             </button>
           </div>
         </div>
+        <div className="line-y"></div>
         <div className="pl-4 pr-4 pb-4">
           <div className="row">
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Tên nhà xe :</p>
+                <p className="mb-2 text-zinc-500 text-base">Tên nhà xe :</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -43,7 +44,7 @@ export default function ModalAddCardShip({ visible, onClose }) {
                 />
               </div>
               <div className="mt-3">
-                <p className=" mb-2 text-zinc-500">Địa chỉ giao hàng :</p>
+                <p className=" mb-2 text-zinc-500 text-base">Địa chỉ giao hàng :</p>
                 <input
                   className=" w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -53,15 +54,15 @@ export default function ModalAddCardShip({ visible, onClose }) {
             </div>
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Số điện thoại :</p>
+                <p className="mb-2 text-zinc-500 text-base">Số điện thoại :</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
-                  placeholder="Địa chỉ"
+                  placeholder="Số điện thoại"
                 />
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Địa chỉ nhận hàng :</p>
+                <p className="mb-2 text-zinc-500 text-base">Địa chỉ nhận hàng :</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -74,14 +75,14 @@ export default function ModalAddCardShip({ visible, onClose }) {
             <button
               title="Tắt hiển thị"
               onClick={onClose}
-              className="text-sm ml-2 test-sm bg-red-400 hover:bg-red-500 text-white font-base py-2 px-3 rounded "
+              className="ml-2  bg-gray-400 hover:bg-gray-500 text-white  py-2 px-3 rounded "
             >
-              Hủy bỏ
+              Trở về
             </button>
             <button
               title="Thêm nhà xe mới"
               onClick={submitCard}
-              className="text-sm ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
+              className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3  rounded "
             >
               Thêm
             </button>

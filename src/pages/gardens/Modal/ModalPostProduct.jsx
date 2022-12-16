@@ -63,7 +63,7 @@ export default function ModalPostProduct({ visible, onClose }) {
           <div className="row">
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Tên sản phẩm</p>
+                <p className="mb-2 text-zinc-500 text-base">Tên sản phẩm</p>
                 <select
                   id="countries_disabled"
                   className="h-10 border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
@@ -87,7 +87,7 @@ export default function ModalPostProduct({ visible, onClose }) {
               </div>
 
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Số lượng hiện có</p>
+                <p className="mb-2 text-zinc-500 text-base">Số lượng hiện có</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -96,7 +96,7 @@ export default function ModalPostProduct({ visible, onClose }) {
               </div>
 
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Ngày bắt đầu thu hoạch</p>
+                <p className="mb-2 text-zinc-500 text-base">Ngày bắt đầu thu hoạch</p>
                 <DatePicker
                   locale={locale}
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -107,7 +107,7 @@ export default function ModalPostProduct({ visible, onClose }) {
             </div>
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Loại sản phẩm</p>
+                <p className="mb-2 text-zinc-500 text-base">Loại sản phẩm</p>
                 <select
                   id="countries_disabled"
                   className=" h-10
@@ -128,7 +128,7 @@ export default function ModalPostProduct({ visible, onClose }) {
                 </select>
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Giá bán</p>
+                <p className="mb-2 text-zinc-500 text-base">Giá bán</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -136,7 +136,7 @@ export default function ModalPostProduct({ visible, onClose }) {
                 />
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Đến ngày</p>
+                <p className="mb-2 text-zinc-500 text-base">Đến ngày</p>
                 <DatePicker
                   locale={locale}
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -150,14 +150,14 @@ export default function ModalPostProduct({ visible, onClose }) {
             <button
               title="Trở về trang trước"
               onClick={onClose}
-              className="ml-2 bg-gray-400 hover:bg-gray-400 text-white font-base py-2 px-3 rounded "
+              className="ml-2 shadow-md bg-gray-400 hover:bg-gray-400 text-white font-base py-2 px-3 rounded "
             >
               Đóng
             </button>
             <button
               title="Đăng bán sản phẩm này"
               onClick={submitCard}
-              className=" ml-2 bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
+              className=" ml-2 shadow-md bg-blue-500 hover:bg-blue-600 text-white font-base py-2 px-3  rounded "
             >
               Đăng bán
             </button>

@@ -22,7 +22,7 @@ export default function ChangePasswordComponent() {
       {showChangeUsername ? (
         <div className="flex justify-between items-center ml-2">
           <div>
-            <p className="color-bold mb-2 text-base">Tên đăng nhập</p>
+            <p className=" mb-2 text-base">Tên đăng nhập</p>
             <p className=" mb-0 text-md text-gray-700">
               support@keenthemes.com
             </p>
@@ -39,7 +39,7 @@ export default function ChangePasswordComponent() {
         <div className="ml-2">
           <div className="row">
             <div className="col-md-6 mt-4">
-              <p className="color-bold mb-2 text-base ">Tên đăng nhập mới</p>
+              <p className=" mb-2 text-base ">Tên đăng nhập mới</p>
               <input
                 className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="password"
@@ -47,7 +47,7 @@ export default function ChangePasswordComponent() {
               />
             </div>
             <div className="col-md-6 mt-4">
-              <p className="color-bold mb-2 text-base ">Mật khẩu</p>
+              <p className=" mb-2 text-base ">Mật khẩu</p>
               <input
                 className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="password"
@@ -73,7 +73,7 @@ export default function ChangePasswordComponent() {
       {showChangePassword ? (
         <div className="flex justify-between items-center ml-2">
           <div>
-            <p className="color-bold mb-2 text-base">Mật khẩu hiện tại</p>
+            <p className=" mb-2 text-base">Mật khẩu hiện tại</p>
             <p className=" mb-0 text-md text-gray-700">*****************</p>
           </div>
           <button
@@ -88,7 +88,7 @@ export default function ChangePasswordComponent() {
         <div className="ml-2">
           <div className="row">
             <div className="col-md-4 mt-4">
-              <p className="color-bold mb-2 text-base ">Mật khẩu cũ</p>
+              <p className=" mb-2 text-base ">Mật khẩu cũ</p>
               <input
                 className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="password"
@@ -96,7 +96,7 @@ export default function ChangePasswordComponent() {
               />
             </div>
             <div className="col-md-4 mt-4">
-              <p className="color-bold mb-2 text-base ">Mật khẩu mới</p>
+              <p className=" mb-2 text-base ">Mật khẩu mới</p>
               <input
                 className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="password"
@@ -104,7 +104,7 @@ export default function ChangePasswordComponent() {
               />
             </div>
             <div className="col-md-4 mt-4">
-              <p className="color-bold mb-2 text-base ">Nhập lại mật khẩu</p>
+              <p className=" mb-2 text-base ">Nhập lại mật khẩu</p>
               <input
                 className=" border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="password"

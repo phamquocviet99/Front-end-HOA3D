@@ -5,7 +5,7 @@ export default function EditProfileUser() {
     <div>
       <div className="rounded-lg bg-white shadow-md">
         <div className="py-4 px-4 flex justify-between items-center">
-          <p style={{ fontSize: "17px" }} className="font-bold mb-0 mr-3">
+          <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
             Trang cá nhân
           </p>
         </div>
@@ -13,7 +13,7 @@ export default function EditProfileUser() {
         <div className="p-4">
           <div className="row mb-4 mt-2">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Ảnh đại diện</p>
+              <p className=" mb-0 text-base">Ảnh đại diện</p>
             </div>
             <div className="col-md-9">
               <div className="flex justify-center center mx-auto">
@@ -37,7 +37,7 @@ export default function EditProfileUser() {
           </div>
           <div className="row mb-4">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Tên chủ nhà vườn : </p>
+              <p className=" mb-0 text-base">Tên chủ nhà vườn : </p>
             </div>
             <div className="col-md-9">
               <input
@@ -49,7 +49,7 @@ export default function EditProfileUser() {
           </div>
           <div className="row mb-4">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Tên nhà vườn</p>
+              <p className=" mb-0 text-base">Tên nhà vườn</p>
             </div>
             <div className="col-md-9">
               <input
@@ -61,7 +61,7 @@ export default function EditProfileUser() {
           </div>
           <div className="row mb-4">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Email</p>
+              <p className=" mb-0 text-base">Email</p>
             </div>
             <div className="col-md-9">
               <input
@@ -73,7 +73,7 @@ export default function EditProfileUser() {
           </div>
           <div className="row mb-4">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Địa chỉ vườn</p>
+              <p className=" mb-0 text-base">Địa chỉ vườn</p>
             </div>
             <div className="col-md-9">
               <input
@@ -85,7 +85,7 @@ export default function EditProfileUser() {
           </div>
           <div className="row mb-4">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Phường/Xã</p>
+              <p className=" mb-0 text-base">Phường/Xã</p>
             </div>
             <div className="col-md-9">
               <input
@@ -97,7 +97,7 @@ export default function EditProfileUser() {
           </div>
           <div className="row mb-4">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Quận/Huyện</p>
+              <p className=" mb-0 text-base">Quận/Huyện</p>
             </div>
             <div className="col-md-9">
               <input
@@ -109,7 +109,7 @@ export default function EditProfileUser() {
           </div>
           <div className="row mb-4">
             <div className="col-md-3">
-              <p className="color-bold mb-0 text-base">Thành phố</p>
+              <p className=" mb-0 text-base">Thành phố</p>
             </div>
             <div className="col-md-9">
               <input

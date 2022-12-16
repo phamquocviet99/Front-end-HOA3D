@@ -5,7 +5,7 @@ export default function TransportList() {
   return (
     <div className=" h-screen   rounded-lg bg-white shadow-md">
       <div className="py-3 px-4 flex justify-between items-center">
-        <p style={{ fontSize: "17px" }} className="font-bold mb-0 mr-3">
+        <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
           Danh sách chành xe
         </p>
         <ButtonAddCardShip />

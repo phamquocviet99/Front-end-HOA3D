@@ -86,7 +86,7 @@ export default function ModalDelivery({ visible, onClose }) {
           <div className="row">
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Mã hóa đơn giao hàng :</p>
+                <p className="mb-2 text-zinc-500 text-base ">Mã hóa đơn giao hàng :</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -94,7 +94,7 @@ export default function ModalDelivery({ visible, onClose }) {
                 />
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Giá giao hàng :</p>
+                <p className="mb-2 text-zinc-500 text-base ">Giá giao hàng :</p>
                 <input
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -104,7 +104,7 @@ export default function ModalDelivery({ visible, onClose }) {
             </div>
             <div className="col-md-6">
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Chành xe :</p>
+                <p className="mb-2 text-zinc-500 text-base ">Chành xe :</p>
                 <select
                   id="countries_disabled"
                   className="h-9 border border-gray-300 text-gray-700 text-sm rounded  w-full"
@@ -124,7 +124,7 @@ export default function ModalDelivery({ visible, onClose }) {
                 </select>
               </div>
               <div className="mt-3">
-                <p className="mb-2 text-zinc-500">Dự kiến ngày đến :</p>
+                <p className="mb-2 text-zinc-500 text-base ">Dự kiến ngày đến :</p>
                 <DatePicker
                   locale={locale}
                   className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -135,7 +135,7 @@ export default function ModalDelivery({ visible, onClose }) {
             </div>
           </div>
           <div className="mt-2">
-            <p className="mb-2 text-zinc-500">Ghi chú :</p>
+            <p className="mb-2 text-zinc-500 text-base ">Ghi chú :</p>
             <textarea
               className="w-full border rounded h-24 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
