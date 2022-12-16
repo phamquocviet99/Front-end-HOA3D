@@ -32,14 +32,14 @@ export default function DetailOrder() {
   ];
   return (
     <div className=" ">
-      <div className="bg-white rounded-md shadow-md w-full  block md:flex items-center pl-5  md:bg-transparent md:pb-0">
+      <div className="bg-white rounded-md shadow-md w-full  block sm:flex items-center pl-5  sm:bg-transparent sm:pb-0">
         {tabName.map((t, index) => (
           <div key={index}>
             <div
               onClick={() => setIsActiveTab(t.id)}
               className={
                 isActiveTab === t.id
-                  ? "element-tab-product-active md:border-b-4 md:border-blue-500 md:text-blue-500"
+                  ? "element-tab-product-active sm:border-b-4 sm:border-blue-500 sm:text-blue-500"
                   : "element-tab-product text-gray-400 border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400"
               }
             >
