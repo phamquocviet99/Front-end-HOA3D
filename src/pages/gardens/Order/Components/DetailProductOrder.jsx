@@ -122,19 +122,19 @@ export default function DetailProductOrder() {
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Giao hàng</p>
-              <p className="mb-0 text-gray-400 text-base">
+              <p className="mb-0 mt-1 text-gray-400 text-base">
                 Mã giao hàng : TB2234
               </p>
             </div>
 
             <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
+              <div className="flex items-center ">
                 <MdLocationOn className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">
+                <p className="mb-0 text-gray-400 text-base w-36">
                   Địa chỉ giao hàng :
                 </p>
               </div>
-              <p className="mb-0 text-gray-600 text-base">
+              <p className="mb-0 text-gray-600 text-base text-right">
                 123 Phan Bội Châu Đà Lạt
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function DetailProductOrder() {
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Nhận hàng</p>
-              <p className="mb-0 text-gray-400 text-base">
+              <p className="mb-0 mt-1 text-gray-400 text-base">
                 Điện thoại : 0902666888
               </p>
             </div>
@@ -159,11 +159,11 @@ export default function DetailProductOrder() {
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center">
                 <MdLocationOn className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">
+                <p className="mb-0 text-gray-400 text-base w-36">
                   Địa chỉ nhận hàng :
                 </p>
               </div>
-              <p className="mb-0 text-gray-600 text-base">
+              <p className="mb-0 text-gray-600 text-base text-right">
                 123 Phan Bội Châu Đà Lạt
               </p>
             </div>
