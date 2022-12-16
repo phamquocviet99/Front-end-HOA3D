@@ -3,9 +3,9 @@ export default function HistoryDetailOrder() {
     <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
       <p className="text-xl font-bold">Lịch sử đơn hàng</p>
 
-      <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+      <div className="overflow-x-auto mt-3 relative shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 ">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+          <thead className="text-sm text-gray-700 uppercase bg-gray-50 ">
             <tr>
               <th scope="col" className="py-3 px-6">
                 Ngày cập nhật

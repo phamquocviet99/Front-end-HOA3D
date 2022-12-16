@@ -185,43 +185,43 @@ export default function DetailProductOrder() {
 
       <div className="overflow-x-auto relative bg-white p-2 rounded-lg mt-4">
         <table className="w-full text-sm text-left text-gray-500">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-100 ">
+          <thead className="text-sm text-gray-700 uppercase bg-gray-100 ">
             <tr>
-              <th scope="col" className="py-3 px-6 rounded-l-lg">
+              <th scope="col" className="py-3 px-6 rounded-l-lg ">
                 Tên sản phẩm
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" className="py-3 px-6 ">
                 Số lượng
               </th>
-              <th scope="col" class="py-3 px-6 rounded-r-lg">
+              <th scope="col" className="py-3 px-6 ">
                 Đơn giá
               </th>
-              <th scope="col" class="py-3 px-6 rounded-r-lg">
+              <th scope="col" className="py-3 px-6 rounded-r-lg ">
                 Thành tiền
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white ">
+            <tr className="bg-white ">
               <th
                 scope="row"
-                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap "
+                className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap "
               >
                 Hoa lan trắng
               </th>
-              <td class="py-4 px-6">100kg</td>
-              <td class="py-4 px-6">2999</td>
-              <td class="py-4 px-6">2999</td>
+              <td className="py-4 px-6">100kg</td>
+              <td className="py-4 px-6">2999</td>
+              <td className="py-4 px-6">2999</td>
             </tr>
           </tbody>
           <tfoot>
-            <tr class="font-semibold text-gray-900 ">
-              <th scope="row" class="py-3 px-6 text-base">
+            <tr className="font-semibold text-gray-900 text">
+              <th scope="row" className="py-3 px-6 text-base">
                 Tổng tiền
               </th>
-              <td class="py-3 px-6"></td>
-              <td class="py-3 px-6"></td>
-              <td class="py-3 px-6">21,000</td>
+              <td className="py-3 px-6"></td>
+              <td className="py-3 px-6"></td>
+              <td className="py-3 px-6">21,000</td>
             </tr>
           </tfoot>
         </table>
