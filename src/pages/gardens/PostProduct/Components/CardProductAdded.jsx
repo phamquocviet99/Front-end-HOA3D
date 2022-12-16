@@ -2,7 +2,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 export default function CardProductAdded() {
   return (
-    <div className="width-card-6 p-2 shadow rounded-lg">
+    <div className="w-full p-2 shadow rounded-lg">
       <img
         // className="h-44 w-full "
         className="img-responsive rounded-t-lg "

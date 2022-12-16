@@ -122,10 +122,21 @@ export default function PostedProduct() {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <div className="flex-card mt-2">
           {listProductAdmin?.map((p, index) => (
             <CardProductAdded key={index} />
+          ))}
+        </div>
+      </div> */}
+      <div>
+        <div className="row">
+          {listProductAdmin?.map((p, index) => (
+            // <CardProductAdded key={index} />
+            <div className="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2">
+              <CardProductAdded  />
+            </div>
+            
           ))}
         </div>
       </div>
