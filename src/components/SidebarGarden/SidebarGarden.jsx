@@ -44,11 +44,6 @@ const SidebarGarden = ({ children }) => {
       link: "/nha-vuon/san-pham",
       icon: <BiBox />,
     },
-    // {
-    //   name: "Sản Lượng",
-    //   link: "/nha-vuon/san-luong",
-    //   icon: <BiBox />,
-    // },
     {
       name: "Đơn hàng",
       link: "/nha-vuon/don-hang",
@@ -86,7 +81,7 @@ const SidebarGarden = ({ children }) => {
       >
         <div
           onClick={() => setIsShowing((isShowing) => !isShowing)}
-          className="absolute z-20 flex justify-start background-side-phone h-full w-full fixed md:hidden"
+          className="absolute z-20 flex justify-start background-side-phone h-full w-full  xl:hidden"
         >
           <div className="relative flex w-3/5 pl-3  md:w-3/4 back-ground-side pt-10 pb-6 h-full ">
             {/* <div className="flex justify-center max-w3/4 min-w-2/4 back-ground-side pt-10 pb-6 h-full "> */}
@@ -140,7 +135,7 @@ const SidebarGarden = ({ children }) => {
             <>
               <div className=" px-4 sm:px-6 lg:px-8 ">
                 <div className="flex h-20 items-center justify-between">
-                  <div className="-mr-2 flex md:hidden">
+                  <div className="-mr-2 flex lg:hidden">
                     {/* Mobile menu button */}
                     <div className="flex items-center justify-center">
                       <Disclosure.Button
@@ -173,7 +168,7 @@ const SidebarGarden = ({ children }) => {
                     </div>
                   </div>
 
-                  <div className="md:flex items-center ml-2  hidden md:block">
+                  <div className="lg:flex items-center ml-2  hidden ">
                     {!isShowLogo ? (
                       <>
                         {" "}
@@ -201,7 +196,7 @@ const SidebarGarden = ({ children }) => {
                     <div className="ml-4 flex items-center md:ml-6">
                       {/* Profile dropdown */}
 
-                      <ButtonPosted  button={{ name: "Đăng bán" }} />
+                      <ButtonPosted button={{ name: "Đăng bán" }} />
                       <Menu as="div" className="relative ml-4 hidden md:block">
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 ">
@@ -342,16 +337,15 @@ const SidebarGarden = ({ children }) => {
             </>
           )}
         </Disclosure>
-        {/* <div className="h-5"></div> */}
-        <div className="flex mx-2 pb-2 md:pr-10 md:mb-5">
+
+        <div className="flex mx-2 pb-2 sm:pr-5  lg:pr-10 md:mb-5">
           <div className="w-full md:ml-5 rounded-3xl bg-side-test sm:bg-transparent">
-            {/* <div className="w-full md:ml-5 rounded-3xl bg-side-test "> */}
             {/* SideBar for MD */}
             <div
               className={
                 !isShowLogo
-                  ? "hidden md:block w-48  h-screen fixed pt-5"
-                  : "hidden md:block w-48  h-screen fixed top-10"
+                  ? "hidden lg:block w-48  h-screen fixed pt-5"
+                  : "hidden lg:block w-48  h-screen fixed top-10"
               }
             >
               {isShowLogo ? (
@@ -396,13 +390,13 @@ const SidebarGarden = ({ children }) => {
               ))}
             </div>
 
-            <div className="w-full pl-0  pr-0 md:pr-0  md:pl-48 ">
+            <div className="w-full pl-0  pr-0 lg:pr-0  lg:pl-48 ">
               <div className="bg-page rounded-3xl ">{children}</div>
             </div>
           </div>
         </div>
       </div>
-      <ButtonOnTop/>
+      <ButtonOnTop />
     </div>
   );
 };

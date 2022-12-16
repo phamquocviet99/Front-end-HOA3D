@@ -41,8 +41,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    /* margin-left: 25px; */
-    /* margin-bottom: 30px; */
+  
 }
 
 .background-side-phone {
@@ -111,7 +110,6 @@
 }
 
 .link:hover::after {
-
     content: "";
     position: absolute;
     bottom: -35px;
@@ -131,7 +129,7 @@
     }
 }
 
-@media only screen and (max-width: 770px ) {
+@media only screen and (max-width: 1023px ) {
     .width-phone{
         width: 70%;
     }
