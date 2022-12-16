@@ -1,13 +1,13 @@
-import { FaUserCircle,FaFlagCheckered } from "react-icons/fa";
+import { FaUserCircle, FaFlagCheckered } from "react-icons/fa";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 import { MdLocationOn } from "react-icons/md";
-import {CgCalendarDates} from "react-icons/cg"
+import { CgCalendarDates } from "react-icons/cg";
 
 export default function DetailProductOrder() {
   return (
     <div>
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-4 mt-2">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <p className="text-xl font-bold">Thông tin nhà vườn</p>
             <div className="flex justify-between items-center mt-4">
@@ -45,7 +45,7 @@ export default function DetailProductOrder() {
             </div>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 mt-2">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <p className="text-xl font-bold">Thông tin cửa hàng</p>
             <div className="flex justify-between items-center mt-4">
@@ -83,7 +83,7 @@ export default function DetailProductOrder() {
             </div>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 mt-2">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <p className="text-xl font-bold">Thông tin đơn hàng</p>
             <div className="flex justify-between items-center mt-4">
@@ -122,8 +122,8 @@ export default function DetailProductOrder() {
           </div>
         </div>
       </div>
-      <div className="row mt-4">
-        <div className="col-md-6">
+      <div className="row">
+        <div className="col-md-6 mt-2">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Giao hàng</p>
@@ -152,7 +152,7 @@ export default function DetailProductOrder() {
             </div>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 mt-2">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Nhận hàng</p>
@@ -184,8 +184,8 @@ export default function DetailProductOrder() {
       </div>
 
       <div className="overflow-x-auto relative bg-white p-2 rounded-lg mt-4">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left text-gray-500">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-100 ">
             <tr>
               <th scope="col" className="py-3 px-6 rounded-l-lg">
                 Tên sản phẩm
@@ -202,10 +202,10 @@ export default function DetailProductOrder() {
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white dark:bg-gray-800">
+            <tr class="bg-white ">
               <th
                 scope="row"
-                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap "
               >
                 Hoa lan trắng
               </th>
@@ -213,11 +213,9 @@ export default function DetailProductOrder() {
               <td class="py-4 px-6">2999</td>
               <td class="py-4 px-6">2999</td>
             </tr>
-           
-            
           </tbody>
           <tfoot>
-            <tr class="font-semibold text-gray-900 dark:text-white">
+            <tr class="font-semibold text-gray-900 ">
               <th scope="row" class="py-3 px-6 text-base">
                 Tổng tiền
               </th>
