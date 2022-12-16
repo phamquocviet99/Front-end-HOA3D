@@ -251,7 +251,7 @@ function Order() {
                       <button
                         title="Xem chi tiết đơn hàng"
                         onClick={goToDetail}
-                        className=" bg-gray-400 hover:bg-gray-500 text-white text-sm  py-2 px-3 border border-blue-700 rounded-lg shadow-md"
+                        className=" bg-gray-400 w-24 hover:bg-gray-500 text-white text-sm  py-2 px-3 border border-blue-700 rounded-lg shadow-md"
                       >
                         Chi tiết
                       </button>
