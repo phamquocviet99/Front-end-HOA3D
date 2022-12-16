@@ -14,7 +14,6 @@ import ButtonPosted from "../ButtonPosted/ButtonPosted";
 import ButtonOnTop from "../ButtonOnTop/ButtonOnTop";
 
 const SidebarGarden = ({ children }) => {
-  const navigate = useNavigate();
   const [isShowLogo, setIsShowLogo] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
   const user = {
@@ -66,8 +65,11 @@ const SidebarGarden = ({ children }) => {
       setIsShowLogo(false);
     }
   };
+  const handleResize = () => {
+    setIsShowing(false);
+  };
   window.addEventListener("scroll", handleLogo);
-
+  window.addEventListener("resize", handleResize);
   return (
     <div className="relative">
       <Transition
