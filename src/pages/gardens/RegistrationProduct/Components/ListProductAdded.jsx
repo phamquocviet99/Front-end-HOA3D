@@ -122,11 +122,11 @@ export default function ListProductAdded() {
       </div>
 
       <div>
-        <div className="row">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 2xl:grid-cols-7 mt-3 gap-3">
           {listProductAdmin?.map((p, index) => (
-            <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mt-3">
+            
               <CardProduct key={index} />
-            </div>
+            
           ))}
         </div>
       </div>
