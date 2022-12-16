@@ -233,14 +233,14 @@ function Order() {
                       ) : o.status === "waitingCensorship" ? (
                         <ButtonWaitingCensorship />
                       ) : o.status === "cancel" ? (
-                        <button className="bg-red-500  hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                        <button className="bg-red-500 shadow-md hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
                           Đơn hàng hủy
                         </button>
                       ) : (
                         <button
                           title="Xem chi tiết"
                           onClick={goToDetail}
-                          className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
+                          className="bg-green-600 shadow-md hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
                         >
                           Đơn hoàn thành
                         </button>
@@ -281,14 +281,14 @@ function Order() {
                     ) : o.status === "waitingCensorship" ? (
                       <ButtonWaitingCensorship />
                     ) : o.status === "cancel" ? (
-                      <button className="bg-red-500  hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                      <button className="bg-red-500 shadow-md hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
                         Đơn hàng hủy
                       </button>
                     ) : (
                       <button
                         title="Xem chi tiết"
                         onClick={goToDetail}
-                        className="bg-green-600  hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
+                        className="bg-green-600 shadow-md hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
                       >
                         Đơn hoàn thành
                       </button>

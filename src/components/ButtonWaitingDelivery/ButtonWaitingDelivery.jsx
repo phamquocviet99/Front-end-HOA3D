@@ -14,7 +14,7 @@ export default function ButtonWaitingDelivery({ props }) {
       <button
         onClick={() => setShowPaymentModal(true)}
         title="Xem chi tiết giao hàng"
-        className="bg-orange-500  hover:bg-orange-600  text-white  px-2 py-1 rounded-full   w-32 text-center"
+        className="bg-orange-500 shadow-md hover:bg-orange-600  text-white  px-2 py-1 rounded-full   w-32 text-center"
       >
         Đang giao hàng
       </button>

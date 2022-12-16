@@ -21,7 +21,7 @@ const ButtonOnTop = () => {
         });
     };
     return (
-        <div title="Về đầu trang" className="top-to-btm">
+        <div title="Về đầu trang" className="top-to-btm shadow-md">
             {" "}
             {showTopBtn && (
                 <FaAngleUp

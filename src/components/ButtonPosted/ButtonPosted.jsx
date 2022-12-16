@@ -14,7 +14,7 @@ export default function ButtonPosted({ button }) {
       <button
         title="Đăng bán sản phẩm"
         onClick={() => setShowPostProductModal(true)}
-        className="mb-1 ml-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-sm py-2 px-3  rounded-lg "
+        className="mb-1 shadow-md ml-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-sm py-2 px-3  rounded-lg "
       >
         <div className="flex justify-center items-center">
           <GoDiffAdded className="text-xl mr-3" />

@@ -11,7 +11,7 @@ export default function ButtonDeposit() {
       <button
         title="Đặt cọc đơn hàng"
         onClick={() => setShowPaymentModal(true)}
-        className="bg-blue-500  hover:bg-blue-600 text-white px-2 py-1 rounded-full  w-32 text-center"
+        className="bg-blue-500 shadow-md hover:bg-blue-600 text-white px-2 py-1 rounded-full  w-32 text-center"
       >
         Đơn hàng mới
       </button>
