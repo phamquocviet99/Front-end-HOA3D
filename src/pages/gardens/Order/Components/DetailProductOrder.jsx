@@ -6,124 +6,119 @@ import { CgCalendarDates } from "react-icons/cg";
 export default function DetailProductOrder() {
   return (
     <div>
-      <div className="row">
-        <div className="col-md-4 mt-2">
-          <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
-            <p className="text-xl font-bold">Thông tin nhà vườn</p>
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <FaUserCircle className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Nhà vườn :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">Ba Garden</p>
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-3">
+        <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
+          <p className="text-xl font-bold">Thông tin nhà vườn</p>
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <FaUserCircle className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Nhà vườn :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <HiDevicePhoneMobile className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Số điện thoại :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">0906959619</p>
+            <p className="mb-0 text-gray-600 text-base">Ba Garden</p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <HiDevicePhoneMobile className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Số điện thoại :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Địa chỉ :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">
-                B12/20 Lê Sao Tân Phú
-              </p>
+            <p className="mb-0 text-gray-600 text-base">0906959619</p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Địa chỉ :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Ngày đặt cọc :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">22/3/2002</p>
+            <p className="mb-0 text-gray-600 text-base">
+              B12/20 Lê Sao Tân Phú
+            </p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Ngày đặt cọc :</p>
             </div>
+            <p className="mb-0 text-gray-600 text-base">22/3/2002</p>
           </div>
         </div>
-        <div className="col-md-4 mt-2">
-          <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
-            <p className="text-xl font-bold">Thông tin cửa hàng</p>
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <FaUserCircle className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Cửa hàng :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">Minh Lan Shop</p>
+
+        <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
+          <p className="text-xl font-bold">Thông tin cửa hàng</p>
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <FaUserCircle className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Cửa hàng :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <HiDevicePhoneMobile className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Số điện thoại :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">0906959619</p>
+            <p className="mb-0 text-gray-600 text-base">Minh Lan Shop</p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <HiDevicePhoneMobile className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Số điện thoại :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <MdLocationOn className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Địa chỉ :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">
-                B12/20 đường 3/2 TPHCM
-              </p>
+            <p className="mb-0 text-gray-600 text-base">0906959619</p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <MdLocationOn className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Địa chỉ :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Ngày đặt cọc :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">11/2/2022</p>
+            <p className="mb-0 text-gray-600 text-base">
+              B12/20 đường 3/2 TPHCM
+            </p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Ngày đặt cọc :</p>
             </div>
+            <p className="mb-0 text-gray-600 text-base">11/2/2022</p>
           </div>
         </div>
-        <div className="col-md-4 mt-2">
-          <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
-            <p className="text-xl font-bold">Thông tin đơn hàng</p>
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <FaUserCircle className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Mã hóa đơn :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">HD11</p>
+
+        <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
+          <p className="text-xl font-bold">Thông tin đơn hàng</p>
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <FaUserCircle className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Mã hóa đơn :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <HiDevicePhoneMobile className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Tổng tiền :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">12.000.000đ</p>
+            <p className="mb-0 text-gray-600 text-base">HD11</p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <HiDevicePhoneMobile className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Tổng tiền :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <FaFlagCheckered className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">Tình trạng :</p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">Đã hoàn thành</p>
+            <p className="mb-0 text-gray-600 text-base">12.000.000đ</p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <FaFlagCheckered className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Tình trạng :</p>
             </div>
-            <div className="line-y mt-3" />
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex items-center">
-                <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
-                <p className="mb-0 text-gray-400 text-base">
-                  Ngày hoàn thành :
-                </p>
-              </div>
-              <p className="mb-0 text-gray-600 text-base">3/12/2022</p>
+            <p className="mb-0 text-gray-600 text-base">Đã hoàn thành</p>
+          </div>
+          <div className="line-y mt-3" />
+          <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center">
+              <CgCalendarDates className="text-gray-400 mr-2 text-xl" />
+              <p className="mb-0 text-gray-400 text-base">Ngày hoàn thành :</p>
             </div>
+            <p className="mb-0 text-gray-600 text-base">3/12/2022</p>
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-6 mt-4">
+
+      <div className="grid gird-cols-1 xl:grid-cols-2 gap-3 mt-3">
+        <div className="">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Giao hàng</p>
@@ -152,7 +147,7 @@ export default function DetailProductOrder() {
             </div>
           </div>
         </div>
-        <div className="col-md-6  mt-4">
+        <div className="">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Nhận hàng</p>
