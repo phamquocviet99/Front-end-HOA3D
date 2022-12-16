@@ -3,8 +3,8 @@ import React from "react";
 const DashboardGarden = () => {
   return (
     <div className="">
-      <div className="row">
-        <div className="col-md-3 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
               <div className="p-3 bg-orange-100 rounded-lg">
@@ -22,7 +22,7 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-3 mt-2">
+        <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
               <div className="p-3 bg-indigo-100 rounded-lg">
@@ -41,7 +41,7 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-3 mt-2">
+        <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
               <div className="p-3 bg-blue-100 rounded-lg">
@@ -59,7 +59,7 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-3 mt-2">
+        <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
               <div className="p-3 bg-rose-100 rounded-lg">
