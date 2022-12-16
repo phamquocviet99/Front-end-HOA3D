@@ -123,7 +123,7 @@ export default function DetailProductOrder() {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 mt-2">
+        <div className="col-md-6 mt-4">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Giao hàng</p>
@@ -152,7 +152,7 @@ export default function DetailProductOrder() {
             </div>
           </div>
         </div>
-        <div className="col-md-6 mt-2">
+        <div className="col-md-6  mt-4">
           <div className="bg-white rounded-lg py-4 px-4 shadow-md ">
             <div className="flex justify-between items-center">
               <p className="text-xl mb-0 font-bold">Nhận hàng</p>
