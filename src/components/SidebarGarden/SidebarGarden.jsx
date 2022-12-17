@@ -66,7 +66,7 @@ const SidebarGarden = ({ children }) => {
     }
   };
   const handleResize = () => {
-    setIsShowing(false);
+    setIsShowing(false)
   };
   window.addEventListener("scroll", handleLogo);
   window.addEventListener("resize", handleResize);
@@ -83,9 +83,10 @@ const SidebarGarden = ({ children }) => {
       >
         <div
           onClick={() => setIsShowing((isShowing) => !isShowing)}
-          className="absolute z-10 flex justify-start background-side-phone h-full w-full  lg:hidden"
+          className="absolute z-20 flex justify-start background-side-phone h-full w-full  xl:hidden"
         >
           <div className="relative flex w-2/3 sm:3/5  md:w-1/3 back-ground-side pt-10 pb-6 h-full ">
+            {/* <div className="flex justify-center max-w3/4 min-w-2/4 back-ground-side pt-10 pb-6 h-full "> */}
             <div className="w-full pl-3 pr-6">
               <div className="flex justify-between items-center px-2 w-full mb-4">
                 <div className="flex items-center">
