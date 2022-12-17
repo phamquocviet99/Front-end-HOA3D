@@ -116,7 +116,7 @@ function Order() {
         </div>
         <div className="line-y" />
         <div className=" w-full  p-3 ">
-          <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 ">
+          <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 gap-3">
             <form className="flex  justify-start md:mt-2 items-center">
               <label for="simple-search" className="sr-only">
                 Search
