@@ -5,15 +5,15 @@ export default function CardProductByAdmin() {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className="w-full mt-3 shadow-md rounded-lg">
+    <div className="width-card mt-3 shadow-md rounded-lg">
       <img
-        // className="h-48 w-full object-cover"
-        className="img-responsive rounded-t-lg"
+        className=" h-44 w-full object-cover rounded-t-lg"
+        // className="img-responsive rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />
       <div className="  p-2">
-        <p className="text-center font-bold text-xl mb-2">Hoa nhài</p>
+        <p className="text-center font-medium text-xl mb-2">Hoa nhài</p>
         {isCheck ? (
           <button
             onClick={() => setIsCheck(!isCheck)}

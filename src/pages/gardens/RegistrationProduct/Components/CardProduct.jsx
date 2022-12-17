@@ -7,34 +7,36 @@ export default function CardProduct() {
   const [showPostProductModal, setShowPostProductModal] = useState(false);
   const handleClosePostProductModal = () => setShowPostProductModal(false);
   return (
-    <div className="  border-2 rounded-xl p-1 shadow-md">
+    <div className="width-card rounded-xl shadow-md">
       <ModalPostProduct
         onClose={handleClosePostProductModal}
         visible={showPostProductModal}
       />
       <img
         // className="w-full h-52 rounded object-cover "
-        className="img-responsive rounded-t-lg"
+        className=" h-44 w-full object-cover rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/avartar/avartar.jpg")}
       />
+      <div className="p-1">
+        <p className=" text-center font-medium text-xl ml-1 mt-2 mb-2">Hoa Lan</p>
 
-      <p className=" text-center font-bold text-xl ml-1 mt-2 mb-2">
-        Hoa Lan
-      </p>
-
-      <div className="flex justify-start items-center w-full ">
-        <button
-        title="Bán sản phẩm này"
-          onClick={() => setShowPostProductModal(true)}
-          className="mb-1 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center shadow-md  items-center "
-        >
-          <i class="fa-regular fa-circle-check text-xl"></i>
-          <p className="mb-0 ml-3 text-base">Bán</p>
-        </button>
-        <button title="Xóa sản phẩm này" className="mb-1 ml-1 bg-red-500 hover:bg-red-600 text-white font-sm p-2 shadow-md rounded-full ">
-          <AiOutlineClose className="text-2xl"/>
-        </button>
+        <div className="flex justify-start items-center w-full ">
+          <button
+            title="Bán sản phẩm này"
+            onClick={() => setShowPostProductModal(true)}
+            className="mb-1 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center shadow-md  items-center "
+          >
+            <i class="fa-regular fa-circle-check text-xl"></i>
+            <p className="mb-0 ml-3 text-base">Bán</p>
+          </button>
+          <button
+            title="Xóa sản phẩm này"
+            className="mb-1 ml-1 bg-red-500 hover:bg-red-600 text-white font-sm p-2 shadow-md rounded-full "
+          >
+            <AiOutlineClose className="text-2xl" />
+          </button>
+        </div>
       </div>
     </div>
   );
