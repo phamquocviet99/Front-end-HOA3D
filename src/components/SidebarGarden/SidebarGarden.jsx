@@ -66,7 +66,10 @@ const SidebarGarden = ({ children }) => {
     }
   };
   const handleResize = () => {
-    setIsShowing(false)
+    setIsShowing(false);
+  };
+  const handleCloseNav = () => {
+    if (isShowing) setIsShowing(false);
   };
   window.addEventListener("scroll", handleLogo);
   window.addEventListener("resize", handleResize);
@@ -82,7 +85,7 @@ const SidebarGarden = ({ children }) => {
         leaveTo="opacity-0"
       >
         <div
-          onClick={() => setIsShowing((isShowing) => !isShowing)}
+          onClick={() => setIsShowing(false)}
           className="absolute z-20 flex justify-start background-side-phone h-full w-full  xl:hidden"
         >
           <div className="relative flex w-2/3 sm:3/5  md:w-1/3 back-ground-side pt-10 pb-6 h-full ">
@@ -104,7 +107,10 @@ const SidebarGarden = ({ children }) => {
                     <p className="font-text-logo">HOA 3D</p>
                   </div>
                 </div>
-                <div className="absolute right-5 inline-flex items-center justify-center rounded-md border border-white p-0 text-white ml-5 w-8 h-8">
+                <div
+                  onClick={() => setIsShowing(false)}
+                  className="absolute right-5 inline-flex items-center justify-center rounded-md border border-white p-0 text-white ml-5 w-8 h-8"
+                >
                   <AiOutlineClose className="h-6 w-6 block" />
                 </div>
               </div>
@@ -141,7 +147,7 @@ const SidebarGarden = ({ children }) => {
                     {/* Mobile menu button */}
                     <div className="flex items-center justify-center">
                       <Disclosure.Button
-                        onClick={() => setIsShowing((isShowing) => !isShowing)}
+                        onClick={() => setIsShowing(true)}
                         className="inline-flex items-center justify-center rounded-md border border-white p-2 w-11 h-11 text-white "
                       >
                         <span className="sr-only">Open main menu</span>
