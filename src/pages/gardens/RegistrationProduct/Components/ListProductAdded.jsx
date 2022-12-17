@@ -66,14 +66,12 @@ export default function ListProductAdded() {
   ]);
   return (
     <div className="card-element p-4">
-      <div className="row">
-        <div className="col-md-6"></div>
-        <div className="col-md-6">
+ 
           <form className="flex  justify-start md:justify-end md:mt-0 items-center">
             <label for="simple-search" class="sr-only">
               Search
             </label>
-            <div className="relative w-full md:w-1/2">
+            <div className="relative w-full md:w-1/4">
               <div className="absolute inset-y-0 left-0 flex  items-center pl-3 pointer-events-none">
                 <svg
                   aria-hidden="true"
@@ -118,8 +116,7 @@ export default function ListProductAdded() {
               <span className="sr-only">Search</span>
             </button>
           </form>
-        </div>
-      </div>
+    
 
       <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 2xl:grid-cols-7 mt-3 gap-3">

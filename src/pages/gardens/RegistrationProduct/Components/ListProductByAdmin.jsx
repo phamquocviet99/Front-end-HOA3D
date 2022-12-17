@@ -66,7 +66,7 @@ export default function ListProductByAdmin() {
   ]);
   return (
     <div className="card-element p-4">
-      <div className="row mt-3">
+      <div className="row">
         <div className="col-md-6">
           <div className="md:flex justify-start items-center mb-3">
             <p className="text-zinc-500 text-sm md:text-base mt-1  ml-2 mb-1 mr-3">
