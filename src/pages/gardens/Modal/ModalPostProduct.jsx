@@ -41,12 +41,12 @@ export default function ModalPostProduct({ visible, onClose }) {
       onClick={handleClose}
       className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm z-20"
     >
-      <div className=" bg-white rounded overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto">
+      <div className=" bg-white rounded overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto w-11/12 md:w-1/3 ">
         <div className="flex justify-between items-center">
           <div className="w-3/12"></div>
           <div className="w-1/2 justify-center">
             <p className="text-center text-xl mb-0  text-zinc-600">
-              ĐĂNG BÁN SẢN PHẨM
+              ĐĂNG BÁN
             </p>
           </div>
           <div className="w-3/12 flex justify-end">
@@ -60,92 +60,94 @@ export default function ModalPostProduct({ visible, onClose }) {
         </div>
         <div className="line-y"></div>
         <div className="pl-4 pr-4 pb-4">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Tên sản phẩm</p>
-                <select
-                  id="countries_disabled"
-                  className="h-10 border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
-                >
-                  <option className="text-gray-700 text-sm" selected>
-                    Hoa Lan
-                  </option>
-                  <option className="text-gray-700 text-sm" value="US">
-                    United States
-                  </option>
-                  <option className="text-gray-700 text-sm" value="CA">
-                    Canada
-                  </option>
-                  <option className="text-gray-700 text-sm" value="FR">
-                    France
-                  </option>
-                  <option className="text-gray-700 text-sm" value="DE">
-                    Germany
-                  </option>
-                </select>
-              </div>
-
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Số lượng hiện có</p>
-                <input
-                  className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  placeholder="Số lượng"
-                />
-              </div>
-
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Ngày bắt đầu thu hoạch</p>
-                <DatePicker
-                  locale={locale}
-                  className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+            <div className="">
+              <p className="mb-2 text-zinc-500 text-base">Tên sản phẩm</p>
+              <select
+                id="countries_disabled"
+                className="h-10 border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
+              >
+                <option className="text-gray-700 text-sm" selected>
+                  Hoa Lan
+                </option>
+                <option className="text-gray-700 text-sm" value="US">
+                  United States
+                </option>
+                <option className="text-gray-700 text-sm" value="CA">
+                  Canada
+                </option>
+                <option className="text-gray-700 text-sm" value="FR">
+                  France
+                </option>
+                <option className="text-gray-700 text-sm" value="DE">
+                  Germany
+                </option>
+              </select>
             </div>
-            <div className="col-md-6">
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Loại sản phẩm</p>
-                <select
-                  id="countries_disabled"
-                  className=" h-10
+            <div className="">
+              <p className="mb-2 text-zinc-500 text-base">Loại sản phẩm</p>
+              <select
+                id="countries_disabled"
+                className=" h-10
                  border border-gray-300 text-gray-700 text-sm rounded p-2 w-full"
-                >
-                  <option className="text-gray-700 text-sm" selected>
-                    A
-                  </option>
-                  <option className="text-gray-700 text-sm" value="US">
-                    B
-                  </option>
-                  <option className="text-gray-700 text-sm" value="CA">
-                    C
-                  </option>
-                  <option className="text-gray-700 text-sm" value="FR">
-                    D
-                  </option>
-                </select>
-              </div>
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Giá bán</p>
-                <input
-                  className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  placeholder="Giá"
-                />
-              </div>
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Đến ngày</p>
-                <DatePicker
-                  locale={locale}
-                  className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                />
-              </div>
+              >
+                <option className="text-gray-700 text-sm" selected>
+                  A
+                </option>
+                <option className="text-gray-700 text-sm" value="US">
+                  B
+                </option>
+                <option className="text-gray-700 text-sm" value="CA">
+                  C
+                </option>
+                <option className="text-gray-700 text-sm" value="FR">
+                  D
+                </option>
+              </select>
             </div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+            <div className="">
+              <p className="mb-2 text-zinc-500 text-base">Số lượng hiện có</p>
+              <input
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Số lượng"
+              />
+            </div>
+            <div className="">
+              <p className="mb-2 text-zinc-500 text-base">Giá bán</p>
+              <input
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Giá"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+            <div className="">
+              <p className="mb-2 text-zinc-500 text-base">
+                Ngày bắt đầu thu hoạch
+              </p>
+              <DatePicker
+                locale={locale}
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+              />
+            </div>
+            <div className="">
+              <p className="mb-2 text-zinc-500 text-base">Đến ngày</p>
+              <DatePicker
+                locale={locale}
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+              />
+            </div>
+          </div>
+
           <div className="flex justify-end mt-4">
             <button
               title="Trở về trang trước"
