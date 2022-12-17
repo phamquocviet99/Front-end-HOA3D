@@ -1,7 +1,7 @@
 import { useEffect, Fragment, React, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import "./Sidebar.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { BiBox } from "react-icons/bi";
 
@@ -68,22 +68,12 @@ const SidebarGarden = ({ children }) => {
   const handleResize = () => {
     setIsShowing(false);
   };
-  const handleCloseNav = () => {
-    if (isShowing) setIsShowing(false);
-  };
+
   window.addEventListener("scroll", handleLogo);
   window.addEventListener("resize", handleResize);
   return (
     <div className="relative">
-      <Transition
-        show={isShowing}
-        enter="transition-opacity duration-300"
-        enterFrom="x-0"
-        enterTo="x-full"
-        leave="transition-opacity duration-600"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
+      {isShowing ? (
         <div
           onClick={() => setIsShowing(false)}
           className="absolute z-20 flex justify-start background-side-phone h-full w-full  xl:hidden"
@@ -136,7 +126,10 @@ const SidebarGarden = ({ children }) => {
             </div>
           </div>
         </div>
-      </Transition>
+      ) : (
+        <></>
+      )}
+
       <div className="min-h-full">
         <Disclosure as="nav" className="back-ground-side">
           {({ open }) => (
