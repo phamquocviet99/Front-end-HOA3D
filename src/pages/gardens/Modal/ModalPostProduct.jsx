@@ -41,7 +41,7 @@ export default function ModalPostProduct({ visible, onClose }) {
       onClick={handleClose}
       className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm z-20"
     >
-      <div className=" bg-white rounded overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto w-11/12 md:w-1/3 ">
+      <div className=" bg-white rounded overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto w-11/12 md:w-3/5 xl:w-1/3">
         <div className="flex justify-between items-center">
           <div className="w-3/12"></div>
           <div className="w-1/2 justify-center">

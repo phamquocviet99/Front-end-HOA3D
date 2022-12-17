@@ -47,7 +47,7 @@ export default function ModalPayment({ visible, onClose }) {
       onClick={handleClose}
       className="fixed  inset-0 bg-black bg-opacity-25 flex justify-center items-center backdrop-blur-sm z-20"
     >
-      <div className=" bg-white rounded  overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto">
+      <div className=" bg-white rounded  overflow-y-scroll h-3/4 md:overflow-y-hidden md:h-auto w-11/12 md:w-3/5 xl:w-1/3">
         <div className="flex justify-between items-center">
           <div className="w-3/12"></div>
           <div className="w-1/2 justify-center">
@@ -78,48 +78,44 @@ export default function ModalPayment({ visible, onClose }) {
               Chi tiết
             </button>
           </div>
-
-          <div className="row ">
-            <div className="col-md-6">
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Mã giao dịch :</p>
-                <input
-                  className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  placeholder="Mã hóa đơn"
-                />
-              </div>
-              <div className="mt-3">
-                <p className=" mb-2 text-zinc-500 text-base">Số tiền :</p>
-                <input
-                  className=" w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  placeholder="Số tiền"
-                />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+            <div>
+              <p className="mb-2 text-zinc-500 text-base">Mã giao dịch :</p>
+              <input
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Mã hóa đơn"
+              />
             </div>
-            <div className="col-md-6">
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">Người gửi :</p>
-                <input
-                  className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  placeholder="Tên"
-                />
-              </div>
-              <div className="mt-3">
-                <p className="mb-2 text-zinc-500 text-base">
-                  Ngày Đặt cọc :
-                </p>
-                <DatePicker
-                  locale={locale}
-                  className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                />
-              </div>
+            <div>
+              <p className=" mb-2 text-zinc-500 text-base">Số tiền :</p>
+              <input
+                className=" w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Số tiền"
+              />
             </div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+            <div>
+              <p className="mb-2 text-zinc-500 text-base">Người gửi :</p>
+              <input
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Tên"
+              />
+            </div>
+            <div>
+              <p className="mb-2 text-zinc-500 text-base">Ngày Đặt cọc :</p>
+              <DatePicker
+                locale={locale}
+                className="w-full border rounded  py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+              />
+            </div>
+          </div>
+
           <div className="flex justify-end mt-4">
             <button
               title="Hủy bỏ đơn hàng"
