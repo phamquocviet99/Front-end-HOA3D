@@ -32,21 +32,36 @@ export default function DetailOrder() {
   ];
   return (
     <div className=" ">
-      <div className="bg-white rounded-md shadow-md w-full  block sm:flex items-center pl-5  sm:bg-transparent sm:pb-0">
-        {tabName.map((t, index) => (
-          <div key={index}>
-            <div
-              onClick={() => setIsActiveTab(t.id)}
-              className={
-                isActiveTab === t.id
-                  ? "element-tab-product-active sm:border-b-4 sm:border-blue-500 sm:text-blue-500"
-                  : "element-tab-product text-gray-400 border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400"
-              }
-            >
-              {t.name}
+      <div className="bg-white rounded-md shadow-md w-full">
+        <div className="py-3 px-4 flex justify-between items-center">
+          <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
+            Đơn hàng HD1
+          </p>
+          <button
+            onClick={() => navigate(-1)}
+            title="Trở về trang trước"
+            className="ml-2 bg-gray-400 hover:bg-gray-600 text-white font-base py-2 px-3  rounded "
+          >
+            Trở về
+          </button>
+        </div>
+        <div className="line-y"/>
+        <div className="w-full  block sm:flex items-center pl-5 sm:bg-transparent padding-tab-bottom">
+          {tabName.map((t, index) => (
+            <div key={index}>
+              <div
+                onClick={() => setIsActiveTab(t.id)}
+                className={
+                  isActiveTab === t.id
+                    ? "element-tab-product-active sm:border-b-4 sm:border-blue-500 sm:text-blue-500"
+                    : "element-tab-product text-gray-400 border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400"
+                }
+              >
+                {t.name}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <div className="w-full  mt-4">
         {listComponent?.map((l, index) => (
@@ -54,15 +69,6 @@ export default function DetailOrder() {
             {l.element}
           </div>
         ))}
-        <div className="flex justify-end mt-4">
-          <button
-            onClick={() => navigate(-1)}
-            title="Trở về trang trước"
-            className="ml-2 bg-gray-400 hover:bg-gray-600 text-white font-base py-2 px-3    rounded "
-          >
-            Trở về
-          </button>
-        </div>
       </div>
     </div>
   );

@@ -1,6 +1,4 @@
 import ListProductByAdmin from "./Components/ListProductByAdmin";
-import "./RegistionProduct.css";
-
 import ListProductAdded from "./Components/ListProductAdded";
 import PostedProduct from "../PostProduct/Components/PostedProduct";
 import TabHeader from "../../../components/TabHeader/TabHeader";

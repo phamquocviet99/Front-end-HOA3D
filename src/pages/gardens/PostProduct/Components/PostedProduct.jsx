@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CardProductAdded from "./CardProductAdded";
-import "./index.css";
 
 export default function PostedProduct() {
   const [listProductAdmin, setListProductAdmin] = useState([

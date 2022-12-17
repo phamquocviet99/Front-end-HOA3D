@@ -120,7 +120,7 @@ export default function UserGarden() {
           </div>
         </div>
 
-        <div className=" w-full rounded-xl sm:rounded-b-none block sm:flex items-center pl-5  sm:bg-transparent md:pb-0">
+        <div className=" w-full rounded-xl sm:rounded-b-none block sm:flex items-center pl-5  sm:bg-transparent padding-tab-bottom">
           {tabName.map((t, index) => (
             <div key={index}>
               <div

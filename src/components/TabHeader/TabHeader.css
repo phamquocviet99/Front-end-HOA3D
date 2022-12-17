@@ -49,6 +49,9 @@
   }
   
   @media only screen and (max-width: 640px) {
+    .padding-tab-bottom{
+      padding-bottom: 10px;
+    }
     .element-tab-product {
       cursor: pointer;
       height: 40px;
@@ -63,6 +66,7 @@
       padding-top: 15px;
       padding-bottom: 20px;
       font-weight: 500;
+      
     }
     .element-tab-product-active {
       cursor: pointer;
