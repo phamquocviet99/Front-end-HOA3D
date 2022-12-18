@@ -1,19 +1,20 @@
 import { useState } from "react";
+import "./index.css"
 
 export default function CardProductByAdmin() {
   const [isCheck, setIsCheck] = useState(true);
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className="width-card mt-3 shadow-md rounded-lg">
+    <div className="width-card shadow rounded-lg">
       <img
         className=" h-44 w-full object-cover rounded-t-lg"
         // className="img-responsive rounded-t-lg"
         alt=""
-        src={require("../../../../assets/images/avartar/avartar.jpg")}
+        src={require("../../../../assets/images/image/test-flower.jpg")}
       />
-      <div className="  p-2">
-        <p className="text-center font-medium text-xl mb-2">Hoa nhài</p>
+      <div className="p-1">
+      <p className=" text-center font-medium text-xl ml-1 mt-2 mb-2">Hoa nhài</p>
         {isCheck ? (
           <button
             onClick={() => setIsCheck(!isCheck)}

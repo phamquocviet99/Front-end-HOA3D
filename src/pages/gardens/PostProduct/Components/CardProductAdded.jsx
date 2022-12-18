@@ -5,23 +5,24 @@ export default function CardProductAdded() {
     <div className="width-card shadow rounded-lg">
       <img
         
-        className=" h-44 w-full object-cover rounded-t-lg"
+        className=" h-44 w-auto object-cover rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/image/test-flower.jpg")}
       />
       <div className="p-2">
         <p className="mt-2 text-xl font-light mb-0">Hoa cúc vàng</p>
 
-        <p className="mt-1 text-base  mb-0">Danh mục : Hoa cúc</p>
-        <p className="mt-2 text-base mb-0 ">Giá : 220.000đ</p>
+        <p className="mt-2 text-base  mb-0">Danh mục : Hoa cúc</p>
+       
 
-        <div className="flex justify-between items-center mt-2">
+        <div className="flex justify-between items-center mt-1">
           <div className="flex items-center">
             <p className="mb-0 text-base mr-1">Loại </p>
             <div className=" rounded-full bg-green-600  flex justify-center items-center p-2 h-6 w-6">
               <p className="mb-0 text-white text-xs">A</p>
             </div>
           </div>
+          <p className="mt-2 text-base mb-0 ">220.000đ</p>
         </div>
 
         <div className="w-full flex justify-start items-center mt-3">

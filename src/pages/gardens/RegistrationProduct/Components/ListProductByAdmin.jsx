@@ -66,9 +66,9 @@ export default function ListProductByAdmin() {
   ]);
   return (
     <div className="card-element p-4">
-      <div className="row">
-        <div className="col-md-6">
-          <div className="md:flex justify-start items-center mb-3">
+      <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 gap-3">
+        <div className="">
+          <div className="md:flex justify-start items-center">
             <p className="text-zinc-500 text-sm md:text-base mt-1  ml-2 mb-1 mr-3">
               Bộ lọc :
             </p>
@@ -84,7 +84,7 @@ export default function ListProductByAdmin() {
             </select>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="">
           <div>
             <form className="flex  justify-start md:justify-end md:mt-0 items-center">
               <label for="simple-search" class="sr-only">
@@ -138,9 +138,12 @@ export default function ListProductByAdmin() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7 mt-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-4 xl:gap-y-6 2xl:grid-cols-6 2xl:gap-y-10 2xl:gap-x-4 mt-3">
         {listProductAdmin?.map((p, index) => (
-          <CardProductByAdmin />
+          <div key={index} className="flex justify-center w-full">
+           
+            <CardProductByAdmin />
+          </div>
         ))}
       </div>
     </div>

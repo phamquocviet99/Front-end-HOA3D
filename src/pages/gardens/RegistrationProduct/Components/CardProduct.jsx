@@ -7,7 +7,7 @@ export default function CardProduct() {
   const [showPostProductModal, setShowPostProductModal] = useState(false);
   const handleClosePostProductModal = () => setShowPostProductModal(false);
   return (
-    <div className="width-card rounded-xl shadow-md">
+    <div className="width-card shadow rounded-lg">
       <ModalPostProduct
         onClose={handleClosePostProductModal}
         visible={showPostProductModal}
@@ -16,7 +16,7 @@ export default function CardProduct() {
         // className="w-full h-52 rounded object-cover "
         className=" h-44 w-full object-cover rounded-t-lg"
         alt=""
-        src={require("../../../../assets/images/avartar/avartar.jpg")}
+        src={require("../../../../assets/images/image/test-flower.jpg")}
       />
       <div className="p-1">
         <p className=" text-center font-medium text-xl ml-1 mt-2 mb-2">Hoa Lan</p>
@@ -27,8 +27,8 @@ export default function CardProduct() {
             onClick={() => setShowPostProductModal(true)}
             className="mb-1 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center shadow-md  items-center "
           >
-            <i class="fa-regular fa-circle-check text-xl"></i>
-            <p className="mb-0 ml-3 text-base">Bán</p>
+         
+            <p className="mb-0 text-base">Bán</p>
           </button>
           <button
             title="Xóa sản phẩm này"
