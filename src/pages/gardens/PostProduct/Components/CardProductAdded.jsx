@@ -1,5 +1,5 @@
 import { AiOutlineClose } from "react-icons/ai";
-import "./index.css"
+
 export default function CardProductAdded() {
   return (
     <div className="width-card shadow rounded-lg">

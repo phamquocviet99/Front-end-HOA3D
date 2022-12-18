@@ -117,7 +117,7 @@ export default function ListProductAdded() {
       </form>
 
       <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-4 xl:gap-y-6 2xl:grid-cols-6 2xl:gap-y-10 2xl:gap-x-4 mt-3">
+        <div className="grid gap-y-4  grid-cols-1 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-4 xl:gap-y-6 2xl:grid-cols-6 2xl:gap-y-10 2xl:gap-x-4 mt-3">
           {listProductAdmin?.map((p, index) => (
             <div key={index} className="flex justify-center w-full">
               

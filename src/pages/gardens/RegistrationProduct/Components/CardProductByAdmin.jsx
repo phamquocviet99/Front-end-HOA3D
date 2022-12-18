@@ -11,7 +11,7 @@ export default function CardProductByAdmin() {
         alt=""
         src={require("../../../../assets/images/image/test-flower.jpg")}
       />
-      <div className="p-1">
+      <div className="p-2">
       <p className=" text-center font-medium text-xl ml-1 mt-2 mb-2">Hoa nhài</p>
         {isCheck ? (
           <button

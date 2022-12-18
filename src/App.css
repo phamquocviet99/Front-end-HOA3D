@@ -104,3 +104,14 @@ a {
     padding: 15px;
   }
 }
+.width-card {
+  max-width: 250px;
+  min-width: 170px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .width-card {
+    max-width: 100%;
+    min-width: 170px;
+  }
+}
