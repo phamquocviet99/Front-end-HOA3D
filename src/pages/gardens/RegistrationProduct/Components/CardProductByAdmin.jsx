@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "./index.css"
-
 export default function CardProductByAdmin() {
   const [isCheck, setIsCheck] = useState(true);
   const [isHover, setIsHover] = useState(false);
