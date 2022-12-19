@@ -109,7 +109,7 @@ a {
   min-width: 170px;
 }
 .test-width{
-  min-width: 200px;
+  min-width: 195px;
 }
 
 @media only screen and (max-width: 1023px) {
