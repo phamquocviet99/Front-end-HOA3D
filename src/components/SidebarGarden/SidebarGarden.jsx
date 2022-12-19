@@ -197,7 +197,7 @@ const SidebarGarden = ({ children }) => {
                     <div className="ml-4 flex items-center md:ml-6">
                       {/* Profile dropdown */}
 
-                      <ButtonPosted button={{ name: "Đăng bán" }} />
+                      {/* <ButtonPosted button={{ name: "Đăng bán" }} />
                       <Menu as="div" className="relative ml-4 hidden md:block">
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 p-2 ">
@@ -273,7 +273,7 @@ const SidebarGarden = ({ children }) => {
                             ))}
                           </Menu.Items>
                         </Transition>
-                      </Menu>
+                      </Menu> */}
                       <Menu as="div" className="relative ml-3 md:mr-5">
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 ">
