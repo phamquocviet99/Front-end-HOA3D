@@ -108,10 +108,16 @@ a {
   max-width: 250px;
   min-width: 170px;
 }
+.test-width{
+  min-width: 200px;
+}
 
 @media only screen and (max-width: 1023px) {
   .width-card {
     max-width: 100%;
     min-width: 170px;
+  }
+  .test-width{
+    min-width: 100%;
   }
 }

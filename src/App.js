@@ -13,7 +13,6 @@ import SidebarGarden from "./components/SidebarGarden/SidebarGarden";
 import DashboardGarden from "./pages/gardens/Dashboard/DashboardGarden";
 
 import RegistrationProduct from "./pages/gardens/RegistrationProduct/RegistrationProduct";
-import PostProduct from "./pages/gardens/PostProduct/PostProduct";
 import Order from "./pages/gardens/Order/Order";
 import ProfileShop from "./pages/gardens/ProfileShop/ProfileShop";
 import Quantity from "./pages/gardens/Quantity/Quantity";
@@ -71,7 +70,7 @@ function App() {
               path="/nha-vuon/ho-so-cua-hang"
               element={<ProfileShop />}
             />
-            <Route path="/nha-vuon/dang-ban" element={<PostProduct />} />
+           
             <Route path="/nha-vuon/nguoi-dung" element={<UserGarden />} />
           </Routes>
         </SidebarGarden>

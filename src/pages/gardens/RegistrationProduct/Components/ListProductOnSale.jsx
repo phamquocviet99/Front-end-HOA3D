@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CardProductAdded from "./CardProductAdded";
 
-export default function PostedProduct() {
+export default function ListProductOnSale() {
   const [listProductAdmin, setListProductAdmin] = useState([
     {
       id: "1",

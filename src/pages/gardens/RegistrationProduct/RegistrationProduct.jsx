@@ -1,6 +1,6 @@
 import ListProductByAdmin from "./Components/ListProductByAdmin";
 import ListProductAdded from "./Components/ListProductAdded";
-import PostedProduct from "../PostProduct/Components/PostedProduct";
+import ListProductOnSale from "./Components/ListProductOnSale";
 import TabHeader from "../../../components/TabHeader/TabHeader";
 
 export default function RegistrationProduct() {
@@ -25,7 +25,7 @@ export default function RegistrationProduct() {
   const ListContentProduct = [
     {
       id: 1,
-      element: <PostedProduct />,
+      element: <ListProductOnSale />,
     },
     {
       id: 2,
