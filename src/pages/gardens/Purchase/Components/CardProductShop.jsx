@@ -1,7 +1,6 @@
-
 export default function CardProductShop() {
   return (
-    <div  className="border-2 w-full mx-2 test-width rounded-2xl shadow-md">
+    <div className=" w-full mx-2 test-width rounded-2xl shadow-md">
       <img
         className="w-full h-44 rounded-t-xl object-cover "
         alt=""
