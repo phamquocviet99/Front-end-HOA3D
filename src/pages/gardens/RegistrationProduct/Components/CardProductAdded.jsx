@@ -2,9 +2,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 export default function CardProductAdded() {
   return (
-    <div className="width-card shadow rounded-lg">
+    <div className="w-full mx-auto mt-2 test-width rounded-2xl shadow-md">
       <img
-        
         className=" h-48 w-full object-cover rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/image/test-flower.jpg")}
@@ -13,7 +12,6 @@ export default function CardProductAdded() {
         <p className="mt-2 text-xl font-light mb-0">Hoa cúc vàng</p>
 
         <p className="mt-2 text-base  mb-0">Danh mục : Hoa cúc</p>
-       
 
         <div className="flex justify-between items-center mt-1">
           <div className="flex items-center">

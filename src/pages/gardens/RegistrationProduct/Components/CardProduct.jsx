@@ -7,7 +7,7 @@ export default function CardProduct() {
   const [showPostProductModal, setShowPostProductModal] = useState(false);
   const handleClosePostProductModal = () => setShowPostProductModal(false);
   return (
-    <div className="width-card shadow rounded-lg">
+    <div className=" w-full mx-auto mt-2 test-width rounded-2xl shadow-md">
       <ModalPostProduct
         onClose={handleClosePostProductModal}
         visible={showPostProductModal}
