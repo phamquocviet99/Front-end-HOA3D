@@ -4,9 +4,9 @@ export default function CardProductByAdmin() {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className="w-full mx-auto mt-2 test-width rounded-2xl shadow-md">
+    <div className="w-full mx-auto mt-2 test-width rounded-lg shadow-md">
       <img
-        className=" h-48 w-full object-cover rounded-t-2xl"
+        className=" h-48 w-full object-cover rounded-t-lg"
         // className="img-responsive rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/image/test-flower.jpg")}
