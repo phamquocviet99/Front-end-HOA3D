@@ -135,6 +135,14 @@ export default function Purchase() {
           </form>
         </div>
       </div>
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-4  2xl:grid-cols-6 gap-3 mt-3">
+        {listProductAdmin?.map((p, index) => (
+          <div key={index} className="flex w-full xl:w-11/12 justify-center">
+            
+            <CardProductShop />
+          </div>
+        ))}
+      </div> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-4  2xl:grid-cols-6 gap-3 mt-3">
         {listProductAdmin?.map((p, index) => (
           <div key={index} className="flex w-full xl:w-11/12 justify-center">

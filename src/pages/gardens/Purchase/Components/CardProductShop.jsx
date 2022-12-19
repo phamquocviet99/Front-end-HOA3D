@@ -1,11 +1,14 @@
 export default function CardProductShop() {
   return (
     <div className=" w-full mx-auto mt-2 test-width rounded-2xl shadow-md">
-      <img
-        className="w-full h-44 rounded-t-xl object-cover "
-        alt=""
-        src={require("../../../../assets/images/avartar/avartar.jpg")}
-      />
+     
+        <img
+          className="w-full h-48 rounded-t-xl object-cover "
+          alt=""
+          src={require("../../../../assets/images/avartar/avartar.jpg")}
+        />
+      
+
       <div className="py-2 px-3">
         <div className="flex justify-between items-center my-2">
           <p className=" text-xl font-bold mb-0">Hoa Lan</p>

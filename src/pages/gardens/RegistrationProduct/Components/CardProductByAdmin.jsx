@@ -6,7 +6,7 @@ export default function CardProductByAdmin() {
   return (
     <div className="width-card shadow rounded-lg">
       <img
-        className=" h-44 w-full object-cover rounded-t-lg"
+        className=" h-48 w-full object-cover rounded-t-lg"
         // className="img-responsive rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/image/test-flower.jpg")}

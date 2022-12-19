@@ -14,7 +14,7 @@ export default function CardProduct() {
       />
       <img
         // className="w-full h-52 rounded object-cover "
-        className=" h-44 w-full object-cover rounded-t-lg"
+        className=" h-48 w-full object-cover rounded-t-lg"
         alt=""
         src={require("../../../../assets/images/image/test-flower.jpg")}
       />
