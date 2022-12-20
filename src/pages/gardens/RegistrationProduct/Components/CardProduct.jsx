@@ -11,14 +11,11 @@ export default function CardProduct() {
         onClose={handleClosePostProductModal}
         visible={showPostProductModal}
       />
-      <div
-        className="relative"
-       
-      >
+      <div className="relative">
         <button
-        title="Xóa sản phẩm này"
-         onMouseEnter={() => setIsHover(true)}
-         onMouseLeave={() => setIsHover(false)}
+          title="Xóa sản phẩm này"
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
           className={
             isHover
               ? "absolute z-20 bg-red-500 border-2 text-white border-red-500 -top-3 -right-3 rounded-full   h-9 w-9 flex justify-center items-center"
@@ -27,17 +24,18 @@ export default function CardProduct() {
         >
           <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
+      </div>
+      <div onDoubleClick={() => setShowPostProductModal(true)}>
         <img
-          className=" h-48 w-full object-cover rounded-t-lg hover:brightness-90"
+          className=" h-48 w-full object-cover rounded-t-lg "
           alt=""
           src={require("../../../../assets/images/image/test-flower.jpg")}
         />
-      </div>
-
-      <div className="py-2 px-3">
-        <p className=" text-center font-medium text-xl ml-1 mt-2 mb-2">
-          Hoa Lan
-        </p>
+        <div className="py-2 px-3">
+          <p className=" text-center font-medium text-xl ml-1 mt-2 mb-2">
+            Hoa Lan
+          </p>
+        </div>
       </div>
       <div className="flex justify-start items-center w-full ">
         <button
