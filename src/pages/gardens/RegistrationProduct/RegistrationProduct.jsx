@@ -36,6 +36,17 @@ export default function RegistrationProduct() {
       element: <ListProductByAdmin />,
     },
   ];
+  return (
+    <div>
+      <div className="py-3 flex justify-between items-center px-2">
+        <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
+          Quản lý sản phẩm
+        </p>
+      </div>
+      <div className="line-y mx-2" />
+      <TabHeader tabName={tabProduct} listComponent={ListContentProduct} />
+    </div>
+  );
 
-  return <TabHeader tabName={tabProduct} listComponent={ListContentProduct} />;
+  // return <TabHeader tabName={tabProduct} listComponent={ListContentProduct} />;
 }

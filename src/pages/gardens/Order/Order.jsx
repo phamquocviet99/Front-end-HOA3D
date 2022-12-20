@@ -113,44 +113,29 @@ function Order() {
 
   return (
     <div>
-      <div className=" w-full bg-white shadow-md  rounded-xl">
-        <div className="py-3 px-4 flex justify-between items-center">
+      <div className=" w-full min-h-screen px-2">
+        <div className="py-3  flex justify-between items-center">
           <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
             Danh sách đơn hàng
           </p>
         </div>
         <div className="line-y" />
-        <div className=" w-full  p-3 ">
-          <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 mt-3">
-            <div>
+        <div className=" w-full mt-4">
+          <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 ">
+            <div >
               <form className="flex  justify-start md:justify-start md:mt-0 items-center">
                 <div className="relative w-full md:w-2/3">
-                  <div className="absolute inset-y-0 left-0 flex  items-center pl-3 pointer-events-none">
-                    <svg
-                      aria-hidden="true"
-                      className="w-5 h-5 text-gray-500 dark:text-gray-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
                   <input
                     type="text"
                     id="simple-search"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-l-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-l-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-2.5 shadow-md"
                     placeholder="Tìm kiếm"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="py-2.5 px-4  text-sm font-medium bg-gray-50 border border-gray-300  rounded-r-full  focus:ring-4 focus:outline-none focus:ring-blue-300 "
+                  className="py-2.5 px-4  text-sm font-medium bg-white border border-gray-300  rounded-r-full  focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-md"
                 >
                   <svg
                     className="w-5 h-5"
@@ -171,10 +156,10 @@ function Order() {
               </form>
             </div>
             <div className="md:flex justify-end items-center  mb-3">
-              <Menu as="div" className="relative inline-block text-left">
+              <Menu as="div" className="relative inline-block text-left mr-3">
                 <div>
-                  <Menu.Button className="inline-flex w-full justify-center items-center  px-4 py-2 text-sm font-medium text-gray-600  hover:text-gray-400 focus:outline-none ">
-                    <i class="fa-solid fa-arrow-up-wide-short mr-2 h-5 w-5 mt-2"></i>
+                  <Menu.Button className="inline-flex w-full justify-center items-center bg-white rounded-lg shadow-md px-4 py-1 text-base font-medium text-gray-600  hover:text-gray-400 focus:outline-none ">
+                    <i class="fa-solid fa-arrow-up-wide-short mr-2 h-7 w-7 mt-2 text-xl"></i>
                     Sắp xếp
                   </Menu.Button>
                 </div>
@@ -211,8 +196,8 @@ function Order() {
               </Menu>
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="inline-flex w-full justify-center items-center  px-4 py-2 text-sm font-medium text-gray-600  hover:text-gray-400 focus:outline-none ">
-                    <i class="fa-solid fa-filter mr-2 h-5 w-5 mt-2"></i>
+                  <Menu.Button className="inline-flex w-full justify-center items-center  bg-white rounded-lg shadow-md px-4 py-1 text-base font-medium text-gray-600  hover:text-gray-400 focus:outline-none ">
+                    <i class="fa-solid fa-filter mr-2 h-7 w-7 mt-2 text-xl"></i>
                     Lọc
                   </Menu.Button>
                 </div>
@@ -250,10 +235,10 @@ function Order() {
             </div>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-2">
             <div className=" hidden md:block overflow-x-auto relative shadow-md sm:rounded-lg">
               <table className=" w-full text-sm text-left text-gray-500 ">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-200 ">
                   <tr>
                     <th scope="col" className="py-3 px-6 text-center">
                       Mã đơn
@@ -385,17 +370,10 @@ function Order() {
                 </div>
               ))}
             </div>
-            <div className="flex justify-between items-center pt-3 ">
-              <select
-                id="countries_disabled"
-                className="px-2 h-8 bg-gray-50 border border-gray-300 text-zinc-500t-gray-900 text-sm rounded-lg  focus:ring-0"
-              >
-                <option value="US">10</option>
-                <option value="CA">20</option>
-                <option value="FR">30</option>
-              </select>
-              <ul className="inline-flex items-center mt-2 h-10">
-                <li>
+            <div className="flex justify-end items-center pt-3 ">
+              
+              <ul className="inline-flex items-center mt-2 h-10 ">
+                <li className="shadow-md">
                   <a
                     href="/#"
                     className=" rounded-l-lg py-2  px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "

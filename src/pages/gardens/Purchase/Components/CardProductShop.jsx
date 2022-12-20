@@ -31,7 +31,7 @@ export default function CardProductShop() {
         <div className="flex justify-start items-center w-full mt-3">
           <button
             title="Bán sản phẩm này"
-            className="shadow-md mb-2 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-lg flex justify-center items-center "
+            className="shadow-md mb-2 ml-1 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-3  rounded-full flex justify-center items-center "
           >
             <p className="mb-0 ml-3 text-base">Bán</p>
           </button>

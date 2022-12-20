@@ -16,6 +16,7 @@ export default function CardProduct() {
        
       >
         <button
+        title="Xóa sản phẩm này"
          onMouseEnter={() => setIsHover(true)}
          onMouseLeave={() => setIsHover(false)}
           className={

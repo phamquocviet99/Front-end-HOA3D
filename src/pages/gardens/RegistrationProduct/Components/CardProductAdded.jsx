@@ -6,12 +6,13 @@ export default function CardProductAdded() {
     <div className="w-full mx-auto mt-2 test-width rounded-lg shadow-md">
       <div className="relative">
         <button
+        title="Xóa sản phẩm này"
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
           className={
             isHover
-              ? "absolute z-20 top-2 right-2 h-10 w-10  rounded-full  flex justify-center items-center text-white bg-red-500"
-              : "absolute z-20 top-2 right-2 h-10 w-10  rounded-full  flex justify-center items-center text-black bg-white"
+              ? "absolute z-20 top-1 right-1 h-9 w-9  rounded-full  flex justify-center items-center text-white bg-red-500"
+              : "absolute z-20 top-1 right-1 h-9 w-9  rounded-full  flex justify-center items-center text-black bg-white"
           }
         >
           <i class="fa-solid fa-xmark text-2xl "></i>
