@@ -56,9 +56,7 @@ export const data = {
 const DashboardGarden = () => {
   return (
     <div className="">
-      <div>
-        <Line options={options} data={data} ></Line>
-      </div>
+     
 
       <div className="grid grid-cols-4 gap-3">
         <div className="col-start-1 col-end-2">
@@ -180,10 +178,10 @@ const DashboardGarden = () => {
           </div>
         </div>
         <div>
-        <Line options={options} data={data} ></Line>
+        
       </div>
       </div>
-
+<Line options={options} data={data} ></Line>
     </div>
   );
 };
