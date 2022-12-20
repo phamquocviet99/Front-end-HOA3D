@@ -1,9 +1,111 @@
-import React from "react";
+import { React } from "react";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
+
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {},
+    title: {
+      display: true,
+      text: "Chart.js Line Chart",
+    },
+  },
+};
+
+const labels = ["January", "February", "March", "April", "May", "June", "July"];
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: "Dataset 1",
+     
+      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+    },
+    {
+      label: "Dataset 2",
+      
+      borderColor: "rgb(53, 162, 235)",
+      backgroundColor: "rgba(53, 162, 235, 0.5)",
+    },
+  ],
+};
 const DashboardGarden = () => {
   return (
     <div className="">
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div>
+        <Line options={options} data={data} ></Line>
+      </div>
+
+      <div className="grid grid-cols-4 gap-3">
+        <div className="col-start-1 col-end-2">
+          <div className="py-2 px-4">
+            <button
+              title="Đăng bán sản phẩm"
+              className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-full "
+            >
+              <div className="flex justify-center items-center ">
+                <p className="mb-0 text-lg">Đăng bán</p>
+                <i class="fa-solid fa-arrow-right text-lg ml-3 mt-1 text-white"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className="col-start-2 col-end-4">
+          <div className="py-2 px-4">
+            <button
+              title="Đăng bán sản phẩm"
+              style={{ color: "#2D3693" }}
+              className="shadow-md mb-2 w-full bg-orange-button hover:bg-orange-400   py-2 px-3 rounded-full "
+            >
+              <div className="flex justify-center items-center ">
+                <p className="mb-0 text-lg">Các sản phẩm đang được thu mua</p>
+                <i
+                  style={{ color: "#2D3693" }}
+                  className="fa-solid fa-arrow-right text-lg ml-3 mt-1 "
+                ></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div className="py-2 px-4">
+            <button
+              title="Đăng bán sản phẩm"
+              className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-full "
+            >
+              <div className="flex justify-center items-center ">
+                <p className="mb-0 text-lg">Đơn hàng</p>
+                <i class="fa-solid fa-arrow-right text-lg ml-3 mt-1 text-white"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-3">
         <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
@@ -77,7 +179,11 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
+        <div>
+        <Line options={options} data={data} ></Line>
       </div>
+      </div>
+
     </div>
   );
 };

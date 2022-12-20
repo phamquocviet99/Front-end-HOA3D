@@ -111,6 +111,9 @@ a {
 .shadow-button{
   box-shadow: 2px 2px 3px #d1d1d1;
 }
+.bg-orange-button{
+  background-color: #EB7F28;
+}
 
 @media only screen and (max-width: 1023px) {
 
