@@ -70,7 +70,7 @@ export default function ListProductAdded() {
   }
   return (
     <div className="w-full min-h-screen">
-      <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 px-2 mt-2">
+      <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 px-2 mt-2 gap-3">
           <div>
             <form className="flex  justify-start md:justify-start md:mt-0 items-center">
               <div className="relative w-full md:w-2/3">
@@ -104,7 +104,7 @@ export default function ListProductAdded() {
               </button>
             </form>
           </div>
-          <div className="md:flex justify-end items-center  mb-3">
+          <div className="flex justify-between md:justify-end items-center  mb-3">
             <Menu as="div" className="relative inline-block text-left mr-3">
               <div>
                 <Menu.Button className="inline-flex w-full justify-center items-center bg-white rounded-lg shadow-md px-4 py-1 text-base font-medium text-gray-600  hover:text-gray-400 focus:outline-none ">
