@@ -17,7 +17,7 @@ export default function CardProductByAdmin() {
           <button
             onClick={() => setIsCheck(!isCheck)}
             title="Bán lại sản phẩm này"
-            className=" shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white flex justify-center items-center  py-2 px-3 rounded-lg "
+            className=" shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white flex justify-center items-center  py-2 px-3 rounded-full "
           >
             <div className="h-6 w-6 flex justify-center items-center rounded-full ">
               <i className="fa-solid fa-plus text-lg" />
@@ -32,8 +32,8 @@ export default function CardProductByAdmin() {
             onClick={() => setIsCheck(!isCheck)}
             className={
               isHover
-                ? "shadow-md mb-2 w-full bg-red-400 hover:bg-red-400 text-white flex justify-center items-center  py-2 px-3 rounded-lg "
-                : " shadow-md mb-2 w-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center  py-2 px-3 rounded-lg "
+                ? "shadow-md mb-2 w-full bg-red-400 hover:bg-red-400 text-white flex justify-center items-center  py-2 px-3 rounded-full "
+                : " shadow-md mb-2 w-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center  py-2 px-3 rounded-full "
             }
           >
             {isHover ? (

@@ -4,22 +4,20 @@ export default function CardProductAdded() {
   const [isHover, setIsHover] = useState(false);
   return (
     <div className="w-full mx-auto mt-2 test-width rounded-lg shadow-md">
-      <div
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-        className="relative"
-      >
+      <div className="relative">
         <button
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
           className={
             isHover
-              ? "absolute z-20 bg-red-600 top-2 right-2 rounded-md border-2 border-white h-10 w-10 flex justify-center items-center"
-              : "absolute z-20  top-2 right-2 rounded-md border-2 border-white h-10 w-10 flex justify-center items-center"
+              ? "absolute z-20 top-2 right-2 h-10 w-10  rounded-full  flex justify-center items-center text-white bg-red-500"
+              : "absolute z-20 top-2 right-2 h-10 w-10  rounded-full  flex justify-center items-center text-black bg-white"
           }
         >
-          <i class="fa-solid fa-xmark text-2xl text-white"></i>
+          <i class="fa-solid fa-xmark text-2xl "></i>
         </button>
         <img
-          className=" h-48 w-full object-cover rounded-t-lg hover:brightness-90"
+          className=" h-48 w-full object-cover rounded-t-lg"
           alt=""
           src={require("../../../../assets/images/image/test-flower.jpg")}
         />
@@ -43,7 +41,7 @@ export default function CardProductAdded() {
         <div className="w-full flex justify-start items-center mt-3">
           <button
             title="Bán lại sản phẩm này"
-            className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg "
+            className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-full"
           >
             <div className="flex justify-center items-center ">
               <i class="fa-solid fa-rotate-right text-lg"></i>
