@@ -128,7 +128,7 @@ function Order() {
                   <input
                     type="text"
                     id="simple-search"
-                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-l-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-2.5 shadow-md"
+                    className="bg-white border-y border-l border-gray-300 text-gray-900 text-sm rounded-l-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-2.5 shadow-md"
                     placeholder="Tìm kiếm"
                     required
                   />
@@ -236,8 +236,8 @@ function Order() {
           </div>
 
           <div className="mt-2">
-            <div className=" hidden md:block overflow-x-auto relative shadow-md sm:rounded-lg">
-              <table className=" w-full text-sm text-left text-gray-500 ">
+            <div className=" hidden md:block overflow-x-auto relative shadow-md sm:rounded-lg ">
+              <table className=" w-full text-sm text-left text-gray-500 border ">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-200 ">
                   <tr>
                     <th scope="col" className="py-3 px-6 text-center">

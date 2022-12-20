@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function CardProductAdded() {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="w-full mx-auto mt-2 test-width rounded-lg shadow-md">
+    <div className="w-full mx-auto mt-2 test-width rounded-lg shadow-md bg-white">
       <div className="relative">
         <button
         title="Xóa sản phẩm này"

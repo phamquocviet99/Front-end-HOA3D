@@ -6,7 +6,7 @@ export default function CardProduct() {
   const handleClosePostProductModal = () => setShowPostProductModal(false);
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className=" w-full mx-auto mt-2 test-width rounded-lg shadow-md">
+    <div className=" w-full bg-white mx-auto mt-2 test-width rounded-lg shadow-md">
       <ModalPostProduct
         onClose={handleClosePostProductModal}
         visible={showPostProductModal}
