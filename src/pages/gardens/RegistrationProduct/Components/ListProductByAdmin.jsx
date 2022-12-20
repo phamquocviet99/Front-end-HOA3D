@@ -69,7 +69,7 @@ export default function ListProductByAdmin() {
     },
   ]);
   return (
-    <div className="card-element p-4">
+    <div className="card-element min-h-screen p-4">
       <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2">
             <div>
               <form className="flex  justify-start md:justify-start md:mt-0 items-center">

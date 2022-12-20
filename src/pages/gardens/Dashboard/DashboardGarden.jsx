@@ -11,8 +11,6 @@ import {
   Legend,
 } from "chart.js";
 
-
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -41,13 +39,13 @@ export const data = {
   datasets: [
     {
       label: "Dataset 1",
-     
+
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     {
       label: "Dataset 2",
-      
+
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
@@ -56,8 +54,6 @@ export const data = {
 const DashboardGarden = () => {
   return (
     <div className="">
-     
-
       <div className="grid grid-cols-4 gap-3">
         <div className="col-start-1 col-end-2">
           <div className="py-2 px-4">
@@ -177,11 +173,9 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
-        <div>
-        
+        <div></div>
       </div>
-      </div>
-<Line options={options} data={data} ></Line>
+      <Line options={options} data={data}></Line>
     </div>
   );
 };

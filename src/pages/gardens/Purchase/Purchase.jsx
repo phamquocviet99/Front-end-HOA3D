@@ -72,7 +72,7 @@ export default function Purchase() {
   }
 
   return (
-    <div className="card-element shadow-md">
+    <div className="card-element min-h-screen shadow-md">
       <div className="py-3 px-4 flex justify-between items-center">
         <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
           Danh sách cửa hàng mua
