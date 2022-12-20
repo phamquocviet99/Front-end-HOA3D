@@ -72,7 +72,7 @@ const SidebarGarden = ({ children }) => {
   window.addEventListener("scroll", handleLogo);
   window.addEventListener("resize", handleResize);
   return (
-    <div className="">
+    <div className="relative">
       {isShowing ? (
         <div
           onClick={() => setIsShowing(false)}
