@@ -317,7 +317,7 @@ const DashboardGarden = () => {
                     <tr className="bg-white border-t">
                       <th
                         scope="row"
-                        className="py-3 px-6 font-medium text-gray-900 whitespace-nowrap text-center rounded-b-lg"
+                        className="py-3 px-6 font-normal text-gray-900 whitespace-nowrap text-center rounded-b-lg"
                       >
                         Hoa lan trắng
                       </th>
@@ -355,7 +355,7 @@ const DashboardGarden = () => {
           </div>
           <div className="mt-3 ">
             {listOrder?.map((o, index) => (
-              <div className="flex justify-between items-center shadow-md my-3 border rounded-lg pr-2">
+              <div className="flex justify-between items-center shadow-md my-3 border rounded-lg pr-2 bg-slate-50">
                 <div className="flex items-center">
                   <div className="">
                     <img
@@ -364,10 +364,10 @@ const DashboardGarden = () => {
                       src={require("../../../assets/images/avartar/avartar.jpg")}
                     />
                   </div>
-                  <div className="ml-3">
-                    <p className="mb-0 font-bold text-gray-600">Hoa Lan Tím Loại B</p>
-                    <p className="mb-0 text-gray-500">Cửa hàng : <span className="text-black">Minh Lan</span> </p>
-                    <p className="mb-0 text-gray-500">Số lượng : <span className="text-black">15kg</span></p>
+                  <div className="ml-2">
+                    <p className="mb-1 text-sm  text-gray-600">Hoa Lan Tím Loại B</p>
+                    <p className="mb-1 text-sm text-gray-500">Cửa hàng : <span className="text-black">Minh Lan</span> </p>
+                    <p className="mb-1 text-sm text-gray-500">Số lượng : <span className="text-black">15kg</span></p>
                   </div>
                 </div>
                 <p className="mb-0 text-base">2.000.000đ/kg</p>
