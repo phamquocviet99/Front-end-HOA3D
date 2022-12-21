@@ -3,16 +3,16 @@ import { Line, Bar } from "react-chartjs-2";
 import { Chart } from "chart.js";
 import * as Chartjs from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
+// import {
+//   Chart as ChartJS,
+//   CategoryScale,
+//   LinearScale,
+//   PointElement,
+//   LineElement,
+//   Title,
+//   Tooltip,
+//   Legend,
+// } from "chart.js";
 import ButtonDeposit from "../../../components/ButtonPayment/ButtonDeposit";
 import ButtonWaitingShopPayment from "../../../components/ButtonWaitingShopPayment/ButtonWaitingShopPayment";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
@@ -24,7 +24,6 @@ const controllers = Object.values(Chartjs).filter(
 );
 
 Chart.register(...controllers);
-
 
 const listOrder = [
   {
@@ -58,12 +57,11 @@ const listOrder = [
 const DashboardGarden = () => {
   const options = {
     scales: {
-      
       x: {
-        
         grid: {
           drawOnChartArea: false,
-          color: (ctx) => (ctx.index === 0 ? 'rgba(0, 0, 0, 0)' : 'rgba(0, 0, 0, 0)')
+          color: (ctx) =>
+            ctx.index === 0 ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 0)",
         },
       },
       y: {
@@ -107,8 +105,8 @@ const DashboardGarden = () => {
   }
   return (
     <div className="">
-      <div className="grid grid-cols-4 gap-3">
-        <div className="col-start-1 col-end-2">
+      <div className="grid grid-cols-1 xl:grid-cols-4 gap-3">
+        <div className="md:col-start-1 md:col-end-2">
           <div className="py-2 px-4">
             <button
               title="Đăng bán sản phẩm"
@@ -121,10 +119,11 @@ const DashboardGarden = () => {
             </button>
           </div>
         </div>
-        <div className="col-start-2 col-end-4">
+        <div className="col-start-2 xl:col-end-4">
           <div className="py-2 px-4">
             <button
-              title="Đăng bán sản phẩm"
+              onClick={() => navigate("/nha-vuon/mua-ban")}
+              title="Đến trang các sản phẩm cần mua"
               style={{ color: "#2D3693" }}
               className="shadow-md mb-2 w-full bg-orange-button hover:bg-orange-400   py-2 px-3 rounded-full "
             >
@@ -141,7 +140,8 @@ const DashboardGarden = () => {
         <div>
           <div className="py-2 px-4">
             <button
-              title="Đăng bán sản phẩm"
+              onClick={() => navigate("/nha-vuon/don-hang")}
+              title="Đến trang đơn hàng"
               className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-full "
             >
               <div className="flex justify-center items-center ">
@@ -227,13 +227,13 @@ const DashboardGarden = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 mt-4">
-        <div className="col-start-1 col-end-3">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
+        <div className="xl:col-start-1 xl:col-end-3">
           <div className=" bg-white rounded-xl shadow-md p-4 h-full">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="h-full">
                 <Bar
-                  height={"300px"}
+                  height={"330px"}
                   plugins={[ChartDataLabels]}
                   options={options}
                   data={data}
@@ -301,7 +301,7 @@ const DashboardGarden = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-col-1 xl:grid-cols-3 gap-4 mt-4">
         <div className="w-full bg-white rounded-xl shadow-md p-3">
           <div className="flex justify-between items-center">
             <div className="pl-1">
@@ -309,6 +309,7 @@ const DashboardGarden = () => {
               <p className="mb-0 text-sm text-gray-400">Có 6 đơn cần xử lý</p>
             </div>
             <button
+              onClick={() => navigate("/nha-vuon/don-hang")}
               title="Xem tất cả đơn hàng"
               className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg shadow-md"
             >
@@ -318,6 +319,7 @@ const DashboardGarden = () => {
           <div className="mt-3">
             {listOrder?.map((o, index) => (
               <div
+                onDoubleClick={goToDetail}
                 key={index}
                 className="w-full shadow-md rounded-xl border mt-2 p-3 bg-slate-50 "
               >
@@ -375,7 +377,8 @@ const DashboardGarden = () => {
               </p>
             </div>
             <button
-              title="Xem tất cả đơn hàng"
+              onClick={() => navigate("/nha-vuon/san-pham")}
+              title="Xem tất cả sản phẩm đang bán"
               className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg shadow-md"
             >
               Xem tất cả
@@ -433,7 +436,8 @@ const DashboardGarden = () => {
               </p>
             </div>
             <button
-              title="Xem tất cả đơn hàng"
+            onClick={() => navigate("/nha-vuon/mua-ban")}
+              title="Xem tất cả cửa hàng mua"
               className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg shadow-md"
             >
               Xem tất cả
