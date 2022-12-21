@@ -10,6 +10,12 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import ButtonDeposit from "../../../components/ButtonPayment/ButtonDeposit";
+import ButtonWaitingShopPayment from "../../../components/ButtonWaitingShopPayment/ButtonWaitingShopPayment";
+import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
+import ButtonWaitingDelivery from "../../../components/ButtonWaitingDelivery/ButtonWaitingDelivery";
+import ButtonWaitingCensorship from "../../../components/ButtonWaitingCensorship/ButtonWaitingCensorship";
+import { useNavigate } from "react-router-dom";
 
 ChartJS.register(
   CategoryScale,
@@ -51,7 +57,69 @@ export const data = {
     },
   ],
 };
+
+const listOrder = [
+  {
+    id: "HD1",
+    nameProduct: "Hoa hồng vàng",
+    nameShop: "Minh An",
+    count: "12kg",
+    totalPrice: "1.000.000đ",
+    status: "waitingDeposit",
+    date: "22/12/2022",
+  },
+  {
+    id: "HD2",
+    nameProduct: "Hoa lan trắng",
+    nameShop: "Minh Huệ",
+    count: "200kg",
+    totalPrice: "2.000.000đ",
+    status: "waitingDeposit",
+    date: "Chưa có",
+  },
+  {
+    id: "HD3",
+    nameProduct: "Hoa lan trắng",
+    nameShop: "Minh An",
+    count: "200kg",
+    totalPrice: "2.000.000đ",
+    status: "waitingPayment",
+    date: "22/12/2022",
+  },
+  {
+    id: "HD4",
+    nameProduct: "Hoa lan trắng",
+    nameShop: "Ba Lan",
+    count: "200kg",
+    totalPrice: "2.000.000đ",
+    status: "waitingDelivery",
+    date: "22/12/2022",
+  },
+  {
+    id: "HD5",
+    nameProduct: "Hoa lan trắng",
+    nameShop: "Minh Minh",
+    count: "200kg",
+    totalPrice: "2.000.000đ",
+    status: "delivering",
+    date: "22/12/2022",
+  },
+  {
+    id: "HD6",
+    nameProduct: "Hoa lan trắng",
+    nameShop: "Minh Hoàng",
+    count: "200kg",
+    totalPrice: "2.000.000đ",
+    status: "delivering",
+    date: "Chưa có",
+  }
+];
 const DashboardGarden = () => {
+  const navigate = useNavigate();
+
+  function goToDetail() {
+    navigate("/nha-vuon/don-hang/chi-tiet");
+  }
   return (
     <div className="">
       <div className="grid grid-cols-4 gap-3">
@@ -173,9 +241,92 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
-        <div></div>
       </div>
-      <Line options={options} data={data}></Line>
+      <div className="grid grid-cols-4 gap-4 mt-4">
+        <div className="col-start-1 col-end-4">
+          <div className="mt-2">
+            <div className=" hidden md:block overflow-x-auto relative shadow-md sm:rounded-lg ">
+              <table className=" w-full text-sm text-left text-gray-500 border ">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-200 ">
+                  <tr>
+                    <th scope="col" className="py-3 px-6 text-center">
+                      Mã đơn
+                    </th>
+
+                    <th scope="col" className="py-3 px-6 text-center">
+                      Cửa hàng
+                    </th>
+
+                    <th scope="col" className="py-3 px-6 text-center">
+                      Tổng tiền
+                    </th>
+                    <th scope="col" className="py-3 px-6 text-center">
+                      Trạng thái
+                    </th>
+
+                    <th scope="col" className="py-3 px-6 text-center">
+                      Hành động
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {listOrder?.map((o, index) => (
+                    <tr className="bg-order border-b  ">
+                      <td className="py-4 px-6 text-center">{o.id}</td>
+
+                      <td className="py-4 px-6 text-center">{o.nameShop}</td>
+
+                      <td className="py-4 px-6 text-center">{o.totalPrice}</td>
+                      <td className="py-4 px-6 flex justify-center items-center">
+                        {o.status === "waitingDeposit" ? (
+                          <ButtonDeposit />
+                        ) : o.status === "waitingPayment" ? (
+                          <ButtonWaitingShopPayment />
+                        ) : o.status === "waitingDelivery" ? (
+                          <ButtonDelivery />
+                        ) : o.status === "delivering" ? (
+                          <ButtonWaitingDelivery />
+                        ) : o.status === "waitingCensorship" ? (
+                          <ButtonWaitingCensorship />
+                        ) : o.status === "cancel" ? (
+                          <button className="bg-red-500 shadow-md hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                            Đơn hàng hủy
+                          </button>
+                        ) : (
+                          <button
+                            title="Xem chi tiết"
+                            onClick={goToDetail}
+                            className="bg-green-600 shadow-md hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
+                          >
+                            Đơn hoàn thành
+                          </button>
+                        )}
+                      </td>
+
+                      <td className="py-4 px-6 text-center">
+                        <button
+                          title="Xem chi tiết đơn hàng"
+                          onClick={goToDetail}
+                          className="  w-24 border-2 border-gray-300 hover:bg-gray-300 text-blue-500 text-sm  py-2 px-3 rounded-lg shadow-button"
+                        >
+                          Chi tiết
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            
+           
+          </div>
+        </div>
+        <div className="col-start-4 ">
+          <div className="w-full bg-white rounded-xl shadow-md p-4">
+            <Line options={options} data={data}></Line>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
