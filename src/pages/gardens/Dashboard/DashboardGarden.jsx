@@ -17,17 +17,18 @@ import ButtonWaitingDelivery from "../../../components/ButtonWaitingDelivery/But
 import ButtonWaitingCensorship from "../../../components/ButtonWaitingCensorship/ButtonWaitingCensorship";
 import { useNavigate } from "react-router-dom";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+
 
 export const options = {
+  scales: {
+    
+    x: {
+      display: false,
+   },
+   y: {
+      display: false,
+   }
+  },
   responsive: true,
   plugins: {
     legend: {},
@@ -45,15 +46,11 @@ export const data = {
   datasets: [
     {
       label: "Dataset 1",
-
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
-    },
-    {
-      label: "Dataset 2",
-
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      data: [20, 30, 10, 20, 30, 10],
+      fill: false,
+      borderRadius: 15,
     },
   ],
 };
@@ -314,7 +311,7 @@ const DashboardGarden = () => {
                 </thead>
                 <tbody>
                   {listOrder?.map((o, index) => (
-                    <tr className="bg-white border-t">
+                    <tr className="hover:bg-gray-50 border-t">
                       <th
                         scope="row"
                         className="py-3 px-6 font-normal text-gray-900 whitespace-nowrap text-center rounded-b-lg"
@@ -365,9 +362,15 @@ const DashboardGarden = () => {
                     />
                   </div>
                   <div className="ml-2">
-                    <p className="mb-1 text-sm  text-gray-600">Hoa Lan Tím Loại B</p>
-                    <p className="mb-1 text-sm text-gray-500">Cửa hàng : <span className="text-black">Minh Lan</span> </p>
-                    <p className="mb-1 text-sm text-gray-500">Số lượng : <span className="text-black">15kg</span></p>
+                    <p className="mb-1 text-sm  text-gray-600">
+                      Hoa Lan Tím Loại B
+                    </p>
+                    <p className="mb-1 text-sm text-gray-500">
+                      Cửa hàng : <span className="text-black">Minh Lan</span>{" "}
+                    </p>
+                    <p className="mb-1 text-sm text-gray-500">
+                      Số lượng : <span className="text-black">15kg</span>
+                    </p>
                   </div>
                 </div>
                 <p className="mb-0 text-base">2.000.000đ/kg</p>
@@ -376,16 +379,16 @@ const DashboardGarden = () => {
           </div>
         </div>
       </div>
-      {/* <div className="grid grid-cols-4 gap-4 mt-4">
+      <div className="grid grid-cols-4 gap-4 mt-4">
         <div className="col-start-1 col-end-4">
-        
-        </div>
-        <div className="col-start-4 ">
-          <div className="w-full bg-white rounded-xl shadow-md p-4">
+        <div className="w-full bg-white rounded-xl shadow-md p-4">
             <Line options={options} data={data}></Line>
           </div>
         </div>
-      </div> */}
+        <div className="col-start-4 ">
+         
+        </div>
+      </div>
     </div>
   );
 };
