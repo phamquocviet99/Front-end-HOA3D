@@ -1,5 +1,8 @@
 import { React } from "react";
-import { Line } from "react-chartjs-2";
+import { Line, Bar } from "react-chartjs-2";
+import { Chart } from "chart.js";
+import * as Chartjs from "chart.js";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -16,44 +19,11 @@ import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
 import ButtonWaitingDelivery from "../../../components/ButtonWaitingDelivery/ButtonWaitingDelivery";
 import ButtonWaitingCensorship from "../../../components/ButtonWaitingCensorship/ButtonWaitingCensorship";
 import { useNavigate } from "react-router-dom";
+const controllers = Object.values(Chartjs).filter(
+  (chart) => chart.id !== undefined
+);
 
-
-
-export const options = {
-  scales: {
-    
-    x: {
-      display: false,
-   },
-   y: {
-      display: false,
-   }
-  },
-  responsive: true,
-  plugins: {
-    legend: {},
-    title: {
-      display: true,
-      text: "Chart.js Line Chart",
-    },
-  },
-};
-
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
-      data: [20, 30, 10, 20, 30, 10],
-      fill: false,
-      borderRadius: 15,
-    },
-  ],
-};
+Chart.register(...controllers);
 
 const listOrder = [
   {
@@ -85,8 +55,47 @@ const listOrder = [
   },
 ];
 const DashboardGarden = () => {
-  const navigate = useNavigate();
+  const options = {
+    scales: {
+      x: {
+        grid: {
+          drawOnChartArea: false,
+        },
+      },
+      y: {
+        display: false,
+        grid: {
+          drawOnChartArea: false,
+        },
+      },
+    },
+    maintainAspectRatio: false,
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: false,
+        text: "Chart.js Line Chart",
+      },
+    },
+  };
+  const labels = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
 
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Doanh thu theo ngày",
+        data: [10, 2, 3, 4, 5, 6, 7],
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
+
+  const navigate = useNavigate();
   function goToDetail() {
     navigate("/nha-vuon/don-hang/chi-tiet");
   }
@@ -209,6 +218,80 @@ const DashboardGarden = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="col-start-1 col-end-3">
+          <div className=" bg-white rounded-xl shadow-md p-4 h-full">
+            <div className="grid grid-cols-2">
+              <div className="h-full">
+                <Bar
+                  height={"300px"}
+                  plugins={[ChartDataLabels]}
+                  options={options}
+                  data={data}
+                ></Bar>
+              </div>
+              <div></div>
+            </div>
+            {/* <Line options={options} data={data}></Line> */}
+          </div>
+        </div>
+        <div className=" bg-white rounded-xl shadow-md p-3">
+          <div className="pl-1">
+            <p className="mb-0 text-lg text-gray-600">Giao dịch tiền</p>
+            <p className="mb-0 text-sm text-gray-400">
+              Có 10 giao dịch trong tháng này
+            </p>
+          </div>
+          <div className="flex justify-between items-center mt-3">
+            <div className="flex items-center">
+              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
+                <i class="fa-regular fa-credit-card text-2xl"></i>
+              </div>
+              <div className="ml-3">
+                <p className="mb-0 text-base">Nội dung gửi</p>
+                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
+              </div>
+            </div>
+            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
+          </div>
+          <div className="flex justify-between items-center mt-3">
+            <div className="flex items-center">
+              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
+                <i class="fa-regular fa-credit-card text-2xl"></i>
+              </div>
+              <div className="ml-3">
+                <p className="mb-0 text-base">Nội dung gửi</p>
+                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
+              </div>
+            </div>
+            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
+          </div>
+          <div className="flex justify-between items-center mt-3">
+            <div className="flex items-center">
+              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
+                <i class="fa-regular fa-credit-card text-2xl"></i>
+              </div>
+              <div className="ml-3">
+                <p className="mb-0 text-base">Nội dung gửi</p>
+                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
+              </div>
+            </div>
+            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
+          </div>
+          <div className="flex justify-between items-center mt-3">
+            <div className="flex items-center">
+              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
+                <i class="fa-regular fa-credit-card text-2xl"></i>
+              </div>
+              <div className="ml-3">
+                <p className="mb-0 text-base">Nội dung gửi</p>
+                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
+              </div>
+            </div>
+            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
           </div>
         </div>
       </div>
@@ -377,16 +460,6 @@ const DashboardGarden = () => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-4 gap-4 mt-4">
-        <div className="col-start-1 col-end-4">
-        <div className="w-full bg-white rounded-xl shadow-md p-4">
-            <Line options={options} data={data}></Line>
-          </div>
-        </div>
-        <div className="col-start-4 ">
-         
         </div>
       </div>
     </div>
