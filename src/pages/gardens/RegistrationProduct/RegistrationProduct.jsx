@@ -38,7 +38,7 @@ export default function RegistrationProduct() {
   ];
   return (
     <div>
-      <div className="py-3 flex justify-between items-center px-2">
+      <div className="pb-3 flex justify-between items-center px-2">
         <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
           Quản lý sản phẩm
         </p>

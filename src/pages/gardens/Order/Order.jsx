@@ -114,7 +114,7 @@ function Order() {
   return (
     <div>
       <div className=" w-full min-h-screen px-2">
-        <div className="py-3  flex justify-between items-center">
+        <div className="pb-3   flex justify-between items-center">
           <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
             Danh sách đơn hàng
           </p>

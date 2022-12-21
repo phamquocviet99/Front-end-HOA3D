@@ -73,7 +73,7 @@ export default function Purchase() {
 
   return (
     <div className="w-full min-h-screen">
-      <div className="py-3 flex justify-between items-center px-2">
+      <div className="pb-3 flex justify-between items-center px-2">
         <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
           Danh sách cửa hàng mua
         </p>
