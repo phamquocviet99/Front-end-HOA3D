@@ -339,7 +339,9 @@ const DashboardGarden = () => {
         <div className="w-full bg-white rounded-xl shadow-md p-3">
           <div className="flex justify-between items-center">
             <div className="pl-1">
-              <p className="mb-0 text-lg text-gray-600">Sản phẩm cửa hàng mua</p>
+              <p className="mb-0 text-lg text-gray-600">
+                Sản phẩm cửa hàng mua
+              </p>
               <p className="mb-0 text-sm text-gray-400">
                 Có 6 cửa hàng cần mua
               </p>
@@ -352,44 +354,25 @@ const DashboardGarden = () => {
             </button>
           </div>
           <div className="mt-3 ">
-            <div className=" relative shadow-md rounded-lg">
-              <table className="w-full text-sm rounded-lg">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-200 rounded-lg">
-                  <tr>
-                    <th scope="col" className="py-3 px-6 rounded-tl-lg">
-                      Tên SP
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      Loại
-                    </th>
-
-                    <th scope="col" className="py-3 px-6 rounded-tr-lg">
-                      Giá đang bán
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {listOrder?.map((o, index) => (
-                    <tr className="bg-white border-t">
-                      <th
-                        scope="row"
-                        className="py-3 px-6 font-medium text-gray-900 whitespace-nowrap text-center rounded-b-lg"
-                      >
-                        Hoa lan trắng
-                      </th>
-                      <td className="py-3 px-6 flex justify-center">
-                        <div className=" rounded-full bg-green-600  flex justify-center items-center p-2 h-6 w-6">
-                          <p className="mb-0 text-white text-xs">A</p>
-                        </div>
-                      </td>
-                      <td className="py-3 px-6  text-center rounded-b-lg">
-                        1.000.000đ
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            {listOrder?.map((o, index) => (
+              <div className="flex justify-between items-center shadow-md my-3 border rounded-lg pr-2">
+                <div className="flex items-center">
+                  <div className="">
+                    <img
+                      className=" h-20 w-20 object-cover rounded-lg "
+                      alt=""
+                      src={require("../../../assets/images/avartar/avartar.jpg")}
+                    />
+                  </div>
+                  <div className="ml-3">
+                    <p className="mb-0 font-bold text-gray-600">Hoa Lan Tím Loại B</p>
+                    <p className="mb-0 text-gray-500">Cửa hàng : <span className="text-black">Minh Lan</span> </p>
+                    <p className="mb-0 text-gray-500">Số lượng : <span className="text-black">15kg</span></p>
+                  </div>
+                </div>
+                <p className="mb-0 text-base">2.000.000đ/kg</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
