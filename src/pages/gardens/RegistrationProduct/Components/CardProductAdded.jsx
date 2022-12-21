@@ -19,8 +19,8 @@ export default function CardProductAdded() {
           onMouseLeave={() => setIsHover(false)}
           className={
             isHover
-              ? "absolute z-20 top-1 right-1 h-9 w-9  rounded-full  flex justify-center items-center text-white bg-red-500"
-              : "absolute z-20 top-1 right-1 h-9 w-9  rounded-full  flex justify-center items-center text-black bg-white"
+              ? "absolute z-20 bg-red-500 border-2 text-white border-red-500 -top-3 -right-3 rounded-full   h-9 w-9 flex justify-center items-center"
+              : "absolute z-20 bg-white border-2 border-red-500 text-red-500 -top-3 -right-3 rounded-full  h-9 w-9 flex justify-center items-center"
           }
         >
           <i class="fa-solid fa-xmark text-2xl "></i>
@@ -46,18 +46,17 @@ export default function CardProductAdded() {
             </div>
             <p className=" text-base mb-0 ">220.000đ</p>
           </div>
-
-          <div className="w-full flex justify-start items-center mt-3">
-            <button
-              title="Bán lại sản phẩm này"
-              className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-full"
-            >
-              <div className="flex justify-center items-center ">
-                <i class="fa-solid fa-rotate-right text-lg"></i>
-                <p className="mb-0 ml-2 text-base">Bán lại</p>
-              </div>
-            </button>
-          </div>
+        </div>
+        <div className="w-full flex justify-start items-center mt-3">
+          <button
+            title="Bán lại sản phẩm này"
+            className="shadow-md w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-b-lg"
+          >
+            <div className="flex justify-center items-center ">
+              <i class="fa-solid fa-rotate-right text-lg"></i>
+              <p className="mb-0 ml-2 text-base">Bán lại</p>
+            </div>
+          </button>
         </div>
       </div>
     </div>
