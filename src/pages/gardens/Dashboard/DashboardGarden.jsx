@@ -25,6 +25,7 @@ const controllers = Object.values(Chartjs).filter(
 
 Chart.register(...controllers);
 
+
 const listOrder = [
   {
     id: "HD1",
@@ -57,15 +58,19 @@ const listOrder = [
 const DashboardGarden = () => {
   const options = {
     scales: {
+      
       x: {
+        
         grid: {
           drawOnChartArea: false,
+          color: (ctx) => (ctx.index === 0 ? 'rgba(0, 0, 0, 0)' : 'rgba(0, 0, 0, 0)')
         },
       },
       y: {
         display: false,
         grid: {
           drawOnChartArea: false,
+          drawBorder: false,
         },
       },
     },
@@ -86,7 +91,8 @@ const DashboardGarden = () => {
   const data = {
     labels,
     datasets: [
-      { borderRadius: 7,
+      {
+        borderRadius: 7,
         label: "Doanh thu theo ngày",
         data: [10, 2, 3, 4, 5, 6, 7],
         borderColor: "rgb(255, 99, 132)",
