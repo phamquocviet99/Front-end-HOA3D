@@ -264,7 +264,7 @@ const DashboardGarden = () => {
                 <div className="grid grid-cols-1 xl:grid-cols-2">
                   <p className="text-gray-500 mb-0">
                     Cửa hàng :{" "}
-                    <span className="font-bold text-black">{o?.nameShop} </span>
+                    <span className=" text-black">{o?.nameShop} </span>
                   </p>
 
                   <p className="text-gray-500 mb-0">
