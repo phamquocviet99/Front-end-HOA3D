@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Line, Bar } from "react-chartjs-2";
+import { Doughnut, Bar } from "react-chartjs-2";
 import { Chart } from "chart.js";
 import * as Chartjs from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
@@ -56,7 +56,7 @@ const listOrder = [
   },
 ];
 const DashboardGarden = () => {
-  const options = {
+  const optionsBar = {
     scales: {
       x: {
         grid: {
@@ -80,22 +80,54 @@ const DashboardGarden = () => {
         position: "top",
       },
       title: {
-        display: false,
-        text: "Chart.js Line Chart",
+        display: true,
+        text: "Doanh thu trong tuần",
       },
     },
   };
-  const labels = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
-
-  const data = {
-    labels,
+  const optionsDounghnut = {
+    
+    maintainAspectRatio: false,
+    responsive: true,
+    plugins: {
+     
+      title: {
+        display: true,
+        text: "Số đơn theo từng sản phẩm",
+      },
+    },
+  };
+  const dataBar = {
+    labels: ["T2", "T3", "T4", "T5", "T6", "T7", "CN"],
     datasets: [
       {
         borderRadius: 7,
         label: "Doanh thu theo ngày",
         data: [10, 2, 3, 4, 5, 6, 7],
         borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
+        backgroundColor: "#AFA6FF",
+      },
+    ],
+  };
+  const dataDoughnut = {
+    labels: ["Lan vàng", "Lan trắng", "Lan đỏ", "Lan tím"],
+    datasets: [
+      {
+        borderRadius: 4,
+        label: "Số đơn hàng",
+        data: [10, 2, 3, 1],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 206, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+        ],
+        borderColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 206, 86, 1)",
+          "rgba(75, 192, 192, 1)",
+        ],
       },
     ],
   };
@@ -110,7 +142,7 @@ const DashboardGarden = () => {
         <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
           Trang quản lý
         </p>
-        <ButtonPosted/>
+        <ButtonPosted />
       </div>
       {/* <div className="grid grid-cols-1 xl:grid-cols-4 gap-3">
         <div className="md:col-start-1 md:col-end-2">
@@ -237,18 +269,19 @@ const DashboardGarden = () => {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
         <div className="xl:col-start-1 xl:col-end-3">
           <div className=" bg-white rounded-xl shadow-md p-4 h-full">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="h-full">
                 <Bar
-                  height={"330px"}
+                  
                   plugins={[ChartDataLabels]}
-                  options={options}
-                  data={data}
+                  options={optionsBar}
+                  data={dataBar}
                 ></Bar>
               </div>
-              <div></div>
+              <div>
+                <Doughnut options={optionsDounghnut} data={dataDoughnut} />
+              </div>
             </div>
-            {/* <Line options={options} data={data}></Line> */}
           </div>
         </div>
         <div className=" bg-white rounded-xl shadow-md p-3">
@@ -358,7 +391,7 @@ const DashboardGarden = () => {
                     )}
                   </p>
                 </div>
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-1 xl:grid-cols-2">
                   <p className="text-gray-500 mb-0">
                     Cửa hàng :{" "}
                     <span className="font-bold text-black">{o?.nameShop} </span>
