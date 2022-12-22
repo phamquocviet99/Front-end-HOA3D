@@ -129,17 +129,17 @@ const DashboardGarden = () => {
         label: "Số đơn hàng",
         data: [10, 2, 3, 1],
         backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
+          "rgba(255, 99, 132, 0.7)",
+          "rgba(54, 162, 235, 0.7)",
+          "rgba(255, 206, 86, 0.7)",
+          "rgba(75, 192, 192, 0.7)",
         ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-        ],
+        // borderColor: [
+        //   "rgba(255, 99, 132, 1)",
+        //   "rgba(54, 162, 235, 1)",
+        //   "rgba(255, 206, 86, 1)",
+        //   "rgba(75, 192, 192, 1)",
+        // ],
       },
     ],
   };
@@ -282,14 +282,14 @@ const DashboardGarden = () => {
         <div className="xl:col-start-1 xl:col-end-3">
           <div className=" bg-white rounded-xl shadow-md p-4 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="">
+              <div className="h-96">
                 <Bar
                   plugins={[ChartDataLabels]}
                   options={optionsBar}
                   data={dataBar}
                 ></Bar>
               </div>
-              <div>
+              <div className="h-96">
                 <Doughnut options={optionsDounghnut} data={dataDoughnut} />
               </div>
             </div>
