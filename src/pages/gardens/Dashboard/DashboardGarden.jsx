@@ -56,6 +56,15 @@ const listOrder = [
     status: "waitingPayment",
     date: "22/12/2022",
   },
+  {
+    id: "HD3",
+    nameProduct: "Hoa lan trắng",
+    nameShop: "Minh An",
+    count: "200kg",
+    totalPrice: "2.000.000đ",
+    status: "waitingPayment",
+    date: "22/12/2022",
+  },
 ];
 const DashboardGarden = () => {
   const navigate = useNavigate();
@@ -165,6 +174,74 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
+        <div className="w-full bg-white rounded-xl shadow-md">
+          <div className="flex justify-between items-center  p-3">
+            <div className="pl-1">
+              <p className="mb-0 text-lg text-gray-600">Đơn hàng quan tâm</p>
+              <p className="mb-0 text-sm text-gray-400">Có 6 đơn cần xử lý</p>
+            </div>
+            <button
+              onClick={() => navigate("/nha-vuon/don-hang")}
+              title="Xem tất cả đơn hàng"
+              className=" hover:bg-gray-50 text-gray-400  py-2 px-3 rounded-lg "
+            >
+              Xem tất cả
+            </button>
+          </div>
+          <div>
+            {listOrder?.map((o, index) => (
+              <div
+                onDoubleClick={goToDetail}
+                key={index}
+                className="border-t flex justify-between item-center py-3 px-2 hover:bg-gray-50"
+              >
+                <div className="flex items-center">
+                  <div className="flex justify-center items-center h-12 w-12 rounded-md bg-sky-100 border-2 border-sky-300 text-sky-600">
+                    <p className="mb-0 text-sm">{o?.id}</p>
+                  </div>
+
+                  <div className="ml-3">
+                    <p className="text-gray-400 text-sm mb-1">
+                      Cửa hàng :{" "}
+                      <span className="text-gray-700">{o?.nameShop}</span>
+                    </p>
+                    <p className="text-gray-400 text-sm mb-1">
+                      Tổng tiền :{" "}
+                      <span className="text-red-400">{o?.totalPrice}</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-2 text-sm">
+                  {o.status === "waitingDeposit" ? (
+                    <ButtonDeposit />
+                  ) : o.status === "waitingPayment" ? (
+                    <ButtonWaitingShopPayment />
+                  ) : o.status === "waitingDelivery" ? (
+                    <ButtonDelivery />
+                  ) : o.status === "delivering" ? (
+                    <ButtonWaitingDelivery />
+                  ) : o.status === "waitingCensorship" ? (
+                    <ButtonWaitingCensorship />
+                  ) : o.status === "cancel" ? (
+                    <button className="bg-red-500 shadow-md hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
+                      Đơn hàng hủy
+                    </button>
+                  ) : (
+                    <button
+                      title="Xem chi tiết"
+                      onClick={goToDetail}
+                      className="bg-green-600 shadow-md hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
+                    >
+                      Đơn hoàn thành
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
         <div className=" bg-white rounded-xl shadow-md p-3">
           <div className="pl-1">
             <p className="mb-0 text-lg text-gray-600">Giao dịch tiền</p>
@@ -210,76 +287,8 @@ const DashboardGarden = () => {
             <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
           </div>
         </div>
-      </div>
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
-        <div className="w-full bg-white rounded-xl shadow-md p-3">
-          <div className="flex justify-between items-center">
-            <div className="pl-1">
-              <p className="mb-0 text-lg text-gray-600">Đơn hàng quan tâm</p>
-              <p className="mb-0 text-sm text-gray-400">Có 6 đơn cần xử lý</p>
-            </div>
-            <button
-              onClick={() => navigate("/nha-vuon/don-hang")}
-              title="Xem tất cả đơn hàng"
-              className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg shadow-md"
-            >
-              Xem tất cả
-            </button>
-          </div>
-          <div className="mt-3">
-            {listOrder?.map((o, index) => (
-              <div
-                onDoubleClick={goToDetail}
-                key={index}
-                className="w-full shadow-md rounded-xl border mt-2 p-3 bg-slate-50 "
-              >
-                <div className="flex justify-between items-center">
-                  <p className="font-bold text-base">Mã đơn : {o.id}</p>
-                  <p className="text-gray-500">
-                    {o.status === "waitingDeposit" ? (
-                      <ButtonDeposit />
-                    ) : o.status === "waitingPayment" ? (
-                      <ButtonWaitingShopPayment />
-                    ) : o.status === "waitingDelivery" ? (
-                      <ButtonDelivery />
-                    ) : o.status === "delivering" ? (
-                      <ButtonWaitingDelivery />
-                    ) : o.status === "waitingCensorship" ? (
-                      <ButtonWaitingCensorship />
-                    ) : o.status === "cancel" ? (
-                      <button className="bg-red-500 shadow-md hover:bg-red-600 text-white px-2 py-1 rounded-full   w-32 text-center">
-                        Đơn hàng hủy
-                      </button>
-                    ) : (
-                      <button
-                        title="Xem chi tiết"
-                        onClick={goToDetail}
-                        className="bg-green-600 shadow-md hover:bg-green-700  px-2 py-1 rounded-full  text-white w-32 text-center"
-                      >
-                        Đơn hoàn thành
-                      </button>
-                    )}
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 xl:grid-cols-2">
-                  <p className="text-gray-500 mb-0">
-                    Cửa hàng :{" "}
-                    <span className=" text-black">{o?.nameShop} </span>
-                  </p>
-
-                  <p className="text-gray-500 mb-0">
-                    Tổng tiền :{" "}
-                    <span className="font-bold text-red-500">
-                      {o?.totalPrice}
-                    </span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="w-full bg-white rounded-xl shadow-md p-3">
-          <div className="flex justify-between items-center">
+        <div className="w-full bg-white rounded-xl shadow-md ">
+          <div className="flex justify-between items-center p-3">
             <div className="pl-1">
               <p className="mb-0 text-lg text-gray-600">Sản phẩm đang bán</p>
               <p className="mb-0 text-sm text-gray-400">
@@ -289,24 +298,24 @@ const DashboardGarden = () => {
             <button
               onClick={() => navigate("/nha-vuon/san-pham")}
               title="Xem tất cả sản phẩm đang bán"
-              className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg shadow-md"
+              className=" hover:bg-gray-50 text-gray-400  py-2 px-3 rounded-lg "
             >
               Xem tất cả
             </button>
           </div>
-          <div className="mt-3 ">
-            <div className=" relative shadow-md rounded-lg">
-              <table className="w-full text-sm rounded-lg">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-200 rounded-lg">
+          <div>
+            <div className=" relative ">
+              <table className="w-full text-sm ">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-200">
                   <tr>
-                    <th scope="col" className="py-3 px-6 rounded-tl-lg">
+                    <th scope="col" className="py-3 px-6 text-center">
                       Tên SP
                     </th>
-                    <th scope="col" className="py-3 px-6">
+                    <th scope="col" className="py-3 px-6 text-center">
                       Loại
                     </th>
 
-                    <th scope="col" className="py-3 px-6 rounded-tr-lg">
+                    <th scope="col" className="py-3 px-6 text-center">
                       Giá đang bán
                     </th>
                   </tr>
@@ -316,7 +325,7 @@ const DashboardGarden = () => {
                     <tr className="hover:bg-gray-50 border-t">
                       <th
                         scope="row"
-                        className="py-3 px-2 font-normal text-gray-900  text-center rounded-b-lg"
+                        className="py-3 px-2 font-normal text-gray-900  text-center"
                       >
                         Hoa lan trắng
                       </th>
@@ -325,9 +334,7 @@ const DashboardGarden = () => {
                           <p className="mb-0 text-white text-xs">A</p>
                         </div>
                       </td>
-                      <td className="py-3 px-6  text-center rounded-b-lg">
-                        1.000.000đ
-                      </td>
+                      <td className="py-3 px-6  text-center ">1.000.000đ</td>
                     </tr>
                   ))}
                 </tbody>
@@ -335,9 +342,9 @@ const DashboardGarden = () => {
             </div>
           </div>
         </div>
-        <div className="w-full bg-white rounded-xl shadow-md p-3">
+        <div className="w-full bg-white rounded-xl shadow-md ">
           <div className="flex justify-between items-center">
-            <div className="pl-1">
+            <div className="p-3">
               <p className="mb-0 text-lg text-gray-600">
                 Sản phẩm cửa hàng mua
               </p>
@@ -348,16 +355,19 @@ const DashboardGarden = () => {
             <button
               onClick={() => navigate("/nha-vuon/mua-ban")}
               title="Xem tất cả cửa hàng mua"
-              className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg shadow-md"
+              className=" hover:bg-gray-50 text-gray-400  py-2 px-3 rounded-lg "
             >
               Xem tất cả
             </button>
           </div>
-          <div className="mt-3 ">
+          <div>
             {listOrder?.map((o, index) => (
-              <div className="flex justify-between items-center shadow-md my-3 border rounded-lg pr-2 bg-slate-50">
+              <div
+                key={index}
+                className="flex justify-between items-center hover:bg-gray-50"
+              >
                 <div className="flex items-center">
-                  <div className="">
+                  <div className="pl-2 pb-2">
                     <img
                       className=" h-24 md:h-20 w-24 md:w-20 object-cover rounded-lg "
                       alt=""
@@ -379,7 +389,9 @@ const DashboardGarden = () => {
                     </p>
                   </div>
                 </div>
-                <p className="hidden xl:block mb-0 text-base">2.000.000đ/kg</p>
+                <p className="hidden xl:block mb-0 text-base mr-2">
+                  2.000.000đ/kg
+                </p>
               </div>
             ))}
           </div>
