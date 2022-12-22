@@ -192,7 +192,7 @@ const SidebarGarden = ({ children }) => {
                               width: "3px",
                               height: "40px",
                               backgroundColor: "white",
-                              margin: "0 30px",
+                              margin: "0px 30px 0px 50px",
                             }}
                           />
                           <p className="mb-0 text-white whitespace-nowrap text-lg">
