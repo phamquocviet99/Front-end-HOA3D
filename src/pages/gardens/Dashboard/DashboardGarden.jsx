@@ -359,7 +359,7 @@ const DashboardGarden = () => {
                 <div className="flex items-center">
                   <div className="">
                     <img
-                      className=" h-20 w-20 object-cover rounded-lg "
+                      className=" h-24 md:h-20 w-24 md:w-20 object-cover rounded-lg "
                       alt=""
                       src={require("../../../assets/images/avartar/avartar.jpg")}
                     />
@@ -374,9 +374,12 @@ const DashboardGarden = () => {
                     <p className="mb-1 text-sm text-gray-500">
                       Số lượng : <span className="text-black">15kg</span>
                     </p>
+                    <p className="block xl:hidden mb-1 text-sm text-gray-500">
+                      Giá : <span className="text-black">2.000.000đ/kg</span>
+                    </p>
                   </div>
                 </div>
-                <p className="mb-0 text-base">2.000.000đ/kg</p>
+                <p className="hidden xl:block mb-0 text-base">2.000.000đ/kg</p>
               </div>
             ))}
           </div>
