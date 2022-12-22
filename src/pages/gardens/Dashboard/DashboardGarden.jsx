@@ -308,7 +308,7 @@ const DashboardGarden = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-col-1 xl:grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
         <div className="w-full bg-white rounded-xl shadow-md p-3">
           <div className="flex justify-between items-center">
             <div className="pl-1">
