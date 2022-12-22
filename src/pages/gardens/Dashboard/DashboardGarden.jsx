@@ -153,10 +153,10 @@ const DashboardGarden = () => {
       <div className="w-full bg-white rounded-xl shadow-md p-4 flex justify-between items-center">
         <div>
           <p style={{ fontSize: "20px" }} className="font-bold mb-2 mr-3">
-            Trang quản lý
+            Trang chủ
           </p>
           <p style={{ fontSize: "16px" }} className="text-gray-400 mb-0 mr-3">
-            Chào mừng Ba Lan đến với HOA 3Đ
+            Chào mừng Ba Lan
           </p>
         </div>
 

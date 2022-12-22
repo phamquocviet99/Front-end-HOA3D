@@ -186,6 +186,19 @@ const SidebarGarden = ({ children }) => {
                         <div className=" w-full flex items-center">
                           <p className="font-text-logo">HOA 3D</p>
                         </div>
+                        <div className="flex items-center">
+                          <div
+                            style={{
+                              width: "3px",
+                              height: "40px",
+                              backgroundColor: "white",
+                              margin: "0 30px",
+                            }}
+                          />
+                          <p className="mb-0 text-white whitespace-nowrap text-lg">
+                            Trang quản lý dành cho  <span className="text-white">nhà vườn</span>
+                          </p>
+                        </div>
                       </>
                     ) : (
                       <></>

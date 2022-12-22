@@ -1,4 +1,3 @@
-import "./Order.css";
 
 import { useNavigate } from "react-router-dom";
 import ButtonDeposit from "../../../components/ButtonPayment/ButtonDeposit";
@@ -237,7 +236,7 @@ function Order() {
 
           <div className="mt-2">
             <div className=" hidden md:block overflow-x-auto relative shadow-md sm:rounded-lg ">
-              <table className=" w-full text-sm text-left text-gray-500 border ">
+              <table className=" w-full text-sm text-left text-gray-500 border bg-white">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-200 ">
                   <tr>
                     <th scope="col" className="py-3 px-6 text-center">
@@ -262,7 +261,7 @@ function Order() {
                 </thead>
                 <tbody>
                   {listOrder?.map((o, index) => (
-                    <tr className="bg-order border-b  ">
+                    <tr className="hover:bg-gray-50 border-b transition-all ">
                       <td className="py-4 px-6 text-center">{o.id}</td>
 
                       <td className="py-4 px-6 text-center">{o.nameShop}</td>
