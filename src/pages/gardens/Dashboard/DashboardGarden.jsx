@@ -151,9 +151,15 @@ const DashboardGarden = () => {
   return (
     <div className="">
       <div className="w-full bg-white rounded-xl shadow-md p-4 flex justify-between items-center">
-        <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
-          Trang quản lý
-        </p>
+        <div>
+          <p style={{ fontSize: "20px" }} className="font-bold mb-2 mr-3">
+            Trang quản lý
+          </p>
+          <p style={{ fontSize: "16px" }} className="text-gray-400 mb-0 mr-3">
+            Chào mừng Ba Lan đến với HOA 3Đ
+          </p>
+        </div>
+
         <ButtonPosted />
       </div>
       {/* <div className="grid grid-cols-1 xl:grid-cols-4 gap-3">
@@ -326,7 +332,7 @@ const DashboardGarden = () => {
             </div>
             <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
           </div>
-         
+
           <div className="flex justify-between items-center mt-3">
             <div className="flex items-center">
               <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
