@@ -20,6 +20,8 @@ import ButtonWaitingDelivery from "../../../components/ButtonWaitingDelivery/But
 import ButtonWaitingCensorship from "../../../components/ButtonWaitingCensorship/ButtonWaitingCensorship";
 import { useNavigate } from "react-router-dom";
 import ButtonPosted from "../../../components/ButtonPosted/ButtonPosted";
+import BarChart from "./Components/BarChart";
+import DoughnutChart from "./Components/DounghnutChart";
 const controllers = Object.values(Chartjs).filter(
   (chart) => chart.id !== undefined
 );
@@ -56,94 +58,6 @@ const listOrder = [
   },
 ];
 const DashboardGarden = () => {
-  const optionsBar = {
-    scales: {
-      x: {
-        grid: {
-          drawOnChartArea: false,
-          color: (ctx) =>
-            ctx.index === 0 ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 0)",
-        },
-      },
-      y: {
-        display: false,
-        grid: {
-          drawOnChartArea: false,
-          drawBorder: false,
-        },
-      },
-    },
-    maintainAspectRatio: false,
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top",
-      },
-      title: {
-        display: true,
-        text: "Doanh thu trong tuần",
-        padding: {
-          top: 10,
-          bottom: 10,
-        },
-        font: {
-          size: 16,
-        },
-      },
-    },
-  };
-  const optionsDounghnut = {
-    maintainAspectRatio: false,
-    responsive: true,
-    plugins: {
-      title: {
-        display: true,
-        text: "Số đơn theo từng sản phẩm",
-        padding: {
-          top: 10,
-          bottom: 10,
-        },
-        font: {
-          size: 16,
-        },
-      },
-    },
-  };
-  const dataBar = {
-    labels: ["T2", "T3", "T4", "T5", "T6", "T7", "CN"],
-    datasets: [
-      {
-        borderRadius: 7,
-        label: "Doanh thu theo ngày",
-        data: [10, 2, 3, 4, 5, 6, 7],
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "#cabeff",
-      },
-    ],
-  };
-  const dataDoughnut = {
-    labels: ["Lan vàng", "Lan trắng", "Lan đỏ", "Lan tím"],
-    datasets: [
-      {
-        borderRadius: 4,
-        label: "Số đơn hàng",
-        data: [10, 2, 3, 1],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.7)",
-          "rgba(54, 162, 235, 0.7)",
-          "rgba(255, 206, 86, 0.7)",
-          "rgba(75, 192, 192, 0.7)",
-        ],
-        // borderColor: [
-        //   "rgba(255, 99, 132, 1)",
-        //   "rgba(54, 162, 235, 1)",
-        //   "rgba(255, 206, 86, 1)",
-        //   "rgba(75, 192, 192, 1)",
-        // ],
-      },
-    ],
-  };
-
   const navigate = useNavigate();
   function goToDetail() {
     navigate("/nha-vuon/don-hang/chi-tiet");
@@ -162,53 +76,7 @@ const DashboardGarden = () => {
 
         <ButtonPosted />
       </div>
-      {/* <div className="grid grid-cols-1 xl:grid-cols-4 gap-3">
-        <div className="md:col-start-1 md:col-end-2">
-          <div className="py-2 px-4">
-            <button
-              title="Đăng bán sản phẩm"
-              className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-full "
-            >
-              <div className="flex justify-center items-center ">
-                <p className="mb-0 text-lg">Đăng bán</p>
-                <i class="fa-solid fa-arrow-right text-lg ml-3 mt-1 text-white"></i>
-              </div>
-            </button>
-          </div>
-        </div>
-        <div className="col-start-2 xl:col-end-4">
-          <div className="py-2 px-4">
-            <button
-              onClick={() => navigate("/nha-vuon/mua-ban")}
-              title="Đến trang các sản phẩm cần mua"
-              style={{ color: "#2D3693" }}
-              className="shadow-md mb-2 w-full bg-orange-button hover:bg-orange-400   py-2 px-3 rounded-full "
-            >
-              <div className="flex justify-center items-center ">
-                <p className="mb-0 text-lg">Các sản phẩm đang được thu mua</p>
-                <i
-                  style={{ color: "#2D3693" }}
-                  className="fa-solid fa-arrow-right text-lg ml-3 mt-1 "
-                ></i>
-              </div>
-            </button>
-          </div>
-        </div>
-        <div>
-          <div className="py-2 px-4">
-            <button
-              onClick={() => navigate("/nha-vuon/don-hang")}
-              title="Đến trang đơn hàng"
-              className="shadow-md mb-2 w-full bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-full "
-            >
-              <div className="flex justify-center items-center ">
-                <p className="mb-0 text-lg">Đơn hàng</p>
-                <i class="fa-solid fa-arrow-right text-lg ml-3 mt-1 text-white"></i>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div> */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-4">
         <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
@@ -289,14 +157,10 @@ const DashboardGarden = () => {
           <div className=" bg-white rounded-xl shadow-md p-4 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="h-96">
-                <Bar
-                  plugins={[ChartDataLabels]}
-                  options={optionsBar}
-                  data={dataBar}
-                ></Bar>
+                <BarChart />
               </div>
               <div className="h-96">
-                <Doughnut options={optionsDounghnut} data={dataDoughnut} />
+                <DoughnutChart />
               </div>
             </div>
           </div>
