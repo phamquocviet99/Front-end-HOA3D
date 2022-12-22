@@ -19,6 +19,7 @@ import ProfileShop from "./pages/gardens/ProfileShop/ProfileShop";
 import Quantity from "./pages/gardens/Quantity/Quantity";
 import Purchase from "./pages/gardens/Purchase/Purchase";
 import DetailOrder from "./pages/gardens/Order/DetailOrder";
+import OnSale from "./pages/gardens/OnSale/OnSale";
 
 // function App() {
 //   return (
@@ -59,7 +60,8 @@ function App() {
               element={<Navigate replace to="/nha-vuon/trang-chu" />}
             />
             <Route path="/nha-vuon/trang-chu" element={<DashboardGarden />} />
-            <Route path="/nha-vuon/mua-ban" element={<Purchase />} />
+            <Route path="/nha-vuon/nguoi-mua" element={<Purchase />} />
+            <Route path="/nha-vuon/toi-ban" element={<OnSale />} />
             <Route path="/nha-vuon/san-pham" element={<RegistrationProduct />} />
             <Route path="/nha-vuon/san-luong" element={<Quantity />} />
             <Route path="/nha-vuon/don-hang/chi-tiet" element={<DetailOrder />} />

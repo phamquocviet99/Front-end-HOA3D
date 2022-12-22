@@ -31,28 +31,33 @@ const SidebarGarden = ({ children }) => {
     {
       name: "Trang Chủ",
       link: "/nha-vuon/trang-chu",
-      icon: <TbApps />,
-    },
-    {
-      name: "Mua Bán",
-      link: "/nha-vuon/mua-ban",
-      icon: <BiBox />,
-    },
-    {
-      name: "Sản Phẩm",
-      link: "/nha-vuon/san-pham",
-      icon: <BiBox />,
+      icon: <i className="fa-solid fa-house-chimney text-2xl"></i>
     },
     {
       name: "Đơn hàng",
       link: "/nha-vuon/don-hang",
-      icon: <BiBox />,
+      icon: <i className="fa-solid fa-newspaper text-2xl"></i>,
+    },
+    {
+      name: "Tôi Bán",
+      link: "/nha-vuon/toi-ban",
+      icon: <i className="fa-solid fa-cart-shopping text-2xl"></i>,
+    },
+    {
+      name: "Người mua",
+      link: "/nha-vuon/nguoi-mua",
+      icon: <i className="fa-solid fa-cart-arrow-down text-2xl"></i>,
+    },
+    {
+      name: "Sản Phẩm",
+      link: "/nha-vuon/san-pham",
+      icon: <i className="fa-solid fa-box-open text-2xl"></i>,
     },
 
     {
       name: "Thông Tin",
       link: "/nha-vuon/nguoi-dung",
-      icon: <HiOutlineUserCircle />,
+      icon: <i className="fa-solid fa-address-card text-2xl"></i>,
     },
   ];
   function classNames(...classes) {
@@ -196,7 +201,8 @@ const SidebarGarden = ({ children }) => {
                             }}
                           />
                           <p className="mb-0 text-white whitespace-nowrap text-lg">
-                            Trang quản lý dành cho  <span className="text-white">nhà vườn</span>
+                            Trang quản lý dành cho{" "}
+                            <span className="text-white">nhà vườn</span>
                           </p>
                         </div>
                       </>

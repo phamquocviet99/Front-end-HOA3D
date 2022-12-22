@@ -242,50 +242,27 @@ const DashboardGarden = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
-        <div className=" bg-white rounded-xl shadow-md p-3">
-          <div className="pl-1">
+        <div className=" bg-white rounded-xl shadow-md">
+          <div className=" p-3">
             <p className="mb-0 text-lg text-gray-600">Giao dịch tiền</p>
             <p className="mb-0 text-sm text-gray-400">
               Có 10 giao dịch trong tháng này
             </p>
           </div>
-          <div className="flex justify-between items-center mt-3">
-            <div className="flex items-center">
-              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
-                <i class="fa-regular fa-credit-card text-2xl"></i>
+          {listOrder?.map((p, index) => (
+            <div key={index} className="flex justify-between items-center mt-3 px-3 hover:bg-gray-50">
+              <div className="flex items-center">
+                <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
+                  <i class="fa-regular fa-credit-card text-2xl"></i>
+                </div>
+                <div className="ml-3">
+                  <p className="mb-0 text-base">Nội dung gửi</p>
+                  <p className="mb-0 test-base text-gray-400">22/7/2022</p>
+                </div>
               </div>
-              <div className="ml-3">
-                <p className="mb-0 text-base">Nội dung gửi</p>
-                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
-              </div>
+              <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
             </div>
-            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
-          </div>
-          <div className="flex justify-between items-center mt-3">
-            <div className="flex items-center">
-              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
-                <i class="fa-regular fa-credit-card text-2xl"></i>
-              </div>
-              <div className="ml-3">
-                <p className="mb-0 text-base">Nội dung gửi</p>
-                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
-              </div>
-            </div>
-            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
-          </div>
-
-          <div className="flex justify-between items-center mt-3">
-            <div className="flex items-center">
-              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
-                <i class="fa-regular fa-credit-card text-2xl"></i>
-              </div>
-              <div className="ml-3">
-                <p className="mb-0 text-base">Nội dung gửi</p>
-                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
-              </div>
-            </div>
-            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
-          </div>
+          ))}
         </div>
         <div className="w-full bg-white rounded-xl shadow-md ">
           <div className="flex justify-between items-center p-3">
@@ -378,10 +355,10 @@ const DashboardGarden = () => {
                     <p className="mb-1 text-sm  text-gray-600">
                       Hoa Lan Tím Loại B
                     </p>
-                    <p className="mb-1 text-sm text-gray-500">
+                    <p className="mb-1 text-sm text-gray-400">
                       Cửa hàng : <span className="text-black">Minh Lan</span>{" "}
                     </p>
-                    <p className="mb-1 text-sm text-gray-500">
+                    <p className="mb-1 text-sm text-gray-400">
                       Số lượng : <span className="text-black">15kg</span>
                     </p>
                     <p className="block xl:hidden mb-1 text-sm text-gray-500">
