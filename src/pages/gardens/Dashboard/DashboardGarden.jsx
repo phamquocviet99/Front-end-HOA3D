@@ -413,7 +413,7 @@ const DashboardGarden = () => {
                     <tr className="hover:bg-gray-50 border-t">
                       <th
                         scope="row"
-                        className="py-3 px-6 font-normal text-gray-900 whitespace-nowrap text-center rounded-b-lg"
+                        className="py-3 px-2 font-normal text-gray-900  text-center rounded-b-lg"
                       >
                         Hoa lan trắng
                       </th>
