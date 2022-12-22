@@ -82,18 +82,30 @@ const DashboardGarden = () => {
       title: {
         display: true,
         text: "Doanh thu trong tuần",
+        padding: {
+          top: 10,
+          bottom: 10,
+        },
+        font: {
+          size: 16,
+        },
       },
     },
   };
   const optionsDounghnut = {
-    
     maintainAspectRatio: false,
     responsive: true,
     plugins: {
-     
       title: {
         display: true,
         text: "Số đơn theo từng sản phẩm",
+        padding: {
+          top: 10,
+          bottom: 10,
+        },
+        font: {
+          size: 16,
+        },
       },
     },
   };
@@ -105,7 +117,7 @@ const DashboardGarden = () => {
         label: "Doanh thu theo ngày",
         data: [10, 2, 3, 4, 5, 6, 7],
         borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "#AFA6FF",
+        backgroundColor: "#cabeff",
       },
     ],
   };
@@ -268,11 +280,10 @@ const DashboardGarden = () => {
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
         <div className="xl:col-start-1 xl:col-end-3">
-          <div className=" bg-white rounded-xl shadow-md p-4 h-full">
+          <div className=" bg-white rounded-xl shadow-md p-4 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="h-full">
+              <div className="">
                 <Bar
-                  
                   plugins={[ChartDataLabels]}
                   options={optionsBar}
                   data={dataBar}
@@ -315,18 +326,7 @@ const DashboardGarden = () => {
             </div>
             <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
           </div>
-          <div className="flex justify-between items-center mt-3">
-            <div className="flex items-center">
-              <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
-                <i class="fa-regular fa-credit-card text-2xl"></i>
-              </div>
-              <div className="ml-3">
-                <p className="mb-0 text-base">Nội dung gửi</p>
-                <p className="mb-0 test-base text-gray-400">22/7/2022</p>
-              </div>
-            </div>
-            <p className="mb-0 text-lg text-blue-500">+25.000.000đ</p>
-          </div>
+         
           <div className="flex justify-between items-center mt-3">
             <div className="flex items-center">
               <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
