@@ -19,6 +19,7 @@ import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
 import ButtonWaitingDelivery from "../../../components/ButtonWaitingDelivery/ButtonWaitingDelivery";
 import ButtonWaitingCensorship from "../../../components/ButtonWaitingCensorship/ButtonWaitingCensorship";
 import { useNavigate } from "react-router-dom";
+import ButtonPosted from "../../../components/ButtonPosted/ButtonPosted";
 const controllers = Object.values(Chartjs).filter(
   (chart) => chart.id !== undefined
 );
@@ -105,7 +106,13 @@ const DashboardGarden = () => {
   }
   return (
     <div className="">
-      <div className="grid grid-cols-1 xl:grid-cols-4 gap-3">
+      <div className="w-full bg-white rounded-xl shadow-md p-4 flex justify-between items-center">
+        <p style={{ fontSize: "20px" }} className="font-bold mb-0 mr-3">
+          Trang quản lý
+        </p>
+        <ButtonPosted/>
+      </div>
+      {/* <div className="grid grid-cols-1 xl:grid-cols-4 gap-3">
         <div className="md:col-start-1 md:col-end-2">
           <div className="py-2 px-4">
             <button
@@ -151,7 +158,7 @@ const DashboardGarden = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-3">
         <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
@@ -436,7 +443,7 @@ const DashboardGarden = () => {
               </p>
             </div>
             <button
-            onClick={() => navigate("/nha-vuon/mua-ban")}
+              onClick={() => navigate("/nha-vuon/mua-ban")}
               title="Xem tất cả cửa hàng mua"
               className="bg-blue-500 hover:bg-blue-600 text-white  py-2 px-3 rounded-lg shadow-md"
             >
