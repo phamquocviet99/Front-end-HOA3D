@@ -18,8 +18,8 @@ export default function CardProduct() {
           onMouseLeave={() => setIsHover(false)}
           className={
             isHover
-              ? "absolute z-20 bg-red-500 border-2 text-white border-red-500 -top-3 -right-3 rounded-full   h-9 w-9 flex justify-center items-center"
-              : "absolute z-20 bg-white border-2 border-red-500 text-red-500 -top-3 -right-3 rounded-full  h-9 w-9 flex justify-center items-center"
+              ? "absolute z-10 bg-red-500 border-2 text-white border-red-500 -top-3 -right-3 rounded-full   h-9 w-9 flex justify-center items-center"
+              : "absolute z-10 bg-white border-2 border-red-500 text-red-500 -top-3 -right-3 rounded-full  h-9 w-9 flex justify-center items-center"
           }
         >
           <i class="fa-solid fa-xmark text-2xl"></i>

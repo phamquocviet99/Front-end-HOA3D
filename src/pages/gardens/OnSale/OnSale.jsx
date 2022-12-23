@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import CardProductAdded from "../RegistrationProduct/Components/CardProductAdded";
+import CardProductAdded from "./Components/CardProductAdded";
 
 export default function OnSale() {
   const [listProductAdmin, setListProductAdmin] = useState([
@@ -133,7 +133,7 @@ export default function OnSale() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
               >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 z-20 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
                     <Menu.Item>
                       {({ active }) => (
@@ -171,7 +171,7 @@ export default function OnSale() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
               >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 z-20 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
                     <Menu.Item>
                       {({ active }) => (

@@ -1,6 +1,6 @@
 import ListProductByAdmin from "./Components/ListProductByAdmin";
 import ListProductAdded from "./Components/ListProductAdded";
-import ListProductOnSale from "./Components/ListProductOnSale";
+
 import TabHeader from "../../../components/TabHeader/TabHeader";
 
 export default function RegistrationProduct() {
