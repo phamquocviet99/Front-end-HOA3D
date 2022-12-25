@@ -35,7 +35,10 @@ export default function CardProductAdded() {
         <div className="px-3 py-2">
           <p className="mt-2 text-xl font-light mb-0">Hoa cúc vàng</p>
 
-          <p className="mt-2 text-base  mb-0">Danh mục : Hoa cúc</p>
+          <div className="flex justify-between items-center">
+            <p className="mt-2 text-base  mb-0">Số lượng :</p>
+            <p className="mt-2 text-base  mb-0"> 15kg</p>
+          </div>
 
           <div className="flex justify-between items-center mt-2">
             <div className="flex items-center">
