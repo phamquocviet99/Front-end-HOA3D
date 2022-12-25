@@ -183,9 +183,10 @@ const DashboardGarden = () => {
             <button
               onClick={() => navigate("/nha-vuon/don-hang")}
               title="Xem tất cả đơn hàng"
-              className=" hover:bg-gray-50 text-gray-400  py-2 px-3 rounded-lg "
+              className=" hover:text-blue-500 text-blue-400 flex items-center"
             >
-              Xem tất cả
+              Tất cả
+              <i className="fa-solid fa-angles-right mt-1 ml-1"></i>
             </button>
           </div>
           <div>
@@ -272,11 +273,12 @@ const DashboardGarden = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate("/nha-vuon/san-pham")}
-              title="Xem tất cả sản phẩm đang bán"
-              className=" hover:bg-gray-50 text-gray-400  py-2 px-3 rounded-lg "
+              onClick={() => navigate("/nha-vuon/toi-ban")}
+              title="Xem tất cả đơn hàng"
+              className=" hover:text-blue-500 text-blue-400 flex items-center"
             >
-              Xem tất cả
+              Tất cả
+              <i className="fa-solid fa-angles-right mt-1 ml-1"></i>
             </button>
           </div>
           <div>
@@ -319,7 +321,7 @@ const DashboardGarden = () => {
           </div>
         </div>
         <div className="w-full bg-white rounded-xl shadow-md ">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center pr-3">
             <div className="p-3">
               <p className="mb-0 text-lg text-gray-600">
                 Sản phẩm cửa hàng mua
@@ -329,11 +331,12 @@ const DashboardGarden = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate("/nha-vuon/mua-ban")}
-              title="Xem tất cả cửa hàng mua"
-              className=" hover:bg-gray-50 text-gray-400  py-2 px-3 rounded-lg "
+              onClick={() => navigate("/nha-vuon/nguoi-mua")}
+              title="Xem tất cả đơn hàng"
+              className=" hover:text-blue-500 text-blue-400 flex items-center"
             >
-              Xem tất cả
+              Tất cả
+              <i className="fa-solid fa-angles-right mt-1 ml-1"></i>
             </button>
           </div>
           <div>
