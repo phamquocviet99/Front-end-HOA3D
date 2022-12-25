@@ -73,7 +73,7 @@ const DashboardGarden = () => {
   }
   return (
     <div className="">
-      <div className="w-full bg-white rounded-xl shadow-md p-4 flex justify-between items-center">
+      <div className="w-full  p-4 flex justify-between items-center">
         <div>
           <p style={{ fontSize: "20px" }} className="font-bold mb-2 mr-3">
             Trang chủ
@@ -90,8 +90,8 @@ const DashboardGarden = () => {
         <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
-              <div className="p-3 bg-orange-100 rounded-lg">
-                <i className="fa-solid fa-table-list text-orange-500 text-4xl"></i>
+              <div className=" bg-white rounded-lg">
+                <i className="fa-solid fa-table-list text-orange-500 text-6xl"></i>
               </div>
               <div>
                 <p className="mb-0 text-base text-gray-500">Tổng đơn hàng</p>
@@ -108,8 +108,8 @@ const DashboardGarden = () => {
         <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
-              <div className="p-3 bg-indigo-100 rounded-lg">
-                <i className="fa-solid fa-file-circle-plus text-indigo-500 text-4xl"></i>
+              <div className=" bg-white rounded-lg">
+                <i className="fa-solid fa-file-circle-plus text-indigo-500 text-6xl"></i>
               </div>
               <div>
                 <p className="mb-0 text-base text-gray-500">Đơn hàng mới</p>
@@ -127,8 +127,8 @@ const DashboardGarden = () => {
         <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
-              <div className="p-3 bg-blue-100 rounded-lg">
-                <i className="text-blue-500 text-4xl fa-solid fa-truck-fast"></i>
+              <div className=" bg-white  rounded-lg">
+                <i className="text-blue-500 text-6xl fa-solid fa-truck-fast"></i>
               </div>
               <div>
                 <p className="mb-0 text-base text-gray-500">Đơn đang giao</p>
@@ -145,8 +145,8 @@ const DashboardGarden = () => {
         <div className="">
           <div className="p-4  w-full bg-white rounded-xl shadow-md">
             <div className="flex justify-around items-center">
-              <div className="p-3 bg-rose-100 rounded-lg">
-                <i className="fa-solid fa-building-circle-check text-rose-500 text-4xl"></i>
+              <div className="bg-white  rounded-lg">
+                <i className="fa-solid fa-building-circle-check text-rose-500 text-6xl"></i>
               </div>
               <div>
                 <p className="mb-0 text-base text-gray-500">Đơn hoàn thành</p>
@@ -196,10 +196,6 @@ const DashboardGarden = () => {
                 className="border-t flex justify-between item-center py-3 px-2 hover:bg-gray-50"
               >
                 <div className="flex items-center">
-                  <div className="flex justify-center items-center h-12 w-12 rounded-md bg-sky-100 border-2 border-sky-300 text-sky-600">
-                    <p className="mb-0 text-sm">{o?.id}</p>
-                  </div>
-
                   <div className="ml-3">
                     <p className="text-gray-400 text-sm mb-1">
                       Cửa hàng :{" "}
@@ -250,7 +246,10 @@ const DashboardGarden = () => {
             </p>
           </div>
           {listOrder?.map((p, index) => (
-            <div key={index} className="flex justify-between items-center mt-3 px-3 hover:bg-gray-50">
+            <div
+              key={index}
+              className="flex justify-between items-center mt-3 px-3 hover:bg-gray-50"
+            >
               <div className="flex items-center">
                 <div className="h-14 w-14 text-green-500 flex justify-center items-center rounded-md bg-green-100">
                   <i class="fa-regular fa-credit-card text-2xl"></i>

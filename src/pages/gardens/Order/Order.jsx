@@ -1,11 +1,10 @@
-
 import { useNavigate } from "react-router-dom";
 import ButtonDeposit from "../../../components/ButtonPayment/ButtonDeposit";
 import ButtonWaitingShopPayment from "../../../components/ButtonWaitingShopPayment/ButtonWaitingShopPayment";
 import ButtonDelivery from "../../../components/ButtonDelivery/ButtonDelivery";
 import ButtonWaitingDelivery from "../../../components/ButtonWaitingDelivery/ButtonWaitingDelivery";
 import ButtonWaitingCensorship from "../../../components/ButtonWaitingCensorship/ButtonWaitingCensorship";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 
 function Order() {
@@ -14,6 +13,7 @@ function Order() {
   function goToDetail() {
     navigate("/nha-vuon/don-hang/chi-tiet");
   }
+  const [isActiveTab, setIsActiveTab] = useState(1);
   const listOrder = [
     {
       id: "HD1",
@@ -106,6 +106,51 @@ function Order() {
       date: "Chưa có",
     },
   ];
+  const listStatusOrder = [
+    {
+      id: 1,
+      status: "waitingDeposit",
+      name: "Đơn hàng mới",
+      count: 8,
+    },
+    {
+      id: 2,
+      count: 2,
+      status: "waitingDeposit",
+      name: "Chờ thanh toán",
+    },
+    {
+      id: 3,
+      status: "waitingDelivery",
+      name: "Đơn cần giao",
+      count: 5,
+    },
+    {
+      id: 4,
+      status: "delivering",
+      name: "Đơn đang giao",
+      count: 2,
+    },
+    {
+      id: 5,
+      status: "waitingCensorship",
+      name: "Chờ kiểm duyệt",
+      count: 3,
+    },
+
+    {
+      id: 6,
+      status: "completed",
+      name: "Đơn hoàn thành",
+      count: 8,
+    },
+    {
+      id: 7,
+      status: "cancel",
+      name: "Đơn bị hủy",
+      count: 0,
+    },
+  ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
@@ -121,7 +166,7 @@ function Order() {
         <div className="line-y" />
         <div className=" w-full mt-4">
           <div className="grid gird-cols-1 sm:gird-cols-2 md:grid-cols-2 gap-3">
-            <div >
+            <div>
               <form className="flex  justify-start md:justify-start md:mt-0 items-center">
                 <div className="relative w-full md:w-2/3">
                   <input
@@ -233,7 +278,27 @@ function Order() {
               </Menu>
             </div>
           </div>
-
+          <div className=" w-full rounded-xl md:rounded-b-none block sm:flex items-center pl-2 pt-1 pb-3 sm:bg-transparent sm:pb-0 padding-tab-bottom">
+            {listStatusOrder.map((t, index) => (
+              <div key={index}>
+                <div
+                  onClick={() => setIsActiveTab(t.id)}
+                  className={
+                    isActiveTab === t.id
+                      ? "element-tab-product-active sm:border-b-4 sm:border-blue-500 sm:text-blue-500 "
+                      : "element-tab-product text-gray-400 border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400 "
+                  }
+                >
+                  <div className="relative">
+                    {t.name}
+                    <p className="absolute z-10 -top-2 -right-3 mb-0 text-orange-500">
+                      {t.count}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
           <div className="mt-2">
             <div className=" hidden md:block overflow-x-auto relative shadow-md sm:rounded-lg ">
               <table className=" w-full text-sm text-left text-gray-500 border bg-white">
@@ -370,7 +435,6 @@ function Order() {
               ))}
             </div>
             <div className="flex justify-end items-center pt-3 ">
-              
               <ul className="inline-flex items-center mt-2 h-10 ">
                 <li className="shadow-md">
                   <a

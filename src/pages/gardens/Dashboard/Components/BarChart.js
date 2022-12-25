@@ -52,7 +52,7 @@ export default function BarChart() {
         label: "Doanh thu theo ngày",
         data: [10, 2, 3, 4, 5, 6, 7],
         borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "#cabeff",
+        backgroundColor: "rgba(54, 162, 235, 0.7)",
       },
     ],
   };
