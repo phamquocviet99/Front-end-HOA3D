@@ -108,6 +108,12 @@ function Order() {
   ];
   const listStatusOrder = [
     {
+      id: 0,
+      status: "waitingDeposit",
+      name: "Tất cả",
+      count: 8,
+    },
+    {
       id: 1,
       status: "waitingDeposit",
       name: "Đơn hàng mới",
@@ -217,7 +223,7 @@ function Order() {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <Menu.Items className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
@@ -238,7 +244,7 @@ function Order() {
                   </Menu.Items>
                 </Transition>
               </Menu>
-              <Menu as="div" className="relative inline-block text-left">
+              <Menu as="div" className="relative inline-block text-left xl:hidden">
                 <div>
                   <Menu.Button className="inline-flex w-full justify-center items-center  bg-white rounded-lg shadow-md px-4 py-1 text-base font-medium text-gray-600  hover:text-gray-400 focus:outline-none ">
                     <i class="fa-solid fa-filter mr-2 h-7 w-7 mt-2 text-xl"></i>
@@ -257,10 +263,11 @@ function Order() {
                 >
                   <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
-                      <Menu.Item>
+                    {listStatusOrder?.map((t, index) => (
+                      <Menu.Item key={index}>
                         {({ active }) => (
                           <button
-                            href="#"
+                            
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -268,17 +275,22 @@ function Order() {
                               "block px-4 py-2 text-sm"
                             )}
                           >
-                            Account settings
+                            <div className="flex items-center">
+                            {t?.name}
+                            <div className="h-5 w-5 flex justify-center items-center bg-red-400 text-white rounded-full text-xs ml-2 ">{t?.count}</div>
+                            </div>
+                           
                           </button>
                         )}
                       </Menu.Item>
+                    ))}
                     </div>
                   </Menu.Items>
                 </Transition>
               </Menu>
             </div>
           </div>
-          <div className=" w-full rounded-xl md:rounded-b-none block sm:flex items-center pl-2 pt-1 pb-3 sm:bg-transparent sm:pb-0 padding-tab-bottom">
+          <div className="hidden w-full rounded-xl md:rounded-b-none  xl:flex items-center pl-2 pt-1 pb-3 sm:bg-transparent sm:pb-0 padding-tab-bottom">
             {listStatusOrder.map((t, index) => (
               <div key={index}>
                 <div
@@ -291,9 +303,9 @@ function Order() {
                 >
                   <div className="relative">
                     {t.name}
-                    <p className="absolute z-10 -top-2 -right-3 mb-0 text-orange-500">
-                      {t.count}
-                    </p>
+                    <div className="absolute -top-4 -right-6 h-6 w-6 bg-red-400 rounded-full shadow-md flex justify-center items-center text-white text-sm">
+                    {t.count}
+                  </div>
                   </div>
                 </div>
               </div>
